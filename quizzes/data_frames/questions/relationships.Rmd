@@ -9,7 +9,7 @@ Answerlist
 * A data frame is a special kind of matrix that happens to allow different column types.
 * A data frame and a matrix are the same underlying object type, just printed differently.
 * A data frame is a list, but its columns can have different lengths, unlike a matrix's columns.
-* A data frame has nothing in common with either lists or matrices — it's a completely separate object type.
+* A data frame has nothing in common with either lists or matrices. It's a completely separate object type.
 
 Solution
 ========

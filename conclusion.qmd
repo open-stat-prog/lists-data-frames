@@ -32,11 +32,11 @@ Complete each step below in your own R session, then submit your work (see "What
    comment, explain why `book["pages"]` would *not* give you the same kind of result as `book[["pages"]]` or
    `book$pages`.
 1. **Create a data frame.** Build a data frame called `books` with (at least) 4 rows and 3 columns: `title`
-   (character), `pages` (numeric), and `finished` (logical) — you can make up the data.
+   (character), `pages` (numeric), and `finished` (logical). You can make up the data.
 1. **Select and modify.** Using indexing (your choice of list-style or matrix-style), select all books in `books`
    where `pages` is greater than some threshold of your choosing, and change their `finished` value to `TRUE`.
 1. **Conceptual explanation.** In a comment, explain in your own words how `books` (a data frame) is related to
-   `book` (a list) — specifically, what makes a data frame a *special case* of a list rather than something entirely
+   `book` (a list). Specifically, what makes a data frame a *special case* of a list rather than something entirely
    different.
 
 ### What to Hand In

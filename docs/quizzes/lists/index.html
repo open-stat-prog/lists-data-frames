@@ -72,6 +72,19 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
+div.callout-reading-advanced.callout {
+  border-left-color: red;
+}
+div.callout-reading-advanced.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
+}
+div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
+  background-image: none;
+}
 div.callout-reading.callout {
   border-left-color: purple;
 }
@@ -96,19 +109,6 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f085' !important;
-  background-image: none;
-}
-div.callout-reading-advanced.callout {
-  border-left-color: red;
-}
-div.callout-reading-advanced.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
-}
-div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
   background-image: none;
 }
 div.callout-resource.callout {
@@ -332,17 +332,17 @@ $eyes
 </div>
 </div>
 <p>Which of the following expressions will change the value of the <code>eyes</code> slot in <code>l1</code> from “blue” to “green”?</p>
-<div id="webex-532f502b0d03ce845428df0863df2620" class="webex-checkboxgroup" data-answer="bgIeVhkBHlMcVG0=">
-<label><input type="checkbox" autocomplete="off" name="532f502b0d03ce845428df0863df2620"><span><code>l1[[4]] &lt;- "green"</code></span></label><label><input type="checkbox" autocomplete="off" name="532f502b0d03ce845428df0863df2620"><span><code>l1$4 &lt;- "green"</code></span></label><label><input type="checkbox" autocomplete="off" name="532f502b0d03ce845428df0863df2620"><span><code>l1[4] &lt;- "green"</code></span></label><label><input type="checkbox" autocomplete="off" name="532f502b0d03ce845428df0863df2620"><span><code>l1$eyes &lt;- "green"</code></span></label><label><input type="checkbox" autocomplete="off" name="532f502b0d03ce845428df0863df2620"><span><code>names(l1)[4] &lt;- "green"</code></span></label>
+<div id="webex-32a10545d0c6da207105c8b1acf4d715" class="webex-checkboxgroup" data-answer="aANNARwFGAVIAD4=">
+<label><input type="checkbox" autocomplete="off" name="32a10545d0c6da207105c8b1acf4d715"><span><code>l1[4] &lt;- "green"</code></span></label><label><input type="checkbox" autocomplete="off" name="32a10545d0c6da207105c8b1acf4d715"><span><code>l1[4, ] &lt;- "green"</code></span></label><label><input type="checkbox" autocomplete="off" name="32a10545d0c6da207105c8b1acf4d715"><span><code>names(l1)[4] &lt;- "green"</code></span></label><label><input type="checkbox" autocomplete="off" name="32a10545d0c6da207105c8b1acf4d715"><span><code>l1$eyes &lt;- green</code></span></label><label><input type="checkbox" autocomplete="off" name="32a10545d0c6da207105c8b1acf4d715"><span><code>l1$4 &lt;- "green"</code></span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
 <li>Correct</li>
-<li>Wrong: There is no slot named “4” in l1.</li>
-<li>Correct</li>
-<li>Correct</li>
+<li>Wrong: l1 is a list, so we should not use matrix-style selection.</li>
 <li>Wrong: This command will change the name of the fourth slot, not the contents of that slot.</li>
+<li>Wrong: We’re replacing the value of <code>l4$eyes</code> with the contents of the object <code>green</code>, not the character vector <code>"green"</code>.</li>
+<li>Wrong: There is no slot named “4” in l1.</li>
 </ul>
 </div>
 </div>
@@ -364,26 +364,26 @@ $hair
 [1] "blue"</code></pre>
 </div>
 </div>
-<div id="webex-449387d662ffdaa018cf1a9f21a6d354" class="webex-radiogroup" data-answer="bwUVAxQHSAYaAjs=">
-<label><input type="radio" autocomplete="off" name="449387d662ffdaa018cf1a9f21a6d354"><span><code>names(l)[4] &lt;- "eyes"</code></span></label><label><input type="radio" autocomplete="off" name="449387d662ffdaa018cf1a9f21a6d354"><span><code>names(l)$hair &lt;- "eyes"</code></span></label><label><input type="radio" autocomplete="off" name="449387d662ffdaa018cf1a9f21a6d354"><span><code>l[4] &lt;- "eyes"</code></span></label><label><input type="radio" autocomplete="off" name="449387d662ffdaa018cf1a9f21a6d354"><span><code>l[[4]] &lt;- "eyes"</code></span></label><label><input type="radio" autocomplete="off" name="449387d662ffdaa018cf1a9f21a6d354"><span><code>l$hair &lt;- names("eyes")</code></span></label>
+<div id="webex-166834b19e03c2352a78accdf69f00e4" class="webex-radiogroup" data-answer="agYaCB8FTgEVVW0=">
+<label><input type="radio" autocomplete="off" name="166834b19e03c2352a78accdf69f00e4"><span><code>l$hair &lt;- names("eyes")</code></span></label><label><input type="radio" autocomplete="off" name="166834b19e03c2352a78accdf69f00e4"><span><code>l[4] &lt;- "eyes"</code></span></label><label><input type="radio" autocomplete="off" name="166834b19e03c2352a78accdf69f00e4"><span><code>names(l)[4] &lt;- "eyes"</code></span></label><label><input type="radio" autocomplete="off" name="166834b19e03c2352a78accdf69f00e4"><span><code>names(l)$hair &lt;- "eyes"</code></span></label><label><input type="radio" autocomplete="off" name="166834b19e03c2352a78accdf69f00e4"><span><code>l[[4]] &lt;- "eyes"</code></span></label>
 </div>
 </div>
 <div class="webex-solution">
 <p>The correct way to change the name of the value is <code>names(l)[4] &lt;- "eyes"</code></p>
 <ul>
+<li>Wrong: <code>names("eyes")</code> is <code>NULL</code> since a character string doesn’t have a name, so it will just erase the list element</li>
+<li>Wrong: This will change the value itself and not the name</li>
 <li>Correct</li>
 <li>Wrong: This will return an error since the <code>names()</code> element is a vector and not a list</li>
 <li>Wrong: This will change the value itself and not the name</li>
-<li>Wrong: This will change the value itself and not the name</li>
-<li>Wrong: <code>names("eyes")</code> is <code>NULL</code> since a character string doesn’t have a name, so it will just erase the list element</li>
 </ul>
 </div>
 </div>
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Given the list <code>l &lt;- list(a = 1, b = 2, c = 3)</code>, which statement correctly describes the difference between <code>l["a"]</code> and <code>l[["a"]]</code>?</p>
-<div id="webex-ec5bc9800f71f5bf8e55db95d539fde2" class="webex-radiogroup" data-answer="PlMZUk8IFAAcVmo=">
-<label><input type="radio" autocomplete="off" name="ec5bc9800f71f5bf8e55db95d539fde2"><span><code>l["a"]</code> causes an error, since single brackets can’t be used with names.</span></label><label><input type="radio" autocomplete="off" name="ec5bc9800f71f5bf8e55db95d539fde2"><span><code>l["a"]</code> returns the number <code>1</code>; <code>l[["a"]]</code> returns a one-element list.</span></label><label><input type="radio" autocomplete="off" name="ec5bc9800f71f5bf8e55db95d539fde2"><span><code>l["a"]</code> returns a one-element list; <code>l[["a"]]</code> returns just the number <code>1</code>.</span></label><label><input type="radio" autocomplete="off" name="ec5bc9800f71f5bf8e55db95d539fde2"><span><code>l["a"]</code> and <code>l[["a"]]</code> always return exactly the same thing.</span></label><label><input type="radio" autocomplete="off" name="ec5bc9800f71f5bf8e55db95d539fde2"><span><code>l[["a"]]</code> can select multiple named slots at once, while <code>l["a"]</code> cannot.</span></label>
+<div id="webex-e58c46d52fdb2fe9842b5b3878113ca9" class="webex-radiogroup" data-answer="PgQUUxgGSAUeVjk=">
+<label><input type="radio" autocomplete="off" name="e58c46d52fdb2fe9842b5b3878113ca9"><span><code>l["a"]</code> returns a one-element list; <code>l[["a"]]</code> returns just the number <code>1</code>.</span></label><label><input type="radio" autocomplete="off" name="e58c46d52fdb2fe9842b5b3878113ca9"><span><code>l[["a"]]</code> can select multiple named slots at once, while <code>l["a"]</code> cannot.</span></label><label><input type="radio" autocomplete="off" name="e58c46d52fdb2fe9842b5b3878113ca9"><span><code>l["a"]</code> causes an error, since single brackets can’t be used with names.</span></label><label><input type="radio" autocomplete="off" name="e58c46d52fdb2fe9842b5b3878113ca9"><span><code>l["a"]</code> and <code>l[["a"]]</code> always return exactly the same thing.</span></label><label><input type="radio" autocomplete="off" name="e58c46d52fdb2fe9842b5b3878113ca9"><span><code>l["a"]</code> returns the number <code>1</code>; <code>l[["a"]]</code> returns a one-element list.</span></label>
 </div>
 </div>
 <div class="webex-solution">

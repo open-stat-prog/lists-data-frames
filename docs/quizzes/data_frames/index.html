@@ -72,19 +72,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-div.callout-reading.callout {
-  border-left-color: purple;
-}
-div.callout-reading.callout-style-default > .callout-header {
-  background-color: rgb(from purple r g b / 13%);
-}
-div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
-  background-image: none;
-}
 div.callout-practice.callout {
   border-left-color: green;
 }
@@ -96,6 +83,19 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f085' !important;
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: orange;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f0c1' !important;
   background-image: none;
 }
 div.callout-reading-advanced.callout {
@@ -111,17 +111,17 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
   content: '\f518' !important;
   background-image: none;
 }
-div.callout-resource.callout {
-  border-left-color: orange;
+div.callout-reading.callout {
+  border-left-color: purple;
 }
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgb(from orange r g b / 13%);
+div.callout-reading.callout-style-default > .callout-header {
+  background-color: rgb(from purple r g b / 13%);
 }
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f0c1' !important;
+  content: '\f518' !important;
   background-image: none;
 }
 </style>
@@ -355,17 +355,17 @@ Note
 </div>
 </div>
 <p>How can we extract the <code>name</code> column and return the selection as a <em>character vector</em>?</p>
-<div id="webex-11142df2e0fe442342f6010e3bcc772f" class="webex-checkboxgroup" data-answer="agEdBR5USgJJADs=">
-<label><input type="checkbox" autocomplete="off" name="11142df2e0fe442342f6010e3bcc772f"><span><code>df["name", ]</code></span></label><label><input type="checkbox" autocomplete="off" name="11142df2e0fe442342f6010e3bcc772f"><span><code>df[ , 1]</code></span></label><label><input type="checkbox" autocomplete="off" name="11142df2e0fe442342f6010e3bcc772f"><span><code>df[1, ]</code></span></label><label><input type="checkbox" autocomplete="off" name="11142df2e0fe442342f6010e3bcc772f"><span><code>df[1:2]</code></span></label><label><input type="checkbox" autocomplete="off" name="11142df2e0fe442342f6010e3bcc772f"><span><code>df[[2]]</code></span></label>
+<div id="webex-f6149023516ca87dd8fd039ec76795ec" class="webex-checkboxgroup" data-answer="PQYdBBUBHgIZAGs=">
+<label><input type="checkbox" autocomplete="off" name="f6149023516ca87dd8fd039ec76795ec"><span><code>df[1, ]</code></span></label><label><input type="checkbox" autocomplete="off" name="f6149023516ca87dd8fd039ec76795ec"><span><code>df["name", ]</code></span></label><label><input type="checkbox" autocomplete="off" name="f6149023516ca87dd8fd039ec76795ec"><span><code>df[ , "name"]</code></span></label><label><input type="checkbox" autocomplete="off" name="f6149023516ca87dd8fd039ec76795ec"><span><code>df[ , 1]</code></span></label><label><input type="checkbox" autocomplete="off" name="f6149023516ca87dd8fd039ec76795ec"><span><code>df[[1]]</code></span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
+<li>Wrong: This command will return the first row of <code>df</code> as a <span class="math inline">\(1 \times 4\)</span> data frame.</li>
 <li>Wrong: This command will try to return a row called “name” and fail because there is no such row in <code>df</code>.</li>
 <li>Correct</li>
-<li>Wrong: This command will return the first row of <code>df</code> as a <span class="math inline">\(1 \times 4\)</span> data frame.</li>
-<li>Wrong: This command will return the <code>name</code> and <code>age</code> columns as a <span class="math inline">\(4 \times 2\)</span> data frame.</li>
-<li>Wrong: This command will return the <code>age</code> column as a numeric vector.</li>
+<li>Correct</li>
+<li>Correct</li>
 </ul>
 </div>
 </div>
@@ -382,17 +382,17 @@ Note
 </div>
 </div>
 <p>How can we extract the <code>height</code> column and return the selection as a <em>data frame</em>?</p>
-<div id="webex-e81f25e8fd70ecccc093e1d8e0163186" class="webex-checkboxgroup" data-answer="PgkdVh4FSQhKVGo=">
-<label><input type="checkbox" autocomplete="off" name="e81f25e8fd70ecccc093e1d8e0163186"><span><code>df["height"]</code></span></label><label><input type="checkbox" autocomplete="off" name="e81f25e8fd70ecccc093e1d8e0163186"><span><code>df[[2]]</code></span></label><label><input type="checkbox" autocomplete="off" name="e81f25e8fd70ecccc093e1d8e0163186"><span><code>df[ , 3]</code></span></label><label><input type="checkbox" autocomplete="off" name="e81f25e8fd70ecccc093e1d8e0163186"><span><code>df[ , "height"]</code></span></label><label><input type="checkbox" autocomplete="off" name="e81f25e8fd70ecccc093e1d8e0163186"><span><code>df[[3]]</code></span></label>
+<div id="webex-2e3dd25c23b087e10dec701986773153" class="webex-checkboxgroup" data-answer="aVUfVUgCGVMeAz8=">
+<label><input type="checkbox" autocomplete="off" name="2e3dd25c23b087e10dec701986773153"><span><code>df[2:3]</code></span></label><label><input type="checkbox" autocomplete="off" name="2e3dd25c23b087e10dec701986773153"><span><code>df[3]</code></span></label><label><input type="checkbox" autocomplete="off" name="2e3dd25c23b087e10dec701986773153"><span><code>df[3, ]</code></span></label><label><input type="checkbox" autocomplete="off" name="2e3dd25c23b087e10dec701986773153"><span><code>df[ , "height"]</code></span></label><label><input type="checkbox" autocomplete="off" name="2e3dd25c23b087e10dec701986773153"><span><code>df[[2]]</code></span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
+<li>Wrong: This command will return the <code>age</code> and <code>height</code> columns as a <span class="math inline">\(4 \times 2\)</span> data frame.</li>
 <li>Correct</li>
+<li>Wrong: This command will return the third row of <code>df</code> as a <span class="math inline">\(1 \times 4\)</span> data frame.</li>
+<li>Wrong: This command will return the <code>height</code> column as a numeric vector.</li>
 <li>Wrong: This command will return the <code>age</code> column as a numeric vector.</li>
-<li>Wrong: This command will return the <code>height</code> column as a numeric vector.</li>
-<li>Wrong: This command will return the <code>height</code> column as a numeric vector.</li>
-<li>Wrong: This command will return the <code>height</code> column as a numeric vector.</li>
 </ul>
 </div>
 </div>
@@ -408,7 +408,7 @@ Note
 4 steve  26    183 black</code></pre>
 </div>
 </div>
-<p><input class="webex-solveme" id="webex-11fa10ed1744b5877171e25e47dfb19f" size="20" data-answer="ahMCB2oBSTkTag=="></p>
+<p><input class="webex-solveme" id="webex-90910a8ce51878f856204cec86e3fdad" size="20" data-answer="YhJdV2tQFD5HaA=="></p>
 </div>
 <div class="webex-solution">
 <p>We have to select the first row of the data frame, and we can do this using <code>df[1,]</code></p>
@@ -417,8 +417,8 @@ Note
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Which of the following statements about data frames is correct?</p>
-<div id="webex-768e60ca616b43957b57ca78aa2b7773" class="webex-radiogroup" data-answer="bAYUVBoAT1EaAWs=">
-<label><input type="radio" autocomplete="off" name="768e60ca616b43957b57ca78aa2b7773"><span>A data frame is a list, but its columns can have different lengths, unlike a matrix’s columns.</span></label><label><input type="radio" autocomplete="off" name="768e60ca616b43957b57ca78aa2b7773"><span>A data frame is a special kind of list, where each slot holds a column vector, and all those vectors must have the same length.</span></label><label><input type="radio" autocomplete="off" name="768e60ca616b43957b57ca78aa2b7773"><span>A data frame is a special kind of matrix that happens to allow different column types.</span></label><label><input type="radio" autocomplete="off" name="768e60ca616b43957b57ca78aa2b7773"><span>A data frame and a matrix are the same underlying object type, just printed differently.</span></label><label><input type="radio" autocomplete="off" name="768e60ca616b43957b57ca78aa2b7773"><span>A data frame has nothing in common with either lists or matrices — it’s a completely separate object type.</span></label>
+<div id="webex-bb427cd2115d15be916e6e349d211555" class="webex-radiogroup" data-answer="OVIYAxtTSAIdAWg=">
+<label><input type="radio" autocomplete="off" name="bb427cd2115d15be916e6e349d211555"><span>A data frame is a list, but its columns can have different lengths, unlike a matrix’s columns.</span></label><label><input type="radio" autocomplete="off" name="bb427cd2115d15be916e6e349d211555"><span>A data frame is a special kind of list, where each slot holds a column vector, and all those vectors must have the same length.</span></label><label><input type="radio" autocomplete="off" name="bb427cd2115d15be916e6e349d211555"><span>A data frame and a matrix are the same underlying object type, just printed differently.</span></label><label><input type="radio" autocomplete="off" name="bb427cd2115d15be916e6e349d211555"><span>A data frame is a special kind of matrix that happens to allow different column types.</span></label><label><input type="radio" autocomplete="off" name="bb427cd2115d15be916e6e349d211555"><span>A data frame has nothing in common with either lists or matrices. It’s a completely separate object type.</span></label>
 </div>
 </div>
 <div class="webex-solution">
@@ -428,8 +428,8 @@ Note
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>You have a data frame <code>d</code> with 10 rows. You run <code>d[1:2] &lt;- 1:3</code> (attempting to replace the first two columns using a length-3 replacement vector), and R raises an error. Why?</p>
-<div id="webex-0bdc143b73fe1890bf0c804cd3e4c64e" class="webex-radiogroup" data-answer="a1JIUx0EH1MbAzs=">
-<label><input type="radio" autocomplete="off" name="0bdc143b73fe1890bf0c804cd3e4c64e"><span>Because the replacement vector must always be named.</span></label><label><input type="radio" autocomplete="off" name="0bdc143b73fe1890bf0c804cd3e4c64e"><span>Because <code>d[1:2] &lt;-</code> can only ever replace exactly one column at a time.</span></label><label><input type="radio" autocomplete="off" name="0bdc143b73fe1890bf0c804cd3e4c64e"><span>Because 3 is larger than 2 (the number of columns being replaced).</span></label><label><input type="radio" autocomplete="off" name="0bdc143b73fe1890bf0c804cd3e4c64e"><span>Because replacing 2 columns of 10 rows needs 20 values total, and 3 does not evenly divide 20, so R can’t recycle the replacement vector without leaving a “leftover,” ambiguous partial fill.</span></label><label><input type="radio" autocomplete="off" name="0bdc143b73fe1890bf0c804cd3e4c64e"><span>Because you can never use a numeric vector to replace data frame columns.</span></label>
+<div id="webex-694132eb6f977d817738c5a63f68092e" class="webex-radiogroup" data-answer="bQkYAR8CSVMaVmQ=">
+<label><input type="radio" autocomplete="off" name="694132eb6f977d817738c5a63f68092e"><span>Because you can never use a numeric vector to replace data frame columns.</span></label><label><input type="radio" autocomplete="off" name="694132eb6f977d817738c5a63f68092e"><span>Because the replacement vector must always be named.</span></label><label><input type="radio" autocomplete="off" name="694132eb6f977d817738c5a63f68092e"><span>Because <code>d[1:2] &lt;-</code> can only ever replace exactly one column at a time.</span></label><label><input type="radio" autocomplete="off" name="694132eb6f977d817738c5a63f68092e"><span>Because replacing 2 columns of 10 rows needs 20 values total, and 3 does not evenly divide 20, so R can’t recycle the replacement vector without leaving a “leftover,” ambiguous partial fill.</span></label><label><input type="radio" autocomplete="off" name="694132eb6f977d817738c5a63f68092e"><span>Because 3 is larger than 2 (the number of columns being replaced).</span></label>
 </div>
 </div>
 <div class="webex-solution">
