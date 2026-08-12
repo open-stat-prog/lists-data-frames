@@ -1,0 +1,27 @@
+Question
+========
+Given the list `l <- list(a = 1, b = 2, c = 3)`, which statement correctly describes the difference between `l["a"]`
+and `l[["a"]]`?
+
+Answerlist
+----------
+* `l["a"]` returns a one-element list; `l[["a"]]` returns just the number `1`.
+* `l["a"]` and `l[["a"]]` always return exactly the same thing.
+* `l["a"]` returns the number `1`; `l[["a"]]` returns a one-element list.
+* `l["a"]` causes an error, since single brackets can't be used with names.
+* `l[["a"]]` can select multiple named slots at once, while `l["a"]` cannot.
+
+Solution
+========
+Single brackets (`[]`) always preserve the list "wrapper" around the result, even when selecting just one slot. So
+`l["a"]` returns a one-element *list*. Double brackets (`[[]]`) reach inside and return the actual *contents* of a
+single slot. So `l[["a"]]` returns the plain number `1`. This distinction matters constantly in real R code: if a
+function unexpectedly receives a list instead of the value you meant to pass it, mixing up `[]` and `[[]]` is a very
+common cause.
+
+Meta-information
+================
+exname: List Selection Operators
+extype: schoice
+exsolution: 10000
+exshuffle: TRUE

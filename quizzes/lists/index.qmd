@@ -1,0 +1,26 @@
+---
+title: "Knowledge Quiz: Lists"
+---
+
+::: {.column-margin}
+
+:::: {.callout-note}
+- Click the check-mark button to check your answer.
+- Click the question-mark button to see an explanation of the solution.
+::::
+
+:::
+
+```{r lists_quiz}
+#| echo: FALSE
+#| results: "asis"
+
+exams2forms::exams2forms(
+  file = list(
+    "list_change.Rmd",
+    "list_name.Rmd",
+    "selection_operators.Rmd"
+  ),
+  edir = here::here("quizzes", "lists", "questions")
+)
+```

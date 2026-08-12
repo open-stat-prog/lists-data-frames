@@ -1,0 +1,103 @@
+---
+title: "Conclusion"
+format:
+  html: 
+    toc: false
+    link-external-icon: true
+    link-external-newwindow: true
+    link-external-filter: ^(?:http:|https:)\/\/www\.openstatprog\.com
+---
+
+```{r include = FALSE}
+source(here::here("R", "buttons.R"))
+```
+
+By completing this module, you've built a solid foundation in understanding two more of R's essential data
+structures:
+
+- Lists
+- Data Frames
+
+## Hand-In Assignment
+
+::: practice
+
+## Lists & Data Frames Capstone Assignment
+
+Complete each step below in your own R session, then submit your work (see "What to Hand In" below).
+
+1. **Create a list.** Build a list called `book` describing a book of your choice, with named slots for `title`
+   (character), `pages` (numeric), and `finished` (logical, whether you've read it).
+1. **Access and explain.** Access the `pages` slot of `book` two different ways (e.g., using `$` and `[[]]`). In a
+   comment, explain why `book["pages"]` would *not* give you the same kind of result as `book[["pages"]]` or
+   `book$pages`.
+1. **Create a data frame.** Build a data frame called `books` with (at least) 4 rows and 3 columns: `title`
+   (character), `pages` (numeric), and `finished` (logical) — you can make up the data.
+1. **Select and modify.** Using indexing (your choice of list-style or matrix-style), select all books in `books`
+   where `pages` is greater than some threshold of your choosing, and change their `finished` value to `TRUE`.
+1. **Conceptual explanation.** In a comment, explain in your own words how `books` (a data frame) is related to
+   `book` (a list) — specifically, what makes a data frame a *special case* of a list rather than something entirely
+   different.
+
+### What to Hand In
+
+Save all of your commands, in the order you ran them, in a single plain-text or R script file (e.g.
+`yourname_lists-data-frames.R`), including both required comments. Submit the file however your instructor has
+requested.
+
+A teacher reviewing your submission should be able to see: a correctly constructed list, two working (and correctly
+explained) list-access methods, a correctly constructed data frame, correct conditional selection/modification, and a
+clear explanation of the list–data-frame relationship in your own words.
+
+:::
+
+## Learning Goals
+
+Now that you've completed this module, you should be able to:
+
+### Lists
+
+1. Describe the characteristics of an R list.
+1. Describe important use-cases for lists, and explain why lists are the best choice in these situations.
+1. Create new lists in R.
+1. Access and modify list elements using different methods and explain the difference between the available
+   selection operators.
+
+### Data Frames
+
+1. Describe the characteristics of data frames.
+1. Explain important use-cases for data frames, and explain why data frames are the best choice in these situations.
+1. Explain how data frames and lists are related.
+1. Explain the differences between data frames and matrices.
+1. Create new data frames in R.
+1. Use list-style and matrix-style indexing to access and modify the elements of a data frame.
+1. Explain the different effects of the available selection operators.
+1. Explain how recycling works with data frames.
+
+## Additional Reading
+
+For more information on the topics we've covered in this module, the following resources are excellent starting
+points.
+
+- [Lists](https://r4ds.hadley.nz/vectors.html#lists) and [Data Frames](https://r4ds.hadley.nz/data-structures.html)
+  chapters from Hadley Wickham's *R for Data Science*.
+- [Tibbles](https://r4ds.hadley.nz/data-import.html) for more on the tibble variant briefly previewed in this module.
+
+### Advanced Reading
+
+For a much more technical deep-dive into the topics we've covered in this module, check out the following chapter
+from Hadley Wickham's [Advanced R](https://adv-r.hadley.nz/index.html).
+
+- [Subsetting](https://adv-r.hadley.nz/subsetting.html)
+
+## Next Steps 
+
+Now that you're comfortable with lists and data frames, you're ready to move on to the last data structure in this
+series: factors, which R uses to represent categorical data.
+
+```{r}
+#| echo: false
+#| results: asis
+
+next_module_button("https://www.openstatprog.com/factors/index.html")
+```

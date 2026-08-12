@@ -1,0 +1,28 @@
+---
+title: "Knowledge Quiz: Data Frames"
+---
+
+::: {.column-margin}
+
+:::: {.callout-note}
+- Click the check-mark button to check your answer.
+- Click the question-mark button to see an explanation of the solution.
+::::
+
+:::
+
+```{r df_quiz}
+#| echo: FALSE
+#| results: "asis"
+
+exams2forms::exams2forms(
+  file = list(
+    "return_column_as_vector.Rmd",
+    "return_column_as_df.Rmd",
+    "select_row.Rmd",
+    "relationships.Rmd",
+    "recycling_concept.Rmd"
+  ),
+  edir = here::here("quizzes", "data_frames", "questions")
+)
+```

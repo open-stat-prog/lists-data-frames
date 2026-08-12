@@ -1,0 +1,103 @@
+---
+title: "Creating Data Frames"
+---
+
+::: {.callout-note}
+This page is hands-on: constructing data frames with columns of different types.
+:::
+
+We create data frames using the `data.frame()` function. This function takes vectors as arguments, and each vector
+becomes a column in the resulting data frame. 
+
+In the following code, we create a data frame called `d1` that contains 10 rows and 3 columns.
+
+1. The first column is the integer sequence from 1 to 10
+1. The second column alternates between -1 and 1
+1. The third column contains the sequence $\{0.1, 0.2, \ldots, 1.0\}$.
+
+```{r}
+(d1 <- data.frame(1:10, c(-1, 1), seq(0.1, 1, 0.1)))
+```
+
+Since we did not name the arguments to `data.frame()` when creating `d1`, R generated default (ugly) column names by
+parsing the argument values. 
+
+```{r}
+colnames(d1)
+```
+
+We can assign our own column names by naming the arguments to `data.frame()`.
+
+```{r}
+# Generate a version of d1 with better column names
+(d2 <- data.frame(x = 1:10, y = c(-1, 1), z = seq(0.1, 1, 0.1)))
+```
+
+We can also assign column names to an existing data frame using the `names()` or `colnames()` functions.
+
+```{r}
+names(d1) <- c("foo", "bar", "baz")
+d1
+
+colnames(d1) <- c("alice", "bob", "suzy")
+d1
+```
+
+One of the greatest strengths of data frames is their ability to store heterogeneously typed columns. For example, in
+the following code, we create a data frame called `d3` that comprises three uniquely typed columns.
+
+a. A logical vector containing 10 randomly sampled boolean values.
+a. A character vector containing 10 random selections from the set {"foo", "bar"}.
+a. A numeric vector containing 10 values randomly sampled from the interval [0, 1].
+
+```{r}
+(d3 <- data.frame(a = sample(c(TRUE, FALSE), 10, replace = TRUE),
+                  b = sample(c("foo", "bar"), 10, replace = TRUE),
+                  c = runif(10)))
+```
+
+If we want to quickly generate an empty data frame, we can supply a matrix as the sole argument to `data.frame()`.
+
+```{r}
+(d4 <- data.frame(matrix(NA, 10, 3)))
+```
+
+::: practice
+
+## Practice
+
+Create a data frame containing 7 observations of 3 variables.
+
+- Use a different type for each of the variables.
+
+:::: {.panel-tabset}
+
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+
+```
+
+## {{< var tab_title.solution >}}
+
+There are an infinite number of correct solutions to this problem (literally). The following is one possibility.
+
+```{r}
+df <- data.frame(text = rep("text", 7),
+                 integer = sample(1:10, 7, replace = TRUE),
+                 complex = complex(7, 1:5, 1:3)
+                 )
+df
+```
+
+::::
+
+:::
+
+## Quick Check
+
+- What determines the column names when you don't explicitly name the arguments to `data.frame()`?
+- Can two columns in the same data frame have different types? Can they have different lengths? Why or why not?
+
+```{webr-r}
+```

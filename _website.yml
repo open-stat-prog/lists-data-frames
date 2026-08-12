@@ -1,0 +1,58 @@
+website:
+
+  title: "OSP Lists & Data Frames"
+
+  site-url: "https://www.openstatprog.com/lists-data-frames/"
+
+  page-navigation: true
+
+  back-to-top-navigation: true
+
+  navbar:
+    title: false
+    background: primary
+    foreground: dark
+    left:
+      - href: "https://www.openstatprog.com"
+        text: "Open-Stat-Prog"
+      - href: index.qmd
+    tools:
+      - icon: github
+        menu:
+          - text: Source Code
+            href: https://github.com/open-stat-prog/lists-data-frames
+          - text: Report a Bug
+            href: https://github.com/open-stat-prog/lists-data-frames/issues
+
+  sidebar:
+    style: "floating"
+    collapse-level: 1
+    contents:
+      - href: index.qmd
+        text: "Overview"
+      - section: tutorials/lists/index.qmd
+        text: "Lists"
+        contents:
+        - href: tutorials/lists/creating.qmd
+        - href: tutorials/lists/manipulating.qmd
+        - href: quizzes/lists/index.qmd
+          text: "Knowledge Quiz"
+      - section: tutorials/data_frames/index.qmd
+        text: "Data Frames"
+        contents:
+          - href: tutorials/data_frames/creating.qmd
+          - href: tutorials/data_frames/manipulating.qmd
+          - href: tutorials/data_frames/tibbles.qmd
+          - href: quizzes/data_frames/index.qmd
+            text: "Knowledge Quiz"
+      - href: conclusion.qmd
+
+  page-footer:
+    background: primary
+    foreground: dark
+    left: |
+      [![](/assets/images/UU_logo_2021_EN_BLACK.png){fig-alt="UU" width=200px}](https://uu.nl) 
+    right: 
+      - text: "&copy; 2026"
+      - href: "https://github.com/open-stat-prog"
+        text: Open-Stat-Prog

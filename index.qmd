@@ -1,0 +1,57 @@
+---
+title: "Lists & Data Frames"
+page-navigation: false
+format:
+  html: 
+    toc: false
+---
+
+```{r, echo = FALSE, include = FALSE}
+source(here::here("R", "buttons.R"))
+```
+
+::: {.callout-tip}
+
+## ⏱ Estimated Time to Complete **About 100–130 minutes**.
+
+:::
+
+In this module, we'll cover two more of R's essential data structures: **lists** and **data frames**. Where vectors
+and matrices (covered in the previous module) require every element to share the same type, lists and data frames
+are built specifically to hold *mixed* types of data — which is exactly what most real-world datasets look like.
+
+Content is split into two tutorials:
+
+1. [Lists](/tutorials/lists/index.qmd)
+1. [Data Frames](/tutorials/data_frames/index.qmd) (including a short, optional preview of *tibbles*)
+
+## Learning Goals
+
+After completing this module, you will be able to:
+
+### Lists
+
+1. Describe the characteristics of an R list
+1. Describe important use-cases for lists, and explain why lists are the best choice in these situations.
+1. Create new lists in R.
+1. Access and modify list elements using different methods, and explain the difference between the available
+   selection operators.
+
+### Data Frames
+
+1. Describe the characteristics of data frames. 
+1. Explain important use-cases for data frames, and explain why data frames are the best choice in these situations.
+1. Explain how data frames and lists are related. 
+1. Explain the differences between data frames and matrices. 
+1. Create new data frames in R.
+1. Use list-style and matrix-style indexing to access and modify the elements of a data frame.
+1. Explain the different effects of the available selection operators.
+1. Explain how recycling works with data frames.
+
+Click the button below to get started with the first tutorial.
+
+```{r}
+#| echo: false
+#| results: asis
+begin_button("/tutorials/lists/index.html")
+```

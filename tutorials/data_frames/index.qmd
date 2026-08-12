@@ -1,0 +1,118 @@
+---
+title: "Data Frames"
+---
+
+::: {.callout-note}
+
+## Learning Outcomes
+
+By the end of this tutorial, you will be able to:
+
+- **Describe** the characteristics of data frames.
+- **Explain** important use-cases for data frames, and explain why data frames are the best choice in these
+  situations.
+- **Explain** how data frames and lists are related. 
+- **Explain** the differences between data frames and matrices.
+- **Create** new data frames in R.
+- **Use** list-style and matrix-style indexing to access and modify the elements of a data frame, and explain the
+  different effects of the available selection operators. 
+- **Explain** how recycling works with data frames.
+
+:::
+
+Data frames are one of the most useful data structures in R, at least when it comes to real-world data analysis. A data
+frame is a two-dimensional, tabular object wherein the columns must be the same length, but they can contain different
+types of data. This structure closely mirrors the layout of rectangular, spreadsheet-style datasets, so data frames are
+the natural choice for storing and manipulating real-world datasets in most data analytic projects — anywhere you'd
+reach for a spreadsheet, a data frame is usually the R equivalent.
+
+## Data Frames Are Actually Lists
+
+Interestingly, data frames are actually implemented as a special case of lists. Each column in a data frame is an
+element of a list, but all of these list elements must be vector-like objects (not necessarily atomic vectors, though)
+with equal length. In other words, a data frame is just a list where each slot contains a vector representing one column
+in the data frame, but with additional constraints and attributes that allow it to behave like a 2 dimensional table.
+
+```{r}
+d1 <- data.frame(a = sample(c(TRUE, FALSE), 10, replace = TRUE),
+                 b = sample(c("foo", "bar"), 10, replace = TRUE),
+                 c = runif(10)
+                 )
+d2 <- data.frame(a = 1:10, b = c(-1, 1), c = seq(0.1, 1, 0.1))
+d3 <- data.frame(x = -5:4, y = c(1, 10), z = seq(1, 1.5, length.out = 10))
+
+# d1, d2, and d3 are all data frame.
+is.data.frame(d1)
+is.data.frame(d2)
+is.data.frame(d3)
+
+# But they're also lists
+is.list(d1)
+is.list(d2)
+is.list(d3)
+```
+
+All data frames are lists, but not all lists need be data frames.
+
+```{r}
+l1 <- list()
+l2 <- list(a = sample(c(TRUE, FALSE), 10, replace = TRUE),
+           b = sample(c("foo", "bar"), 10, replace = TRUE),
+           c = runif(10)
+           )
+l3 <- list(d2, d3)
+
+# l1, l2, and l3 are all lists
+is.list(l1)
+is.list(l2)
+is.list(l3)
+
+# But they're not data frames
+is.data.frame(l1)
+is.data.frame(l2)
+is.data.frame(l3)
+```
+
+## Data Frames Are Not Matrices
+
+As you have probably surmised, data frames are not matrices. Although data frames and matrices share many superficial
+similarities, they're almost entirely unrelated types of objects.
+
+```{r}
+is.matrix(d1)
+is.matrix(d2)
+is.matrix(d3)
+```
+
+Consequently, you cannot apply matrix operations (such as matrix multiplication) to a data frame.
+
+```{r error = TRUE}
+d2 %*% t(d3)
+```
+
+If you wanted to analyze a data frame like a matrix, you could *type cast* the data frame into a matrix using the
+`as.matrix()` function.
+
+```{r}
+as.matrix(d2) %*% t(as.matrix(d3))
+```
+
+You should be carefully about any type conversions. If you're data frame contains mixed column types, R will coerce every
+column into some compatible type, the same coercion rule you learned about back in the Vectors tutorial, just
+applied across an entire data frame at once.
+
+```{r}
+(m1 <- as.matrix(d1))
+typeof(m1)
+
+(d4 <- data.frame(x = rep(c(TRUE, FALSE), 3), y = runif(6)))
+(m4 <- as.matrix(d4))
+typeof(m4)
+```
+
+## Quick Check
+
+- In one sentence: how is a data frame related to a list?
+- Why can't you do `d2 %*% t(d3)` directly on two data frames?
+- If a data frame has one text column and one numeric column, what happens if you convert it to a matrix with
+  `as.matrix()`? Why?

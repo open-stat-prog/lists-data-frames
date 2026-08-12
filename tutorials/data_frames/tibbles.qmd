@@ -1,0 +1,82 @@
+---
+title: "Tibbles: A Modern Data Frame"
+knitr:
+  opts_chunk:
+    eval: true
+---
+
+::: {.callout-note}
+The goal is to recognize tibbles and describe how they relate to ordinary data frames, not to master a new syntax. None of the code on this page needs to run for you to get the point. Read it, and try it yourself later once you've installed the **tibble** package (or the tidyverse, which includes it).
+:::
+
+::: {.callout-tip}
+
+## Optional Page
+
+This page is a brief preview, not a required part of the module's learning outcomes. Feel free to skim it now and
+come back later once you've had more practice with ordinary data frames.
+
+:::
+
+As you continue working with R, especially once you start using packages from the [tidyverse](https://www.tidyverse.org/)
+(like **dplyr** or **ggplot2**), you'll frequently encounter a variant of the data frame called a **tibble**. A tibble
+is provided by the **tibble** package, and it's designed to behave like a data frame in almost every way, while
+smoothing over a few behaviors that regularly surprise beginners.
+
+## Creating a Tibble
+
+We create tibbles with the `tibble()` function, which works almost identically to `data.frame()`.
+
+```{r}
+library(tibble)
+
+t1 <- tibble(x = 1:5, y = c("a", "b", "c", "d", "e"))
+t1
+```
+
+If you ran this yourself, you'd notice the printed output already looks a little different from an ordinary data
+frame. Tibbles print the number of rows and columns, and show each column's type right under its name.
+
+## How Tibbles Differ From Data Frames
+
+Tibbles are still data frames underneath (in fact, `is.data.frame()` returns `TRUE` for a tibble). They change a
+few specific behaviors, not the fundamental structure:
+
+```{r}
+is.data.frame(t1)
+class(t1)
+```
+
+- **Tibbles never simplify on selection.** Remember how selecting a single column from a data frame using
+  matrix-style indexing (`d1[, 1]`) automatically "dropped" the result down to a plain vector? Tibbles don't do that.
+  `t1[, 1]` always returns a one-column tibble, never a bare vector. This removes a common source of unexpected
+  behavior in longer scripts.
+- **Tibbles don't do partial column-name matching.** With an ordinary data frame, `df$he` might accidentally match a
+  column called `height` if there's no exact match. Tibbles require an exact match, which helps catch typos early.
+- **Tibbles print more safely.** Printing a large ordinary data frame dumps every row to your console. Tibbles print
+  only the first several rows by default, along with each column's type — much friendlier for big datasets.
+
+```{r}
+# Compare: selecting one column with matrix-style indexing
+d1 <- data.frame(x = 1:5, y = letters[1:5])
+
+class(d1[, 1])  # a data frame "drops" to a vector
+class(t1[, 1])  # a tibble does not drop
+```
+
+## Converting Between the Two
+
+You can convert freely between ordinary data frames and tibbles.
+
+```{r}
+# Convert a data frame to a tibble
+as_tibble(d1)
+
+# Convert a tibble to an ordinary data frame
+as.data.frame(t1)
+```
+
+## Quick Check
+
+- Is a tibble a completely different data structure from a data frame, or a variant of one?
+- Name one specific behavior where tibbles differ from ordinary data frames, and explain why that difference exists.

@@ -1,0 +1,27 @@
+Question
+========
+Which of the following statements about data frames is correct?
+
+Answerlist
+----------
+* A data frame is a special kind of list, where each slot holds a column vector, and all those vectors must have
+  the same length.
+* A data frame is a special kind of matrix that happens to allow different column types.
+* A data frame and a matrix are the same underlying object type, just printed differently.
+* A data frame is a list, but its columns can have different lengths, unlike a matrix's columns.
+* A data frame has nothing in common with either lists or matrices — it's a completely separate object type.
+
+Solution
+========
+A data frame is implemented as a list, where every element (column) is a vector-like object, with the added
+constraint that all of those vectors must have equal length. This is exactly what gives a data frame its
+"rectangular," table-like structure while still being a list underneath. `is.list()` returns `TRUE` for every data
+frame. Data frames are *not* matrices: matrices require every element to share the same type, while data frames
+allow each column to have its own type, and the two are otherwise unrelated object types under the hood.
+
+Meta-information
+================
+exname: Data Frame Relationships
+extype: schoice
+exsolution: 10000
+exshuffle: TRUE
