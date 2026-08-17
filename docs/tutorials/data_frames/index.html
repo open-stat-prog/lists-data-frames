@@ -133,19 +133,6 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
   content: '\f518' !important;
   background-image: none;
 }
-div.callout-resource.callout {
-  border-left-color: orange;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgb(from orange r g b / 13%);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f0c1' !important;
-  background-image: none;
-}
 div.callout-reading.callout {
   border-left-color: purple;
 }
@@ -157,6 +144,19 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f518' !important;
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: orange;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f0c1' !important;
   background-image: none;
 }
 </style>
@@ -491,17 +491,17 @@ Learning Outcomes
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>(m1 <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(d1))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>      a       b     c          
- [1,] "FALSE" "foo" "0.9644394"
- [2,] "TRUE"  "bar" "0.1239507"
- [3,] "FALSE" "bar" "0.8535739"
- [4,] "TRUE"  "bar" "0.8982143"
- [5,] "FALSE" "bar" "0.5799132"
- [6,] "FALSE" "foo" "0.7639568"
- [7,] "FALSE" "bar" "0.4564456"
- [8,] "TRUE"  "bar" "0.9420337"
- [9,] "TRUE"  "bar" "0.6803142"
-[10,] "FALSE" "foo" "0.7407377"</code></pre>
+<pre><code>      a       b     c           
+ [1,] "FALSE" "bar" "0.60430156"
+ [2,] "TRUE"  "bar" "0.74295005"
+ [3,] "TRUE"  "bar" "0.54698522"
+ [4,] "FALSE" "foo" "0.51269063"
+ [5,] "FALSE" "foo" "0.53852420"
+ [6,] "TRUE"  "bar" "0.03316637"
+ [7,] "TRUE"  "bar" "0.84933565"
+ [8,] "TRUE"  "foo" "0.53671100"
+ [9,] "FALSE" "foo" "0.70549778"
+[10,] "FALSE" "foo" "0.10842836"</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(m1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -509,23 +509,23 @@ Learning Outcomes
 </div>
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>(d4 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>), <span class="dv">3</span>), <span class="at">y =</span> <span class="fu">runif</span>(<span class="dv">6</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>      x          y
-1  TRUE 0.06835325
-2 FALSE 0.54079133
-3  TRUE 0.99494377
-4 FALSE 0.64897026
-5  TRUE 0.19514212
-6 FALSE 0.41716505</code></pre>
+<pre><code>      x         y
+1  TRUE 0.4304682
+2 FALSE 0.9958951
+3  TRUE 0.4419986
+4 FALSE 0.6827133
+5  TRUE 0.9502714
+6 FALSE 0.7517179</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>(m4 <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(d4))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>     x          y
-[1,] 1 0.06835325
-[2,] 0 0.54079133
-[3,] 1 0.99494377
-[4,] 0 0.64897026
-[5,] 1 0.19514212
-[6,] 0 0.41716505</code></pre>
+<pre><code>     x         y
+[1,] 1 0.4304682
+[2,] 0 0.9958951
+[3,] 1 0.4419986
+[4,] 0 0.6827133
+[5,] 1 0.9502714
+[6,] 0 0.7517179</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(m4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">

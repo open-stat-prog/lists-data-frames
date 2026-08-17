@@ -1660,19 +1660,6 @@ globalThis.qwebrExecuteCode = async function (
 
 </script>
 <style>
-div.callout-reading-advanced.callout {
-  border-left-color: red;
-}
-div.callout-reading-advanced.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
-}
-div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
-  background-image: none;
-}
 div.callout-reading.callout {
   border-left-color: purple;
 }
@@ -1686,17 +1673,17 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
   content: '\f518' !important;
   background-image: none;
 }
-div.callout-resource.callout {
-  border-left-color: orange;
+div.callout-reading-advanced.callout {
+  border-left-color: red;
 }
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgb(from orange r g b / 13%);
+div.callout-reading-advanced.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
 }
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f0c1' !important;
+  content: '\f518' !important;
   background-image: none;
 }
 div.callout-practice.callout {
@@ -1710,6 +1697,19 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f085' !important;
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: orange;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f0c1' !important;
   background-image: none;
 }
 </style>
@@ -2306,17 +2306,17 @@ Note
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>                  <span class="at">b =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"foo"</span>, <span class="st">"bar"</span>), <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>                  <span class="at">c =</span> <span class="fu">runif</span>(<span class="dv">10</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>       a   b         c
-1  FALSE foo 0.3926019
-2  FALSE bar 0.9751621
-3  FALSE bar 0.7096021
-4  FALSE foo 0.8770346
-5   TRUE foo 0.2756496
-6  FALSE bar 0.7309422
-7   TRUE foo 0.4069913
-8   TRUE bar 0.6278262
-9  FALSE bar 0.7918343
-10 FALSE foo 0.2682145</code></pre>
+<pre><code>       a   b           c
+1  FALSE bar 0.530373170
+2   TRUE bar 0.805753625
+3  FALSE foo 0.457430991
+4   TRUE bar 0.856652134
+5   TRUE foo 0.861860435
+6  FALSE bar 0.034774592
+7  FALSE bar 0.394612024
+8  FALSE foo 0.749882454
+9  FALSE foo 0.506265389
+10  TRUE bar 0.001723177</code></pre>
 </div>
 </div>
 <p>If we want to quickly generate an empty data frame, we can supply a matrix as the sole argument to <code>data.frame()</code>.</p>
@@ -2367,13 +2367,13 @@ Practice
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  text integer complex
-1 text       3    1+1i
-2 text       7    2+2i
-3 text       4    3+3i
-4 text       4    4+1i
-5 text       6    5+2i
-6 text       9    1+3i
-7 text       4    2+1i</code></pre>
+1 text       2    1+1i
+2 text      10    2+2i
+3 text       8    3+3i
+4 text       8    4+1i
+5 text       9    5+2i
+6 text      10    1+3i
+7 text       7    2+1i</code></pre>
 </div>
 </div>
 </div>

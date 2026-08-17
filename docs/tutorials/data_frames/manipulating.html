@@ -1660,32 +1660,6 @@ globalThis.qwebrExecuteCode = async function (
 
 </script>
 <style>
-div.callout-practice.callout {
-  border-left-color: green;
-}
-div.callout-practice.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
-}
-div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f085' !important;
-  background-image: none;
-}
-div.callout-reading-advanced.callout {
-  border-left-color: red;
-}
-div.callout-reading-advanced.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
-}
-div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
-  background-image: none;
-}
 div.callout-reading.callout {
   border-left-color: purple;
 }
@@ -1699,6 +1673,19 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
   content: '\f518' !important;
   background-image: none;
 }
+div.callout-practice.callout {
+  border-left-color: green;
+}
+div.callout-practice.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
+}
+div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f085' !important;
+  background-image: none;
+}
 div.callout-resource.callout {
   border-left-color: orange;
 }
@@ -1710,6 +1697,19 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f0c1' !important;
+  background-image: none;
+}
+div.callout-reading-advanced.callout {
+  border-left-color: red;
+}
+div.callout-reading-advanced.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
+}
+div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
   background-image: none;
 }
 </style>
@@ -2205,7 +2205,7 @@ Note
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>                 )</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>d1<span class="sc">$</span>b</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "bar" "foo" "bar" "bar" "foo" "foo" "foo" "foo" "bar" "foo"</code></pre>
+<pre><code> [1] "bar" "foo" "bar" "bar" "foo" "bar" "foo" "bar" "foo" "bar"</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(iris)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>iris<span class="sc">$</span>Petal.Length</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2236,11 +2236,11 @@ Note
 3  bar
 4  bar
 5  foo
-6  foo
+6  bar
 7  foo
-8  foo
-9  bar
-10 foo</code></pre>
+8  bar
+9  foo
+10 bar</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The same as above, but using the column index instead of the column name</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>d1[<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2251,11 +2251,11 @@ Note
 3  bar
 4  bar
 5  foo
-6  foo
+6  bar
 7  foo
-8  foo
-9  bar
-10 foo</code></pre>
+8  bar
+9  foo
+10 bar</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Return a two-column data frame comprising the 'a' and 'b' columns from d1</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>d1[<span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2264,13 +2264,13 @@ Note
 1   TRUE bar
 2   TRUE foo
 3  FALSE bar
-4  FALSE bar
-5   TRUE foo
-6  FALSE foo
+4   TRUE bar
+5  FALSE foo
+6   TRUE bar
 7  FALSE foo
-8  FALSE foo
-9   TRUE bar
-10  TRUE foo</code></pre>
+8  FALSE bar
+9  FALSE foo
+10 FALSE bar</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The same as above, but using the column indices instead of the column names</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>d1[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2279,23 +2279,23 @@ Note
 1   TRUE bar
 2   TRUE foo
 3  FALSE bar
-4  FALSE bar
-5   TRUE foo
-6  FALSE foo
+4   TRUE bar
+5  FALSE foo
+6   TRUE bar
 7  FALSE foo
-8  FALSE foo
-9   TRUE bar
-10  TRUE foo</code></pre>
+8  FALSE bar
+9  FALSE foo
+10 FALSE bar</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Return the 'b' column from d1 as a character vector</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>d1[[<span class="st">"b"</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "bar" "foo" "bar" "bar" "foo" "foo" "foo" "foo" "bar" "foo"</code></pre>
+<pre><code> [1] "bar" "foo" "bar" "bar" "foo" "bar" "foo" "bar" "foo" "bar"</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The same as above, but using the column index instead of the column name</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>d1[[<span class="dv">2</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "bar" "foo" "bar" "bar" "foo" "foo" "foo" "foo" "bar" "foo"</code></pre>
+<pre><code> [1] "bar" "foo" "bar" "bar" "foo" "bar" "foo" "bar" "foo" "bar"</code></pre>
 </div>
 </div>
 <section id="matrix-style-selection" class="level3">
@@ -2305,8 +2305,8 @@ Note
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>d1[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="dv">2</span><span class="sc">:</span><span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>    b         c
-1 bar 0.3993104
-2 foo 0.2949245</code></pre>
+1 bar 0.4841472
+2 foo 0.5329053</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>d1[ , <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -2314,26 +2314,26 @@ Note
 1   TRUE bar
 2   TRUE foo
 3  FALSE bar
-4  FALSE bar
-5   TRUE foo
-6  FALSE foo
+4   TRUE bar
+5  FALSE foo
+6   TRUE bar
 7  FALSE foo
-8  FALSE foo
-9   TRUE bar
-10  TRUE foo</code></pre>
+8  FALSE bar
+9  FALSE foo
+10 FALSE bar</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>d1[<span class="dv">2</span><span class="sc">:</span><span class="dv">3</span>, ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>      a   b         c
-2  TRUE foo 0.2949245
-3 FALSE bar 0.5299719</code></pre>
+2  TRUE foo 0.5329053
+3 FALSE bar 0.7865156</code></pre>
 </div>
 </div>
 <p>In most cases, matrix style subsetting behaves the same was as the <code>[]</code> list-style operator. You can select any number of elements, and the selection is returned as a data frame, but there is one exception: If you select a single column using matrix-style subsetting, the selection will be converted to a vector.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>d1[ , <span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]  TRUE  TRUE FALSE FALSE  TRUE FALSE FALSE FALSE  TRUE  TRUE</code></pre>
+<pre><code> [1]  TRUE  TRUE FALSE  TRUE FALSE  TRUE FALSE FALSE FALSE FALSE</code></pre>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -2359,16 +2359,16 @@ Why This Matters
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>d1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>       a   b         c
-1   TRUE bar 0.3993104
-2   TRUE foo 0.2949245
-3  FALSE bar 0.5299719
-4  FALSE bar 0.4208980
-5   TRUE foo 0.8280955
-6  FALSE foo 0.2729275
-7  FALSE foo 0.8006991
-8  FALSE foo 0.2749646
-9   TRUE bar 0.2704654
-10  TRUE foo 0.1829894</code></pre>
+1   TRUE bar 0.4841472
+2   TRUE foo 0.5329053
+3  FALSE bar 0.7865156
+4   TRUE bar 0.8668884
+5  FALSE foo 0.8447465
+6   TRUE bar 0.2726832
+7  FALSE foo 0.0730769
+8  FALSE bar 0.3705464
+9  FALSE foo 0.9011818
+10 FALSE bar 0.8518957</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Modify some list elements</span></span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>d1<span class="sc">$</span>a <span class="ot">&lt;-</span> LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]</span>
@@ -2379,16 +2379,16 @@ Why This Matters
 <span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>d1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   a           b     c
-1  A  1.36768136  TRUE
-2  B  0.12217525  TRUE
-3  C -1.04995570  TRUE
-4  D -0.08622482  TRUE
-5  E  0.66748832  TRUE
-6  F -0.16004682 FALSE
-7  G  1.29515014 FALSE
-8  H -0.68198728 FALSE
-9  I  0.32860395 FALSE
-10 J -0.54899524 FALSE</code></pre>
+1  A  2.00475868  TRUE
+2  B -0.45017003  TRUE
+3  C  1.62724692  TRUE
+4  D  2.34927877  TRUE
+5  E  0.54897323  TRUE
+6  F -2.09497505 FALSE
+7  G  0.03572308 FALSE
+8  H -1.12583753 FALSE
+9  I -1.70276992 FALSE
+10 J  0.77336232 FALSE</code></pre>
 </div>
 </div>
 <p>When modifying multiple columns with the <code>[]</code>, operator, it’s best to supply the replacement values as a data frame or list with the same size as the selected columns.</p>
@@ -2414,17 +2414,17 @@ Why This Matters
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>d1[<span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"c"</span>)] <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="fu">rnorm</span>(<span class="dv">10</span>), <span class="fu">runif</span>(<span class="dv">10</span>))</span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>d1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>             a   b           c
-1   0.79151016 3.5 0.393800749
-2  -0.27885630 3.0 0.659713033
-3  -0.50333157 3.2 0.508652915
-4  -0.57451802 3.1 0.510178002
-5   0.09817648 3.6 0.265099570
-6  -0.51507265 3.9 0.045619704
-7   1.21680929 3.4 0.440328789
-8  -1.60835589 3.4 0.092193939
-9  -0.55139198 2.9 0.008363863
-10  0.20474045 3.1 0.498322075</code></pre>
+<pre><code>              a   b          c
+1   0.807277237 3.5 0.53384010
+2  -0.009185656 3.0 0.64821884
+3   0.611673726 3.2 0.45623112
+4   2.657741713 3.1 0.91800006
+5   0.800721601 3.6 0.61382245
+6  -0.468921343 3.9 0.90829605
+7   0.874829749 3.4 0.02117777
+8   0.728573840 3.4 0.19102151
+9  -0.050805778 2.9 0.28955247
+10  0.809578658 3.1 0.33244773</code></pre>
 </div>
 </div>
 <section id="matrix-style-selection-1" class="level3">
@@ -2434,32 +2434,32 @@ Why This Matters
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>d1[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="dv">41</span><span class="sc">:</span><span class="dv">45</span></span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>d1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>             a    b           c
-1   0.79151016 41.0 0.393800749
-2  -0.27885630 42.0 0.659713033
-3  -0.50333157 43.0 0.508652915
-4  -0.57451802 44.0 0.510178002
-5   0.09817648 45.0 0.265099570
-6  -0.51507265  3.9 0.045619704
-7   1.21680929  3.4 0.440328789
-8  -1.60835589  3.4 0.092193939
-9  -0.55139198  2.9 0.008363863
-10  0.20474045  3.1 0.498322075</code></pre>
+<pre><code>              a    b          c
+1   0.807277237 41.0 0.53384010
+2  -0.009185656 42.0 0.64821884
+3   0.611673726 43.0 0.45623112
+4   2.657741713 44.0 0.91800006
+5   0.800721601 45.0 0.61382245
+6  -0.468921343  3.9 0.90829605
+7   0.874829749  3.4 0.02117777
+8   0.728573840  3.4 0.19102151
+9  -0.050805778  2.9 0.28955247
+10  0.809578658  3.1 0.33244773</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>d1[<span class="dv">3</span><span class="sc">:</span><span class="dv">6</span>, <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"c"</span>)] <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="sc">-</span><span class="dv">99</span>, <span class="dv">888</span>)</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>d1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>             a    b            c
-1    0.7915102 41.0 3.938007e-01
-2   -0.2788563 42.0 6.597130e-01
-3  -99.0000000 43.0 8.880000e+02
-4  -99.0000000 44.0 8.880000e+02
-5  -99.0000000 45.0 8.880000e+02
-6  -99.0000000  3.9 8.880000e+02
-7    1.2168093  3.4 4.403288e-01
-8   -1.6083559  3.4 9.219394e-02
-9   -0.5513920  2.9 8.363863e-03
-10   0.2047404  3.1 4.983221e-01</code></pre>
+<pre><code>               a    b            c
+1    0.807277237 41.0   0.53384010
+2   -0.009185656 42.0   0.64821884
+3  -99.000000000 43.0 888.00000000
+4  -99.000000000 44.0 888.00000000
+5  -99.000000000 45.0 888.00000000
+6  -99.000000000  3.9 888.00000000
+7    0.874829749  3.4   0.02117777
+8    0.728573840  3.4   0.19102151
+9   -0.050805778  2.9   0.28955247
+10   0.809578658  3.1   0.33244773</code></pre>
 </div>
 </div>
 </section>
@@ -2472,16 +2472,16 @@ Why This Matters
 <span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>d1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   a b            c
-1  1 1 3.938007e-01
-2  2 2 6.597130e-01
-3  3 3 8.880000e+02
-4  4 4 8.880000e+02
-5  5 5 8.880000e+02
-6  1 1 8.880000e+02
-7  2 2 4.403288e-01
-8  3 3 9.219394e-02
-9  4 4 8.363863e-03
-10 5 5 4.983221e-01</code></pre>
+1  1 1   0.53384010
+2  2 2   0.64821884
+3  3 3 888.00000000
+4  4 4 888.00000000
+5  5 5 888.00000000
+6  1 1 888.00000000
+7  2 2   0.02117777
+8  3 3   0.19102151
+9  4 4   0.28955247
+10 5 5   0.33244773</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Replace the 'a' and 'c' columns in d1 with a list containing vectors that</span></span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="co"># will need to be recycled</span></span>
@@ -2539,17 +2539,17 @@ Why This Matters
 <span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>d1[<span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"c"</span>)] <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="fu">rnorm</span>(<span class="dv">100</span>), <span class="fu">runif</span>(<span class="dv">100</span>))</span>
 <span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>d1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>            a   b          c
-1  -1.2138082 110 0.11349076
-2  -0.2871775 111 0.84591991
-3   1.5073974 112 0.93798384
-4  -0.1121389 113 0.82991670
-5   0.5753161 114 0.28307442
-6  -0.2241006 115 0.28891870
-7  -1.3685852 116 0.41217792
-8   0.7655015 117 0.04463806
-9  -0.1418195 118 0.19733576
-10 -2.3211249 119 0.94730991</code></pre>
+<pre><code>            a   b         c
+1   2.1518289 110 0.1049928
+2   0.3170152 111 0.2662790
+3  -0.4998579 112 0.6250133
+4  -1.7826797 113 0.6826559
+5   0.1830725 114 0.5200852
+6  -1.5560787 115 0.9310660
+7  -1.1517706 116 0.5370007
+8  -1.0141696 117 0.1859239
+9   1.1543173 118 0.9646431
+10 -1.3540783 119 0.6116382</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Works: Replace the 'a' and 'c' columns in d1 with a the first two slots in a</span></span>
 <span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="co"># length-3 list</span></span>
@@ -2625,17 +2625,17 @@ Why This Matters
 <span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a>d2[<span class="st">"alice"</span>] <span class="ot">&lt;-</span> <span class="cn">TRUE</span></span>
 <span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a>d2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>    a   b c         d         V5 alice
-1   1 bob a 0.6850919 -0.4658352  TRUE
-2   2 bob b 0.2525022  1.0729966  TRUE
-3   3 bob c 0.8872130 -0.7457986  TRUE
-4   4 bob d 0.5613422  0.4513114  TRUE
-5   5 bob e 0.8328220 -0.2814222  TRUE
-6   6 bob f 0.9156511 -0.8834148  TRUE
-7   7 bob g 0.1578158 -0.9269232  TRUE
-8   8 bob h 0.1692015 -0.7874817  TRUE
-9   9 bob i 0.4359570 -0.1817833  TRUE
-10 10 bob j 0.8501487  0.3267530  TRUE</code></pre>
+<pre><code>    a   b c          d         V5 alice
+1   1 bob a 0.68955859 -0.1675990  TRUE
+2   2 bob b 0.92500838 -1.4307241  TRUE
+3   3 bob c 0.07260729 -1.3762076  TRUE
+4   4 bob d 0.26520752  1.2919809  TRUE
+5   5 bob e 0.06731356 -0.3840749  TRUE
+6   6 bob f 0.01251758  0.9944344  TRUE
+7   7 bob g 0.57070907 -1.0061306  TRUE
+8   8 bob h 0.40705748  0.8124297  TRUE
+9   9 bob i 0.65584746 -0.9690165  TRUE
+10 10 bob j 0.69146830  0.7310392  TRUE</code></pre>
 </div>
 </div>
 <p>We can add multiple columns using the <code>[]</code> operator.</p>
@@ -2644,17 +2644,17 @@ Why This Matters
 <span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>d2[<span class="fu">c</span>(<span class="st">"foo"</span>, <span class="st">"bar"</span>)] <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>)</span>
 <span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>d2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>    a   b c         d         V5 alice         V7          V8  foo   bar
-1   1 bob a 0.6850919 -0.4658352  TRUE  0.1321903  0.16441905 TRUE FALSE
-2   2 bob b 0.2525022  1.0729966  TRUE -0.5310773 -0.81029216 TRUE FALSE
-3   3 bob c 0.8872130 -0.7457986  TRUE -0.2331060 -0.46126338 TRUE FALSE
-4   4 bob d 0.5613422  0.4513114  TRUE -0.8188854 -1.65546416 TRUE FALSE
-5   5 bob e 0.8328220 -0.2814222  TRUE -0.3917521 -0.82661101 TRUE FALSE
-6   6 bob f 0.9156511 -0.8834148  TRUE  1.0254758 -0.04749058 TRUE FALSE
-7   7 bob g 0.1578158 -0.9269232  TRUE -0.3037849 -0.63289648 TRUE FALSE
-8   8 bob h 0.1692015 -0.7874817  TRUE -1.6800791  0.04528722 TRUE FALSE
-9   9 bob i 0.4359570 -0.1817833  TRUE  0.3876233 -0.51281137 TRUE FALSE
-10 10 bob j 0.8501487  0.3267530  TRUE  0.5190739  0.60209987 TRUE FALSE</code></pre>
+<pre><code>    a   b c          d         V5 alice         V7          V8  foo   bar
+1   1 bob a 0.68955859 -0.1675990  TRUE  0.7023358  0.95099767 TRUE FALSE
+2   2 bob b 0.92500838 -1.4307241  TRUE  1.0475573 -2.17139733 TRUE FALSE
+3   3 bob c 0.07260729 -1.3762076  TRUE  0.8215654  0.57744926 TRUE FALSE
+4   4 bob d 0.26520752  1.2919809  TRUE  1.6490459 -0.43729978 TRUE FALSE
+5   5 bob e 0.06731356 -0.3840749  TRUE -0.6990208 -1.90592818 TRUE FALSE
+6   6 bob f 0.01251758  0.9944344  TRUE  0.5443463 -0.34315273 TRUE FALSE
+7   7 bob g 0.57070907 -1.0061306  TRUE  0.3582002  0.05009020 TRUE FALSE
+8   8 bob h 0.40705748  0.8124297  TRUE  1.5493395 -1.31125571 TRUE FALSE
+9   9 bob i 0.65584746 -0.9690165  TRUE  0.8461863  0.84648572 TRUE FALSE
+10 10 bob j 0.69146830  0.7310392  TRUE  1.4611048 -0.07295731 TRUE FALSE</code></pre>
 </div>
 </div>
 <div class="callout callout-style-default callout-practice callout-titled">
