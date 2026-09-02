@@ -2,22 +2,25 @@
 title: "Manipulating Lists"
 ---
 
-::: {.callout-note}
-Using `$`, `[]`, and `[[]]` correctly allows you to apply using lists; being able to explain *why* they behave differently (and predict which one you need in a given situation) is allows you to understand how lists work. This distinction is one of the most common sources of confusion for R beginners, so it's worth extra attention.
-:::
+Like vectors and matrices, we can access and modify the slots of a list. Unlike those simpler data objects, however, we
+have several different ways to select list elements (not just the `[]` operator).
 
 ## Accessing List Slots
 
 R provides several mechanisms for accessing the contents of a list, each serving a distinct purpose. The three main
 operators used for this task are the dollar sign (`$`), single brackets (`[]`), and double brackets (`[[]]`).
 
+### Accessing Single Slots
+
 The `$` operator accesses *a single list slot* by name and returns *the contents* of that list slot. 
 
 ```{r}
-l1 <- list(name = "bob",
-           alive = TRUE,
-           age = 33,
-           relationshipStatus = 42+3i)
+l1 <- list(
+  name = "bob",
+  alive = TRUE,
+  age = 33,
+  relationshipStatus = 42 + 3i
+)
 
 l1$name
 class(l1$name)
@@ -31,9 +34,11 @@ l1[[2]]
 class(l1[[2]])
 ```
 
-The `[]` operator is notably different: it extracts *any number of list slots* and returns the result *as a list*.
-Even if only one element is selected, the output remains a list. This behavior is useful when we want to retain the list
-structure for further processing.
+### Multi-Slot Access
+
+The `[]` operator is notably different: it extracts *any number of list slots* and returns the result *as a list*. Even
+if we only select one element, the `[]` operator still returns a list. This behavior is useful when we want to retain
+the list structure for further processing.
 
 ```{r}
 l1["name"]
@@ -48,7 +53,9 @@ class(l1[1:2])
 If we want to select multiple list elements, the `[]` operator is our only option. You cannot use the `$` or `[[]]`
 operators to select multiple list slots.
 
-```{r, error = TRUE}
+```{r}
+#| error: true
+
 l1[[1:2]]
 l1$c("name", "alive")
 ```
@@ -57,28 +64,79 @@ l1$c("name", "alive")
 
 ## A Mental Model for `$`, `[[]]`, and `[]`
 
-A common way people remember the difference: think of a list as a row of labeled boxes.
+To gain some intuition for the different flavors of list subsetting, you can think of a list as a stack of moving boxes.
+Let's consider a three-slot list as our example. We conceptualize this list as a stack of three boxes. Let's say the
+first box contains clothes, the second box contains books, and the third box contains four smaller boxes that hold
+various types of office supplies.
 
-- `$` and `[[]]` reach *inside* a single box and hand you what's in it, the *contents*.
-- `[]` hands you a smaller row of boxes, still sealed, the *list itself*, just with fewer slots.
+- The `$` and `[[]]` operators work like reaching *inside* a single box and retrieving its *contents*.
+  - In our analogy, these two operators unpack a single box.
+	- We remove the clothes from our first box and do something with those clothes.
+- The `[]` operator works like choosing one or more boxes from our stack and doing something with those unopened boxes.
+  - In our analogy, this operator picks up some boxes but doesn't open them.
+	- We pick up the first box and move it to our bedroom.
 
-If you ever find yourself surprised that a selection "is still a list" when you expected the raw value, check
-whether you used `[]` (which always keeps the list wrapper) instead of `$` or `[[]]` (which unwrap it).
+If you ever find yourself surprised that a selection "is still a list" when you expected the raw value from the list
+slot, check whether you used `[]` (which always keeps the list wrapper) instead of `$` or `[[]]` (which unwrap it).
+
+:::
+
+**Predict:** What type of object will the following code print?
+
+```{webr-r}
+someList <- list(
+  a = 1:10,
+  b = tail(LETTERS, 5),
+  c = list(
+    x = "the quick brown",
+    y = "fox",
+    z = "jumped over"
+  )
+)
+
+someList$c
+```
+
+::: explanation
+
+```{r}
+#| include: false
+
+someList <- list(
+  a = 1:10,
+  b = tail(LETTERS, 5),
+  c = list(
+    x = "the quick brown",
+    y = "fox",
+    z = "jumped over"
+  )
+)
+```
+
+```{r}
+class(someList$c)
+```
+
+The command `someList$c` returns a list because the `c` slot in `someList` holds an entire list. Using the single
+element extraction procedure returns the contents of the `c` slot, which is another list, in this case.
+
+So, don't fall into the trap of thinking that `$` and `[[]]` *never* return a list. Both the `$` and `[[]]` operators
+will return a list, when the selected slot holds a list.
 
 :::
 
 ## Modifying List Elements
 
-Above, we used the three selection operators to extract list elements, but you shouldn't think about those operators as
-"subsetting operators". It's better to think about the selection operators as designating some part of a list for further
-processing. In the above examples, the further processing was simply printing the selected elements to the R console, but
-we can also use the selection operators to modify the designated list elements.
+As with vectors and matrices, you shouldn't think about the list selection operators (`$`, `[]`, `[[]]`) as "subsetting
+operators". It's better to think about the selection operators as designating some part of a list for further
+processing. In the above examples, the further processing was simply printing the selected elements to the R console,
+but we can also use the selection operators to modify the designated list elements.
 
 ```{r}
 # View the original list
 l1
 
-## Modify some list elements
+# Modify some list elements
 l1$age <- 57
 l1[[1]] <- "suzy"
 l1[c(2, 4)] <- c("foo", "bar")
@@ -102,6 +160,8 @@ l2[[3]] <- 1:4
 l2
 ```
 
+## Using List Elements
+
 Importantly, the types of the objects you store in a list are maintained.
 
 ```{r}
@@ -124,31 +184,27 @@ Consequently, objects stored in a list behave just as they would outside of the 
 stored as an element of a list, we can call it directly:
 
 ```{r}
-# Create a trivial function
-addOne <- function(x) { x + 1 }
-
-# Store our function object in the 'l3' list
-l3$myFunction <- addOne
+# Store the Base R 'mean' function in the 'l3' list
+l3$myMean <- mean
 
 # Call both versions of our function
-addOne(2)
-l3$myFunction(2)
+mean(1:5)
+l3$myMean(1:5)
 ```
 
 ::: practice
 
-## Practice
-
 Use the list that you created in the last practice problem for this exercise.
-
-Using a single command, test if your eye color OR your hair color is also your favorite color.
 
 :::: {.panel-tabset}
 
 ## {{< var tab_title.question >}}
 
-```{webr-r}
+Using a single command, test if your eye color OR your hair color is also your favorite color.
 
+## {{< var tab_title.editor >}}
+
+```{webr-r}
 ```
 
 ## {{< var tab_title.hint >}}
@@ -161,12 +217,24 @@ Recall the basic logical operators:
 
 ## {{< var tab_title.solution >}}
 
-```{r, echo = FALSE, include = FALSE}
-myInfo <- list(name = "bob",
-               eyes = "blue",
-               hair = "black",
-               color = "green")
+Recall my solution for the last practice problem.
+
+```{r}
+#| include: false
+
+myInfo <- list(
+  name = "bob",
+  eyes = "blue",
+  hair = "black",
+  color = "green"
+)
 ```
+
+```{r}
+myInfo
+```
+
+So, I would set up the necessary logical test as follows.
 
 ```{r}
 myInfo$eyes == myInfo$color | myInfo$hair == myInfo$color
@@ -176,12 +244,14 @@ myInfo$eyes == myInfo$color | myInfo$hair == myInfo$color
 
 :::
 
-## Quick Check
+::: knowledge-check
 
 - If `l$x` returns an error but `l[["x"]]` works, what does that tell you about `l`?
-- Why does `l["name"]` return a list, while `l[["name"]]` returns just the value?
-- Which operator would you need if you wanted to select *two* named slots at once? Why can't you use `$` or `[[]]`
-  for that?
+- Assuming the `name` slot in the list `l` does not hold another list, why would `l["name"]` return a list, while
+`l[["name"]]` returns some other type of object?
+- Which operator would you need if you wanted to select *two* named list slots at once?
+
+:::
 
 ::: {.callout-tip}
 

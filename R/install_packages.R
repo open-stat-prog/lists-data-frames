@@ -1,8 +1,9 @@
 ### Title:    Package Management via renv
 ### Author:   Kyle M. Lang
-### Modified: 2025-07-21
+### Modified: 2026-09-02
 
-renv::restore()
+# renv::install("tibble")
+# renv::restore()
 
 # renv::status()
 # renv::update()

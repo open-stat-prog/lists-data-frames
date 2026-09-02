@@ -19,29 +19,31 @@ By the end of this tutorial, you will be able to:
 Lists are one of R's most versatile and ubiquitous data structures. Like vectors, lists are one-dimensional objects.
 Unlike vectors, however, lists can comprise arbitrary mixes of data objects with any combination of types. This
 flexibility makes lists particularly useful for storing and organizing heterogeneous data such as the results returned
-from statistical modeling functions.
+from statistical modeling functions. Understanding *why* you'd use a list instead of a vector (not just *how* to create
+lists) is one of the main goals of this tutorial.
 
-This is a genuinely new step up from what you've learned so far. Vectors and matrices both required every element to
-share the same type. Lists remove that restriction entirely. Understanding *why* you'd reach for a list instead of
-a vector (not just *how* to create one) is one of the main goals of this tutorial.
+## Why Use Lists?
 
-## Why Use a List?
+There are a few common situations where a list is the natural (or only) choice:
 
-A few common situations where a list is the natural (or only) choice:
+- **Storing mixed-type information about one thing**
 
-- **Storing mixed-type information about one "thing."** If you want to keep someone's name (text), age (number), and
-  active status (logical) bundled together as a single object, a vector can't do that. It would coerce everything
-  to one shared type. A list keeps each piece in its original type.
-- **Storing the results of a complex function.** Many R functions (especially statistical modeling functions you'll
-  encounter later) return dozens of pieces of output at once, coefficients, fitted values, diagnostic statistics,
-  the original data, all of different shapes and types. A list is the only structure flexible enough to hold all of
-  that in one object.
-- **Building nested or hierarchical data.** Since a list can contain other lists, they're a natural fit for data
-  that has its own internal structure, like a set of survey responses grouped by respondent.
+	If you want to store someone's name (character), age (numeric), and active status (logical) in a single object, you
+	can't use a vector (or matrix). A vector would coerce each piece of data into one shared type. A list stores each
+	piece with its original type.
+
+- **Storing the results of a complex function**
+
+	Many R functions (especially statistical modeling functions) return several pieces of output (e.g., coefficients,
+	fitted values, diagnostic statistics, transformed data), all with different shapes and types. A list is the only
+	structure flexible enough to hold all of these disparate elements in one object.
 
 You'll see the second data structure in the next tutorial, the *data frame*, is actually a special, constrained
 kind of list. So getting comfortable with lists now will make data frames feel much less mysterious later.
 
-## Quick Check
+::: knowledge-check
 
-In your own words: why can't you just use a vector to store someone's name, age, and active status together?
+In your own words, explain why a list would work better than a vector if you wanted to store the result of a logical
+comparison and the result of an arithmetic calculation in one object.
+
+:::
