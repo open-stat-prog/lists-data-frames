@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../tutorials/data_frames/manipulating.html" rel="next">
+<link href="../../tutorials/data_frames/relation_to_lists.html" rel="next">
 <link href="../../tutorials/data_frames/index.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -404,7 +404,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"options":{"message":"true","editor-font-scale":"1","autorun":"false","label":"unnamed-chunk-1","dpi":72,"context":"interactive","editor-word-wrap":"true","classes":"","results":"markup","warning":"true","fig-width":7,"output":"true","fig-height":5,"fig-cap":"","editor-quick-suggestions":"false","editor-max-height":"","out-width":"700px","read-only":"false","out-height":"","comment":""},"code":"","id":1},{"options":{"message":"true","editor-font-scale":"1","autorun":"false","label":"unnamed-chunk-2","dpi":72,"context":"interactive","editor-word-wrap":"true","classes":"","results":"markup","warning":"true","fig-width":7,"output":"true","fig-height":5,"fig-cap":"","editor-quick-suggestions":"false","editor-max-height":"","out-width":"700px","read-only":"false","out-height":"","comment":""},"code":"","id":2}];
+globalThis.qwebrCellDetails = [{"options":{"warning":"true","read-only":"false","results":"markup","editor-word-wrap":"true","dpi":72,"comment":"","out-width":"700px","out-height":"","autorun":"false","editor-font-scale":"1","fig-width":7,"fig-cap":"","editor-quick-suggestions":"false","output":"true","fig-height":5,"label":"unnamed-chunk-1","message":"true","classes":"","editor-max-height":"","context":"interactive"},"id":1,"code":""},{"options":{"warning":"true","read-only":"false","results":"markup","editor-word-wrap":"true","dpi":72,"comment":"","out-width":"700px","out-height":"","autorun":"false","editor-font-scale":"1","fig-width":7,"fig-cap":"","editor-quick-suggestions":"false","output":"true","fig-height":5,"label":"unnamed-chunk-2","message":"true","classes":"","editor-max-height":"","context":"interactive"},"id":2,"code":""}];
 
 </script>
 <script type="module">
@@ -1658,17 +1658,17 @@ globalThis.qwebrExecuteCode = async function (
 
 </script>
 <style>
-div.callout-common-mistakes.callout {
-  border-left-color: #B01919;
+div.callout-reading.callout {
+  border-left-color: violet;
 }
-div.callout-common-mistakes.callout-style-default > .callout-header {
-  background-color: rgba(176, 25, 25, 0.13);
+div.callout-reading.callout-style-default > .callout-header {
+  background-color: rgb(from violet r g b / 13%);
 }
-div.callout-common-mistakes .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-common-mistakes.callout-style-default .callout-icon::before, div.callout-common-mistakes.callout-titled .callout-icon::before {
+div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f188' !important;
+  content: '\f518' !important;
   background-image: none;
 }
 div.callout-reading-advanced.callout {
@@ -1684,17 +1684,17 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
   content: '\f518' !important;
   background-image: none;
 }
-div.callout-reading.callout {
-  border-left-color: violet;
+div.callout-common-mistakes.callout {
+  border-left-color: #B01919;
 }
-div.callout-reading.callout-style-default > .callout-header {
-  background-color: rgb(from violet r g b / 13%);
+div.callout-common-mistakes.callout-style-default > .callout-header {
+  background-color: rgba(176, 25, 25, 0.13);
 }
-div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+div.callout-common-mistakes .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-common-mistakes.callout-style-default .callout-icon::before, div.callout-common-mistakes.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f518' !important;
+  content: '\f188' !important;
   background-image: none;
 }
 div.callout-knowledge-check.callout {
@@ -1710,19 +1710,6 @@ div.callout-knowledge-check.callout-style-default .callout-icon::before, div.cal
   content: '\f044' !important;
   background-image: none;
 }
-div.callout-going-further.callout {
-  border-left-color: #B58900;
-}
-div.callout-going-further.callout-style-default > .callout-header {
-  background-color: rgba(181, 137, 0, 0.13);
-}
-div.callout-going-further .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-going-further.callout-style-default .callout-icon::before, div.callout-going-further.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f4d7' !important;
-  background-image: none;
-}
 div.callout-completion-time.callout {
   border-left-color: gray;
 }
@@ -1736,17 +1723,17 @@ div.callout-completion-time.callout-style-default .callout-icon::before, div.cal
   content: '\f2f2' !important;
   background-image: none;
 }
-div.callout-explanation.callout {
-  border-left-color: violet;
+div.callout-practice.callout {
+  border-left-color: green;
 }
-div.callout-explanation.callout-style-default > .callout-header {
-  background-color: rgb(from violet r g b / 13%);
+div.callout-practice.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
 }
-div.callout-explanation .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-explanation.callout-style-default .callout-icon::before, div.callout-explanation.callout-titled .callout-icon::before {
+div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f075' !important;
+  content: '\f085' !important;
   background-image: none;
 }
 div.callout-resource.callout {
@@ -1762,17 +1749,30 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   content: '\f0c1' !important;
   background-image: none;
 }
-div.callout-practice.callout {
-  border-left-color: green;
+div.callout-explanation.callout {
+  border-left-color: violet;
 }
-div.callout-practice.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
+div.callout-explanation.callout-style-default > .callout-header {
+  background-color: rgb(from violet r g b / 13%);
 }
-div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
+div.callout-explanation .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-explanation.callout-style-default .callout-icon::before, div.callout-explanation.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f085' !important;
+  content: '\f075' !important;
+  background-image: none;
+}
+div.callout-going-further.callout {
+  border-left-color: #B58900;
+}
+div.callout-going-further.callout-style-default > .callout-header {
+  background-color: rgba(181, 137, 0, 0.13);
+}
+div.callout-going-further .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-going-further.callout-style-default .callout-icon::before, div.callout-going-further.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f4d7' !important;
   background-image: none;
 }
 </style>
@@ -1916,6 +1916,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/data_frames/creating.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Creating Data Frames</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/data_frames/relation_to_lists.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Relation to Lists</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -2370,16 +2376,16 @@ Note
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>                  <span class="at">c =</span> <span class="fu">runif</span>(<span class="dv">10</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>       a   b          c
-1  FALSE foo 0.01269061
-2   TRUE bar 0.67994750
-3   TRUE bar 0.56424374
-4   TRUE bar 0.11435267
-5   TRUE bar 0.32463626
-6   TRUE foo 0.21978842
-7  FALSE foo 0.00217471
-8   TRUE foo 0.48809409
-9  FALSE foo 0.10830001
-10 FALSE bar 0.54663084</code></pre>
+1   TRUE bar 0.19858868
+2  FALSE bar 0.38426508
+3   TRUE foo 0.35993882
+4   TRUE foo 0.39544801
+5  FALSE foo 0.81648970
+6  FALSE bar 0.30765156
+7  FALSE foo 0.29124515
+8  FALSE foo 0.01769363
+9  FALSE bar 0.87380215
+10  TRUE bar 0.11872620</code></pre>
 </div>
 </div>
 <p>If we want to quickly generate an empty data frame, we can supply a matrix as the sole argument to <code>data.frame()</code>.</p>
@@ -2430,13 +2436,13 @@ Practice
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  text integer complex
-1 text       2    1+1i
-2 text       4    2+2i
-3 text      10    3+3i
+1 text       9    1+1i
+2 text       8    2+2i
+3 text       6    3+3i
 4 text      10    4+1i
 5 text       9    5+2i
-6 text       2    1+3i
-7 text       9    2+1i</code></pre>
+6 text       7    1+3i
+7 text       5    2+1i</code></pre>
 </div>
 </div>
 </div>
@@ -2891,8 +2897,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../tutorials/data_frames/manipulating.html" class="pagination-link" aria-label="Manipulating Data Frames">
-        <span class="nav-page-text">Manipulating Data Frames</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../tutorials/data_frames/relation_to_lists.html" class="pagination-link" aria-label="Relation to Lists">
+        <span class="nav-page-text">Relation to Lists</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

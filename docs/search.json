@@ -1,89 +1,5 @@
 [
   {
-    "objectID": "quizzes/lists/questions/list_change.html",
-    "href": "quizzes/lists/questions/list_change.html",
-    "title": "Question",
-    "section": "",
-    "text": "Consider the following list, l1.\n\n\n$name\n[1] \"bob\"\n\n$age\n[1] 25\n\n$height\n[1] 180\n\n$eyes\n[1] \"blue\"\n\n\nWhich of the following expressions will change the value of the eyes slot in l1 from “blue” to “green”?\n\n\n\nl1$eyes &lt;- \"green\"\nl1[[4]] &lt;- \"green\"\nl1[4] &lt;- \"green\"\nl1$eyes &lt;- \"blue\"\nl1$4 &lt;- \"green\"\nl1$eyes &lt;- green\nl1[4, ] &lt;- \"green\"\nnames(l1)[4] &lt;- \"green\""
-  },
-  {
-    "objectID": "quizzes/lists/questions/list_change.html#answerlist",
-    "href": "quizzes/lists/questions/list_change.html#answerlist",
-    "title": "Question",
-    "section": "",
-    "text": "l1$eyes &lt;- \"green\"\nl1[[4]] &lt;- \"green\"\nl1[4] &lt;- \"green\"\nl1$eyes &lt;- \"blue\"\nl1$4 &lt;- \"green\"\nl1$eyes &lt;- green\nl1[4, ] &lt;- \"green\"\nnames(l1)[4] &lt;- \"green\""
-  },
-  {
-    "objectID": "quizzes/lists/questions/list_change.html#answerlist-1",
-    "href": "quizzes/lists/questions/list_change.html#answerlist-1",
-    "title": "Question",
-    "section": "Answerlist",
-    "text": "Answerlist\n\nCorrect\nCorrect\nCorrect\nWrong: This command doesn’t actually change anything.\nWrong: There is no slot named “4” in l1.\nWrong: We’re replacing the value of l4$eyes with the contents of the object green, not the character vector \"green\".\nWrong: l1 is a list, so we should not use matrix-style selection.\nWrong: This command will change the name of the fourth slot, not the contents of that slot."
-  },
-  {
-    "objectID": "quizzes/lists/questions/list_name.html",
-    "href": "quizzes/lists/questions/list_name.html",
-    "title": "Question",
-    "section": "",
-    "text": "In the list l below there is an error, the information for the eyes color is wrongly saved as hair, which of this options will change the name of the element?\n\n\n$name\n[1] \"bob\"\n\n$age\n[1] 25\n\n$height\n[1] 180\n\n$hair\n[1] \"blue\"\n\n\n\n\n\nnames(l)[4] &lt;- \"eyes\"\nl$hair &lt;- names(\"eyes\")\nl[[4]] &lt;- \"eyes\"\nl[4] &lt;- \"eyes\"\nnames(l)$hair &lt;- \"eyes\""
-  },
-  {
-    "objectID": "quizzes/lists/questions/list_name.html#answerlist",
-    "href": "quizzes/lists/questions/list_name.html#answerlist",
-    "title": "Question",
-    "section": "",
-    "text": "names(l)[4] &lt;- \"eyes\"\nl$hair &lt;- names(\"eyes\")\nl[[4]] &lt;- \"eyes\"\nl[4] &lt;- \"eyes\"\nnames(l)$hair &lt;- \"eyes\""
-  },
-  {
-    "objectID": "quizzes/lists/questions/list_name.html#answerlist-1",
-    "href": "quizzes/lists/questions/list_name.html#answerlist-1",
-    "title": "Question",
-    "section": "Answerlist",
-    "text": "Answerlist\n\nCorrect\nWrong: names(\"eyes\") is NULL since a character string doesn’t have a name, so it will just erase the list element\nWrong: This will change the value itself and not the name\nWrong: This will change the value itself and not the name\nWrong: This will return an error since the names() element is a vector and not a list"
-  },
-  {
-    "objectID": "quizzes/data_frames/questions/select_row.html",
-    "href": "quizzes/data_frames/questions/select_row.html",
-    "title": "Question",
-    "section": "",
-    "text": "Question\nConsider the data frame df below, how can we extract only the data about Bob?\n\n\n  names age height  eyes\n1   bob  25    180 green\n2  mike  23    178 green\n3  mark  24    169  blue\n4 steve  26    183 black\n\n\n\n\nSolution\nWe have to select the first row of the data frame, and we can do this using df[1,]\n\n\nMeta-information\nexname: DF Row extype: string exsolution: df[1,]\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "quizzes/data_frames/questions/return_column_as_df.html",
-    "href": "quizzes/data_frames/questions/return_column_as_df.html",
-    "title": "Question",
-    "section": "",
-    "text": "Consider the following data frame, df.\n\n\n   name age height  eyes\n1   bob  25    180 green\n2  mike  23    178 green\n3  mark  24    169  blue\n4 steve  26    183 brown\n\n\nHow can we extract the height column and return the selection as a data frame?\n\n\n\ndf[3]\ndf[\"height\"]\ndf$height\ndf[[\"height\"]]\ndf[[3]]\ndf[ , 3]\ndf[ , \"height\"]\ndf[3, ]\ndf[\"height\", ]\ndf[[2]]\ndf[2:3]"
-  },
-  {
-    "objectID": "quizzes/data_frames/questions/return_column_as_df.html#answerlist",
-    "href": "quizzes/data_frames/questions/return_column_as_df.html#answerlist",
-    "title": "Question",
-    "section": "",
-    "text": "df[3]\ndf[\"height\"]\ndf$height\ndf[[\"height\"]]\ndf[[3]]\ndf[ , 3]\ndf[ , \"height\"]\ndf[3, ]\ndf[\"height\", ]\ndf[[2]]\ndf[2:3]"
-  },
-  {
-    "objectID": "quizzes/data_frames/questions/return_column_as_df.html#answerlist-1",
-    "href": "quizzes/data_frames/questions/return_column_as_df.html#answerlist-1",
-    "title": "Question",
-    "section": "Answerlist",
-    "text": "Answerlist\n\nCorrect\nCorrect\nWrong: This command will return the height column as a numeric vector.\nWrong: This command will return the height column as a numeric vector.\nWrong: This command will return the height column as a numeric vector.\nWrong: This command will return the height column as a numeric vector.\nWrong: This command will return the height column as a numeric vector.\nWrong: This command will return the third row of df as a \\(1 \\times 4\\) data frame.\nWrong: This command will try to return a row called “height” and fail because there is no such row in df.\nWrong: This command will return the age column as a numeric vector.\nWrong: This command will return the age and height columns as a \\(4 \\times 2\\) data frame."
-  },
-  {
-    "objectID": "quizzes/data_frames/questions/relationships.html",
-    "href": "quizzes/data_frames/questions/relationships.html",
-    "title": "Question",
-    "section": "",
-    "text": "Which of the following statements about data frames is correct?\n\n\n\nA data frame is a special kind of list, where each slot holds a column vector, and all those vectors must have the same length.\nA data frame is a special kind of matrix that happens to allow different column types.\nA data frame and a matrix are the same underlying object type, just printed differently.\nA data frame is a list, but its columns can have different lengths, unlike a matrix’s columns.\nA data frame has nothing in common with either lists or matrices. It’s a completely separate object type."
-  },
-  {
-    "objectID": "quizzes/data_frames/questions/relationships.html#answerlist",
-    "href": "quizzes/data_frames/questions/relationships.html#answerlist",
-    "title": "Question",
-    "section": "",
-    "text": "A data frame is a special kind of list, where each slot holds a column vector, and all those vectors must have the same length.\nA data frame is a special kind of matrix that happens to allow different column types.\nA data frame and a matrix are the same underlying object type, just printed differently.\nA data frame is a list, but its columns can have different lengths, unlike a matrix’s columns.\nA data frame has nothing in common with either lists or matrices. It’s a completely separate object type."
-  },
-  {
     "objectID": "tutorials/lists/manipulating.html",
     "href": "tutorials/lists/manipulating.html",
     "title": "Manipulating Lists",
@@ -120,11 +36,11 @@
     ]
   },
   {
-    "objectID": "tutorials/lists/manipulating.html#quick-check",
-    "href": "tutorials/lists/manipulating.html#quick-check",
+    "objectID": "tutorials/lists/manipulating.html#using-list-elements",
+    "href": "tutorials/lists/manipulating.html#using-list-elements",
     "title": "Manipulating Lists",
-    "section": "Quick Check",
-    "text": "Quick Check\n\nIf l$x returns an error but l[[\"x\"]] works, what does that tell you about l?\nWhy does l[\"name\"] return a list, while l[[\"name\"]] returns just the value?\nWhich operator would you need if you wanted to select two named slots at once? Why can’t you use $ or [[]] for that?\n\n\n\n\n\n\n\nReady to Continue?\n\n\n\nYou’re ready to move on to Data Frames if you can:\n\nExplain what a list is and describe at least one situation where a list is the right tool.\nCreate a list with named elements.\nExplain the difference between $, [], and [[]], and choose the right one for a given task.\n\nIf any of these still feel shaky, revisit the relevant page above, or try the Knowledge Quiz to pinpoint exactly where to focus.",
+    "section": "Using List Elements",
+    "text": "Using List Elements\nImportantly, the types of the objects you store in a list are maintained.\n\n(x &lt;- 1:5)\n\n[1] 1 2 3 4 5\n\n(y &lt;- list())\n\nlist()\n\n(z &lt;- letters[1:10])\n\n [1] \"a\" \"b\" \"c\" \"d\" \"e\" \"f\" \"g\" \"h\" \"i\" \"j\"\n\n(l3 &lt;- list(a = x, b = y, c = z))\n\n$a\n[1] 1 2 3 4 5\n\n$b\nlist()\n\n$c\n [1] \"a\" \"b\" \"c\" \"d\" \"e\" \"f\" \"g\" \"h\" \"i\" \"j\"\n\nclass(x)\n\n[1] \"integer\"\n\nclass(y)\n\n[1] \"list\"\n\nclass(z)\n\n[1] \"character\"\n\nclass(l3$a)\n\n[1] \"integer\"\n\nclass(l3$b)\n\n[1] \"list\"\n\nclass(l3$c)\n\n[1] \"character\"\n\n\nConsequently, objects stored in a list behave just as they would outside of the list. For example, if a function is stored as an element of a list, we can call it directly:\n\n# Store the Base R 'mean' function in the 'l3' list\nl3$myMean &lt;- mean\n\n# Call both versions of our function\nmean(1:5)\n\n[1] 3\n\nl3$myMean(1:5)\n\n[1] 3\n\n\n\n\n\n\n\n\nPractice\n\n\n\nUse the list that you created in the last practice problem for this exercise.\n\n Question Interactive Editor Hint Solution\n\n\nUsing a single command, test if your eye color OR your hair color is also your favorite color.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nRecall the basic logical operators:\n\n==, !=: Equal, Not Equal\n&gt;, &lt;, &gt;=, &lt;=: Greater Than, Less Than\n&, |: Logical AND, Logical OR (not exclusive)\n\n\n\nRecall my solution for the last practice problem.\n\nmyInfo\n\n$name\n[1] \"bob\"\n\n$eyes\n[1] \"blue\"\n\n$hair\n[1] \"black\"\n\n$color\n[1] \"green\"\n\n\nSo, I would set up the necessary logical test as follows.\n\nmyInfo$eyes == myInfo$color | myInfo$hair == myInfo$color\n\n[1] FALSE\n\n\n\n\n\n\n\n\n\n\n\n\n\nKnowledge Check\n\n\n\n\nIf l$x returns an error but l[[\"x\"]] works, what does that tell you about l?\nAssuming the name slot in the list l does not hold another list, why would l[\"name\"] return a list, while l[[\"name\"]] returns some other type of object?\nWhich operator would you need if you wanted to select two named list slots at once?\n\n\n\n\n\n\n\n\n\nReady to Continue?\n\n\n\nYou’re ready to move on to Data Frames if you can:\n\nExplain what a list is and describe at least one situation where a list is the right tool.\nCreate a list with named elements.\nExplain the difference between $, [], and [[]], and choose the right one for a given task.\n\nIf any of these still feel shaky, revisit the relevant page above, or try the Knowledge Quiz to pinpoint exactly where to focus.",
     "crumbs": [
       "Open-Stat-Prog",
       "Lists",
@@ -132,36 +48,111 @@
     ]
   },
   {
-    "objectID": "tutorials/lists/index.html",
-    "href": "tutorials/lists/index.html",
-    "title": "Lists",
+    "objectID": "tutorials/lists/creating.html",
+    "href": "tutorials/lists/creating.html",
+    "title": "Creating Lists",
     "section": "",
-    "text": "Learning Outcomes\n\n\n\nBy the end of this tutorial, you will be able to:\n\nDescribe the characteristics of an R list.\nDescribe important use-cases for lists, and explain why lists are the best choice in these situations.\nCreate new lists in R.\nAccess and modify list elements using different methods, and explain the difference between the available selection operators ($, [], [[]]).\nLists are one of R’s most versatile and ubiquitous data structures. Like vectors, lists are one-dimensional objects. Unlike vectors, however, lists can comprise arbitrary mixes of data objects with any combination of types. This flexibility makes lists particularly useful for storing and organizing heterogeneous data such as the results returned from statistical modeling functions. Understanding why you’d use a list instead of a vector (not just how to create lists) is one of the main goals of this tutorial.",
+    "text": "Lists place essentially no restrictions on the nature of their contents:\nSo, lists are a great way to store substantively related, but heterogeneously sized/typed, pieces of data in one object.",
     "crumbs": [
       "Open-Stat-Prog",
-      "Lists"
+      "Lists",
+      "Creating Lists"
     ]
   },
   {
-    "objectID": "tutorials/lists/index.html#why-use-a-list",
-    "href": "tutorials/lists/index.html#why-use-a-list",
-    "title": "Lists",
-    "section": "Why Use a List?",
-    "text": "Why Use a List?\nA few common situations where a list is the natural (or only) choice:\n\nStoring mixed-type information about one “thing.” If you want to keep someone’s name (text), age (number), and active status (logical) bundled together as a single object, a vector can’t do that. It would coerce everything to one shared type. A list keeps each piece in its original type.\nStoring the results of a complex function. Many R functions (especially statistical modeling functions you’ll encounter later) return dozens of pieces of output at once, coefficients, fitted values, diagnostic statistics, the original data, all of different shapes and types. A list is the only structure flexible enough to hold all of that in one object.\nBuilding nested or hierarchical data. Since a list can contain other lists, they’re a natural fit for data that has its own internal structure, like a set of survey responses grouped by respondent.\n\nYou’ll see the second data structure in the next tutorial, the data frame, is actually a special, constrained kind of list. So getting comfortable with lists now will make data frames feel much less mysterious later.",
+    "objectID": "tutorials/lists/creating.html#generating-lists",
+    "href": "tutorials/lists/creating.html#generating-lists",
+    "title": "Creating Lists",
+    "section": "Generating Lists",
+    "text": "Generating Lists\nWe construct lists using the list() function.\n\n(l1 &lt;- list(1, 2, 3))\n\n[[1]]\n[1] 1\n\n[[2]]\n[1] 2\n\n[[3]]\n[1] 3\n\n(l2 &lt;- list(\"bob\", TRUE, 33, 42 + 3i))\n\n[[1]]\n[1] \"bob\"\n\n[[2]]\n[1] TRUE\n\n[[3]]\n[1] 33\n\n[[4]]\n[1] 42+3i\n\n(l3 &lt;- list(c(1, 2), c(3, 4)))\n\n[[1]]\n[1] 1 2\n\n[[2]]\n[1] 3 4\n\n\n\n\n\n\n\n\nPractice\n\n\n\nCreate a list called myList that comprises the following three elements.\n\nA length-three numeric vector\nA length-one character vector\nA length-two logical vector\n\n\n Interactive Editor Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nHere’s one possible solution.\n\nmyList &lt;- list(\n  1:3,\n  \"alice is not bob\",\n  rep(TRUE, 2)\n)\n\nmyList\n\n[[1]]\n[1] 1 2 3\n\n[[2]]\n[1] \"alice is not bob\"\n\n[[3]]\n[1] TRUE TRUE",
     "crumbs": [
       "Open-Stat-Prog",
-      "Lists"
+      "Lists",
+      "Creating Lists"
     ]
   },
   {
-    "objectID": "tutorials/lists/index.html#quick-check",
-    "href": "tutorials/lists/index.html#quick-check",
-    "title": "Lists",
+    "objectID": "tutorials/lists/creating.html#naming-list-elements",
+    "href": "tutorials/lists/creating.html#naming-list-elements",
+    "title": "Creating Lists",
+    "section": "Naming List Elements",
+    "text": "Naming List Elements\nWe can name the elements of a list by defining the list slots via key-value pairs.\n\nl4 &lt;- list(\n  name = \"bob\",\n  alive = TRUE,\n  age = 33,\n  relationshipStatus = 42 + 3i\n)\n\nl4\n\n$name\n[1] \"bob\"\n\n$alive\n[1] TRUE\n\n$age\n[1] 33\n\n$relationshipStatus\n[1] 42+3i\n\n\nWe can use the names() function to access and modify the names of a list’s slots.\n\n# The slots in l1 don't yet have names\nnames(l1)\n\nNULL\n\nl1\n\n[[1]]\n[1] 1\n\n[[2]]\n[1] 2\n\n[[3]]\n[1] 3\n\n# Add names to the l1 slots\nnames(l1) &lt;- c(\"first\", \"second\", \"third\")\nl1\n\n$first\n[1] 1\n\n$second\n[1] 2\n\n$third\n[1] 3\n\n\nThe names() function returns a character vector. So, we can assign/overwrite a subset of the names using ordinary vector subsetting syntax.\n\n# Change the name for the second slot in l4\nnames(l4)[2] &lt;- \"not dead\"\nnames(l4)\n\n[1] \"name\"               \"not dead\"           \"age\"               \n[4] \"relationshipStatus\"\n\nl4\n\n$name\n[1] \"bob\"\n\n$`not dead`\n[1] TRUE\n\n$age\n[1] 33\n\n$relationshipStatus\n[1] 42+3i\n\n\n\n\n\n\n\n\nPractice\n\n\n\nConsider the following list (aList) when answering this question.\n\naList\n\n$hello\n[1] \"world\"\n\n$day\n[1] \"monday\"\n\n$name\n[1] \"jude\"\n\n$false\n[1] TRUE\n\n\n\n Question Interactive Editor Solution\n\n\nPredict what the following code will print.\n\nnames(aList)[2:3] &lt;- c(\"blue\", \"hey\")\naList\n\nUse the interactive editor to check your predictions.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nWe’ve overwritten the names of the second and third list slots with the new values blue and hey, respectively. So, we see an updated version of aList that contains the same data but has two new names.\n\n\n$hello\n[1] \"world\"\n\n$blue\n[1] \"monday\"\n\n$hey\n[1] \"jude\"\n\n$false\n[1] TRUE",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Lists",
+      "Creating Lists"
+    ]
+  },
+  {
+    "objectID": "tutorials/lists/creating.html#nested-lists",
+    "href": "tutorials/lists/creating.html#nested-lists",
+    "title": "Creating Lists",
+    "section": "Nested Lists",
+    "text": "Nested Lists\nIt’s difficult to overstate the versatility of lists as general-purpose containers for R objects. It’s no exaggeration to say that a list can store any type of R object. Notably, lists are perfectly happy to store other lists. So the following abomination is a completely valid list.\n\nlevel0 &lt;- list(\n    level1 = list(\n        level2a = list(\n            level3a = list(\"How much wood\"),\n            level3b = list(\"would a woodchuck chuck\"),\n            level3c = list(\"if\")\n        ),\n        level2b = list(\n            level3a = list(\"a\"),\n            level3b = list(\"woodchuck could\"),\n            level3c = list(\"chuck wood?\")\n        )\n    )\n)\n\n\n\n\n\n\n\nPractice\n\n\n\nCreate a list to describe yourself. Include the following named elements in your list:\n\nYour Name\nYour Eye Color\nYour Hair Color\nYour Favorite Color\n\n\n Interactive Editor Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nmyInfo &lt;- list(\n  name = \"bob\",\n  eyes = \"blue\",\n  hair = \"black\",\n  color = \"green\"\n)\n\nmyInfo\n\n$name\n[1] \"bob\"\n\n$eyes\n[1] \"blue\"\n\n$hair\n[1] \"black\"\n\n$color\n[1] \"green\"\n\n\n\n\n\n\n\n\n\n\n\n\n\nKnowledge Check\n\n\n\n\nWhat’s the key difference between a list slot and a vector element, in terms of what kind of data each can hold?\nIf you don’t name a list’s slots when you generate the list, can you still add names later later? How?",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Lists",
+      "Creating Lists"
+    ]
+  },
+  {
+    "objectID": "tutorials/data_frames/manipulating.html",
+    "href": "tutorials/data_frames/manipulating.html",
+    "title": "Manipulating Data Frames",
+    "section": "",
+    "text": "Because data frames are just lists, we can access a data frame’s columns using the same methods we would use for lists. To access a single column by name, the most efficient method is typically the $ operator.\n\nd1 &lt;- data.frame(\n  a = sample(c(TRUE, FALSE), 10, replace = TRUE),\n  b = sample(c(\"foo\", \"bar\"), 10, replace = TRUE),\n  c = runif(10)\n)\n\nd1\n\n       a   b         c\n1  FALSE bar 0.5713676\n2  FALSE foo 0.2126603\n3   TRUE bar 0.2736926\n4   TRUE bar 0.3811297\n5  FALSE foo 0.6140250\n6  FALSE foo 0.1599396\n7   TRUE bar 0.9668328\n8  FALSE foo 0.3084583\n9   TRUE foo 0.1451565\n10 FALSE foo 0.6612316\n\nd1$b\n\n [1] \"bar\" \"foo\" \"bar\" \"bar\" \"foo\" \"foo\" \"bar\" \"foo\" \"foo\" \"foo\"\n\n\nWe can also use the single, [], or double, [[]], square bracket operators. As with lists, these operators differ in two respects: how many columns they can select and how they format the resulting selection.\n\n[] Can select multiple columns and always returns a data frame.\n[[]] Can select only one column and returns the column contents as a vector (or whatever type of object the column contained).\n\n\n# Return a one-column data frame comprising the 'b' column from d1\nd1[\"b\"]\n\n     b\n1  bar\n2  foo\n3  bar\n4  bar\n5  foo\n6  foo\n7  bar\n8  foo\n9  foo\n10 foo\n\n# The same as above, but using the column index instead of the column name\nd1[2]\n\n     b\n1  bar\n2  foo\n3  bar\n4  bar\n5  foo\n6  foo\n7  bar\n8  foo\n9  foo\n10 foo\n\n# Return a two-column data frame comprising the 'a' and 'b' columns from d1\nd1[c(\"a\", \"b\")]\n\n       a   b\n1  FALSE bar\n2  FALSE foo\n3   TRUE bar\n4   TRUE bar\n5  FALSE foo\n6  FALSE foo\n7   TRUE bar\n8  FALSE foo\n9   TRUE foo\n10 FALSE foo\n\n# The same as above, but using the column indices instead of the column names\nd1[1:2]\n\n       a   b\n1  FALSE bar\n2  FALSE foo\n3   TRUE bar\n4   TRUE bar\n5  FALSE foo\n6  FALSE foo\n7   TRUE bar\n8  FALSE foo\n9   TRUE foo\n10 FALSE foo\n\n# Return the 'b' column from d1 as a character vector\nd1[[\"b\"]]\n\n [1] \"bar\" \"foo\" \"bar\" \"bar\" \"foo\" \"foo\" \"bar\" \"foo\" \"foo\" \"foo\"\n\n# The same as above, but using the column index instead of the column name\nd1[[2]]\n\n [1] \"bar\" \"foo\" \"bar\" \"bar\" \"foo\" \"foo\" \"bar\" \"foo\" \"foo\" \"foo\"\n\n\n\n\nData frames also support matrix-style subsetting, where we define the selection by specifying both the row and column indices.\n\n# Return the first two rows of columns `b` and `c`\nd1[1:2, 2:3]\n\n    b         c\n1 bar 0.5713676\n2 foo 0.2126603\n\n# Return all rows from columns `a` and `b`\nd1[, 1:2]\n\n       a   b\n1  FALSE bar\n2  FALSE foo\n3   TRUE bar\n4   TRUE bar\n5  FALSE foo\n6  FALSE foo\n7   TRUE bar\n8  FALSE foo\n9   TRUE foo\n10 FALSE foo\n\n# Return the second and third rows of all columns\nd1[2:3, ]\n\n      a   b         c\n2 FALSE foo 0.2126603\n3  TRUE bar 0.2736926\n\n\n\n\n\nIn most cases, matrix style subsetting behaves the same was as the [] list-style operator. You can select any number of columns, and the selection is returned as a data frame, but there is one important exception. If you select a single column using matrix-style subsetting, the selection will be converted to a vector.\n\nd1[, 1]\n\n [1] FALSE FALSE  TRUE  TRUE FALSE FALSE  TRUE FALSE  TRUE FALSE\n\n\n\n\n\n\n\n\nGoing Further\n\n\n\nIf you want to create a one-column data frame by extracting a single column from another data frame, you should probably use the [] list-style subsetting operator. That being said, if you really want to use matrix-style subsetting, you can achieve the desired effect by adding the drop = FALSE argument inside the brackets.\n\nd1[, 1, drop = FALSE]\n\n       a\n1  FALSE\n2  FALSE\n3   TRUE\n4   TRUE\n5  FALSE\n6  FALSE\n7   TRUE\n8  FALSE\n9   TRUE\n10 FALSE\n\n\nI wouldn’t recommend using this pattern since it produces non-idiomatic R code (i.e., by convention, we should only specify function arguments inside the parentheses of a function call). You might come across this syntax in the wild, however, so it’s worth understanding what’s happening.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Data Frames",
+      "Manipulating Data Frames"
+    ]
+  },
+  {
+    "objectID": "tutorials/data_frames/manipulating.html#accessing-data-frame-elements",
+    "href": "tutorials/data_frames/manipulating.html#accessing-data-frame-elements",
+    "title": "Manipulating Data Frames",
+    "section": "",
+    "text": "Because data frames are just lists, we can access a data frame’s columns using the same methods we would use for lists. To access a single column by name, the most efficient method is typically the $ operator.\n\nd1 &lt;- data.frame(\n  a = sample(c(TRUE, FALSE), 10, replace = TRUE),\n  b = sample(c(\"foo\", \"bar\"), 10, replace = TRUE),\n  c = runif(10)\n)\n\nd1\n\n       a   b         c\n1  FALSE bar 0.5713676\n2  FALSE foo 0.2126603\n3   TRUE bar 0.2736926\n4   TRUE bar 0.3811297\n5  FALSE foo 0.6140250\n6  FALSE foo 0.1599396\n7   TRUE bar 0.9668328\n8  FALSE foo 0.3084583\n9   TRUE foo 0.1451565\n10 FALSE foo 0.6612316\n\nd1$b\n\n [1] \"bar\" \"foo\" \"bar\" \"bar\" \"foo\" \"foo\" \"bar\" \"foo\" \"foo\" \"foo\"\n\n\nWe can also use the single, [], or double, [[]], square bracket operators. As with lists, these operators differ in two respects: how many columns they can select and how they format the resulting selection.\n\n[] Can select multiple columns and always returns a data frame.\n[[]] Can select only one column and returns the column contents as a vector (or whatever type of object the column contained).\n\n\n# Return a one-column data frame comprising the 'b' column from d1\nd1[\"b\"]\n\n     b\n1  bar\n2  foo\n3  bar\n4  bar\n5  foo\n6  foo\n7  bar\n8  foo\n9  foo\n10 foo\n\n# The same as above, but using the column index instead of the column name\nd1[2]\n\n     b\n1  bar\n2  foo\n3  bar\n4  bar\n5  foo\n6  foo\n7  bar\n8  foo\n9  foo\n10 foo\n\n# Return a two-column data frame comprising the 'a' and 'b' columns from d1\nd1[c(\"a\", \"b\")]\n\n       a   b\n1  FALSE bar\n2  FALSE foo\n3   TRUE bar\n4   TRUE bar\n5  FALSE foo\n6  FALSE foo\n7   TRUE bar\n8  FALSE foo\n9   TRUE foo\n10 FALSE foo\n\n# The same as above, but using the column indices instead of the column names\nd1[1:2]\n\n       a   b\n1  FALSE bar\n2  FALSE foo\n3   TRUE bar\n4   TRUE bar\n5  FALSE foo\n6  FALSE foo\n7   TRUE bar\n8  FALSE foo\n9   TRUE foo\n10 FALSE foo\n\n# Return the 'b' column from d1 as a character vector\nd1[[\"b\"]]\n\n [1] \"bar\" \"foo\" \"bar\" \"bar\" \"foo\" \"foo\" \"bar\" \"foo\" \"foo\" \"foo\"\n\n# The same as above, but using the column index instead of the column name\nd1[[2]]\n\n [1] \"bar\" \"foo\" \"bar\" \"bar\" \"foo\" \"foo\" \"bar\" \"foo\" \"foo\" \"foo\"\n\n\n\n\nData frames also support matrix-style subsetting, where we define the selection by specifying both the row and column indices.\n\n# Return the first two rows of columns `b` and `c`\nd1[1:2, 2:3]\n\n    b         c\n1 bar 0.5713676\n2 foo 0.2126603\n\n# Return all rows from columns `a` and `b`\nd1[, 1:2]\n\n       a   b\n1  FALSE bar\n2  FALSE foo\n3   TRUE bar\n4   TRUE bar\n5  FALSE foo\n6  FALSE foo\n7   TRUE bar\n8  FALSE foo\n9   TRUE foo\n10 FALSE foo\n\n# Return the second and third rows of all columns\nd1[2:3, ]\n\n      a   b         c\n2 FALSE foo 0.2126603\n3  TRUE bar 0.2736926\n\n\n\n\n\nIn most cases, matrix style subsetting behaves the same was as the [] list-style operator. You can select any number of columns, and the selection is returned as a data frame, but there is one important exception. If you select a single column using matrix-style subsetting, the selection will be converted to a vector.\n\nd1[, 1]\n\n [1] FALSE FALSE  TRUE  TRUE FALSE FALSE  TRUE FALSE  TRUE FALSE\n\n\n\n\n\n\n\n\nGoing Further\n\n\n\nIf you want to create a one-column data frame by extracting a single column from another data frame, you should probably use the [] list-style subsetting operator. That being said, if you really want to use matrix-style subsetting, you can achieve the desired effect by adding the drop = FALSE argument inside the brackets.\n\nd1[, 1, drop = FALSE]\n\n       a\n1  FALSE\n2  FALSE\n3   TRUE\n4   TRUE\n5  FALSE\n6  FALSE\n7   TRUE\n8  FALSE\n9   TRUE\n10 FALSE\n\n\nI wouldn’t recommend using this pattern since it produces non-idiomatic R code (i.e., by convention, we should only specify function arguments inside the parentheses of a function call). You might come across this syntax in the wild, however, so it’s worth understanding what’s happening.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Data Frames",
+      "Manipulating Data Frames"
+    ]
+  },
+  {
+    "objectID": "tutorials/data_frames/manipulating.html#modifying-data-frame-elements",
+    "href": "tutorials/data_frames/manipulating.html#modifying-data-frame-elements",
+    "title": "Manipulating Data Frames",
+    "section": "Modifying Data Frame Elements",
+    "text": "Modifying Data Frame Elements\nAt this point, I hope it comes as no surprise to hear that we can overwrite the columns of a data frame using the same procedures that we use to modify list slots. When modifying one column at a time, we directly apply the intuitive operations.\n\n# View the original data frame\nd1\n\n       a   b         c\n1  FALSE bar 0.5713676\n2  FALSE foo 0.2126603\n3   TRUE bar 0.2736926\n4   TRUE bar 0.3811297\n5  FALSE foo 0.6140250\n6  FALSE foo 0.1599396\n7   TRUE bar 0.9668328\n8  FALSE foo 0.3084583\n9   TRUE foo 0.1451565\n10 FALSE foo 0.6612316\n\n# Modify some columns\nd1$a &lt;- LETTERS[1:10]\nd1[[2]] &lt;- rnorm(10)\nd1[\"c\"] &lt;- rep(c(TRUE, FALSE), each = 5)\n\n# View the modified data frame\nd1\n\n   a          b     c\n1  A  0.2453732  TRUE\n2  B -0.9763177  TRUE\n3  C  1.0875427  TRUE\n4  D -1.5495519  TRUE\n5  E  0.6856432  TRUE\n6  F  1.3981133 FALSE\n7  G -0.2953492 FALSE\n8  H  0.3670798 FALSE\n9  I  1.0284795 FALSE\n10 J  0.5298518 FALSE\n\n\nWhen modifying multiple columns with the [], operator, it’s best to supply the replacement values as a data frame or list with the same size as the selected columns. For example, below we replace the first two columns of d1 with an equivalently sized data frame.\n\nd1[1:2] &lt;- data.frame(1:10, 1:2)\nd1\n\n    a b     c\n1   1 1  TRUE\n2   2 2  TRUE\n3   3 1  TRUE\n4   4 2  TRUE\n5   5 1  TRUE\n6   6 2 FALSE\n7   7 1 FALSE\n8   8 2 FALSE\n9   9 1 FALSE\n10 10 2 FALSE\n\n\nHere, we replace the a and c columns in d1 with an equivalently sized list.\n\nd1[c(\"a\", \"c\")] &lt;- list(rnorm(10), runif(10))\nd1\n\n            a b          c\n1   0.2300220 1 0.83490526\n2  -0.7569837 2 0.03063430\n3  -0.7931176 1 0.19448170\n4  -0.2589396 2 0.20007377\n5   1.0161777 1 0.09027244\n6   0.9907318 2 0.78323176\n7  -0.9009951 1 0.41985815\n8  -1.1861447 2 0.89236940\n9  -1.5867982 1 0.64761682\n10 -2.7889736 2 0.02244615\n\n\n\nMatrix-Style Selection\nIf we only want to replace part of a column, we can use matrix-style selection to choose the target cells. Below, we first overwrite the first five rows in column b. We then overwrite rows 3 through 6 in columns a and c.\n\nd1[1:5, 2] &lt;- 41:45\nd1\n\n            a  b          c\n1   0.2300220 41 0.83490526\n2  -0.7569837 42 0.03063430\n3  -0.7931176 43 0.19448170\n4  -0.2589396 44 0.20007377\n5   1.0161777 45 0.09027244\n6   0.9907318  2 0.78323176\n7  -0.9009951  1 0.41985815\n8  -1.1861447  2 0.89236940\n9  -1.5867982  1 0.64761682\n10 -2.7889736  2 0.02244615\n\nd1[3:6, c(\"a\", \"c\")] &lt;- list(-99, 888)\nd1\n\n             a  b            c\n1    0.2300220 41   0.83490526\n2   -0.7569837 42   0.03063430\n3  -99.0000000 43 888.00000000\n4  -99.0000000 44 888.00000000\n5  -99.0000000 45 888.00000000\n6  -99.0000000  2 888.00000000\n7   -0.9009951  1   0.41985815\n8   -1.1861447  2   0.89236940\n9   -1.5867982  1   0.64761682\n10  -2.7889736  2   0.02244615\n\n\nIn the second command, notice the pattern in which the contents of the list are recycled to fill the target cells. The recycling rules for data frames can be a little tricky.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Data Frames",
+      "Manipulating Data Frames"
+    ]
+  },
+  {
+    "objectID": "tutorials/data_frames/manipulating.html#adding-columns",
+    "href": "tutorials/data_frames/manipulating.html#adding-columns",
+    "title": "Manipulating Data Frames",
+    "section": "Adding Columns",
+    "text": "Adding Columns\nAs with lists, we can add new columns to an existing data frame using the $ or [[]] operators.\n\n# Create a baseline data frame\n(d2 &lt;- data.frame(a = rep(0, 10)))\n\n   a\n1  0\n2  0\n3  0\n4  0\n5  0\n6  0\n7  0\n8  0\n9  0\n10 0\n\n# Various ways of adding new single columns\nd2$b &lt;- letters[1:10]\nd2[[\"c\"]] &lt;- runif(10)\nd2[[4]] &lt;- rnorm(10)\nd2\n\n   a b         c         V4\n1  0 a 0.9495591  0.7106068\n2  0 b 0.6585198 -0.7596336\n3  0 c 0.4954497  0.7986908\n4  0 d 0.7948196  1.1659917\n5  0 e 0.8287760  0.8719530\n6  0 f 0.2293038 -0.2033347\n7  0 g 0.2962819  0.5876878\n8  0 h 0.3781953 -0.5708052\n9  0 i 0.8856439 -0.6109921\n10 0 j 0.2992905  0.2593481\n\n\nAs you may expect, R will use recycling when we specify too few elements for the new column.\n\nd2[\"alice\"] &lt;- c(TRUE, FALSE)\nd2\n\n   a b         c         V4 alice\n1  0 a 0.9495591  0.7106068  TRUE\n2  0 b 0.6585198 -0.7596336 FALSE\n3  0 c 0.4954497  0.7986908  TRUE\n4  0 d 0.7948196  1.1659917 FALSE\n5  0 e 0.8287760  0.8719530  TRUE\n6  0 f 0.2293038 -0.2033347 FALSE\n7  0 g 0.2962819  0.5876878  TRUE\n8  0 h 0.3781953 -0.5708052 FALSE\n9  0 i 0.8856439 -0.6109921  TRUE\n10 0 j 0.2992905  0.2593481 FALSE\n\n\nWe can add multiple columns using the [] operator.\n\nd2[6:7] &lt;- rnorm(20)\nd2[c(\"foo\", \"bar\")] &lt;- list(TRUE, FALSE)\nd2\n\n   a b         c         V4 alice         V6          V7  foo   bar\n1  0 a 0.9495591  0.7106068  TRUE  0.7719495  0.41371857 TRUE FALSE\n2  0 b 0.6585198 -0.7596336 FALSE  1.0773982 -0.07650138 TRUE FALSE\n3  0 c 0.4954497  0.7986908  TRUE  1.0044468 -1.70716576 TRUE FALSE\n4  0 d 0.7948196  1.1659917 FALSE  1.3934240 -0.24074269 TRUE FALSE\n5  0 e 0.8287760  0.8719530  TRUE  0.9085887  0.94363135 TRUE FALSE\n6  0 f 0.2293038 -0.2033347 FALSE -0.4904889 -0.52771239 TRUE FALSE\n7  0 g 0.2962819  0.5876878  TRUE  0.1783426  0.71639505 TRUE FALSE\n8  0 h 0.3781953 -0.5708052 FALSE -0.4574463 -0.08738753 TRUE FALSE\n9  0 i 0.8856439 -0.6109921  TRUE  0.1759739  0.18474411 TRUE FALSE\n10 0 j 0.2992905  0.2593481 FALSE  0.6414659 -0.47979669 TRUE FALSE\n\n\n\n\n\n\n\n\nPractice\n\n\n\nRun the following code to create an empty data frame containing 10 observations of the 3 variables: a,b, c. Then populate the data frame as described below.\n\nFill column a with the integer sequence from -9 to 0.\n\nUse the column name to assign the new values.\n\nFill column b with the even integers between 1 and 20 (inclusive).\n\nUse the numeric column index to assign the new values.\n\nReplace the odd rows in column c with the odd integers between 11 and 20 (inclusive).\n\nDo not overwrite the missing values in the even rows.\n\n\n\n Interactive Editor Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\ndf &lt;- data.frame(a = rep(NA, 10), b = rep(NA, 10), c = rep(NA, 10))\ndf\n\n    a  b  c\n1  NA NA NA\n2  NA NA NA\n3  NA NA NA\n4  NA NA NA\n5  NA NA NA\n6  NA NA NA\n7  NA NA NA\n8  NA NA NA\n9  NA NA NA\n10 NA NA NA\n\ndf$a &lt;- -9:0\ndf[2] &lt;- seq(2, 20, 2)\ndf[seq(1, 9, 2), \"c\"] &lt;- seq(11, 19, 2)\ndf\n\n    a  b  c\n1  -9  2 11\n2  -8  4 NA\n3  -7  6 13\n4  -6  8 NA\n5  -5 10 15\n6  -4 12 NA\n7  -3 14 17\n8  -2 16 NA\n9  -1 18 19\n10  0 20 NA\n\n\n\n\n\n\n\n\n\n\n\n\n\nKnowledge Check\n\n\n\n\nIf d1 is a data frame, why does d1[2] return a one-column data frame, while d1[[2]] returns a vector?\nSuppose you try to replace two columns in a data frame with the contents of a three-slot list.\n\nWhich list slots (if any) does R use to fill the columns?\n\nWill R raise an error?\nWill R show a warning?\n\n\n\n\n\n\n\n\n\n\n\nReady to Continue?\n\n\n\nYou’re ready to progress if you can:\n\nCreate a data frame with columns of different types.\nExplain how a data frames are related to lists and matrices.\nUse $, [], [[]], and matrix-style subsetting to access and modify data frame contents.\nExplain the differences between the four subsetting operators.\nExplain how recycling applies when modifying data frame columns.\n\nTake the Knowledge Quiz to evaluate your learning.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Data Frames",
+      "Manipulating Data Frames"
+    ]
+  },
+  {
+    "objectID": "tutorials/data_frames/manipulating.html#quick-check",
+    "href": "tutorials/data_frames/manipulating.html#quick-check",
+    "title": "Manipulating Data Frames",
     "section": "Quick Check",
-    "text": "Quick Check\nIn your own words: why can’t you just use a vector to store someone’s name, age, and active status together?",
+    "text": "Quick Check\n\nWhy does d1[2] return a one-column data frame, but d1[[2]] returns a plain vector?\nIf you replace two columns with a list of three replacement values, what happens to the extra value? Why doesn’t R raise an error?\n\n\n\n\n\n\n\nReady to Continue?\n\n\n\nYou’re ready to move on to Tibbles — a short, optional look at a modern variant of the data frame — or straight to the Knowledge Quiz if you can:\n\nExplain how a data frame is related to a list, and how it differs from a matrix.\nCreate a data frame with columns of different types.\nUse $, [], [[]], and matrix-style indexing to access and modify data frame contents, and explain when each returns a data frame vs. a plain vector.\nExplain how recycling applies when modifying data frame columns.",
     "crumbs": [
       "Open-Stat-Prog",
-      "Lists"
+      "Data Frames",
+      "Manipulating Data Frames"
     ]
   },
   {
@@ -169,7 +160,7 @@
     "href": "tutorials/data_frames/creating.html",
     "title": "Creating Data Frames",
     "section": "",
-    "text": "Note\n\n\n\nThis page is hands-on: constructing data frames with columns of different types.\nWe create data frames using the data.frame() function. This function takes vectors as arguments, and each vector becomes a column in the resulting data frame.\nIn the following code, we create a data frame called d1 that contains 10 rows and 3 columns.\n(d1 &lt;- data.frame(1:10, c(-1, 1), seq(0.1, 1, 0.1)))\n\n   X1.10 c..1..1. seq.0.1..1..0.1.\n1      1       -1              0.1\n2      2        1              0.2\n3      3       -1              0.3\n4      4        1              0.4\n5      5       -1              0.5\n6      6        1              0.6\n7      7       -1              0.7\n8      8        1              0.8\n9      9       -1              0.9\n10    10        1              1.0\nSince we did not name the arguments to data.frame() when creating d1, R generated default (ugly) column names by parsing the argument values.\ncolnames(d1)\n\n[1] \"X1.10\"            \"c..1..1.\"         \"seq.0.1..1..0.1.\"\nWe can assign our own column names by naming the arguments to data.frame().\n# Generate a version of d1 with better column names\n(d2 &lt;- data.frame(x = 1:10, y = c(-1, 1), z = seq(0.1, 1, 0.1)))\n\n    x  y   z\n1   1 -1 0.1\n2   2  1 0.2\n3   3 -1 0.3\n4   4  1 0.4\n5   5 -1 0.5\n6   6  1 0.6\n7   7 -1 0.7\n8   8  1 0.8\n9   9 -1 0.9\n10 10  1 1.0\nWe can also assign column names to an existing data frame using the names() or colnames() functions.\nnames(d1) &lt;- c(\"foo\", \"bar\", \"baz\")\nd1\n\n   foo bar baz\n1    1  -1 0.1\n2    2   1 0.2\n3    3  -1 0.3\n4    4   1 0.4\n5    5  -1 0.5\n6    6   1 0.6\n7    7  -1 0.7\n8    8   1 0.8\n9    9  -1 0.9\n10  10   1 1.0\n\ncolnames(d1) &lt;- c(\"alice\", \"bob\", \"suzy\")\nd1\n\n   alice bob suzy\n1      1  -1  0.1\n2      2   1  0.2\n3      3  -1  0.3\n4      4   1  0.4\n5      5  -1  0.5\n6      6   1  0.6\n7      7  -1  0.7\n8      8   1  0.8\n9      9  -1  0.9\n10    10   1  1.0\nOne of the greatest strengths of data frames is their ability to store heterogeneously typed columns. For example, in the following code, we create a data frame called d3 that comprises three uniquely typed columns.\n(d3 &lt;- data.frame(a = sample(c(TRUE, FALSE), 10, replace = TRUE),\n                  b = sample(c(\"foo\", \"bar\"), 10, replace = TRUE),\n                  c = runif(10)))\n\n       a   b           c\n1  FALSE bar 0.530373170\n2   TRUE bar 0.805753625\n3  FALSE foo 0.457430991\n4   TRUE bar 0.856652134\n5   TRUE foo 0.861860435\n6  FALSE bar 0.034774592\n7  FALSE bar 0.394612024\n8  FALSE foo 0.749882454\n9  FALSE foo 0.506265389\n10  TRUE bar 0.001723177\nIf we want to quickly generate an empty data frame, we can supply a matrix as the sole argument to data.frame().\n(d4 &lt;- data.frame(matrix(NA, 10, 3)))\n\n   X1 X2 X3\n1  NA NA NA\n2  NA NA NA\n3  NA NA NA\n4  NA NA NA\n5  NA NA NA\n6  NA NA NA\n7  NA NA NA\n8  NA NA NA\n9  NA NA NA\n10 NA NA NA",
+    "text": "Note\n\n\n\nThis page is hands-on: constructing data frames with columns of different types.\nWe create data frames using the data.frame() function. This function takes vectors as arguments, and each vector becomes a column in the resulting data frame.\nIn the following code, we create a data frame called d1 that contains 10 rows and 3 columns.\n(d1 &lt;- data.frame(1:10, c(-1, 1), seq(0.1, 1, 0.1)))\n\n   X1.10 c..1..1. seq.0.1..1..0.1.\n1      1       -1              0.1\n2      2        1              0.2\n3      3       -1              0.3\n4      4        1              0.4\n5      5       -1              0.5\n6      6        1              0.6\n7      7       -1              0.7\n8      8        1              0.8\n9      9       -1              0.9\n10    10        1              1.0\nSince we did not name the arguments to data.frame() when creating d1, R generated default (ugly) column names by parsing the argument values.\ncolnames(d1)\n\n[1] \"X1.10\"            \"c..1..1.\"         \"seq.0.1..1..0.1.\"\nWe can assign our own column names by naming the arguments to data.frame().\n# Generate a version of d1 with better column names\n(d2 &lt;- data.frame(x = 1:10, y = c(-1, 1), z = seq(0.1, 1, 0.1)))\n\n    x  y   z\n1   1 -1 0.1\n2   2  1 0.2\n3   3 -1 0.3\n4   4  1 0.4\n5   5 -1 0.5\n6   6  1 0.6\n7   7 -1 0.7\n8   8  1 0.8\n9   9 -1 0.9\n10 10  1 1.0\nWe can also assign column names to an existing data frame using the names() or colnames() functions.\nnames(d1) &lt;- c(\"foo\", \"bar\", \"baz\")\nd1\n\n   foo bar baz\n1    1  -1 0.1\n2    2   1 0.2\n3    3  -1 0.3\n4    4   1 0.4\n5    5  -1 0.5\n6    6   1 0.6\n7    7  -1 0.7\n8    8   1 0.8\n9    9  -1 0.9\n10  10   1 1.0\n\ncolnames(d1) &lt;- c(\"alice\", \"bob\", \"suzy\")\nd1\n\n   alice bob suzy\n1      1  -1  0.1\n2      2   1  0.2\n3      3  -1  0.3\n4      4   1  0.4\n5      5  -1  0.5\n6      6   1  0.6\n7      7  -1  0.7\n8      8   1  0.8\n9      9  -1  0.9\n10    10   1  1.0\nOne of the greatest strengths of data frames is their ability to store heterogeneously typed columns. For example, in the following code, we create a data frame called d3 that comprises three uniquely typed columns.\n(d3 &lt;- data.frame(a = sample(c(TRUE, FALSE), 10, replace = TRUE),\n                  b = sample(c(\"foo\", \"bar\"), 10, replace = TRUE),\n                  c = runif(10)))\n\n       a   b          c\n1   TRUE bar 0.19858868\n2  FALSE bar 0.38426508\n3   TRUE foo 0.35993882\n4   TRUE foo 0.39544801\n5  FALSE foo 0.81648970\n6  FALSE bar 0.30765156\n7  FALSE foo 0.29124515\n8  FALSE foo 0.01769363\n9  FALSE bar 0.87380215\n10  TRUE bar 0.11872620\nIf we want to quickly generate an empty data frame, we can supply a matrix as the sole argument to data.frame().\n(d4 &lt;- data.frame(matrix(NA, 10, 3)))\n\n   X1 X2 X3\n1  NA NA NA\n2  NA NA NA\n3  NA NA NA\n4  NA NA NA\n5  NA NA NA\n6  NA NA NA\n7  NA NA NA\n8  NA NA NA\n9  NA NA NA\n10 NA NA NA",
     "crumbs": [
       "Open-Stat-Prog",
       "Data Frames",
@@ -189,47 +180,105 @@
     ]
   },
   {
-    "objectID": "tutorials/data_frames/index.html",
-    "href": "tutorials/data_frames/index.html",
-    "title": "Data Frames",
+    "objectID": "quizzes/lists/questions/list_name.html",
+    "href": "quizzes/lists/questions/list_name.html",
+    "title": "Question",
     "section": "",
-    "text": "Learning Outcomes\n\n\n\nBy the end of this tutorial, you will be able to:\n\nDescribe the characteristics of data frames.\nExplain important use-cases for data frames, and explain why data frames are the best choice in these situations.\nExplain how data frames and lists are related.\nExplain the differences between data frames and matrices.\nCreate new data frames in R.\nUse list-style and matrix-style indexing to access and modify the elements of a data frame, and explain the different effects of the available selection operators.\nExplain how recycling works with data frames.\nData frames are one of the most useful data structures in R, at least when it comes to real-world data analysis. A data frame is a two-dimensional, tabular object wherein the columns must be the same length, but they can contain different types of data. This structure closely mirrors the layout of rectangular, spreadsheet-style datasets, so data frames are the natural choice for storing and manipulating real-world datasets in most data analytic projects — anywhere you’d reach for a spreadsheet, a data frame is usually the R equivalent.",
+    "text": "There is a problem with the list shown below (l): the information for eye color is wrongly saved in a slot called hair. Which of the following options will change the name of the hair slot to something more appropriate?\n\n\n$name\n[1] \"bob\"\n\n$age\n[1] 25\n\n$height\n[1] 180\n\n$hair\n[1] \"blue\"\n\n\n\n\n\nnames(l)[4] &lt;- \"eyes\"\nl$hair &lt;- names(\"eyes\")\nl[[4]] &lt;- \"eyes\"\nl[4] &lt;- \"eyes\"\nnames(l)$hair &lt;- \"eyes\""
+  },
+  {
+    "objectID": "quizzes/lists/questions/list_name.html#answerlist",
+    "href": "quizzes/lists/questions/list_name.html#answerlist",
+    "title": "Question",
+    "section": "",
+    "text": "names(l)[4] &lt;- \"eyes\"\nl$hair &lt;- names(\"eyes\")\nl[[4]] &lt;- \"eyes\"\nl[4] &lt;- \"eyes\"\nnames(l)$hair &lt;- \"eyes\""
+  },
+  {
+    "objectID": "quizzes/lists/questions/list_name.html#answerlist-1",
+    "href": "quizzes/lists/questions/list_name.html#answerlist-1",
+    "title": "Question",
+    "section": "Answerlist",
+    "text": "Answerlist\n\nCorrect\nWrong: names(\"eyes\") is NULL since a character string doesn’t have a name, so this command will just erase the list element\nWrong: This command will change the value itself and not the name\nWrong: This command will change the value itself and not the name\nWrong: This command will return an error since the names() element is a vector and not a list"
+  },
+  {
+    "objectID": "quizzes/lists/index.html",
+    "href": "quizzes/lists/index.html",
+    "title": "Knowledge Quiz: Lists",
+    "section": "",
+    "text": "Consider the following list, l1.\n\n{. .cell-code} l1\n\n$name\n[1] \"bob\"\n\n$age\n[1] 25\n\n$height\n[1] 180\n\n$eyes\n[1] \"blue\"\n\n\nWhich of the following expressions will change the value of the eyes slot in l1 from “blue” to “green”?\n\nl1[[4]] &lt;- \"green\"names(l1)[4] &lt;- \"green\"l1$4 &lt;- \"green\"l1$eyes &lt;- \"blue\"l1[4] &lt;- \"green\"\n\n\n\n\nCorrect\nWrong: This command will change the name of the fourth slot, not the contents of that slot.\nWrong: There is no slot named “4” in l1.\nWrong: This command doesn’t actually change anything.\nCorrect\n\n\n\n\n\nThere is a problem with the list l: the information for eye color is wrongly saved in a slot called hair. Which of the following options will change the name of the hair slot to something more appropriate?\n\n{. .cell-code} l\n\n$name\n[1] \"bob\"\n\n$age\n[1] 25\n\n$height\n[1] 180\n\n$hair\n[1] \"blue\"\n\n\n\nnames(l)$hair &lt;- \"eyes\"l[4] &lt;- \"eyes\"l[[4]] &lt;- \"eyes\"l$hair &lt;- names(\"eyes\")names(l)[4] &lt;- \"eyes\"\n\n\n\nThe correct way to change the name of the value is names(l)[4] &lt;- \"eyes\"\n\nWrong: This command will return an error since the names() element is a vector and not a list\nWrong: This command will change the value itself and not the name\nWrong: This command will change the value itself and not the name\nWrong: names(\"eyes\") is NULL since a character string doesn’t have a name, so this command will just erase the list element\nCorrect\n\n\n\n\n\nGiven the list l &lt;- list(a = 1, b = 2, c = 3), which statement correctly describes the difference between l[\"a\"] and l[[\"a\"]]?\n\nl[\"a\"] and l[[\"a\"]] always return exactly the same thing.l[\"a\"] returns the numeric vector 1; l[[\"a\"]] returns a one-element list.l[[\"a\"]] can select multiple named slots at once, while l[\"a\"] cannot.l[\"a\"] returns a one-element list; l[[\"a\"]] returns the numeric vector 1.l[\"a\"] causes an error, since single brackets can’t be used with names.\n\n\n\nSingle brackets ([]) always preserve the list “wrapper” around the result, even when selecting just one slot. So l[\"a\"] returns a one-element list. Double brackets ([[]]) reach inside and return the actual contents of a single slot. So l[[\"a\"]] returns the numeric vector 1.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n\nClick the check-mark button to check your answer.\nClick the question-mark button to see an explanation of the solution.\n\n\n\n Back to top",
     "crumbs": [
       "Open-Stat-Prog",
-      "Data Frames"
+      "Lists",
+      "Knowledge Quiz"
     ]
   },
   {
-    "objectID": "tutorials/data_frames/index.html#data-frames-are-actually-lists",
-    "href": "tutorials/data_frames/index.html#data-frames-are-actually-lists",
-    "title": "Data Frames",
-    "section": "Data Frames Are Actually Lists",
-    "text": "Data Frames Are Actually Lists\nInterestingly, data frames are actually implemented as a special case of lists. Each column in a data frame is an element of a list, but all of these list elements must be vector-like objects (not necessarily atomic vectors, though) with equal length. In other words, a data frame is just a list where each slot contains a vector representing one column in the data frame, but with additional constraints and attributes that allow it to behave like a 2 dimensional table.\n\nd1 &lt;- data.frame(a = sample(c(TRUE, FALSE), 10, replace = TRUE),\n                 b = sample(c(\"foo\", \"bar\"), 10, replace = TRUE),\n                 c = runif(10)\n                 )\nd2 &lt;- data.frame(a = 1:10, b = c(-1, 1), c = seq(0.1, 1, 0.1))\nd3 &lt;- data.frame(x = -5:4, y = c(1, 10), z = seq(1, 1.5, length.out = 10))\n\n# d1, d2, and d3 are all data frame.\nis.data.frame(d1)\n\n[1] TRUE\n\nis.data.frame(d2)\n\n[1] TRUE\n\nis.data.frame(d3)\n\n[1] TRUE\n\n# But they're also lists\nis.list(d1)\n\n[1] TRUE\n\nis.list(d2)\n\n[1] TRUE\n\nis.list(d3)\n\n[1] TRUE\n\n\nAll data frames are lists, but not all lists need be data frames.\n\nl1 &lt;- list()\nl2 &lt;- list(a = sample(c(TRUE, FALSE), 10, replace = TRUE),\n           b = sample(c(\"foo\", \"bar\"), 10, replace = TRUE),\n           c = runif(10)\n           )\nl3 &lt;- list(d2, d3)\n\n# l1, l2, and l3 are all lists\nis.list(l1)\n\n[1] TRUE\n\nis.list(l2)\n\n[1] TRUE\n\nis.list(l3)\n\n[1] TRUE\n\n# But they're not data frames\nis.data.frame(l1)\n\n[1] FALSE\n\nis.data.frame(l2)\n\n[1] FALSE\n\nis.data.frame(l3)\n\n[1] FALSE",
+    "objectID": "quizzes/data_frames/questions/return_column_as_vector.html",
+    "href": "quizzes/data_frames/questions/return_column_as_vector.html",
+    "title": "Question",
+    "section": "",
+    "text": "Consider the following data frame, df.\n\n\n   name age height  eyes\n1   bob  25    180 green\n2  mike  23    178 green\n3  mark  24    169  blue\n4 steve  26    183 brown\n\n\nHow can we extract the name column and return the selection as a character vector?\n\n\n\ndf$name\ndf[[\"name\"]]\ndf[[1]]\ndf[ , 1]\ndf[ , \"name\"]\ndf[1]\ndf[\"name\"]\ndf[1, ]\ndf[\"name\", ]\ndf[[2]]\ndf[1:2]"
+  },
+  {
+    "objectID": "quizzes/data_frames/questions/return_column_as_vector.html#answerlist",
+    "href": "quizzes/data_frames/questions/return_column_as_vector.html#answerlist",
+    "title": "Question",
+    "section": "",
+    "text": "df$name\ndf[[\"name\"]]\ndf[[1]]\ndf[ , 1]\ndf[ , \"name\"]\ndf[1]\ndf[\"name\"]\ndf[1, ]\ndf[\"name\", ]\ndf[[2]]\ndf[1:2]"
+  },
+  {
+    "objectID": "quizzes/data_frames/questions/return_column_as_vector.html#answerlist-1",
+    "href": "quizzes/data_frames/questions/return_column_as_vector.html#answerlist-1",
+    "title": "Question",
+    "section": "Answerlist",
+    "text": "Answerlist\n\nCorrect\nCorrect\nCorrect\nCorrect\nCorrect\nWrong: This command will return the name column as a one-column data frame.\nWrong: This command will return the name column as a one-column data frame.\nWrong: This command will return the first row of df as a \\(1 \\times 4\\) data frame.\nWrong: This command will try to return a row called “name” and fail because there is no such row in df.\nWrong: This command will return the age column as a numeric vector.\nWrong: This command will return the name and age columns as a \\(4 \\times 2\\) data frame."
+  },
+  {
+    "objectID": "quizzes/data_frames/questions/relationships.html",
+    "href": "quizzes/data_frames/questions/relationships.html",
+    "title": "Question",
+    "section": "",
+    "text": "Which of the following statements about data frames is correct?\n\n\n\nA data frame is a special kind of list, where each slot holds a column vector, and all those vectors must have the same length.\nA data frame is a special kind of matrix that happens to allow different column types.\nA data frame and a matrix are the same underlying object type, just printed differently.\nA data frame is a list, but its columns can have different lengths, unlike a matrix’s columns.\nA data frame has nothing in common with either lists or matrices. It’s a completely separate object type."
+  },
+  {
+    "objectID": "quizzes/data_frames/questions/relationships.html#answerlist",
+    "href": "quizzes/data_frames/questions/relationships.html#answerlist",
+    "title": "Question",
+    "section": "",
+    "text": "A data frame is a special kind of list, where each slot holds a column vector, and all those vectors must have the same length.\nA data frame is a special kind of matrix that happens to allow different column types.\nA data frame and a matrix are the same underlying object type, just printed differently.\nA data frame is a list, but its columns can have different lengths, unlike a matrix’s columns.\nA data frame has nothing in common with either lists or matrices. It’s a completely separate object type."
+  },
+  {
+    "objectID": "quizzes/data_frames/index.html",
+    "href": "quizzes/data_frames/index.html",
+    "title": "Knowledge Quiz: Data Frames",
+    "section": "",
+    "text": "Consider the following data frame, df.\n\n\n   name age height  eyes\n1   bob  25    180 green\n2  mike  23    178 green\n3  mark  24    169  blue\n4 steve  26    183 brown\n\n\nHow can we extract the name column and return the selection as a character vector?\n\ndf[[\"name\"]]df[\"name\", ]df[\"name\"]df[[1]]df[ , 1]\n\n\n\n\nCorrect\nWrong: This command will try to return a row called “name” and fail because there is no such row in df.\nWrong: This command will return the name column as a one-column data frame.\nCorrect\nCorrect\n\n\n\n\n\nConsider the following data frame, df.\n\n\n   name age height  eyes\n1   bob  25    180 green\n2  mike  23    178 green\n3  mark  24    169  blue\n4 steve  26    183 brown\n\n\nHow can we extract the height column and return the selection as a data frame?\n\ndf[2:3]df[\"height\", ]df[ , 3]df[\"height\"]df$height\n\n\n\n\nWrong: This command will return the age and height columns as a \\(4 \\times 2\\) data frame.\nWrong: This command will try to return a row called “height” and fail because there is no such row in df.\nWrong: This command will return the height column as a numeric vector.\nCorrect\nWrong: This command will return the height column as a numeric vector.\n\n\n\n\n\nWhich of the following statements about data frames is correct?\n\nA data frame is a special kind of matrix that happens to allow different column types.A data frame is a special kind of list, where each slot holds a column vector, and all those vectors must have the same length.A data frame and a matrix are the same underlying object type, just printed differently.A data frame is a list, but its columns can have different lengths, unlike a matrix’s columns.A data frame has nothing in common with either lists or matrices. It’s a completely separate object type.\n\n\n\nA data frame is implemented as a list, where every element (column) is a vector-like object, with the added constraint that all of those vectors must have equal length. This is exactly what gives a data frame its “rectangular,” table-like structure while still being a list underneath. is.list() returns TRUE for every data frame. Data frames are not matrices: matrices require every element to share the same type, while data frames allow each column to have its own type, and the two are otherwise unrelated object types under the hood.\n\n\n\n\nYou have a data frame d with 10 rows. You run d[1:2] &lt;- 1:3 (attempting to replace the first two columns using a length-3 replacement vector), and R raises an error. Why?\n\nBecause you can never use a numeric vector to replace data frame columns.Because replacing 2 columns of 10 rows needs 20 values total, and 3 does not evenly divide 20, so R can’t recycle the replacement vector without leaving a “leftover,” ambiguous partial fill.Because the replacement vector must always be named.Because d[1:2] &lt;- can only ever replace exactly one column at a time.Because 3 is larger than 2 (the number of columns being replaced).\n\n\n\nJust like with vectors and matrices, R recycles a shorter replacement vector to fill a longer selection, but only when the replacement length evenly divides the total number of values needed. Replacing 2 columns across 10 rows requires 20 values, and a length-3 vector doesn’t divide 20 evenly (20 / 3 isn’t a whole number), so R refuses rather than guessing at an ambiguous fill pattern.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n\nClick the check-mark button to check your answer.\nClick the question-mark button to see an explanation of the solution.\n\n\n\n Back to top",
     "crumbs": [
       "Open-Stat-Prog",
-      "Data Frames"
+      "Data Frames",
+      "Knowledge Quiz"
     ]
   },
   {
-    "objectID": "tutorials/data_frames/index.html#data-frames-are-not-matrices",
-    "href": "tutorials/data_frames/index.html#data-frames-are-not-matrices",
-    "title": "Data Frames",
-    "section": "Data Frames Are Not Matrices",
-    "text": "Data Frames Are Not Matrices\nAs you have probably surmised, data frames are not matrices. Although data frames and matrices share many superficial similarities, they’re almost entirely unrelated types of objects.\n\nis.matrix(d1)\n\n[1] FALSE\n\nis.matrix(d2)\n\n[1] FALSE\n\nis.matrix(d3)\n\n[1] FALSE\n\n\nConsequently, you cannot apply matrix operations (such as matrix multiplication) to a data frame.\n\nd2 %*% t(d3)\n\nError in d2 %*% t(d3): requires numeric/complex matrix/vector arguments\n\n\nIf you wanted to analyze a data frame like a matrix, you could type cast the data frame into a matrix using the as.matrix() function.\n\nas.matrix(d2) %*% t(as.matrix(d3))\n\n       [,1]       [,2]       [,3]       [,4]       [,5]      [,6]       [,7]\n [1,]  -5.9 -13.894444  -3.888889 -11.883333 -1.8777778 -9.872222  0.1333333\n [2,]  -8.8   2.211111  -4.777778   6.233333 -0.7555556 10.255556  3.2666667\n [3,] -15.7 -21.683333  -9.666667 -15.650000 -3.6333333 -9.616667  2.4000000\n [4,] -18.6  -5.577778 -10.555556   2.466667 -2.5111111 10.511111  5.5333333\n [5,] -25.5 -29.472222 -15.444444 -19.416667 -5.3888889 -9.361111  4.6666667\n [6,] -28.4 -13.366667 -16.333333  -1.300000 -4.2666667 10.766667  7.8000000\n [7,] -35.3 -37.261111 -21.222222 -23.183333 -7.1444444 -9.105556  6.9333333\n [8,] -38.2 -21.155556 -22.111111  -5.066667 -6.0222222 11.022222 10.0666667\n [9,] -45.1 -45.050000 -27.000000 -26.950000 -8.9000000 -8.850000  9.2000000\n[10,] -48.0 -28.944444 -27.888889  -8.833333 -7.7777778 11.277778 12.3333333\n            [,8]      [,9] [,10]\n [1,] -7.8611111  2.144444 -5.85\n [2,] 14.2777778  7.288889 18.30\n [3,] -3.5833333  8.433333  2.45\n [4,] 18.5555556 13.577778 26.60\n [5,]  0.6944444 14.722222 10.75\n [6,] 22.8333333 19.866667 34.90\n [7,]  4.9722222 21.011111 19.05\n [8,] 27.1111111 26.155556 43.20\n [9,]  9.2500000 27.300000 27.35\n[10,] 31.3888889 32.444444 51.50\n\n\nYou should be carefully about any type conversions. If you’re data frame contains mixed column types, R will coerce every column into some compatible type, the same coercion rule you learned about back in the Vectors tutorial, just applied across an entire data frame at once.\n\n(m1 &lt;- as.matrix(d1))\n\n      a       b     c           \n [1,] \"FALSE\" \"bar\" \"0.60430156\"\n [2,] \"TRUE\"  \"bar\" \"0.74295005\"\n [3,] \"TRUE\"  \"bar\" \"0.54698522\"\n [4,] \"FALSE\" \"foo\" \"0.51269063\"\n [5,] \"FALSE\" \"foo\" \"0.53852420\"\n [6,] \"TRUE\"  \"bar\" \"0.03316637\"\n [7,] \"TRUE\"  \"bar\" \"0.84933565\"\n [8,] \"TRUE\"  \"foo\" \"0.53671100\"\n [9,] \"FALSE\" \"foo\" \"0.70549778\"\n[10,] \"FALSE\" \"foo\" \"0.10842836\"\n\ntypeof(m1)\n\n[1] \"character\"\n\n(d4 &lt;- data.frame(x = rep(c(TRUE, FALSE), 3), y = runif(6)))\n\n      x         y\n1  TRUE 0.4304682\n2 FALSE 0.9958951\n3  TRUE 0.4419986\n4 FALSE 0.6827133\n5  TRUE 0.9502714\n6 FALSE 0.7517179\n\n(m4 &lt;- as.matrix(d4))\n\n     x         y\n[1,] 1 0.4304682\n[2,] 0 0.9958951\n[3,] 1 0.4419986\n[4,] 0 0.6827133\n[5,] 1 0.9502714\n[6,] 0 0.7517179\n\ntypeof(m4)\n\n[1] \"double\"",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Lists & Data Frames",
+    "section": "",
+    "text": "About 100–130 minutes, including practice exercises and knowledge quizzes.\nIn this module, we’ll cover two more of R’s essential data structures: lists and data frames. Where vectors and matrices (covered in the previous module) require every element to share the same type, lists and data frames are built specifically to hold mixed types of data.\nContent is split into two tutorials:",
     "crumbs": [
       "Open-Stat-Prog",
-      "Data Frames"
+      "Overview"
     ]
   },
   {
-    "objectID": "tutorials/data_frames/index.html#quick-check",
-    "href": "tutorials/data_frames/index.html#quick-check",
-    "title": "Data Frames",
-    "section": "Quick Check",
-    "text": "Quick Check\n\nIn one sentence: how is a data frame related to a list?\nWhy can’t you do d2 %*% t(d3) directly on two data frames?\nIf a data frame has one text column and one numeric column, what happens if you convert it to a matrix with as.matrix()? Why?",
+    "objectID": "index.html#learning-goals",
+    "href": "index.html#learning-goals",
+    "title": "Lists & Data Frames",
+    "section": "Learning Goals",
+    "text": "Learning Goals\nAfter completing this module, you will be able to:\n\nLists\n\nDescribe the characteristics of an R list\nDescribe important use-cases for lists, and explain why lists are the best choice in these situations.\nCreate new lists in R.\nAccess and modify list elements using different methods, and explain the difference between the available selection operators.\n\n\n\nData Frames\n\nDescribe the characteristics of data frames.\nExplain important use-cases for data frames, and explain why data frames are the best choice in these situations.\nExplain how data frames and lists are related.\nExplain the differences between data frames and matrices.\nCreate new data frames in R.\nUse list-style and matrix-style indexing to access and modify the elements of a data frame.\nExplain the different effects of the available selection operators.\nExplain how recycling works with data frames.\n\nClick the button below to get started.\n\n\n Begin Tutorial",
     "crumbs": [
       "Open-Stat-Prog",
-      "Data Frames"
+      "Overview"
     ]
   },
   {
@@ -288,28 +337,6 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Lists & Data Frames",
-    "section": "",
-    "text": "About 100–130 minutes, including practice exercises and knowledge quizzes.\nIn this module, we’ll cover two more of R’s essential data structures: lists and data frames. Where vectors and matrices (covered in the previous module) require every element to share the same type, lists and data frames are built specifically to hold mixed types of data.\nContent is split into two tutorials:",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "index.html#learning-goals",
-    "href": "index.html#learning-goals",
-    "title": "Lists & Data Frames",
-    "section": "Learning Goals",
-    "text": "Learning Goals\nAfter completing this module, you will be able to:\n\nLists\n\nDescribe the characteristics of an R list\nDescribe important use-cases for lists, and explain why lists are the best choice in these situations.\nCreate new lists in R.\nAccess and modify list elements using different methods, and explain the difference between the available selection operators.\n\n\n\nData Frames\n\nDescribe the characteristics of data frames.\nExplain important use-cases for data frames, and explain why data frames are the best choice in these situations.\nExplain how data frames and lists are related.\nExplain the differences between data frames and matrices.\nCreate new data frames in R.\nUse list-style and matrix-style indexing to access and modify the elements of a data frame.\nExplain the different effects of the available selection operators.\nExplain how recycling works with data frames.\n\nClick the button below to get started.\n\n\n Begin Tutorial",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Overview"
-    ]
-  },
-  {
     "objectID": "in_progress.html",
     "href": "in_progress.html",
     "title": "In Progress",
@@ -317,15 +344,136 @@
     "text": "Sorry, we’re still building the page you’ve requested.\nIt’s almost done…really.\nWe’re just working through a few minor issues…\n\n\n\nImage Source"
   },
   {
+    "objectID": "quizzes/data_frames/questions/recycling_concept.html",
+    "href": "quizzes/data_frames/questions/recycling_concept.html",
+    "title": "Question",
+    "section": "",
+    "text": "You have a data frame d with 10 rows. You run d[1:2] &lt;- 1:3 (attempting to replace the first two columns using a length-3 replacement vector), and R raises an error. Why?\n\n\n\nBecause replacing 2 columns of 10 rows needs 20 values total, and 3 does not evenly divide 20, so R can’t recycle the replacement vector without leaving a “leftover,” ambiguous partial fill.\nBecause you can never use a numeric vector to replace data frame columns.\nBecause d[1:2] &lt;- can only ever replace exactly one column at a time.\nBecause 3 is larger than 2 (the number of columns being replaced).\nBecause the replacement vector must always be named."
+  },
+  {
+    "objectID": "quizzes/data_frames/questions/recycling_concept.html#answerlist",
+    "href": "quizzes/data_frames/questions/recycling_concept.html#answerlist",
+    "title": "Question",
+    "section": "",
+    "text": "Because replacing 2 columns of 10 rows needs 20 values total, and 3 does not evenly divide 20, so R can’t recycle the replacement vector without leaving a “leftover,” ambiguous partial fill.\nBecause you can never use a numeric vector to replace data frame columns.\nBecause d[1:2] &lt;- can only ever replace exactly one column at a time.\nBecause 3 is larger than 2 (the number of columns being replaced).\nBecause the replacement vector must always be named."
+  },
+  {
+    "objectID": "quizzes/data_frames/questions/return_column_as_df.html",
+    "href": "quizzes/data_frames/questions/return_column_as_df.html",
+    "title": "Question",
+    "section": "",
+    "text": "Consider the following data frame, df.\n\n\n   name age height  eyes\n1   bob  25    180 green\n2  mike  23    178 green\n3  mark  24    169  blue\n4 steve  26    183 brown\n\n\nHow can we extract the height column and return the selection as a data frame?\n\n\n\ndf[3]\ndf[\"height\"]\ndf$height\ndf[[\"height\"]]\ndf[[3]]\ndf[ , 3]\ndf[ , \"height\"]\ndf[3, ]\ndf[\"height\", ]\ndf[[2]]\ndf[2:3]"
+  },
+  {
+    "objectID": "quizzes/data_frames/questions/return_column_as_df.html#answerlist",
+    "href": "quizzes/data_frames/questions/return_column_as_df.html#answerlist",
+    "title": "Question",
+    "section": "",
+    "text": "df[3]\ndf[\"height\"]\ndf$height\ndf[[\"height\"]]\ndf[[3]]\ndf[ , 3]\ndf[ , \"height\"]\ndf[3, ]\ndf[\"height\", ]\ndf[[2]]\ndf[2:3]"
+  },
+  {
+    "objectID": "quizzes/data_frames/questions/return_column_as_df.html#answerlist-1",
+    "href": "quizzes/data_frames/questions/return_column_as_df.html#answerlist-1",
+    "title": "Question",
+    "section": "Answerlist",
+    "text": "Answerlist\n\nCorrect\nCorrect\nWrong: This command will return the height column as a numeric vector.\nWrong: This command will return the height column as a numeric vector.\nWrong: This command will return the height column as a numeric vector.\nWrong: This command will return the height column as a numeric vector.\nWrong: This command will return the height column as a numeric vector.\nWrong: This command will return the third row of df as a \\(1 \\times 4\\) data frame.\nWrong: This command will try to return a row called “height” and fail because there is no such row in df.\nWrong: This command will return the age column as a numeric vector.\nWrong: This command will return the age and height columns as a \\(4 \\times 2\\) data frame."
+  },
+  {
+    "objectID": "quizzes/data_frames/questions/select_row.html",
+    "href": "quizzes/data_frames/questions/select_row.html",
+    "title": "Question",
+    "section": "",
+    "text": "Question\nConsider the data frame df below, how can we extract only the data about Bob?\n\n\n  names age height  eyes\n1   bob  25    180 green\n2  mike  23    178 green\n3  mark  24    169  blue\n4 steve  26    183 black\n\n\n\n\nSolution\nWe have to select the first row of the data frame, and we can do this using df[1,]\n\n\nMeta-information\nexname: DF Row extype: string exsolution: df[1,]\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "quizzes/lists/questions/list_change.html",
+    "href": "quizzes/lists/questions/list_change.html",
+    "title": "Question",
+    "section": "",
+    "text": "Consider the following list, l1.\n\n\n$name\n[1] \"bob\"\n\n$age\n[1] 25\n\n$height\n[1] 180\n\n$eyes\n[1] \"blue\"\n\n\nWhich of the following expressions will change the value of the eyes slot in l1 from “blue” to “green”?\n\n\n\nl1$eyes &lt;- \"green\"\nl1[[4]] &lt;- \"green\"\nl1[4] &lt;- \"green\"\nl1$eyes &lt;- \"blue\"\nl1$4 &lt;- \"green\"\nl1$eyes &lt;- green\nl1[4, ] &lt;- \"green\"\nnames(l1)[4] &lt;- \"green\""
+  },
+  {
+    "objectID": "quizzes/lists/questions/list_change.html#answerlist",
+    "href": "quizzes/lists/questions/list_change.html#answerlist",
+    "title": "Question",
+    "section": "",
+    "text": "l1$eyes &lt;- \"green\"\nl1[[4]] &lt;- \"green\"\nl1[4] &lt;- \"green\"\nl1$eyes &lt;- \"blue\"\nl1$4 &lt;- \"green\"\nl1$eyes &lt;- green\nl1[4, ] &lt;- \"green\"\nnames(l1)[4] &lt;- \"green\""
+  },
+  {
+    "objectID": "quizzes/lists/questions/list_change.html#answerlist-1",
+    "href": "quizzes/lists/questions/list_change.html#answerlist-1",
+    "title": "Question",
+    "section": "Answerlist",
+    "text": "Answerlist\n\nCorrect\nCorrect\nCorrect\nWrong: This command doesn’t actually change anything.\nWrong: There is no slot named “4” in l1.\nWrong: This command tries to replace the value of l4$eyes with the contents of the object green, not the character vector \"green\".\nWrong: l1 is a list, so we should not use matrix-style selection.\nWrong: This command will change the name of the fourth slot, not the contents of that slot."
+  },
+  {
+    "objectID": "quizzes/lists/questions/selection_operators.html",
+    "href": "quizzes/lists/questions/selection_operators.html",
+    "title": "Question",
+    "section": "",
+    "text": "Given the list l &lt;- list(a = 1, b = 2, c = 3), which statement correctly describes the difference between l[\"a\"] and l[[\"a\"]]?\n\n\n\nl[\"a\"] returns a one-element list; l[[\"a\"]] returns the numeric vector 1.\nl[\"a\"] and l[[\"a\"]] always return exactly the same thing.\nl[\"a\"] returns the numeric vector 1; l[[\"a\"]] returns a one-element list.\nl[\"a\"] causes an error, since single brackets can’t be used with names.\nl[[\"a\"]] can select multiple named slots at once, while l[\"a\"] cannot."
+  },
+  {
+    "objectID": "quizzes/lists/questions/selection_operators.html#answerlist",
+    "href": "quizzes/lists/questions/selection_operators.html#answerlist",
+    "title": "Question",
+    "section": "",
+    "text": "l[\"a\"] returns a one-element list; l[[\"a\"]] returns the numeric vector 1.\nl[\"a\"] and l[[\"a\"]] always return exactly the same thing.\nl[\"a\"] returns the numeric vector 1; l[[\"a\"]] returns a one-element list.\nl[\"a\"] causes an error, since single brackets can’t be used with names.\nl[[\"a\"]] can select multiple named slots at once, while l[\"a\"] cannot."
+  },
+  {
+    "objectID": "tutorials/data_frames/index.html",
+    "href": "tutorials/data_frames/index.html",
+    "title": "Data Frames",
+    "section": "",
+    "text": "Learning Outcomes\n\n\n\nBy the end of this tutorial, you will be able to:\n\nDescribe the characteristics of data frames.\nExplain important use-cases for data frames, and explain why data frames are the best choice in these situations.\nExplain how data frames and lists are related.\nExplain the differences between data frames and matrices.\nCreate new data frames in R.\nUse list-style and matrix-style indexing to access and modify the elements of a data frame, and explain the different effects of the available selection operators.\nExplain how recycling works with data frames.\n\n\n\nData frames are one of the most useful data structures in R, at least when it comes to real-world data analysis. A data frame is a two-dimensional, tabular object wherein the columns can contain different types of data (unlike matrices). This structure closely mirrors the layout of rectangular, spreadsheet-style datasets, so data frames are the natural choice for storing and manipulating real-world datasets in most data analytic projects.\n\n\n\n Back to top",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Data Frames"
+    ]
+  },
+  {
+    "objectID": "tutorials/data_frames/index.html#data-frames-are-actually-lists",
+    "href": "tutorials/data_frames/index.html#data-frames-are-actually-lists",
+    "title": "Data Frames",
+    "section": "Data Frames Are Actually Lists",
+    "text": "Data Frames Are Actually Lists\nInterestingly, data frames are actually implemented as a special case of lists. Each column in a data frame is an element of a list, but all of these list elements must be vector-like objects (not necessarily atomic vectors, though) with equal length. In other words, a data frame is just a list where each slot contains a vector representing one column in the data frame, but with additional constraints and attributes that allow it to behave like a 2 dimensional table.\n\nd1 &lt;- data.frame(a = sample(c(TRUE, FALSE), 10, replace = TRUE),\n                 b = sample(c(\"foo\", \"bar\"), 10, replace = TRUE),\n                 c = runif(10)\n                 )\nd2 &lt;- data.frame(a = 1:10, b = c(-1, 1), c = seq(0.1, 1, 0.1))\nd3 &lt;- data.frame(x = -5:4, y = c(1, 10), z = seq(1, 1.5, length.out = 10))\n\n# d1, d2, and d3 are all data frame.\nis.data.frame(d1)\n\n[1] TRUE\n\nis.data.frame(d2)\n\n[1] TRUE\n\nis.data.frame(d3)\n\n[1] TRUE\n\n# But they're also lists\nis.list(d1)\n\n[1] TRUE\n\nis.list(d2)\n\n[1] TRUE\n\nis.list(d3)\n\n[1] TRUE\n\n\nAll data frames are lists, but not all lists need be data frames.\n\nl1 &lt;- list()\nl2 &lt;- list(a = sample(c(TRUE, FALSE), 10, replace = TRUE),\n           b = sample(c(\"foo\", \"bar\"), 10, replace = TRUE),\n           c = runif(10)\n           )\nl3 &lt;- list(d2, d3)\n\n# l1, l2, and l3 are all lists\nis.list(l1)\n\n[1] TRUE\n\nis.list(l2)\n\n[1] TRUE\n\nis.list(l3)\n\n[1] TRUE\n\n# But they're not data frames\nis.data.frame(l1)\n\n[1] FALSE\n\nis.data.frame(l2)\n\n[1] FALSE\n\nis.data.frame(l3)\n\n[1] FALSE",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Data Frames"
+    ]
+  },
+  {
+    "objectID": "tutorials/data_frames/index.html#data-frames-are-not-matrices",
+    "href": "tutorials/data_frames/index.html#data-frames-are-not-matrices",
+    "title": "Data Frames",
+    "section": "Data Frames Are Not Matrices",
+    "text": "Data Frames Are Not Matrices\nAs you have probably surmised, data frames are not matrices. Although data frames and matrices share many superficial similarities, they’re almost entirely unrelated types of objects.\n\nis.matrix(d1)\n\n[1] FALSE\n\nis.matrix(d2)\n\n[1] FALSE\n\nis.matrix(d3)\n\n[1] FALSE\n\n\nConsequently, you cannot apply matrix operations (such as matrix multiplication) to a data frame.\n\nd2 %*% t(d3)\n\nError in `d2 %*% t(d3)`:\n! requires numeric/complex matrix/vector arguments\n\n\nIf you wanted to analyze a data frame like a matrix, you could type cast the data frame into a matrix using the as.matrix() function.\n\nas.matrix(d2) %*% t(as.matrix(d3))\n\n       [,1]       [,2]       [,3]       [,4]       [,5]      [,6]       [,7]\n [1,]  -5.9 -13.894444  -3.888889 -11.883333 -1.8777778 -9.872222  0.1333333\n [2,]  -8.8   2.211111  -4.777778   6.233333 -0.7555556 10.255556  3.2666667\n [3,] -15.7 -21.683333  -9.666667 -15.650000 -3.6333333 -9.616667  2.4000000\n [4,] -18.6  -5.577778 -10.555556   2.466667 -2.5111111 10.511111  5.5333333\n [5,] -25.5 -29.472222 -15.444444 -19.416667 -5.3888889 -9.361111  4.6666667\n [6,] -28.4 -13.366667 -16.333333  -1.300000 -4.2666667 10.766667  7.8000000\n [7,] -35.3 -37.261111 -21.222222 -23.183333 -7.1444444 -9.105556  6.9333333\n [8,] -38.2 -21.155556 -22.111111  -5.066667 -6.0222222 11.022222 10.0666667\n [9,] -45.1 -45.050000 -27.000000 -26.950000 -8.9000000 -8.850000  9.2000000\n[10,] -48.0 -28.944444 -27.888889  -8.833333 -7.7777778 11.277778 12.3333333\n            [,8]      [,9] [,10]\n [1,] -7.8611111  2.144444 -5.85\n [2,] 14.2777778  7.288889 18.30\n [3,] -3.5833333  8.433333  2.45\n [4,] 18.5555556 13.577778 26.60\n [5,]  0.6944444 14.722222 10.75\n [6,] 22.8333333 19.866667 34.90\n [7,]  4.9722222 21.011111 19.05\n [8,] 27.1111111 26.155556 43.20\n [9,]  9.2500000 27.300000 27.35\n[10,] 31.3888889 32.444444 51.50\n\n\nYou should be carefully about any type conversions. If you’re data frame contains mixed column types, R will coerce every column into some compatible type, the same coercion rule you learned about back in the Vectors tutorial, just applied across an entire data frame at once.\n\n(m1 &lt;- as.matrix(d1))\n\n      a       b     c          \n [1,] \"FALSE\" \"foo\" \"0.9200611\"\n [2,] \"FALSE\" \"bar\" \"0.2396519\"\n [3,] \"FALSE\" \"bar\" \"0.9724979\"\n [4,] \"FALSE\" \"foo\" \"0.3589182\"\n [5,] \"FALSE\" \"bar\" \"0.0944188\"\n [6,] \"TRUE\"  \"bar\" \"0.4591116\"\n [7,] \"TRUE\"  \"bar\" \"0.3003212\"\n [8,] \"FALSE\" \"foo\" \"0.6798279\"\n [9,] \"FALSE\" \"bar\" \"0.8453105\"\n[10,] \"TRUE\"  \"foo\" \"0.2269882\"\n\ntypeof(m1)\n\n[1] \"character\"\n\n(d4 &lt;- data.frame(x = rep(c(TRUE, FALSE), 3), y = runif(6)))\n\n      x           y\n1  TRUE 0.152940746\n2 FALSE 0.573805635\n3  TRUE 0.351176828\n4 FALSE 0.600751675\n5  TRUE 0.002532329\n6 FALSE 0.976127221\n\n(m4 &lt;- as.matrix(d4))\n\n     x           y\n[1,] 1 0.152940746\n[2,] 0 0.573805635\n[3,] 1 0.351176828\n[4,] 0 0.600751675\n[5,] 1 0.002532329\n[6,] 0 0.976127221\n\ntypeof(m4)\n\n[1] \"double\"",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Data Frames"
+    ]
+  },
+  {
+    "objectID": "tutorials/data_frames/index.html#quick-check",
+    "href": "tutorials/data_frames/index.html#quick-check",
+    "title": "Data Frames",
+    "section": "Quick Check",
+    "text": "Quick Check\n\nIn one sentence: how is a data frame related to a list?\nWhy can’t you do d2 %*% t(d3) directly on two data frames?\nIf a data frame has one text column and one numeric column, what happens if you convert it to a matrix with as.matrix()? Why?",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Data Frames"
+    ]
+  },
+  {
     "objectID": "tutorials/data_frames/tibbles.html",
     "href": "tutorials/data_frames/tibbles.html",
     "title": "Tibbles: A Modern Data Frame",
     "section": "",
-    "text": "Note\n\n\n\nThe goal is to recognize tibbles and describe how they relate to ordinary data frames, not to master a new syntax. None of the code on this page needs to run for you to get the point. Read it, and try it yourself later once you’ve installed the tibble package (or the tidyverse, which includes it).\nAs you continue working with R, especially once you start using packages from the tidyverse (like dplyr or ggplot2), you’ll frequently encounter a variant of the data frame called a tibble. A tibble is provided by the tibble package, and it’s designed to behave like a data frame in almost every way, while smoothing over a few behaviors that regularly surprise beginners.",
+    "text": "Optional Content\n\n\n\nThis page is a brief preview of an advanced topic that you’ll encounter in later modules, not a required part of this module’s learning outcomes. Feel free to skim the following information now and come back later once you’ve had more practice with ordinary data frames.\nAs you continue working with R—especially once you start using packages from the tidyverse like dplyr and ggplot2—you’ll frequently encounter a special kind of data frame called a tibble. This page provides a brief introduction to these very handle data objects.",
     "crumbs": [
       "Open-Stat-Prog",
       "Data Frames",
-      "Tibbles: A Modern Data Frame"
+      "Tibbles"
     ]
   },
   {
@@ -344,12 +492,12 @@
     "objectID": "tutorials/data_frames/tibbles.html#how-tibbles-differ-from-data-frames",
     "href": "tutorials/data_frames/tibbles.html#how-tibbles-differ-from-data-frames",
     "title": "Tibbles: A Modern Data Frame",
-    "section": "How Tibbles Differ From Data Frames",
-    "text": "How Tibbles Differ From Data Frames\nTibbles are still data frames underneath (in fact, is.data.frame() returns TRUE for a tibble). They change a few specific behaviors, not the fundamental structure:\n\nis.data.frame(t1)\n\n[1] TRUE\n\nclass(t1)\n\n[1] \"tbl_df\"     \"tbl\"        \"data.frame\"\n\n\n\nTibbles never simplify on selection. Remember how selecting a single column from a data frame using matrix-style indexing (d1[, 1]) automatically “dropped” the result down to a plain vector? Tibbles don’t do that. t1[, 1] always returns a one-column tibble, never a bare vector. This removes a common source of unexpected behavior in longer scripts.\nTibbles don’t do partial column-name matching. With an ordinary data frame, df$he might accidentally match a column called height if there’s no exact match. Tibbles require an exact match, which helps catch typos early.\nTibbles print more safely. Printing a large ordinary data frame dumps every row to your console. Tibbles print only the first several rows by default, along with each column’s type — much friendlier for big datasets.\n\n\n# Compare: selecting one column with matrix-style indexing\nd1 &lt;- data.frame(x = 1:5, y = letters[1:5])\n\nclass(d1[, 1])  # a data frame \"drops\" to a vector\n\n[1] \"integer\"\n\nclass(t1[, 1])  # a tibble does not drop\n\n[1] \"tbl_df\"     \"tbl\"        \"data.frame\"",
+    "section": "How Tibbles Differ from Data Frames",
+    "text": "How Tibbles Differ from Data Frames\nIn many ways, tibbles don’t differ from data frames. For the most part, tibbles are meant to be a drop-in replacement for traditional data frames, so they don’t change much about the code data frame features (after all, data frames are already very useful). As far as R is concerned, tibbles are still data frames underneath.\n\nis.data.frame(t1)\n\n[1] TRUE\n\n\nSince they share the same underlying structure, you can seamlessly convert data frames to tibbles and visa-versa.\n\n# Convert a tibble to an ordinary data frame\n(d1 &lt;- as.data.frame(t1))\n\n            x   y          z\n1   0.9176988 foo 0.84217109\n2  -1.0449407 bar 1.09190111\n3  -0.9243033 bar 0.85433667\n4  -2.2274027 foo 4.96132281\n5  -0.8488617 baz 0.72056625\n6  -0.1778941 foo 0.03164631\n7   1.1757086 foo 1.38229071\n8  -0.7545384 baz 0.56932820\n9  -2.1178711 bar 4.48537782\n10  0.8824074 baz 0.77864277\n\n# Convert a data frame to a tibble\nas_tibble(d1)\n\n# A tibble: 10 × 3\n        x y          z\n    &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt;\n 1  0.918 foo   0.842 \n 2 -1.04  bar   1.09  \n 3 -0.924 bar   0.854 \n 4 -2.23  foo   4.96  \n 5 -0.849 baz   0.721 \n 6 -0.178 foo   0.0316\n 7  1.18  foo   1.38  \n 8 -0.755 baz   0.569 \n 9 -2.12  bar   4.49  \n10  0.882 baz   0.779 \n\n\nThe goal of tibbles is to smooth over some of the confusing, frustrating, or surprising behavior of traditional data frames. Below, we highlight a few of the most useful differences.\n\nTibbles Don’t Do Surprise Simplification\nRemember how selecting a single column from a data frame using matrix-style indexing (d1[, 1]) automatically simplifies the result to a vector? I certainly hope so; we just covered that on the last page. Anyway, tibbles don’t do that.\nSubsetting a tibble using matrix-style indexing always returns a tibble, regardless of how many rows or columns are extracted.\n\nt1[1:2, 1:2]\n\n# A tibble: 2 × 2\n       x y    \n   &lt;dbl&gt; &lt;chr&gt;\n1  0.918 foo  \n2 -1.04  bar  \n\nt1[, 1]\n\n# A tibble: 10 × 1\n        x\n    &lt;dbl&gt;\n 1  0.918\n 2 -1.04 \n 3 -0.924\n 4 -2.23 \n 5 -0.849\n 6 -0.178\n 7  1.18 \n 8 -0.755\n 9 -2.12 \n10  0.882\n\nt1[1, ]\n\n# A tibble: 1 × 3\n      x y         z\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1 0.918 foo   0.842\n\n\n\n\nTibbles Don’t Do Partial Name Matching\nWe haven’t explicitly addressed it yet, but many R commands use “partial matching” to resolve your inputs. For example, we don’t actually have to write out the full word digits to specify the corresponding argument in round(). We only need to provide enough of the initial letters to disambiguate the intended argument name.\n\nround(digits = 2, 3.14159)\n\n[1] 3.14\n\nround(dig = 2, 3.14159)\n\n[1] 3.14\n\nround(d = 2, 3.14159)\n\n[1] 3.14\n\n\nOrdinary data frames use the system to match column names. So, to match the column foo in d1, we only need to specify one letter.\n\nd1 &lt;- data.frame(\n  foo = rnorm(10),\n  bar = runif(10),\n  baz = rbinom(10, 1, 0.5)\n)\n\nd1$f\n\n [1] -2.91269047 -0.35023392  1.46933902 -0.10735175 -0.73755665  0.07268597\n [7]  1.63779227 -1.40898459  0.29416838 -1.91531183\n\n\nTo match the bar or baz columns, however, we need to give the full column name, since these two names only differ in their final letter.\n\nd1$ba\n\nNULL\n\n\nUsually, this shortcut doesn’t cause problems, but it creates unnecessary ambiguity, and permits easily avoided bugs. Consider the following hypothetical data frame.\n\nmyData &lt;- data.frame(\n  female = sample(0:1, 20, TRUE),\n  malevolent = sample(0:1, 20, TRUE),\n  score = rnorm(20)\n)\n\nmyData\n\n   female malevolent       score\n1       0          0  2.01780483\n2       0          1  0.13044992\n3       1          1  0.95910682\n4       1          1 -1.24720193\n5       0          0  0.60815797\n6       0          0 -0.55418384\n7       0          0  1.27076851\n8       0          1 -0.68464337\n9       0          1  1.28958818\n10      1          1 -0.21351288\n11      1          0 -0.38963644\n12      0          1 -0.15096276\n13      1          1  0.93903174\n14      1          1 -1.47592823\n15      0          0  0.54352379\n16      1          1 -0.21193548\n17      1          1  0.08940495\n18      0          1  1.06639282\n19      1          0  0.84100205\n20      1          1  2.02010721\n\n\nSuppose the female column contains a dummy code representing biological sex. Further suppose that I want to select the female column, but I misremember its name as male, so I run the following command.\n\nmyData$male\n\n [1] 0 1 1 1 0 0 0 1 1 1 0 1 1 1 0 1 1 1 0 1\n\n\nOops…hope I’m paying extra close attention. Otherwise, as I continue with my analysis, the cases that I think are biological males are actually the cases that have been flagged as “malevolent” by the dummy code that I accidentally selected via silent partial matching.\nTibbles don’t allow partial matching for columns names, so this type of mistake cannot happen when working with a tibble.\n\nmyData2 &lt;- as_tibble(myData)\n\nmyData2$male\n\nWarning: Unknown or uninitialised column: `male`.\n\n\nNULL\n\n\n\n\nTibbles Dramatically Restrict Recycling\nTibbles do away with essentially all of the convoluted recycling rules we’ve discussed for other type of R objects. Basically, we’re only allowed to recycle length-one vectors. So, the following commands are all accepted.\n\nmyData2$female &lt;- 42\nmyData2\n\n# A tibble: 20 × 3\n   female malevolent   score\n    &lt;dbl&gt;      &lt;int&gt;   &lt;dbl&gt;\n 1     42          0  2.02  \n 2     42          1  0.130 \n 3     42          1  0.959 \n 4     42          1 -1.25  \n 5     42          0  0.608 \n 6     42          0 -0.554 \n 7     42          0  1.27  \n 8     42          1 -0.685 \n 9     42          1  1.29  \n10     42          1 -0.214 \n11     42          0 -0.390 \n12     42          1 -0.151 \n13     42          1  0.939 \n14     42          1 -1.48  \n15     42          0  0.544 \n16     42          1 -0.212 \n17     42          1  0.0894\n18     42          1  1.07  \n19     42          0  0.841 \n20     42          1  2.02  \n\nmyData2[1:6, \"score\"] &lt;- pi\nmyData2\n\n# A tibble: 20 × 3\n   female malevolent   score\n    &lt;dbl&gt;      &lt;int&gt;   &lt;dbl&gt;\n 1     42          0  3.14  \n 2     42          1  3.14  \n 3     42          1  3.14  \n 4     42          1  3.14  \n 5     42          0  3.14  \n 6     42          0  3.14  \n 7     42          0  1.27  \n 8     42          1 -0.685 \n 9     42          1  1.29  \n10     42          1 -0.214 \n11     42          0 -0.390 \n12     42          1 -0.151 \n13     42          1  0.939 \n14     42          1 -1.48  \n15     42          0  0.544 \n16     42          1 -0.212 \n17     42          1  0.0894\n18     42          1  1.07  \n19     42          0  0.841 \n20     42          1  2.02  \n\nmyData2[1:2] &lt;- list(\"foo\", FALSE)\nmyData2\n\n# A tibble: 20 × 3\n   female malevolent   score\n   &lt;chr&gt;  &lt;lgl&gt;        &lt;dbl&gt;\n 1 foo    FALSE       3.14  \n 2 foo    FALSE       3.14  \n 3 foo    FALSE       3.14  \n 4 foo    FALSE       3.14  \n 5 foo    FALSE       3.14  \n 6 foo    FALSE       3.14  \n 7 foo    FALSE       1.27  \n 8 foo    FALSE      -0.685 \n 9 foo    FALSE       1.29  \n10 foo    FALSE      -0.214 \n11 foo    FALSE      -0.390 \n12 foo    FALSE      -0.151 \n13 foo    FALSE       0.939 \n14 foo    FALSE      -1.48  \n15 foo    FALSE       0.544 \n16 foo    FALSE      -0.212 \n17 foo    FALSE       0.0894\n18 foo    FALSE       1.07  \n19 foo    FALSE       0.841 \n20 foo    FALSE       2.02  \n\n\nThese commands, on the other hand, will all fail because we’re trying to recycle vectors with more than one element.\n\nmyData2$female &lt;- 40:42\n\nError in `$&lt;-`:\n! Assigned data `40:42` must be compatible with existing data.\n✖ Existing data has 20 rows.\n✖ Assigned data has 3 rows.\nℹ Only vectors of size 1 are recycled.\nCaused by error in `vectbl_recycle_rhs_rows()` at tibble/R/subassign-backend.R:51:5:\n! Can't recycle input of size 3 to size 20.\n\nmyData2[1:6, \"score\"] &lt;- c(pi, NA)\n\nError in `[&lt;-`:\n! Assigned data `c(pi, NA)` must be compatible with row subscript `1:6`.\n✖ 6 rows must be assigned.\n✖ Assigned data has 2 rows.\nℹ Only vectors of size 1 are recycled.\nCaused by error in `vectbl_recycle_rhs_rows()` at tibble/R/subassign-backend.R:206:7:\n! Can't recycle input of size 2 to size 6.\n\nmyData2[1:2] &lt;- list(\"foo\", c(FALSE, TRUE))\n\nError in `[&lt;-`:\n! Assigned data `list(\"foo\", c(FALSE, TRUE))` must be compatible with\n  existing data.\n✖ Existing data has 20 rows.\n✖ Element 2 of assigned data has 2 rows.\nℹ Only vectors of size 1 are recycled.\nCaused by error in `vectbl_recycle_rhs_rows()` at tibble/R/subassign-backend.R:51:5:\n! Can't recycle input of size 2 to size 20.\n\n\n\n\n\n\n\n\nKnowledge Check\n\n\n\n\nHow are tibbles and data frames related?\nWhat’s the purpose of tibbles, when we already have perfectly serviceable data frames?\nName one specific behavior where tibbles differ from ordinary data frames, and explain the pros and cons of that difference.",
     "crumbs": [
       "Open-Stat-Prog",
       "Data Frames",
-      "Tibbles: A Modern Data Frame"
+      "Tibbles"
     ]
   },
   {
@@ -357,7 +505,7 @@
     "href": "tutorials/data_frames/tibbles.html#converting-between-the-two",
     "title": "Tibbles: A Modern Data Frame",
     "section": "Converting Between the Two",
-    "text": "Converting Between the Two\nYou can convert freely between ordinary data frames and tibbles.\n\n# Convert a data frame to a tibble\nas_tibble(d1)\n\n# A tibble: 5 × 2\n      x y    \n  &lt;int&gt; &lt;chr&gt;\n1     1 a    \n2     2 b    \n3     3 c    \n4     4 d    \n5     5 e    \n\n# Convert a tibble to an ordinary data frame\nas.data.frame(t1)\n\n  x y\n1 1 a\n2 2 b\n3 3 c\n4 4 d\n5 5 e",
+    "text": "Converting Between the Two",
     "crumbs": [
       "Open-Stat-Prog",
       "Data Frames",
@@ -377,185 +525,15 @@
     ]
   },
   {
-    "objectID": "tutorials/data_frames/manipulating.html",
-    "href": "tutorials/data_frames/manipulating.html",
-    "title": "Manipulating Data Frames",
+    "objectID": "tutorials/lists/index.html",
+    "href": "tutorials/lists/index.html",
+    "title": "Lists",
     "section": "",
-    "text": "Note\n\n\n\nAccessing and modifying data frames is procedural (Apply), but explaining why different selection operators behave differently, and why recycling produces the results it does, is conceptual (Understand). Both matter: knowing the mechanics without understanding the reasoning is a common source of subtle bugs in real analyses.",
+    "text": "Learning Outcomes\n\n\n\nBy the end of this tutorial, you will be able to:\n\nDescribe the characteristics of an R list.\nDescribe important use-cases for lists, and explain why lists are the best choice in these situations.\nCreate new lists in R.\nAccess and modify list elements using different methods, and explain the difference between the available selection operators ($, [], [[]]).\nLists are one of R’s most versatile and ubiquitous data structures. Like vectors, lists are one-dimensional objects. Unlike vectors, however, lists can comprise arbitrary mixes of data objects with any combination of types. This flexibility makes lists particularly useful for storing and organizing heterogeneous data such as the results returned from statistical modeling functions. Understanding why you’d use a list instead of a vector (not just how to create lists) is one of the main goals of this tutorial.",
     "crumbs": [
       "Open-Stat-Prog",
-      "Data Frames",
-      "Manipulating Data Frames"
+      "Lists"
     ]
-  },
-  {
-    "objectID": "tutorials/data_frames/manipulating.html#accessing-data-frame-elements",
-    "href": "tutorials/data_frames/manipulating.html#accessing-data-frame-elements",
-    "title": "Manipulating Data Frames",
-    "section": "Accessing Data Frame Elements",
-    "text": "Accessing Data Frame Elements\nBecause data frames are just lists, we can access a data frame’s columns using the same methods we would use for lists. To access a single column by name, the most efficient method is typically the $ operator.\n\nd1 &lt;- data.frame(a = sample(c(TRUE, FALSE), 10, replace = TRUE),\n                 b = sample(c(\"foo\", \"bar\"), 10, replace = TRUE),\n                 c = runif(10)\n                 )\nd1$b\n\n [1] \"bar\" \"foo\" \"bar\" \"bar\" \"foo\" \"bar\" \"foo\" \"bar\" \"foo\" \"bar\"\n\ndata(iris)\niris$Petal.Length\n\n  [1] 1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 1.5 1.6 1.4 1.1 1.2 1.5 1.3 1.4\n [19] 1.7 1.5 1.7 1.5 1.0 1.7 1.9 1.6 1.6 1.5 1.4 1.6 1.6 1.5 1.5 1.4 1.5 1.2\n [37] 1.3 1.4 1.3 1.5 1.3 1.3 1.3 1.6 1.9 1.4 1.6 1.4 1.5 1.4 4.7 4.5 4.9 4.0\n [55] 4.6 4.5 4.7 3.3 4.6 3.9 3.5 4.2 4.0 4.7 3.6 4.4 4.5 4.1 4.5 3.9 4.8 4.0\n [73] 4.9 4.7 4.3 4.4 4.8 5.0 4.5 3.5 3.8 3.7 3.9 5.1 4.5 4.5 4.7 4.4 4.1 4.0\n [91] 4.4 4.6 4.0 3.3 4.2 4.2 4.2 4.3 3.0 4.1 6.0 5.1 5.9 5.6 5.8 6.6 4.5 6.3\n[109] 5.8 6.1 5.1 5.3 5.5 5.0 5.1 5.3 5.5 6.7 6.9 5.0 5.7 4.9 6.7 4.9 5.7 6.0\n[127] 4.8 4.9 5.6 5.8 6.1 6.4 5.6 5.1 5.6 6.1 5.6 5.5 4.8 5.4 5.6 5.1 5.1 5.9\n[145] 5.7 5.2 5.0 5.2 5.4 5.1\n\n\nWe can also use the single, [], or double, [[]], square bracket operators. As with lists, these operators differ in two respects how many columns they can select and how they format resulting selection.\n\n[]: Can select multiple elements and always returns a data frame.\n[[]]: Can select only one element and returns the column contents as a vector (or whatever type of object the column contained).\n\n\n# Return a one-column data frame comprising the 'b' column from d1\nd1[\"b\"]\n\n     b\n1  bar\n2  foo\n3  bar\n4  bar\n5  foo\n6  bar\n7  foo\n8  bar\n9  foo\n10 bar\n\n# The same as above, but using the column index instead of the column name\nd1[2]\n\n     b\n1  bar\n2  foo\n3  bar\n4  bar\n5  foo\n6  bar\n7  foo\n8  bar\n9  foo\n10 bar\n\n# Return a two-column data frame comprising the 'a' and 'b' columns from d1\nd1[c(\"a\", \"b\")]\n\n       a   b\n1   TRUE bar\n2   TRUE foo\n3  FALSE bar\n4   TRUE bar\n5  FALSE foo\n6   TRUE bar\n7  FALSE foo\n8  FALSE bar\n9  FALSE foo\n10 FALSE bar\n\n# The same as above, but using the column indices instead of the column names\nd1[1:2]\n\n       a   b\n1   TRUE bar\n2   TRUE foo\n3  FALSE bar\n4   TRUE bar\n5  FALSE foo\n6   TRUE bar\n7  FALSE foo\n8  FALSE bar\n9  FALSE foo\n10 FALSE bar\n\n# Return the 'b' column from d1 as a character vector\nd1[[\"b\"]]\n\n [1] \"bar\" \"foo\" \"bar\" \"bar\" \"foo\" \"bar\" \"foo\" \"bar\" \"foo\" \"bar\"\n\n# The same as above, but using the column index instead of the column name\nd1[[2]]\n\n [1] \"bar\" \"foo\" \"bar\" \"bar\" \"foo\" \"bar\" \"foo\" \"bar\" \"foo\" \"bar\"\n\n\n\nMatrix-Style Selection\nData frames also support matrix-style subsetting, where we define the selection by specifying both the row and column indices.\n\nd1[1:2, 2:3]\n\n    b         c\n1 bar 0.4841472\n2 foo 0.5329053\n\nd1[ , 1:2]\n\n       a   b\n1   TRUE bar\n2   TRUE foo\n3  FALSE bar\n4   TRUE bar\n5  FALSE foo\n6   TRUE bar\n7  FALSE foo\n8  FALSE bar\n9  FALSE foo\n10 FALSE bar\n\nd1[2:3, ]\n\n      a   b         c\n2  TRUE foo 0.5329053\n3 FALSE bar 0.7865156\n\n\nIn most cases, matrix style subsetting behaves the same was as the [] list-style operator. You can select any number of elements, and the selection is returned as a data frame, but there is one exception: If you select a single column using matrix-style subsetting, the selection will be converted to a vector.\n\nd1[ , 1]\n\n [1]  TRUE  TRUE FALSE  TRUE FALSE  TRUE FALSE FALSE FALSE FALSE\n\n\n\n\n\n\n\n\nWhy This Matters\n\n\n\nNotice the pattern here: d1[2] (list-style) keeps its data-frame wrapper, but d1[, 1] (matrix-style, single column) drops down to a plain vector. This is the exact same “dropping” behavior you saw with matrices in the previous module: selecting down to a single row or column automatically simplifies the result, unless you tell R not to. This is worth remembering as a general R pattern, not just a data-frame-specific quirk.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Data Frames",
-      "Manipulating Data Frames"
-    ]
-  },
-  {
-    "objectID": "tutorials/data_frames/manipulating.html#modifying-data-frame-elements",
-    "href": "tutorials/data_frames/manipulating.html#modifying-data-frame-elements",
-    "title": "Manipulating Data Frames",
-    "section": "Modifying Data Frame Elements",
-    "text": "Modifying Data Frame Elements\nNaturally, we can overwrite the columns of a data frame using the same procedures that we use to modify list slots. When modifying one column at a time, we directly apply the intuitive operations.\n\n# View the original data frame\nd1\n\n       a   b         c\n1   TRUE bar 0.4841472\n2   TRUE foo 0.5329053\n3  FALSE bar 0.7865156\n4   TRUE bar 0.8668884\n5  FALSE foo 0.8447465\n6   TRUE bar 0.2726832\n7  FALSE foo 0.0730769\n8  FALSE bar 0.3705464\n9  FALSE foo 0.9011818\n10 FALSE bar 0.8518957\n\n## Modify some list elements\nd1$a &lt;- LETTERS[1:10]\nd1[[2]] &lt;- rnorm(10)\nd1[\"c\"] &lt;- rep(c(TRUE, FALSE), each = 5)\n\n# View the modified data frame\nd1\n\n   a           b     c\n1  A  2.00475868  TRUE\n2  B -0.45017003  TRUE\n3  C  1.62724692  TRUE\n4  D  2.34927877  TRUE\n5  E  0.54897323  TRUE\n6  F -2.09497505 FALSE\n7  G  0.03572308 FALSE\n8  H -1.12583753 FALSE\n9  I -1.70276992 FALSE\n10 J  0.77336232 FALSE\n\n\nWhen modifying multiple columns with the [], operator, it’s best to supply the replacement values as a data frame or list with the same size as the selected columns.\n\n# Replace the first two columns of d1 with an equivalently sized data frame\n# extracted from the 'iris' dataset\nd1[1:2] &lt;- iris[1:10, 1:2]\nd1\n\n     a   b     c\n1  5.1 3.5  TRUE\n2  4.9 3.0  TRUE\n3  4.7 3.2  TRUE\n4  4.6 3.1  TRUE\n5  5.0 3.6  TRUE\n6  5.4 3.9 FALSE\n7  4.6 3.4 FALSE\n8  5.0 3.4 FALSE\n9  4.4 2.9 FALSE\n10 4.9 3.1 FALSE\n\n# Replace the 'a' and 'c' columns in d1 with an equivalently sized list\nd1[c(\"a\", \"c\")] &lt;- list(rnorm(10), runif(10))\nd1\n\n              a   b          c\n1   0.807277237 3.5 0.53384010\n2  -0.009185656 3.0 0.64821884\n3   0.611673726 3.2 0.45623112\n4   2.657741713 3.1 0.91800006\n5   0.800721601 3.6 0.61382245\n6  -0.468921343 3.9 0.90829605\n7   0.874829749 3.4 0.02117777\n8   0.728573840 3.4 0.19102151\n9  -0.050805778 2.9 0.28955247\n10  0.809578658 3.1 0.33244773\n\n\n\nMatrix-Style Selection\nIf we only want to replace part of a column, we can use matrix-style selection to choose the target cells.\n\nd1[1:5, 2] &lt;- 41:45\nd1\n\n              a    b          c\n1   0.807277237 41.0 0.53384010\n2  -0.009185656 42.0 0.64821884\n3   0.611673726 43.0 0.45623112\n4   2.657741713 44.0 0.91800006\n5   0.800721601 45.0 0.61382245\n6  -0.468921343  3.9 0.90829605\n7   0.874829749  3.4 0.02117777\n8   0.728573840  3.4 0.19102151\n9  -0.050805778  2.9 0.28955247\n10  0.809578658  3.1 0.33244773\n\nd1[3:6, c(\"a\", \"c\")] &lt;- list(-99, 888)\nd1\n\n               a    b            c\n1    0.807277237 41.0   0.53384010\n2   -0.009185656 42.0   0.64821884\n3  -99.000000000 43.0 888.00000000\n4  -99.000000000 44.0 888.00000000\n5  -99.000000000 45.0 888.00000000\n6  -99.000000000  3.9 888.00000000\n7    0.874829749  3.4   0.02117777\n8    0.728573840  3.4   0.19102151\n9   -0.050805778  2.9   0.28955247\n10   0.809578658  3.1   0.33244773\n\n\n\n\nRecycling\nWhen the replacement size doesn’t match the selection size, R will use recycling to resolve the discrepancy. This is the same recycling concept you learned with vectors and matrices, now applied to entire data frame columns at once. It’s not always easy to predict how the replacement will behave, so pay close attention here.\n\n# Replace the first two columns of d1 by recycling the vector `1:5`\nd1[1:2] &lt;- 1:5\nd1\n\n   a b            c\n1  1 1   0.53384010\n2  2 2   0.64821884\n3  3 3 888.00000000\n4  4 4 888.00000000\n5  5 5 888.00000000\n6  1 1 888.00000000\n7  2 2   0.02117777\n8  3 3   0.19102151\n9  4 4   0.28955247\n10 5 5   0.33244773\n\n# Replace the 'a' and 'c' columns in d1 with a list containing vectors that\n# will need to be recycled\nd1[c(\"a\", \"c\")] &lt;- list(c(\"yes\", \"no\"), 7:8)\nd1\n\n     a b c\n1  yes 1 7\n2   no 2 8\n3  yes 3 7\n4   no 4 8\n5  yes 5 7\n6   no 1 8\n7  yes 2 7\n8   no 3 8\n9  yes 4 7\n10  no 5 8\n\n\nAs with matrices, R is oddly specific (in a slightly different way) about the kinds of size discrepancies it will automatically resolved when modifying data frames.\n\nOK\n\nReplacement length &gt; Selection length\nReplacement length cleanly divides the selection length\nReplacement length exceeds selection length\nReplacement list contains more slots than columns selected\nReplacement data frame contains more slots than columns selected\n\nNot OK\n\nReplacement length does not cleanly divide selection length\n\n\n\n# Works: Replace the first two columns of d1 by using the first 20 elements\n# from the `100:500`\nd1[1:2] &lt;- 100:500\nd1\n\n     a   b c\n1  100 110 7\n2  101 111 8\n3  102 112 7\n4  103 113 8\n5  104 114 7\n6  105 115 8\n7  106 116 7\n8  107 117 8\n9  108 118 7\n10 109 119 8\n\n# Works: Replace the 'a' and 'c' columns in d1 with a list containing vectors\n# that are too long\nd1[c(\"a\", \"c\")] &lt;- list(rnorm(100), runif(100))\nd1\n\n            a   b         c\n1   2.1518289 110 0.1049928\n2   0.3170152 111 0.2662790\n3  -0.4998579 112 0.6250133\n4  -1.7826797 113 0.6826559\n5   0.1830725 114 0.5200852\n6  -1.5560787 115 0.9310660\n7  -1.1517706 116 0.5370007\n8  -1.0141696 117 0.1859239\n9   1.1543173 118 0.9646431\n10 -1.3540783 119 0.6116382\n\n# Works: Replace the 'a' and 'c' columns in d1 with a the first two slots in a\n# length-3 list\nd1[c(\"a\", \"c\")] &lt;- list(1, 2, 3)\nd1\n\n   a   b c\n1  1 110 2\n2  1 111 2\n3  1 112 2\n4  1 113 2\n5  1 114 2\n6  1 115 2\n7  1 116 2\n8  1 117 2\n9  1 118 2\n10 1 119 2\n\n# Works: Replace the 'a' and 'c' columns in d1 with a the first two columns\n# from a three-column data frame\nd1[c(\"a\", \"c\")] &lt;- data.frame(\"foo\", \"bar\", \"baz\")\nd1\n\n     a   b   c\n1  foo 110 bar\n2  foo 111 bar\n3  foo 112 bar\n4  foo 113 bar\n5  foo 114 bar\n6  foo 115 bar\n7  foo 116 bar\n8  foo 117 bar\n9  foo 118 bar\n10 foo 119 bar\n\n# Fails: Replace the first two columns of d1 by using non-conformable vector 1:3\nd1[1:2] &lt;- 1:3\n\nError in `[&lt;-.data.frame`(`*tmp*`, 1:2, value = 1:3): replacement has 3 items, need 20\n\n# Fails: Replace the 'a' and 'c' columns in d1 with a list containing\n# non-conformable vectors\nd1[c(\"a\", \"c\")] &lt;- list(letters[4], 1:8)\n\nError in `[&lt;-.data.frame`(`*tmp*`, c(\"a\", \"c\"), value = list(\"d\", 1:8)): replacement element 2 has 8 rows, need 10",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Data Frames",
-      "Manipulating Data Frames"
-    ]
-  },
-  {
-    "objectID": "tutorials/data_frames/manipulating.html#adding-columns",
-    "href": "tutorials/data_frames/manipulating.html#adding-columns",
-    "title": "Manipulating Data Frames",
-    "section": "Adding Columns",
-    "text": "Adding Columns\nAs with lists, we can add new columns to an existing data frame using the $ or [[]] operators.\n\n# Create an empty list\n(d2 &lt;- data.frame(a = 1:10, b = \"bob\"))\n\n    a   b\n1   1 bob\n2   2 bob\n3   3 bob\n4   4 bob\n5   5 bob\n6   6 bob\n7   7 bob\n8   8 bob\n9   9 bob\n10 10 bob\n\n## Various ways of adding new single columns\nd2$c &lt;- letters[1:10]\nd2[[\"d\"]] &lt;- runif(10)\nd2[[5]] &lt;- rnorm(10)\nd2[\"alice\"] &lt;- TRUE\nd2\n\n    a   b c          d         V5 alice\n1   1 bob a 0.68955859 -0.1675990  TRUE\n2   2 bob b 0.92500838 -1.4307241  TRUE\n3   3 bob c 0.07260729 -1.3762076  TRUE\n4   4 bob d 0.26520752  1.2919809  TRUE\n5   5 bob e 0.06731356 -0.3840749  TRUE\n6   6 bob f 0.01251758  0.9944344  TRUE\n7   7 bob g 0.57070907 -1.0061306  TRUE\n8   8 bob h 0.40705748  0.8124297  TRUE\n9   9 bob i 0.65584746 -0.9690165  TRUE\n10 10 bob j 0.69146830  0.7310392  TRUE\n\n\nWe can add multiple columns using the [] operator.\n\nd2[7:8] &lt;- rnorm(20)\nd2[c(\"foo\", \"bar\")] &lt;- list(TRUE, FALSE)\nd2\n\n    a   b c          d         V5 alice         V7          V8  foo   bar\n1   1 bob a 0.68955859 -0.1675990  TRUE  0.7023358  0.95099767 TRUE FALSE\n2   2 bob b 0.92500838 -1.4307241  TRUE  1.0475573 -2.17139733 TRUE FALSE\n3   3 bob c 0.07260729 -1.3762076  TRUE  0.8215654  0.57744926 TRUE FALSE\n4   4 bob d 0.26520752  1.2919809  TRUE  1.6490459 -0.43729978 TRUE FALSE\n5   5 bob e 0.06731356 -0.3840749  TRUE -0.6990208 -1.90592818 TRUE FALSE\n6   6 bob f 0.01251758  0.9944344  TRUE  0.5443463 -0.34315273 TRUE FALSE\n7   7 bob g 0.57070907 -1.0061306  TRUE  0.3582002  0.05009020 TRUE FALSE\n8   8 bob h 0.40705748  0.8124297  TRUE  1.5493395 -1.31125571 TRUE FALSE\n9   9 bob i 0.65584746 -0.9690165  TRUE  0.8461863  0.84648572 TRUE FALSE\n10 10 bob j 0.69146830  0.7310392  TRUE  1.4611048 -0.07295731 TRUE FALSE\n\n\n\n\n\n\n\n\nPractice\n\n\n\nRun the following code to create an empty data frame containing 10 observations of the 3 variables: a, b, c. Then populate the data frame as described below.\n\nFill column a with the integer sequence from -9 to 0.\n\nUse the column name to assign the new values.\n\nFill column b with the even integers between 1 and 20 (inclusive).\n\nUse the numeric column index to assign the new values.\n\nReplace the odd rows in column c with the odd integers between 11 and 20 (inclusive).\n\nDo not overwrite the missing values in the even rows.\n\n\n\n Interactive Editor Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\ndf &lt;- data.frame(a = rep(NA, 10),\n                 b = rep(NA, 10),\n                 c = rep(NA, 10)\n                 )\ndf\n\n    a  b  c\n1  NA NA NA\n2  NA NA NA\n3  NA NA NA\n4  NA NA NA\n5  NA NA NA\n6  NA NA NA\n7  NA NA NA\n8  NA NA NA\n9  NA NA NA\n10 NA NA NA\n\ndf$a &lt;- -9:0\ndf[2] &lt;- seq(2,20,2)\ndf[seq(1, 9, 2), \"c\"] &lt;- seq(11, 19, 2)\ndf\n\n    a  b  c\n1  -9  2 11\n2  -8  4 NA\n3  -7  6 13\n4  -6  8 NA\n5  -5 10 15\n6  -4 12 NA\n7  -3 14 17\n8  -2 16 NA\n9  -1 18 19\n10  0 20 NA",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Data Frames",
-      "Manipulating Data Frames"
-    ]
-  },
-  {
-    "objectID": "tutorials/data_frames/manipulating.html#quick-check",
-    "href": "tutorials/data_frames/manipulating.html#quick-check",
-    "title": "Manipulating Data Frames",
-    "section": "Quick Check",
-    "text": "Quick Check\n\nWhy does d1[2] return a one-column data frame, but d1[[2]] returns a plain vector?\nIf you replace two columns with a list of three replacement values, what happens to the extra value? Why doesn’t R raise an error?\n\n\n\n\n\n\n\nReady to Continue?\n\n\n\nYou’re ready to move on to Tibbles — a short, optional look at a modern variant of the data frame — or straight to the Knowledge Quiz if you can:\n\nExplain how a data frame is related to a list, and how it differs from a matrix.\nCreate a data frame with columns of different types.\nUse $, [], [[]], and matrix-style indexing to access and modify data frame contents, and explain when each returns a data frame vs. a plain vector.\nExplain how recycling applies when modifying data frame columns.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Data Frames",
-      "Manipulating Data Frames"
-    ]
-  },
-  {
-    "objectID": "tutorials/lists/creating.html",
-    "href": "tutorials/lists/creating.html",
-    "title": "Creating Lists",
-    "section": "",
-    "text": "Lists place essentially no restrictions on the nature of their contents:\nSo, lists are a great way to store substantively related, but heterogeneously sized/typed, pieces of data in one object.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Lists",
-      "Creating Lists"
-    ]
-  },
-  {
-    "objectID": "tutorials/lists/creating.html#generating-lists",
-    "href": "tutorials/lists/creating.html#generating-lists",
-    "title": "Creating Lists",
-    "section": "Generating Lists",
-    "text": "Generating Lists\nWe construct lists using the list() function.\n\n(l1 &lt;- list(1, 2, 3))\n\n[[1]]\n[1] 1\n\n[[2]]\n[1] 2\n\n[[3]]\n[1] 3\n\n(l2 &lt;- list(\"bob\", TRUE, 33, 42 + 3i))\n\n[[1]]\n[1] \"bob\"\n\n[[2]]\n[1] TRUE\n\n[[3]]\n[1] 33\n\n[[4]]\n[1] 42+3i\n\n(l3 &lt;- list(c(1, 2), c(3, 4)))\n\n[[1]]\n[1] 1 2\n\n[[2]]\n[1] 3 4\n\n\n\n\n\n\n\n\nPractice\n\n\n\nCreate a list called myList that comprises the following three elements.\n\nA length-three numeric vector\nA length-one character vector\nA length-two logical vector\n\n\n Interactive Editor Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nHere’s one possible solution.\n\nmyList &lt;- list(\n  1:3,\n  \"alice is not bob\",\n  rep(TRUE, 2)\n)\n\nmyList\n\n[[1]]\n[1] 1 2 3\n\n[[2]]\n[1] \"alice is not bob\"\n\n[[3]]\n[1] TRUE TRUE",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Lists",
-      "Creating Lists"
-    ]
-  },
-  {
-    "objectID": "tutorials/lists/creating.html#naming-list-elements",
-    "href": "tutorials/lists/creating.html#naming-list-elements",
-    "title": "Creating Lists",
-    "section": "Naming List Elements",
-    "text": "Naming List Elements\nWe can name the elements of a list by defining the list slots via key-value pairs.\n\nl4 &lt;- list(\n  name = \"bob\",\n  alive = TRUE,\n  age = 33,\n  relationshipStatus = 42 + 3i\n)\n\nl4\n\n$name\n[1] \"bob\"\n\n$alive\n[1] TRUE\n\n$age\n[1] 33\n\n$relationshipStatus\n[1] 42+3i\n\n\nWe can use the names() function to access and modify the names of a list’s slots.\n\n# The slots in l1 don't yet have names\nnames(l1)\n\nNULL\n\nl1\n\n[[1]]\n[1] 1\n\n[[2]]\n[1] 2\n\n[[3]]\n[1] 3\n\n# Add names to the l1 slots\nnames(l1) &lt;- c(\"first\", \"second\", \"third\")\nl1\n\n$first\n[1] 1\n\n$second\n[1] 2\n\n$third\n[1] 3\n\n\nThe names() function returns a character vector. So, we can assign/overwrite a subset of the names using ordinary vector subsetting syntax.\n\n# Change the name for the second slot in l4\nnames(l4)[2] &lt;- \"not dead\"\nnames(l4)\n\n[1] \"name\"               \"not dead\"           \"age\"               \n[4] \"relationshipStatus\"\n\nl4\n\n$name\n[1] \"bob\"\n\n$`not dead`\n[1] TRUE\n\n$age\n[1] 33\n\n$relationshipStatus\n[1] 42+3i\n\n\n\n\n\n\n\n\nPractice\n\n\n\nConsider the following list (aList) when answering this question.\n\naList\n\n$hello\n[1] \"world\"\n\n$day\n[1] \"monday\"\n\n$name\n[1] \"jude\"\n\n$false\n[1] TRUE\n\n\n\n Question Interactive Editor Solution\n\n\nPredict what the following code will print.\n\nnames(aList)[2:3] &lt;- c(\"blue\", \"hey\")\naList\n\nUse the interactive editor to check your predictions.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nWe’ve overwritten the names of the second and third list slots with the new values blue and hey, respectively. So, we see an updated version of aList that contains the same data but has two new names.\n\n\n$hello\n[1] \"world\"\n\n$blue\n[1] \"monday\"\n\n$hey\n[1] \"jude\"\n\n$false\n[1] TRUE",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Lists",
-      "Creating Lists"
-    ]
-  },
-  {
-    "objectID": "tutorials/lists/creating.html#quick-check",
-    "href": "tutorials/lists/creating.html#quick-check",
-    "title": "Creating Lists",
-    "section": "Quick Check",
-    "text": "Quick Check\n\nWhat’s the key difference between a list slot and a vector element, in terms of what kind of data each can hold?\nIf you don’t name a list’s slots, can you still tell R which slot to modify later? How?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Lists",
-      "Creating Lists"
-    ]
-  },
-  {
-    "objectID": "quizzes/data_frames/index.html",
-    "href": "quizzes/data_frames/index.html",
-    "title": "Knowledge Quiz: Data Frames",
-    "section": "",
-    "text": "Note\n\n\n\n\nClick the check-mark button to check your answer.\nClick the question-mark button to see an explanation of the solution.\n\n\n\n\n\n\nConsider the following data frame, df.\n\n\n   name age height  eyes\n1   bob  25    180 green\n2  mike  23    178 green\n3  mark  24    169  blue\n4 steve  26    183 brown\n\n\nHow can we extract the name column and return the selection as a character vector?\n\ndf[1:2]df[ , 1]df[\"name\"]df[[\"name\"]]df[ , \"name\"]\n\n\n\n\nWrong: This command will return the name and age columns as a \\(4 \\times 2\\) data frame.\nCorrect\nWrong: This command will return the name column as a one-column data frame.\nCorrect\nCorrect\n\n\n\n\n\nConsider the following data frame, df.\n\n\n   name age height  eyes\n1   bob  25    180 green\n2  mike  23    178 green\n3  mark  24    169  blue\n4 steve  26    183 brown\n\n\nHow can we extract the height column and return the selection as a data frame?\n\ndf[3]df[[\"height\"]]df$heightdf[[2]]df[3, ]\n\n\n\n\nCorrect\nWrong: This command will return the height column as a numeric vector.\nWrong: This command will return the height column as a numeric vector.\nWrong: This command will return the age column as a numeric vector.\nWrong: This command will return the third row of df as a \\(1 \\times 4\\) data frame.\n\n\n\n\n\nConsider the data frame df below, how can we extract only the data about Bob?\n\n\n  names age height  eyes\n1   bob  25    180 green\n2  mike  23    178 green\n3  mark  24    169  blue\n4 steve  26    183 black\n\n\n\n\n\nWe have to select the first row of the data frame, and we can do this using df[1,]\n\n\n\n\nWhich of the following statements about data frames is correct?\n\nA data frame and a matrix are the same underlying object type, just printed differently.A data frame is a special kind of matrix that happens to allow different column types.A data frame is a special kind of list, where each slot holds a column vector, and all those vectors must have the same length.A data frame is a list, but its columns can have different lengths, unlike a matrix’s columns.A data frame has nothing in common with either lists or matrices. It’s a completely separate object type.\n\n\n\nA data frame is implemented as a list, where every element (column) is a vector-like object, with the added constraint that all of those vectors must have equal length. This is exactly what gives a data frame its “rectangular,” table-like structure while still being a list underneath. is.list() returns TRUE for every data frame. Data frames are not matrices: matrices require every element to share the same type, while data frames allow each column to have its own type, and the two are otherwise unrelated object types under the hood.\n\n\n\n\nYou have a data frame d with 10 rows. You run d[1:2] &lt;- 1:3 (attempting to replace the first two columns using a length-3 replacement vector), and R raises an error. Why?\n\nBecause 3 is larger than 2 (the number of columns being replaced).Because d[1:2] &lt;- can only ever replace exactly one column at a time.Because the replacement vector must always be named.Because you can never use a numeric vector to replace data frame columns.Because replacing 2 columns of 10 rows needs 20 values total, and 3 does not evenly divide 20, so R can’t recycle the replacement vector without leaving a “leftover,” ambiguous partial fill.\n\n\n\nJust like with vectors and matrices, R recycles a shorter replacement vector to fill a longer selection, but only when the replacement length evenly divides the total number of values needed. Replacing 2 columns across 10 rows requires 20 values, and a length-3 vector doesn’t divide 20 evenly (20 / 3 isn’t a whole number), so R refuses rather than guessing at an ambiguous fill pattern.\n\n\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Data Frames",
-      "Knowledge Quiz"
-    ]
-  },
-  {
-    "objectID": "quizzes/data_frames/questions/recycling_concept.html",
-    "href": "quizzes/data_frames/questions/recycling_concept.html",
-    "title": "Question",
-    "section": "",
-    "text": "You have a data frame d with 10 rows. You run d[1:2] &lt;- 1:3 (attempting to replace the first two columns using a length-3 replacement vector), and R raises an error. Why?\n\n\n\nBecause replacing 2 columns of 10 rows needs 20 values total, and 3 does not evenly divide 20, so R can’t recycle the replacement vector without leaving a “leftover,” ambiguous partial fill.\nBecause you can never use a numeric vector to replace data frame columns.\nBecause d[1:2] &lt;- can only ever replace exactly one column at a time.\nBecause 3 is larger than 2 (the number of columns being replaced).\nBecause the replacement vector must always be named."
-  },
-  {
-    "objectID": "quizzes/data_frames/questions/recycling_concept.html#answerlist",
-    "href": "quizzes/data_frames/questions/recycling_concept.html#answerlist",
-    "title": "Question",
-    "section": "",
-    "text": "Because replacing 2 columns of 10 rows needs 20 values total, and 3 does not evenly divide 20, so R can’t recycle the replacement vector without leaving a “leftover,” ambiguous partial fill.\nBecause you can never use a numeric vector to replace data frame columns.\nBecause d[1:2] &lt;- can only ever replace exactly one column at a time.\nBecause 3 is larger than 2 (the number of columns being replaced).\nBecause the replacement vector must always be named."
-  },
-  {
-    "objectID": "quizzes/data_frames/questions/return_column_as_vector.html",
-    "href": "quizzes/data_frames/questions/return_column_as_vector.html",
-    "title": "Question",
-    "section": "",
-    "text": "Consider the following data frame, df.\n\n\n   name age height  eyes\n1   bob  25    180 green\n2  mike  23    178 green\n3  mark  24    169  blue\n4 steve  26    183 brown\n\n\nHow can we extract the name column and return the selection as a character vector?\n\n\n\ndf$name\ndf[[\"name\"]]\ndf[[1]]\ndf[ , 1]\ndf[ , \"name\"]\ndf[1]\ndf[\"name\"]\ndf[1, ]\ndf[\"name\", ]\ndf[[2]]\ndf[1:2]"
-  },
-  {
-    "objectID": "quizzes/data_frames/questions/return_column_as_vector.html#answerlist",
-    "href": "quizzes/data_frames/questions/return_column_as_vector.html#answerlist",
-    "title": "Question",
-    "section": "",
-    "text": "df$name\ndf[[\"name\"]]\ndf[[1]]\ndf[ , 1]\ndf[ , \"name\"]\ndf[1]\ndf[\"name\"]\ndf[1, ]\ndf[\"name\", ]\ndf[[2]]\ndf[1:2]"
-  },
-  {
-    "objectID": "quizzes/data_frames/questions/return_column_as_vector.html#answerlist-1",
-    "href": "quizzes/data_frames/questions/return_column_as_vector.html#answerlist-1",
-    "title": "Question",
-    "section": "Answerlist",
-    "text": "Answerlist\n\nCorrect\nCorrect\nCorrect\nCorrect\nCorrect\nWrong: This command will return the name column as a one-column data frame.\nWrong: This command will return the name column as a one-column data frame.\nWrong: This command will return the first row of df as a \\(1 \\times 4\\) data frame.\nWrong: This command will try to return a row called “name” and fail because there is no such row in df.\nWrong: This command will return the age column as a numeric vector.\nWrong: This command will return the name and age columns as a \\(4 \\times 2\\) data frame."
-  },
-  {
-    "objectID": "quizzes/lists/index.html",
-    "href": "quizzes/lists/index.html",
-    "title": "Knowledge Quiz: Lists",
-    "section": "",
-    "text": "Note\n\n\n\n\nClick the check-mark button to check your answer.\nClick the question-mark button to see an explanation of the solution.\n\n\n\n\n\n\nConsider the following list, l1.\n\n\n$name\n[1] \"bob\"\n\n$age\n[1] 25\n\n$height\n[1] 180\n\n$eyes\n[1] \"blue\"\n\n\nWhich of the following expressions will change the value of the eyes slot in l1 from “blue” to “green”?\n\nl1$eyes &lt;- \"blue\"l1$4 &lt;- \"green\"l1[[4]] &lt;- \"green\"l1[4, ] &lt;- \"green\"l1$eyes &lt;- green\n\n\n\n\nWrong: This command doesn’t actually change anything.\nWrong: There is no slot named “4” in l1.\nCorrect\nWrong: l1 is a list, so we should not use matrix-style selection.\nWrong: We’re replacing the value of l4$eyes with the contents of the object green, not the character vector \"green\".\n\n\n\n\n\nIn the list l below there is an error, the information for the eyes color is wrongly saved as hair, which of this options will change the name of the element?\n\n\n$name\n[1] \"bob\"\n\n$age\n[1] 25\n\n$height\n[1] 180\n\n$hair\n[1] \"blue\"\n\n\n\nl[[4]] &lt;- \"eyes\"names(l)[4] &lt;- \"eyes\"l[4] &lt;- \"eyes\"names(l)$hair &lt;- \"eyes\"l$hair &lt;- names(\"eyes\")\n\n\n\nThe correct way to change the name of the value is names(l)[4] &lt;- \"eyes\"\n\nWrong: This will change the value itself and not the name\nCorrect\nWrong: This will change the value itself and not the name\nWrong: This will return an error since the names() element is a vector and not a list\nWrong: names(\"eyes\") is NULL since a character string doesn’t have a name, so it will just erase the list element\n\n\n\n\n\nGiven the list l &lt;- list(a = 1, b = 2, c = 3), which statement correctly describes the difference between l[\"a\"] and l[[\"a\"]]?\n\nl[\"a\"] causes an error, since single brackets can’t be used with names.l[\"a\"] returns the number 1; l[[\"a\"]] returns a one-element list.l[\"a\"] returns a one-element list; l[[\"a\"]] returns just the number 1.l[\"a\"] and l[[\"a\"]] always return exactly the same thing.l[[\"a\"]] can select multiple named slots at once, while l[\"a\"] cannot.\n\n\n\nSingle brackets ([]) always preserve the list “wrapper” around the result, even when selecting just one slot. So l[\"a\"] returns a one-element list. Double brackets ([[]]) reach inside and return the actual contents of a single slot. So l[[\"a\"]] returns the plain number 1. This distinction matters constantly in real R code: if a function unexpectedly receives a list instead of the value you meant to pass it, mixing up [] and [[]] is a very common cause.\n\n\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Lists",
-      "Knowledge Quiz"
-    ]
-  },
-  {
-    "objectID": "quizzes/lists/questions/selection_operators.html",
-    "href": "quizzes/lists/questions/selection_operators.html",
-    "title": "Question",
-    "section": "",
-    "text": "Given the list l &lt;- list(a = 1, b = 2, c = 3), which statement correctly describes the difference between l[\"a\"] and l[[\"a\"]]?\n\n\n\nl[\"a\"] returns a one-element list; l[[\"a\"]] returns just the number 1.\nl[\"a\"] and l[[\"a\"]] always return exactly the same thing.\nl[\"a\"] returns the number 1; l[[\"a\"]] returns a one-element list.\nl[\"a\"] causes an error, since single brackets can’t be used with names.\nl[[\"a\"]] can select multiple named slots at once, while l[\"a\"] cannot."
-  },
-  {
-    "objectID": "quizzes/lists/questions/selection_operators.html#answerlist",
-    "href": "quizzes/lists/questions/selection_operators.html#answerlist",
-    "title": "Question",
-    "section": "",
-    "text": "l[\"a\"] returns a one-element list; l[[\"a\"]] returns just the number 1.\nl[\"a\"] and l[[\"a\"]] always return exactly the same thing.\nl[\"a\"] returns the number 1; l[[\"a\"]] returns a one-element list.\nl[\"a\"] causes an error, since single brackets can’t be used with names.\nl[[\"a\"]] can select multiple named slots at once, while l[\"a\"] cannot."
   },
   {
     "objectID": "tutorials/lists/index.html#why-use-lists",
@@ -569,39 +547,75 @@
     ]
   },
   {
-    "objectID": "tutorials/lists/manipulating.html#using-list-elements",
-    "href": "tutorials/lists/manipulating.html#using-list-elements",
-    "title": "Manipulating Lists",
-    "section": "Using List Elements",
-    "text": "Using List Elements\nImportantly, the types of the objects you store in a list are maintained.\n\n(x &lt;- 1:5)\n\n[1] 1 2 3 4 5\n\n(y &lt;- list())\n\nlist()\n\n(z &lt;- letters[1:10])\n\n [1] \"a\" \"b\" \"c\" \"d\" \"e\" \"f\" \"g\" \"h\" \"i\" \"j\"\n\n(l3 &lt;- list(a = x, b = y, c = z))\n\n$a\n[1] 1 2 3 4 5\n\n$b\nlist()\n\n$c\n [1] \"a\" \"b\" \"c\" \"d\" \"e\" \"f\" \"g\" \"h\" \"i\" \"j\"\n\nclass(x)\n\n[1] \"integer\"\n\nclass(y)\n\n[1] \"list\"\n\nclass(z)\n\n[1] \"character\"\n\nclass(l3$a)\n\n[1] \"integer\"\n\nclass(l3$b)\n\n[1] \"list\"\n\nclass(l3$c)\n\n[1] \"character\"\n\n\nConsequently, objects stored in a list behave just as they would outside of the list. For example, if a function is stored as an element of a list, we can call it directly:\n\n# Store the Base R 'mean' function in the 'l3' list\nl3$myMean &lt;- mean\n\n# Call both versions of our function\nmean(1:5)\n\n[1] 3\n\nl3$myMean(1:5)\n\n[1] 3\n\n\n\n\n\n\n\n\nPractice\n\n\n\nUse the list that you created in the last practice problem for this exercise.\n\n Question Interactive Editor Hint Solution\n\n\nUsing a single command, test if your eye color OR your hair color is also your favorite color.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nRecall the basic logical operators:\n\n==, !=: Equal, Not Equal\n&gt;, &lt;, &gt;=, &lt;=: Greater Than, Less Than\n&, |: Logical AND, Logical OR (not exclusive)\n\n\n\nRecall my solution for the last practice problem.\n\nmyInfo\n\n$name\n[1] \"bob\"\n\n$eyes\n[1] \"blue\"\n\n$hair\n[1] \"black\"\n\n$color\n[1] \"green\"\n\n\nSo, I would set up the necessary logical test as follows.\n\nmyInfo$eyes == myInfo$color | myInfo$hair == myInfo$color\n\n[1] FALSE\n\n\n\n\n\n\n\n\n\n\n\n\n\nKnowledge Check\n\n\n\n\nIf l$x returns an error but l[[\"x\"]] works, what does that tell you about l?\nAssuming the name slot in the list l does not hold another list, why would l[\"name\"] return a list, while l[[\"name\"]] returns some other type of object?\nWhich operator would you need if you wanted to select two named list slots at once?\n\n\n\n\n\n\n\n\n\nReady to Continue?\n\n\n\nYou’re ready to move on to Data Frames if you can:\n\nExplain what a list is and describe at least one situation where a list is the right tool.\nCreate a list with named elements.\nExplain the difference between $, [], and [[]], and choose the right one for a given task.\n\nIf any of these still feel shaky, revisit the relevant page above, or try the Knowledge Quiz to pinpoint exactly where to focus.",
+    "objectID": "tutorials/data_frames/relation_to_lists.html",
+    "href": "tutorials/data_frames/relation_to_lists.html",
+    "title": "Relation to Lists",
+    "section": "",
+    "text": "Important\n\n\n\nData frames are somewhat strange objects that can cause a lot of confusion. To new users, data frames usually feel more similar to matrices than lists, but the opposite is actually true. The underlying implementation of data frames doesn’t match their apparent tabular structure. This page compares data frames to lists and matrices. Understanding these similarities and differences will help you use data frames more effectively and avoid many common mistakes.\nDid you notice the similarity between the code that we used to create data frames on the last page and the code that we used to create lists in the last tutorial?\n# Create a data frame\nsomeDataFrame &lt;- data.frame(\n  a = rnorm(10),\n  b = 1:10,\n  c = letters[1:10]\n)\n\n# Create a list\nsomeDataFrame &lt;- list(\n  a = rnorm(10),\n  b = 1:10,\n  c = letters[1:10]\n)\nIf so, you were right to see some parallels: lists and data frames are actually the same thing!",
     "crumbs": [
       "Open-Stat-Prog",
-      "Lists",
-      "Manipulating Lists"
+      "Data Frames",
+      "Relation to Lists"
     ]
   },
   {
-    "objectID": "tutorials/lists/creating.html#flexibility",
-    "href": "tutorials/lists/creating.html#flexibility",
-    "title": "Creating Lists",
-    "section": "Flexibility",
-    "text": "Flexibility\nIt’s difficult to overstate the versatility of lists as general-purpose containers for R objects. It’s no exaggeration to say that a list can store any type of R object. Notably, lists are perfectly happy to store other lists. So the following abomination is a completely valid list.\n\nlevel0 &lt;- list(\n    level1 = list(\n        level2a = list(\n            level3a = list(\"How much wood\"),\n            level3b = list(\"would a woodchuck chuck\"),\n            level3c = list(\"if\")\n        ),\n        level2b = list(\n            level3a = list(\"a\"),\n            level3b = list(\"woodchuck could\"),\n            level3c = list(\"chuck wood?\")\n        )\n    )\n)\n\nlevel0\n\n$level1\n$level1$level2a\n$level1$level2a$level3a\n$level1$level2a$level3a[[1]]\n[1] \"How much wood\"\n\n\n$level1$level2a$level3b\n$level1$level2a$level3b[[1]]\n[1] \"would a woodchuck chuck\"\n\n\n$level1$level2a$level3c\n$level1$level2a$level3c[[1]]\n[1] \"if\"\n\n\n\n$level1$level2b\n$level1$level2b$level3a\n$level1$level2b$level3a[[1]]\n[1] \"a\"\n\n\n$level1$level2b$level3b\n$level1$level2b$level3b[[1]]\n[1] \"woodchuck could\"\n\n\n$level1$level2b$level3c\n$level1$level2b$level3c[[1]]\n[1] \"chuck wood?\"\n\n\n\n\n\n\n\n\nPractice\n\n\n\nCreate a list to describe yourself. Include the following named elements in your list:\n\nYour Name\nYour Eye Color\nYour Hair Color\nYour Favorite Color\n\n\n Interactive Editor Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nmyInfo &lt;- list(\n  name = \"bob\",\n  eyes = \"blue\",\n  hair = \"black\",\n  color = \"green\"\n)\n\nmyInfo\n\n$name\n[1] \"bob\"\n\n$eyes\n[1] \"blue\"\n\n$hair\n[1] \"black\"\n\n$color\n[1] \"green\"\n\n\n\n\n\n\n\n\n\n\n\n\n\nKnowledge Check\n\n\n\n\nWhat’s the key difference between a list slot and a vector element, in terms of what kind of data each can hold?\nIf you don’t name a list’s slots when you generate the list, can you still add names later later? How?",
+    "objectID": "tutorials/data_frames/relation_to_lists.html#data-frames-are-actually-lists",
+    "href": "tutorials/data_frames/relation_to_lists.html#data-frames-are-actually-lists",
+    "title": "Relation to Lists",
+    "section": "Data Frames Are Actually Lists",
+    "text": "Data Frames Are Actually Lists\nData frames are actually implemented as a special kind of list. Each column in a data frame is an element of a list, but all of these list elements must be vector-like objects (not necessarily atomic vectors, though) with equal length. In other words, a data frame is just a list where each slot contains a vector representing one column in the data frame, but with additional constraints and attributes that allow the data frame to behave like a 2 dimensional table.\n\nd1 &lt;- data.frame(\n  a = sample(c(TRUE, FALSE), 10, replace = TRUE),\n  b = sample(c(\"foo\", \"bar\"), 10, replace = TRUE),\n  c = runif(10)\n)\nd2 &lt;- data.frame(a = 1:10, b = c(-1, 1), c = seq(0.1, 1, 0.1))\nd3 &lt;- data.frame(x = -5:4, y = c(1, 10), z = seq(1, 1.5, length.out = 10))\n\nFor example, d1, d2, and d3 are all data frames.\n\nis.data.frame(d1)\n\n[1] TRUE\n\nis.data.frame(d2)\n\n[1] TRUE\n\nis.data.frame(d3)\n\n[1] TRUE\n\n\nBut all three are also lists.\n\nis.list(d1)\n\n[1] TRUE\n\nis.list(d2)\n\n[1] TRUE\n\nis.list(d3)\n\n[1] TRUE\n\n\n\nNot all Lists are Data Frames\nAll data frames are lists, but the inverse is not always true. Some lists are not data frames.\n\nl1 &lt;- list()\nl2 &lt;- list(\n  a = sample(c(TRUE, FALSE), 10, replace = TRUE),\n  b = sample(c(\"foo\", \"bar\"), 10, replace = TRUE),\n  c = runif(10)\n)\nl3 &lt;- list(d2, d3)\n\nAs you can see below, l1, l2, and l3 are all lists, but they’re not data frames.\n\nis.list(l1)\n\n[1] TRUE\n\nis.list(l2)\n\n[1] TRUE\n\nis.list(l3)\n\n[1] TRUE\n\nis.data.frame(l1)\n\n[1] FALSE\n\nis.data.frame(l2)\n\n[1] FALSE\n\nis.data.frame(l3)\n\n[1] FALSE\n\n\n\n\nList \\(\\leftrightarrow\\) Data Frame Conversion\nWe can use the as.list() type conversion function to convert a data frame to a list. For example, in the following code, we convert d1 into a list, l1a.\n\n(l1a &lt;- as.list(d1))\n\n$a\n [1] FALSE  TRUE FALSE FALSE FALSE  TRUE FALSE  TRUE  TRUE  TRUE\n\n$b\n [1] \"foo\" \"foo\" \"bar\" \"bar\" \"bar\" \"bar\" \"bar\" \"bar\" \"bar\" \"bar\"\n\n$c\n [1] 0.52258161 0.04646178 0.07967718 0.97695559 0.12152675 0.24255450\n [7] 0.17593701 0.39135367 0.47990431 0.71694501\n\nis.list(l1a)\n\n[1] TRUE\n\nis.data.frame(l1a)\n\n[1] FALSE\n\n\nLikewise, we can use the as.data.frame() to convert a list to a data frame. Below, we invert the conversion from above.\n\n(d1a &lt;- as.data.frame(l1a))\n\n       a   b          c\n1  FALSE foo 0.52258161\n2   TRUE foo 0.04646178\n3  FALSE bar 0.07967718\n4  FALSE bar 0.97695559\n5  FALSE bar 0.12152675\n6   TRUE bar 0.24255450\n7  FALSE bar 0.17593701\n8   TRUE bar 0.39135367\n9   TRUE bar 0.47990431\n10  TRUE bar 0.71694501\n\nis.data.frame(d1a)\n\n[1] TRUE\n\n\nIn most situations, these type conversions do not destroy an information in the underlying data. Below, we see that the converted-and-back-converted version of the data frame, d1a, is identical to the original data frame, d1.\n\nidentical(d1, d1a)\n\n[1] TRUE",
     "crumbs": [
       "Open-Stat-Prog",
-      "Lists",
-      "Creating Lists"
+      "Data Frames",
+      "Relation to Lists"
     ]
   },
   {
-    "objectID": "tutorials/lists/creating.html#nested-lists",
-    "href": "tutorials/lists/creating.html#nested-lists",
-    "title": "Creating Lists",
-    "section": "Nested Lists",
-    "text": "Nested Lists\nIt’s difficult to overstate the versatility of lists as general-purpose containers for R objects. It’s no exaggeration to say that a list can store any type of R object. Notably, lists are perfectly happy to store other lists. So the following abomination is a completely valid list.\n\nlevel0 &lt;- list(\n    level1 = list(\n        level2a = list(\n            level3a = list(\"How much wood\"),\n            level3b = list(\"would a woodchuck chuck\"),\n            level3c = list(\"if\")\n        ),\n        level2b = list(\n            level3a = list(\"a\"),\n            level3b = list(\"woodchuck could\"),\n            level3c = list(\"chuck wood?\")\n        )\n    )\n)\n\n\n\n\n\n\n\nPractice\n\n\n\nCreate a list to describe yourself. Include the following named elements in your list:\n\nYour Name\nYour Eye Color\nYour Hair Color\nYour Favorite Color\n\n\n Interactive Editor Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nmyInfo &lt;- list(\n  name = \"bob\",\n  eyes = \"blue\",\n  hair = \"black\",\n  color = \"green\"\n)\n\nmyInfo\n\n$name\n[1] \"bob\"\n\n$eyes\n[1] \"blue\"\n\n$hair\n[1] \"black\"\n\n$color\n[1] \"green\"\n\n\n\n\n\n\n\n\n\n\n\n\n\nKnowledge Check\n\n\n\n\nWhat’s the key difference between a list slot and a vector element, in terms of what kind of data each can hold?\nIf you don’t name a list’s slots when you generate the list, can you still add names later later? How?",
+    "objectID": "tutorials/data_frames/relation_to_lists.html#data-frames-are-not-matrices",
+    "href": "tutorials/data_frames/relation_to_lists.html#data-frames-are-not-matrices",
+    "title": "Relation to Lists",
+    "section": "Data Frames Are Not Matrices",
+    "text": "Data Frames Are Not Matrices\nAs you have probably surmised, data frames are not matrices. Although data frames and matrices share many superficial similarities, they’re almost entirely unrelated types of objects.\n\nis.matrix(d1)\n\n[1] FALSE\n\nis.matrix(d2)\n\n[1] FALSE\n\nis.matrix(d3)\n\n[1] FALSE\n\n\nConsequently, you cannot apply matrix operations (such as matrix multiplication) to a data frame.\n\nd2 %*% t(d3)\n\nError in `d2 %*% t(d3)`:\n! requires numeric/complex matrix/vector arguments\n\n\nIf you wanted to analyze a data frame like a matrix, you could type cast the data frame into a matrix using the as.matrix() function.\n\nas.matrix(d2) %*% t(as.matrix(d3))\n\n       [,1]       [,2]       [,3]       [,4]       [,5]      [,6]       [,7]\n [1,]  -5.9 -13.894444  -3.888889 -11.883333 -1.8777778 -9.872222  0.1333333\n [2,]  -8.8   2.211111  -4.777778   6.233333 -0.7555556 10.255556  3.2666667\n [3,] -15.7 -21.683333  -9.666667 -15.650000 -3.6333333 -9.616667  2.4000000\n [4,] -18.6  -5.577778 -10.555556   2.466667 -2.5111111 10.511111  5.5333333\n [5,] -25.5 -29.472222 -15.444444 -19.416667 -5.3888889 -9.361111  4.6666667\n [6,] -28.4 -13.366667 -16.333333  -1.300000 -4.2666667 10.766667  7.8000000\n [7,] -35.3 -37.261111 -21.222222 -23.183333 -7.1444444 -9.105556  6.9333333\n [8,] -38.2 -21.155556 -22.111111  -5.066667 -6.0222222 11.022222 10.0666667\n [9,] -45.1 -45.050000 -27.000000 -26.950000 -8.9000000 -8.850000  9.2000000\n[10,] -48.0 -28.944444 -27.888889  -8.833333 -7.7777778 11.277778 12.3333333\n            [,8]      [,9] [,10]\n [1,] -7.8611111  2.144444 -5.85\n [2,] 14.2777778  7.288889 18.30\n [3,] -3.5833333  8.433333  2.45\n [4,] 18.5555556 13.577778 26.60\n [5,]  0.6944444 14.722222 10.75\n [6,] 22.8333333 19.866667 34.90\n [7,]  4.9722222 21.011111 19.05\n [8,] 27.1111111 26.155556 43.20\n [9,]  9.2500000 27.300000 27.35\n[10,] 31.3888889 32.444444 51.50\n\n\nYou should be carefully about any type conversions, though. If your data frame contains mixed column types, R will coerce every column into some compatible type by applying the same coercion rule you learned about in the Vectors & Matrices module.\n\n(m1 &lt;- as.matrix(d1))\n\n      a       b     c           \n [1,] \"FALSE\" \"foo\" \"0.52258161\"\n [2,] \"TRUE\"  \"foo\" \"0.04646178\"\n [3,] \"FALSE\" \"bar\" \"0.07967718\"\n [4,] \"FALSE\" \"bar\" \"0.97695559\"\n [5,] \"FALSE\" \"bar\" \"0.12152675\"\n [6,] \"TRUE\"  \"bar\" \"0.24255450\"\n [7,] \"FALSE\" \"bar\" \"0.17593701\"\n [8,] \"TRUE\"  \"bar\" \"0.39135367\"\n [9,] \"TRUE\"  \"bar\" \"0.47990431\"\n[10,] \"TRUE\"  \"bar\" \"0.71694501\"\n\ntypeof(m1)\n\n[1] \"character\"\n\n(d4 &lt;- data.frame(x = rep(c(TRUE, FALSE), 3), y = runif(6)))\n\n      x          y\n1  TRUE 0.64512222\n2 FALSE 0.60173157\n3  TRUE 0.36017208\n4 FALSE 0.42502086\n5  TRUE 0.09055093\n6 FALSE 0.86147714\n\n(m4 &lt;- as.matrix(d4))\n\n     x          y\n[1,] 1 0.64512222\n[2,] 0 0.60173157\n[3,] 1 0.36017208\n[4,] 0 0.42502086\n[5,] 1 0.09055093\n[6,] 0 0.86147714\n\ntypeof(m4)\n\n[1] \"double\"\n\n\n\n\n\n\n\n\nKnowledge Check\n\n\n\n\nIn one sentence, explain how a data frame is related to a list.\nif a and b are both data frames, why will a %*% t(b) produce an error?\nIf a data frame has one text column and one numeric column, what happens if you convert it to a matrix with as.matrix()? Why?",
     "crumbs": [
       "Open-Stat-Prog",
-      "Lists",
-      "Creating Lists"
+      "Data Frames",
+      "Relation to Lists"
+    ]
+  },
+  {
+    "objectID": "tutorials/data_frames/relation_to_lists.html#quick-check",
+    "href": "tutorials/data_frames/relation_to_lists.html#quick-check",
+    "title": "Relation to Lists",
+    "section": "Quick Check",
+    "text": "Quick Check\n\nIn one sentence: how is a data frame related to a list?\nWhy can’t you do d2 %*% t(d3) directly on two data frames?\nIf a data frame has one text column and one numeric column, what happens if you convert it to a matrix with as.matrix()? Why?",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Data Frames",
+      "Relation to Lists"
+    ]
+  },
+  {
+    "objectID": "tutorials/data_frames/manipulating.html#recycling",
+    "href": "tutorials/data_frames/manipulating.html#recycling",
+    "title": "Manipulating Data Frames",
+    "section": "Recycling",
+    "text": "Recycling\nWhen the replacement size doesn’t match the selection size, R will use recycling to resolve the discrepancy, as with vectors and matrices. However, it’s not always easy to predict how the replacement will behave.\nIf we supply a single vector as the replacement data, the recycling operates the same way it does for matrices. For example, in the following code, we replace the first two columns of d1 by recycling the vector 1:5.\n\nd1[1:2] &lt;- 1:5\nd1\n\n   a b            c\n1  1 1   0.83490526\n2  2 2   0.03063430\n3  3 3 888.00000000\n4  4 4 888.00000000\n5  5 5 888.00000000\n6  1 1 888.00000000\n7  2 2   0.41985815\n8  3 3   0.89236940\n9  4 4   0.64761682\n10 5 5   0.02244615\n\n\nNothing new here. We simply re-use the elements of the replacement vector, 1:5, until each selected cell is overwritten. Things get more complicated with we supply the replacement data as a list or data frame, though. Below, we want to replace the a and c columns in d1 with the contents of a list, but the vectors therein aren’t long enough, so they will need to be recycled.\n\nd1[c(\"a\", \"c\")] &lt;- list(c(\"yes\", \"no\"), 8:12)\nd1\n\n     a b  c\n1  yes 1  8\n2   no 2  9\n3  yes 3 10\n4   no 4 11\n5  yes 5 12\n6   no 1  8\n7  yes 2  9\n8   no 3 10\n9  yes 4 11\n10  no 5 12\n\n\nNote that each list slot acts as the replacement for one of the selected columns. So, the recycling happens within columns: the contents of each list slot are recycled independently to resolve the respective size discrepancy. In this case,\n\nThe vector c(\"yes\", \"no\") is recycled five times to match the length of column a.\nThe vector 8:12 only needs to be recycled twice.\n\n\nRestrictions\nAs with matrices, R is oddly specific (in a slightly different way) about the kinds of size discrepancies it will automatically resolved when modifying data frames. When all lengths align cleanly (as in the examples above), R will apply recycling silently (i.e., without any messages or warnings).\nIdeal\n\nAll replacement lengths \\(\\leq\\) Respective selection lengths\nAll replacement lengths evenly divide their respective selection lengths\nNumber of replacement list slots = Number of columns selected\nNumber of replacement data frame columns = Number of columns selected\n\nFor several other types of size discrepancy, R will apply recycling with a warning.\nAcceptable\n\nReplacement length &gt; Selection length\nReplacement length cleanly divides the selection length\nReplacement length exceeds selection length\nReplacement list contains more slots than columns selected\nReplacement data frame contains more slots than columns selected\n\nIn one specific situation, R will throw an error and refuse to implement the replacement.\nInvalid\n\nReplacement length does not evenly divide the selection length.\n\n\nExamples of Acceptable Replacement\nWhen working with data frames, R is quite permissive with abuses of recycling. So, all of the following examples represent legal uses of replacement that R will run without errors, but these examples will all trigger warnings.\nReplace the first two columns of d1 by using the first 20 elements from the vector 100:500.\n\nd1[1:2] &lt;- 100:500\n\nWarning in matrix(value, n, p): data length [401] is not a sub-multiple or\nmultiple of the number of rows [10]\n\nd1\n\n     a   b  c\n1  100 110  8\n2  101 111  9\n3  102 112 10\n4  103 113 11\n5  104 114 12\n6  105 115  8\n7  106 116  9\n8  107 117 10\n9  108 118 11\n10 109 119 12\n\n\nReplace the a and c columns in d1 with a list containing vectors that are too long.\n\nd1[c(\"a\", \"c\")] &lt;- list(rnorm(100), runif(100))\n\nWarning in `[&lt;-.data.frame`(`*tmp*`, c(\"a\", \"c\"), value =\nlist(c(1.4840452547017, : replacement element 1 has 100 rows to replace 10 rows\n\n\nWarning in `[&lt;-.data.frame`(`*tmp*`, c(\"a\", \"c\"), value =\nlist(c(1.4840452547017, : replacement element 2 has 100 rows to replace 10 rows\n\nd1\n\n             a   b         c\n1   1.48404525 110 0.7682523\n2  -2.93873382 111 0.1002140\n3   0.20989471 112 0.6808418\n4  -0.30115959 113 0.5880708\n5   1.58410274 114 0.3267631\n6  -0.53009502 115 0.4851846\n7  -0.35053163 116 0.8066808\n8   0.02134226 117 0.3986539\n9   1.04075145 118 0.7947918\n10  0.82499627 119 0.5598684\n\n\nReplace the a and c columns in d1 with the first two slots in a length-3 list.\n\nd1[c(\"a\", \"c\")] &lt;- list(1, 2, 3)\n\nWarning in `[&lt;-.data.frame`(`*tmp*`, c(\"a\", \"c\"), value = list(1, 2, 3)):\nprovided 3 variables to replace 2 variables\n\nd1\n\n   a   b c\n1  1 110 2\n2  1 111 2\n3  1 112 2\n4  1 113 2\n5  1 114 2\n6  1 115 2\n7  1 116 2\n8  1 117 2\n9  1 118 2\n10 1 119 2\n\n\nReplace the a and c columns in d1 with the first two columns of a three-column data frame.\n\nd1[c(\"a\", \"c\")] &lt;- data.frame(\"foo\", \"bar\", \"baz\")\n\nWarning in `[&lt;-.data.frame`(`*tmp*`, c(\"a\", \"c\"), value = structure(list(:\nprovided 3 variables to replace 2 variables\n\nd1\n\n     a   b   c\n1  foo 110 bar\n2  foo 111 bar\n3  foo 112 bar\n4  foo 113 bar\n5  foo 114 bar\n6  foo 115 bar\n7  foo 116 bar\n8  foo 117 bar\n9  foo 118 bar\n10 foo 119 bar\n\n\n\n\nExamples of Invalid Replacement\nFor the most part, R will only complain when the replacement length does not cleanly divide selection length. So, the following two examples represent some of the few situations in which R will completely refuse to apply our requested replacement.\nHere, we try to replace the first two columns of d1 (i.e., 20 total cells) with the length-three vector 1:3.\n\nd1[1:2] &lt;- 1:3\n\nError in `[&lt;-.data.frame`:\n! replacement has 3 items, need 20\n\n\nThis time, we make essentially the same mistake, but now the incompatible vectors live in a list. We’re trying to replace the a and c columns in d1 with a list containing a length-four vector and a length-eight vector.\n\nd1[c(\"a\", \"c\")] &lt;- list(letters[4], 1:8)\n\nError in `[&lt;-.data.frame`:\n! replacement element 2 has 8 rows, need 10",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Data Frames",
+      "Manipulating Data Frames"
+    ]
+  },
+  {
+    "objectID": "tutorials/data_frames/tibbles.html#creating-tibbles",
+    "href": "tutorials/data_frames/tibbles.html#creating-tibbles",
+    "title": "Tibbles: A Modern Data Frame",
+    "section": "Creating Tibbles",
+    "text": "Creating Tibbles\nTibbles are provided by the tibbles package, not Base R. So, before you can use tibbles, you must first install the tibble package.\n\ninstall.packages(\"tibble\")\n\nWe create tibbles with the tibble() function, which works (mostly) like data.frame().\n\nlibrary(tibble)\n\nt1 &lt;- tibble(\n  x = rnorm(10),\n  y = sample(c(\"foo\", \"bar\", \"baz\"), 10, TRUE),\n  z = x^2\n)\nt1\n\n# A tibble: 10 × 3\n        x y          z\n    &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt;\n 1  0.918 foo   0.842 \n 2 -1.04  bar   1.09  \n 3 -0.924 bar   0.854 \n 4 -2.23  foo   4.96  \n 5 -0.849 baz   0.721 \n 6 -0.178 foo   0.0316\n 7  1.18  foo   1.38  \n 8 -0.755 baz   0.569 \n 9 -2.12  bar   4.49  \n10  0.882 baz   0.779 \n\n\nNotice how the printed output looks a little different from an ordinary data frame. Tibbles print the number of rows and columns and show each column’s type under the column name. When printing large tibbles, the rows and/or columns will be truncated into a sensibly sized summary.\n\nas_tibble(\n  matrix(\n    rnorm(10000),\n    ncol = 50,\n    dimnames = list(NULL, paste0(\"x\", 1:50))\n  )\n)\n\n# A tibble: 200 × 50\n        x1     x2     x3      x4      x5     x6      x7     x8     x9     x10\n     &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;\n 1  1.73   -0.173 -1.87  -0.309  -1.03    2.12   2.69    1.34  -1.57  -0.0607\n 2 -0.685  -2.01   0.627 -1.54   -1.30    0.485  1.63   -0.679  0.433  0.0852\n 3 -2.69   -0.809 -1.62  -0.700  -0.326   0.242  0.0182 -0.280  0.601 -1.05  \n 4 -1.95    2.22   1.67   0.366   0.349  -0.455 -0.412  -0.777  1.42  -1.09  \n 5  1.60   -1.24  -0.730 -0.0234 -0.0316 -0.765 -1.85    0.221  0.491  2.29  \n 6  0.799  -0.805 -1.24   1.36   -0.260  -0.340  1.02   -1.11  -0.650 -1.000 \n 7  1.62   -0.198  0.549  0.465   0.860   1.29   1.11    0.681 -0.253 -1.05  \n 8  0.0633 -0.270  1.08   1.53    0.697   0.932 -0.703  -0.639  1.09   0.0777\n 9 -0.744  -0.253 -0.724  1.10   -0.939  -0.611  1.93    0.100  0.386 -0.730 \n10  0.0828 -0.533  0.932 -0.621   0.841  -0.135  0.585  -0.565 -0.628 -0.460 \n# ℹ 190 more rows\n# ℹ 40 more variables: x11 &lt;dbl&gt;, x12 &lt;dbl&gt;, x13 &lt;dbl&gt;, x14 &lt;dbl&gt;, x15 &lt;dbl&gt;,\n#   x16 &lt;dbl&gt;, x17 &lt;dbl&gt;, x18 &lt;dbl&gt;, x19 &lt;dbl&gt;, x20 &lt;dbl&gt;, x21 &lt;dbl&gt;,\n#   x22 &lt;dbl&gt;, x23 &lt;dbl&gt;, x24 &lt;dbl&gt;, x25 &lt;dbl&gt;, x26 &lt;dbl&gt;, x27 &lt;dbl&gt;,\n#   x28 &lt;dbl&gt;, x29 &lt;dbl&gt;, x30 &lt;dbl&gt;, x31 &lt;dbl&gt;, x32 &lt;dbl&gt;, x33 &lt;dbl&gt;,\n#   x34 &lt;dbl&gt;, x35 &lt;dbl&gt;, x36 &lt;dbl&gt;, x37 &lt;dbl&gt;, x38 &lt;dbl&gt;, x39 &lt;dbl&gt;,\n#   x40 &lt;dbl&gt;, x41 &lt;dbl&gt;, x42 &lt;dbl&gt;, x43 &lt;dbl&gt;, x44 &lt;dbl&gt;, x45 &lt;dbl&gt;, …\n\n\nThis bespoke print method is one difference between tibbles and traditional data frames, but there are several others (including a few very handy improvements).",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Data Frames",
+      "Tibbles"
     ]
   }
 ]

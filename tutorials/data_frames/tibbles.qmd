@@ -3,80 +3,201 @@ title: "Tibbles: A Modern Data Frame"
 knitr:
   opts_chunk:
     eval: true
+    warning: true
 ---
 
-::: {.callout-note}
-The goal is to recognize tibbles and describe how they relate to ordinary data frames, not to master a new syntax. None of the code on this page needs to run for you to get the point. Read it, and try it yourself later once you've installed the **tibble** package (or the tidyverse, which includes it).
-:::
+::: going-further
 
-::: {.callout-tip}
+## Optional Content
 
-## Optional Page
-
-This page is a brief preview, not a required part of the module's learning outcomes. Feel free to skim it now and
-come back later once you've had more practice with ordinary data frames.
+This page is a brief preview of an advanced topic that you'll encounter in later modules, not a required part of this
+module's learning outcomes. Feel free to skim the following information now and come back later once you've had more
+practice with ordinary data frames.
 
 :::
 
-As you continue working with R, especially once you start using packages from the [tidyverse](https://www.tidyverse.org/)
-(like **dplyr** or **ggplot2**), you'll frequently encounter a variant of the data frame called a **tibble**. A tibble
-is provided by the **tibble** package, and it's designed to behave like a data frame in almost every way, while
-smoothing over a few behaviors that regularly surprise beginners.
+As you continue working with R---especially once you start using packages from the [tidyverse](https://www.tidyverse.org/)
+like **dplyr** and **ggplot2**---you'll frequently encounter a special kind of data frame called a **tibble**. This page
+provides a brief introduction to these very handle data objects.
 
-## Creating a Tibble
+## Creating Tibbles
 
-We create tibbles with the `tibble()` function, which works almost identically to `data.frame()`.
+Tibbles are provided by the **tibbles** package, not Base R. So, before you can use tibbles, you must first install the
+**tibble** package.
+
+```{r}
+#| eval: false
+
+install.packages("tibble")
+```
+
+We create tibbles with the `tibble()` function, which works (mostly) like `data.frame()`.
 
 ```{r}
 library(tibble)
 
-t1 <- tibble(x = 1:5, y = c("a", "b", "c", "d", "e"))
+t1 <- tibble(
+  x = rnorm(10),
+  y = sample(c("foo", "bar", "baz"), 10, TRUE),
+  z = x^2
+)
 t1
 ```
 
-If you ran this yourself, you'd notice the printed output already looks a little different from an ordinary data
-frame. Tibbles print the number of rows and columns, and show each column's type right under its name.
+Notice how the printed output looks a little different from an ordinary data frame. Tibbles print the number of rows and
+columns and show each column's type under the column name. When printing large tibbles, the rows and/or columns will be
+truncated into a sensibly sized summary.
 
-## How Tibbles Differ From Data Frames
+```{r}
+as_tibble(
+  matrix(
+    rnorm(10000),
+    ncol = 50,
+    dimnames = list(NULL, paste0("x", 1:50))
+  )
+)
+```
 
-Tibbles are still data frames underneath (in fact, `is.data.frame()` returns `TRUE` for a tibble). They change a
-few specific behaviors, not the fundamental structure:
+This bespoke print method is one difference between tibbles and traditional data frames, but there are several others
+(including a few very handy improvements).
+
+## How Tibbles Differ from Data Frames
+
+In many ways, tibbles *don't* differ from data frames. For the most part, tibbles are meant to be a drop-in replacement
+for traditional data frames, so they don't change much about the code data frame features (after all, data frames are
+already very useful). As far as R is concerned, tibbles are still data frames underneath.
 
 ```{r}
 is.data.frame(t1)
-class(t1)
 ```
 
-- **Tibbles never simplify on selection.** Remember how selecting a single column from a data frame using
-  matrix-style indexing (`d1[, 1]`) automatically "dropped" the result down to a plain vector? Tibbles don't do that.
-  `t1[, 1]` always returns a one-column tibble, never a bare vector. This removes a common source of unexpected
-  behavior in longer scripts.
-- **Tibbles don't do partial column-name matching.** With an ordinary data frame, `df$he` might accidentally match a
-  column called `height` if there's no exact match. Tibbles require an exact match, which helps catch typos early.
-- **Tibbles print more safely.** Printing a large ordinary data frame dumps every row to your console. Tibbles print
-  only the first several rows by default, along with each column's type — much friendlier for big datasets.
+Since they share the same underlying structure, you can seamlessly convert data frames to tibbles and visa-versa.
 
 ```{r}
-# Compare: selecting one column with matrix-style indexing
-d1 <- data.frame(x = 1:5, y = letters[1:5])
+# Convert a tibble to an ordinary data frame
+(d1 <- as.data.frame(t1))
 
-class(d1[, 1])  # a data frame "drops" to a vector
-class(t1[, 1])  # a tibble does not drop
-```
-
-## Converting Between the Two
-
-You can convert freely between ordinary data frames and tibbles.
-
-```{r}
 # Convert a data frame to a tibble
 as_tibble(d1)
-
-# Convert a tibble to an ordinary data frame
-as.data.frame(t1)
 ```
 
-## Quick Check
+The goal of tibbles is to smooth over some of the confusing, frustrating, or surprising behavior of traditional data
+frames. Below, we highlight a few of the most useful differences.
 
-- Is a tibble a completely different data structure from a data frame, or a variant of one?
-- Name one specific behavior where tibbles differ from ordinary data frames, and explain why that difference exists.
+### Tibbles Don't Do Surprise Simplification
+
+Remember how selecting a single column from a data frame using matrix-style indexing (`d1[, 1]`) automatically
+simplifies the result to a vector? I certainly hope so; we just covered that on the last page. Anyway, tibbles don't do
+that.
+
+Subsetting a tibble using matrix-style indexing always returns a tibble, regardless of how many rows or columns are
+extracted.
+
+```{r}
+t1[1:2, 1:2]
+t1[, 1]
+t1[1, ]
+```
+
+### Tibbles Don't Do Partial Name Matching
+
+We haven't explicitly addressed it yet, but many R commands use "partial matching" to resolve your inputs. For example,
+we don't actually have to write out the full word `digits` to specify the corresponding argument in `round()`. We only
+need to provide enough of the initial letters to disambiguate the intended argument name.
+
+```{r}
+round(digits = 2, 3.14159)
+round(dig = 2, 3.14159)
+round(d = 2, 3.14159)
+```
+
+Ordinary data frames use the system to match column names. So, to match the column `foo` in `d1`, we only need to
+specify one letter.
+
+```{r}
+d1 <- data.frame(
+  foo = rnorm(10),
+  bar = runif(10),
+  baz = rbinom(10, 1, 0.5)
+)
+
+d1$f
+```
+
+To match the `bar` or `baz` columns, however, we need to give the full column name, since these two names only differ in
+their final letter.
+
+```{r}
+#| error: true
+
+d1$ba
+```
+
+Usually, this shortcut doesn't cause problems, but it creates unnecessary ambiguity, and permits easily avoided bugs.
+Consider the following hypothetical data frame.
+
+```{r}
+myData <- data.frame(
+  female = sample(0:1, 20, TRUE),
+  malevolent = sample(0:1, 20, TRUE),
+  score = rnorm(20)
+)
+
+myData
+```
+
+Suppose the `female` column contains a dummy code representing biological sex. Further suppose that I want to select the
+`female` column, but I misremember its name as `male`, so I run the following command.
+
+```{r}
+myData$male
+```
+
+Oops...hope I'm paying extra close attention. Otherwise, as I continue with my analysis, the cases that I think are
+biological males are actually the cases that have been flagged as "malevolent" by the dummy code that I accidentally
+selected via silent partial matching.
+
+Tibbles don't allow partial matching for columns names, so this type of mistake cannot happen when working with a tibble.
+
+```{r}
+#| error: true
+
+myData2 <- as_tibble(myData)
+
+myData2$male
+```
+
+### Tibbles Dramatically Restrict Recycling
+
+Tibbles do away with essentially all of the convoluted recycling rules we've discussed for other type of R objects.
+Basically, we're only allowed to recycle length-one vectors. So, the following commands are all accepted.
+
+```{r}
+myData2$female <- 42
+myData2
+
+myData2[1:6, "score"] <- pi
+myData2
+
+myData2[1:2] <- list("foo", FALSE)
+myData2
+```
+
+These commands, on the other hand, will all fail because we're trying to recycle vectors with more than one element.
+
+```{r}
+#| error: true
+
+myData2$female <- 40:42
+myData2[1:6, "score"] <- c(pi, NA)
+myData2[1:2] <- list("foo", c(FALSE, TRUE))
+```
+
+::: knowledge-check
+
+- How are tibbles and data frames related?
+- What's the purpose of tibbles, when we already have perfectly serviceable data frames?
+- Name one specific behavior where tibbles differ from ordinary data frames, and explain the pros and cons of that
+difference.
+
+:::

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tibbles: A Modern Data Frame – OSP Lists &amp; Data Frames</title>
+<title>Relation to Lists – OSP Lists &amp; Data Frames</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,8 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../quizzes/data_frames/index.html" rel="next">
-<link href="../../tutorials/data_frames/manipulating.html" rel="prev">
+<link href="../../tutorials/data_frames/manipulating.html" rel="next">
+<link href="../../tutorials/data_frames/creating.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -105,19 +105,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 <style>
-div.callout-completion-time.callout {
-  border-left-color: gray;
-}
-div.callout-completion-time.callout-style-default > .callout-header {
-  background-color: rgb(from gray r g b / 13%);
-}
-div.callout-completion-time .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-completion-time.callout-style-default .callout-icon::before, div.callout-completion-time.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f2f2' !important;
-  background-image: none;
-}
 div.callout-reading-advanced.callout {
   border-left-color: red;
 }
@@ -129,19 +116,6 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f518' !important;
-  background-image: none;
-}
-div.callout-knowledge-check.callout {
-  border-left-color: #368FFF;
-}
-div.callout-knowledge-check.callout-style-default > .callout-header {
-  background-color: rgba(54, 143, 255, 0.13);
-}
-div.callout-knowledge-check .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-knowledge-check.callout-style-default .callout-icon::before, div.callout-knowledge-check.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f044' !important;
   background-image: none;
 }
 div.callout-explanation.callout {
@@ -157,17 +131,17 @@ div.callout-explanation.callout-style-default .callout-icon::before, div.callout
   content: '\f075' !important;
   background-image: none;
 }
-div.callout-resource.callout {
-  border-left-color: orange;
+div.callout-common-mistakes.callout {
+  border-left-color: #B01919;
 }
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgb(from orange r g b / 13%);
+div.callout-common-mistakes.callout-style-default > .callout-header {
+  background-color: rgba(176, 25, 25, 0.13);
 }
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+div.callout-common-mistakes .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-common-mistakes.callout-style-default .callout-icon::before, div.callout-common-mistakes.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f0c1' !important;
+  content: '\f188' !important;
   background-image: none;
 }
 div.callout-reading.callout {
@@ -183,6 +157,32 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
   content: '\f518' !important;
   background-image: none;
 }
+div.callout-resource.callout {
+  border-left-color: orange;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f0c1' !important;
+  background-image: none;
+}
+div.callout-completion-time.callout {
+  border-left-color: gray;
+}
+div.callout-completion-time.callout-style-default > .callout-header {
+  background-color: rgb(from gray r g b / 13%);
+}
+div.callout-completion-time .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-completion-time.callout-style-default .callout-icon::before, div.callout-completion-time.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f2f2' !important;
+  background-image: none;
+}
 div.callout-practice.callout {
   border-left-color: green;
 }
@@ -194,6 +194,19 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f085' !important;
+  background-image: none;
+}
+div.callout-knowledge-check.callout {
+  border-left-color: #368FFF;
+}
+div.callout-knowledge-check.callout-style-default > .callout-header {
+  background-color: rgba(54, 143, 255, 0.13);
+}
+div.callout-knowledge-check .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-knowledge-check.callout-style-default .callout-icon::before, div.callout-knowledge-check.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f044' !important;
   background-image: none;
 }
 div.callout-going-further.callout {
@@ -209,21 +222,37 @@ div.callout-going-further.callout-style-default .callout-icon::before, div.callo
   content: '\f4d7' !important;
   background-image: none;
 }
-div.callout-common-mistakes.callout {
-  border-left-color: #B01919;
-}
-div.callout-common-mistakes.callout-style-default > .callout-header {
-  background-color: rgba(176, 25, 25, 0.13);
-}
-div.callout-common-mistakes .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-common-mistakes.callout-style-default .callout-icon::before, div.callout-common-mistakes.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f188' !important;
-  background-image: none;
-}
 </style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../html/webex.css">
 </head>
@@ -274,7 +303,7 @@ div.callout-common-mistakes.callout-style-default .callout-icon::before, div.cal
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/data_frames/index.html">Data Frames</a></li><li class="breadcrumb-item"><a href="../../tutorials/data_frames/tibbles.html">Tibbles</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/data_frames/index.html">Data Frames</a></li><li class="breadcrumb-item"><a href="../../tutorials/data_frames/relation_to_lists.html">Relation to Lists</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -338,8 +367,8 @@ div.callout-common-mistakes.callout-style-default .callout-icon::before, div.cal
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../tutorials/data_frames/relation_to_lists.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Relation to other Object Types</span></a>
+  <a href="../../tutorials/data_frames/relation_to_lists.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Relation to Lists</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -350,7 +379,7 @@ div.callout-common-mistakes.callout-style-default .callout-icon::before, div.cal
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../tutorials/data_frames/tibbles.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../tutorials/data_frames/tibbles.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tibbles</span></a>
   </div>
 </li>
@@ -378,22 +407,21 @@ div.callout-common-mistakes.callout-style-default .callout-icon::before, div.cal
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#creating-tibbles" id="toc-creating-tibbles" class="nav-link active" data-scroll-target="#creating-tibbles">Creating Tibbles</a></li>
-  <li><a href="#how-tibbles-differ-from-data-frames" id="toc-how-tibbles-differ-from-data-frames" class="nav-link" data-scroll-target="#how-tibbles-differ-from-data-frames">How Tibbles Differ from Data Frames</a>
+  <li><a href="#data-frames-are-actually-lists" id="toc-data-frames-are-actually-lists" class="nav-link active" data-scroll-target="#data-frames-are-actually-lists">Data Frames Are Actually Lists</a>
   <ul class="collapse">
-  <li><a href="#tibbles-dont-do-surprise-simplification" id="toc-tibbles-dont-do-surprise-simplification" class="nav-link" data-scroll-target="#tibbles-dont-do-surprise-simplification">Tibbles Don’t Do Surprise Simplification</a></li>
-  <li><a href="#tibbles-dont-do-partial-name-matching" id="toc-tibbles-dont-do-partial-name-matching" class="nav-link" data-scroll-target="#tibbles-dont-do-partial-name-matching">Tibbles Don’t Do Partial Name Matching</a></li>
-  <li><a href="#tibbles-dramatically-restrict-recycling" id="toc-tibbles-dramatically-restrict-recycling" class="nav-link" data-scroll-target="#tibbles-dramatically-restrict-recycling">Tibbles Dramatically Restrict Recycling</a></li>
+  <li><a href="#not-all-lists-are-data-frames" id="toc-not-all-lists-are-data-frames" class="nav-link" data-scroll-target="#not-all-lists-are-data-frames">Not all Lists are Data Frames</a></li>
+  <li><a href="#list-leftrightarrow-data-frame-conversion" id="toc-list-leftrightarrow-data-frame-conversion" class="nav-link" data-scroll-target="#list-leftrightarrow-data-frame-conversion">List <span class="math inline">\(\leftrightarrow\)</span> Data Frame Conversion</a></li>
   </ul></li>
+  <li><a href="#data-frames-are-not-matrices" id="toc-data-frames-are-not-matrices" class="nav-link" data-scroll-target="#data-frames-are-not-matrices">Data Frames Are Not Matrices</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/data_frames/index.html">Data Frames</a></li><li class="breadcrumb-item"><a href="../../tutorials/data_frames/tibbles.html">Tibbles</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/data_frames/index.html">Data Frames</a></li><li class="breadcrumb-item"><a href="../../tutorials/data_frames/relation_to_lists.html">Relation to Lists</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Tibbles: A Modern Data Frame</h1>
+<h1 class="title">Relation to Lists</h1>
 </div>
 
 
@@ -410,379 +438,269 @@ div.callout-common-mistakes.callout-style-default .callout-icon::before, div.cal
 </header>
 
 
-<div class="callout callout-style-default callout-going-further callout-titled">
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Optional Content
+Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This page is a brief preview of an advanced topic that you’ll encounter in later modules, not a required part of this module’s learning outcomes. Feel free to skim the following information now and come back later once you’ve had more practice with ordinary data frames.</p>
+<p>Data frames are somewhat strange objects that can cause a lot of confusion. To new users, data frames usually feel more similar to matrices than lists, but the opposite is actually true. The underlying implementation of data frames doesn’t match their apparent tabular structure. This page compares data frames to lists and matrices. Understanding these similarities and differences will help you use data frames more effectively and avoid many common mistakes.</p>
 </div>
 </div>
-<p>As you continue working with R—especially once you start using packages from the <a href="https://www.tidyverse.org/">tidyverse</a> like <strong>dplyr</strong> and <strong>ggplot2</strong>—you’ll frequently encounter a special kind of data frame called a <strong>tibble</strong>. This page provides a brief introduction to these very handle data objects.</p>
-<section id="creating-tibbles" class="level2">
-<h2 class="anchored" data-anchor-id="creating-tibbles">Creating Tibbles</h2>
-<p>Tibbles are provided by the <strong>tibbles</strong> package, not Base R. So, before you can use tibbles, you must first install the <strong>tibble</strong> package.</p>
+<p>Did you notice the similarity between the code that we used to create data frames on the last page and the code that we used to create lists in the last tutorial?</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tibble"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a data frame</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>someDataFrame <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">a =</span> <span class="fu">rnorm</span>(<span class="dv">10</span>),</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">b =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">c =</span> letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a list</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>someDataFrame <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">a =</span> <span class="fu">rnorm</span>(<span class="dv">10</span>),</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">b =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">c =</span> letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>We create tibbles with the <code>tibble()</code> function, which works (mostly) like <code>data.frame()</code>.</p>
+<p>If so, you were right to see some parallels: lists and data frames are actually the same thing!</p>
+<section id="data-frames-are-actually-lists" class="level2">
+<h2 class="anchored" data-anchor-id="data-frames-are-actually-lists">Data Frames Are Actually Lists</h2>
+<p>Data frames are actually implemented as a special kind of list. Each column in a data frame is an element of a list, but all of these list elements must be vector-like objects (not necessarily atomic vectors, though) with equal length. In other words, a data frame is just a list where each slot contains a vector representing one column in the data frame, but with additional constraints and attributes that allow the data frame to behave like a 2 dimensional table.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tibble)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>t1 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> <span class="fu">rnorm</span>(<span class="dv">10</span>),</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"foo"</span>, <span class="st">"bar"</span>, <span class="st">"baz"</span>), <span class="dv">10</span>, <span class="cn">TRUE</span>),</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">z =</span> x<span class="sc">^</span><span class="dv">2</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>t1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>d1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">a =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>), <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">b =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"foo"</span>, <span class="st">"bar"</span>), <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">c =</span> <span class="fu">runif</span>(<span class="dv">10</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>d2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">a =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">b =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>), <span class="at">c =</span> <span class="fu">seq</span>(<span class="fl">0.1</span>, <span class="dv">1</span>, <span class="fl">0.1</span>))</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>d3 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="sc">-</span><span class="dv">5</span><span class="sc">:</span><span class="dv">4</span>, <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">10</span>), <span class="at">z =</span> <span class="fu">seq</span>(<span class="dv">1</span>, <span class="fl">1.5</span>, <span class="at">length.out =</span> <span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>For example, <code>d1</code>, <code>d2</code>, and <code>d3</code> are all data frames.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.data.frame</span>(d1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 10 × 3
-        x y          z
-    &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt;
- 1  0.918 foo   0.842 
- 2 -1.04  bar   1.09  
- 3 -0.924 bar   0.854 
- 4 -2.23  foo   4.96  
- 5 -0.849 baz   0.721 
- 6 -0.178 foo   0.0316
- 7  1.18  foo   1.38  
- 8 -0.755 baz   0.569 
- 9 -2.12  bar   4.49  
-10  0.882 baz   0.779 </code></pre>
+<pre><code>[1] TRUE</code></pre>
 </div>
-</div>
-<p>Notice how the printed output looks a little different from an ordinary data frame. Tibbles print the number of rows and columns and show each column’s type under the column name. When printing large tibbles, the rows and/or columns will be truncated into a sensibly sized summary.</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as_tibble</span>(</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">matrix</span>(</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rnorm</span>(<span class="dv">10000</span>),</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">ncol =</span> <span class="dv">50</span>,</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">dimnames =</span> <span class="fu">list</span>(<span class="cn">NULL</span>, <span class="fu">paste0</span>(<span class="st">"x"</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">50</span>))</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.data.frame</span>(d2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 200 × 50
-        x1     x2     x3      x4      x5     x6      x7     x8     x9     x10
-     &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;
- 1  1.73   -0.173 -1.87  -0.309  -1.03    2.12   2.69    1.34  -1.57  -0.0607
- 2 -0.685  -2.01   0.627 -1.54   -1.30    0.485  1.63   -0.679  0.433  0.0852
- 3 -2.69   -0.809 -1.62  -0.700  -0.326   0.242  0.0182 -0.280  0.601 -1.05  
- 4 -1.95    2.22   1.67   0.366   0.349  -0.455 -0.412  -0.777  1.42  -1.09  
- 5  1.60   -1.24  -0.730 -0.0234 -0.0316 -0.765 -1.85    0.221  0.491  2.29  
- 6  0.799  -0.805 -1.24   1.36   -0.260  -0.340  1.02   -1.11  -0.650 -1.000 
- 7  1.62   -0.198  0.549  0.465   0.860   1.29   1.11    0.681 -0.253 -1.05  
- 8  0.0633 -0.270  1.08   1.53    0.697   0.932 -0.703  -0.639  1.09   0.0777
- 9 -0.744  -0.253 -0.724  1.10   -0.939  -0.611  1.93    0.100  0.386 -0.730 
-10  0.0828 -0.533  0.932 -0.621   0.841  -0.135  0.585  -0.565 -0.628 -0.460 
-# ℹ 190 more rows
-# ℹ 40 more variables: x11 &lt;dbl&gt;, x12 &lt;dbl&gt;, x13 &lt;dbl&gt;, x14 &lt;dbl&gt;, x15 &lt;dbl&gt;,
-#   x16 &lt;dbl&gt;, x17 &lt;dbl&gt;, x18 &lt;dbl&gt;, x19 &lt;dbl&gt;, x20 &lt;dbl&gt;, x21 &lt;dbl&gt;,
-#   x22 &lt;dbl&gt;, x23 &lt;dbl&gt;, x24 &lt;dbl&gt;, x25 &lt;dbl&gt;, x26 &lt;dbl&gt;, x27 &lt;dbl&gt;,
-#   x28 &lt;dbl&gt;, x29 &lt;dbl&gt;, x30 &lt;dbl&gt;, x31 &lt;dbl&gt;, x32 &lt;dbl&gt;, x33 &lt;dbl&gt;,
-#   x34 &lt;dbl&gt;, x35 &lt;dbl&gt;, x36 &lt;dbl&gt;, x37 &lt;dbl&gt;, x38 &lt;dbl&gt;, x39 &lt;dbl&gt;,
-#   x40 &lt;dbl&gt;, x41 &lt;dbl&gt;, x42 &lt;dbl&gt;, x43 &lt;dbl&gt;, x44 &lt;dbl&gt;, x45 &lt;dbl&gt;, …</code></pre>
+<pre><code>[1] TRUE</code></pre>
 </div>
-</div>
-<p>This bespoke print method is one difference between tibbles and traditional data frames, but there are several others (including a few very handy improvements).</p>
-</section>
-<section id="how-tibbles-differ-from-data-frames" class="level2">
-<h2 class="anchored" data-anchor-id="how-tibbles-differ-from-data-frames">How Tibbles Differ from Data Frames</h2>
-<p>In many ways, tibbles <em>don’t</em> differ from data frames. For the most part, tibbles are meant to be a drop-in replacement for traditional data frames, so they don’t change much about the code data frame features (after all, data frames are already very useful). As far as R is concerned, tibbles are still data frames underneath.</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.data.frame</span>(t1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.data.frame</span>(d3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
 </div>
-<p>Since they share the same underlying structure, you can seamlessly convert data frames to tibbles and visa-versa.</p>
+<p>But all three are also lists.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert a tibble to an ordinary data frame</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>(d1 <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(t1))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.list</span>(d1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>            x   y          z
-1   0.9176988 foo 0.84217109
-2  -1.0449407 bar 1.09190111
-3  -0.9243033 bar 0.85433667
-4  -2.2274027 foo 4.96132281
-5  -0.8488617 baz 0.72056625
-6  -0.1778941 foo 0.03164631
-7   1.1757086 foo 1.38229071
-8  -0.7545384 baz 0.56932820
-9  -2.1178711 bar 4.48537782
-10  0.8824074 baz 0.77864277</code></pre>
+<pre><code>[1] TRUE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert a data frame to a tibble</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">as_tibble</span>(d1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.list</span>(d2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 10 × 3
-        x y          z
-    &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt;
- 1  0.918 foo   0.842 
- 2 -1.04  bar   1.09  
- 3 -0.924 bar   0.854 
- 4 -2.23  foo   4.96  
- 5 -0.849 baz   0.721 
- 6 -0.178 foo   0.0316
- 7  1.18  foo   1.38  
- 8 -0.755 baz   0.569 
- 9 -2.12  bar   4.49  
-10  0.882 baz   0.779 </code></pre>
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.list</span>(d3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
 </div>
 </div>
-<p>The goal of tibbles is to smooth over some of the confusing, frustrating, or surprising behavior of traditional data frames. Below, we highlight a few of the most useful differences.</p>
-<section id="tibbles-dont-do-surprise-simplification" class="level3">
-<h3 class="anchored" data-anchor-id="tibbles-dont-do-surprise-simplification">Tibbles Don’t Do Surprise Simplification</h3>
-<p>Remember how selecting a single column from a data frame using matrix-style indexing (<code>d1[, 1]</code>) automatically simplifies the result to a vector? I certainly hope so; we just covered that on the last page. Anyway, tibbles don’t do that.</p>
-<p>Subsetting a tibble using matrix-style indexing always returns a tibble, regardless of how many rows or columns are extracted.</p>
+<section id="not-all-lists-are-data-frames" class="level3">
+<h3 class="anchored" data-anchor-id="not-all-lists-are-data-frames">Not all Lists are Data Frames</h3>
+<p>All data frames are lists, but the inverse is not always true. Some lists are not data frames.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>t1[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 2
-       x y    
-   &lt;dbl&gt; &lt;chr&gt;
-1  0.918 foo  
-2 -1.04  bar  </code></pre>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>l1 <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>l2 <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">a =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>), <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">b =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"foo"</span>, <span class="st">"bar"</span>), <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">c =</span> <span class="fu">runif</span>(<span class="dv">10</span>)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>l3 <span class="ot">&lt;-</span> <span class="fu">list</span>(d2, d3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>t1[, <span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>As you can see below, <code>l1</code>, <code>l2</code>, and <code>l3</code> are all lists, but they’re not data frames.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.list</span>(l1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 10 × 1
-        x
-    &lt;dbl&gt;
- 1  0.918
- 2 -1.04 
- 3 -0.924
- 4 -2.23 
- 5 -0.849
- 6 -0.178
- 7  1.18 
- 8 -0.755
- 9 -2.12 
-10  0.882</code></pre>
+<pre><code>[1] TRUE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>t1[<span class="dv">1</span>, ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.list</span>(l2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 3
-      x y         z
-  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;
-1 0.918 foo   0.842</code></pre>
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.list</span>(l3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.data.frame</span>(l1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.data.frame</span>(l2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.data.frame</span>(l3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
 </div>
 </div>
 </section>
-<section id="tibbles-dont-do-partial-name-matching" class="level3">
-<h3 class="anchored" data-anchor-id="tibbles-dont-do-partial-name-matching">Tibbles Don’t Do Partial Name Matching</h3>
-<p>We haven’t explicitly addressed it yet, but many R commands use “partial matching” to resolve your inputs. For example, we don’t actually have to write out the full word <code>digits</code> to specify the corresponding argument in <code>round()</code>. We only need to provide enough of the initial letters to disambiguate the intended argument name.</p>
+<section id="list-leftrightarrow-data-frame-conversion" class="level3">
+<h3 class="anchored" data-anchor-id="list-leftrightarrow-data-frame-conversion">List <span class="math inline">\(\leftrightarrow\)</span> Data Frame Conversion</h3>
+<p>We can use the <code>as.list()</code> type conversion function to convert a data frame to a list. For example, in the following code, we convert <code>d1</code> into a list, <code>l1a</code>.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="at">digits =</span> <span class="dv">2</span>, <span class="fl">3.14159</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>(l1a <span class="ot">&lt;-</span> <span class="fu">as.list</span>(d1))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 3.14</code></pre>
+<pre><code>$a
+ [1] FALSE  TRUE FALSE FALSE FALSE  TRUE FALSE  TRUE  TRUE  TRUE
+
+$b
+ [1] "foo" "foo" "bar" "bar" "bar" "bar" "bar" "bar" "bar" "bar"
+
+$c
+ [1] 0.52258161 0.04646178 0.07967718 0.97695559 0.12152675 0.24255450
+ [7] 0.17593701 0.39135367 0.47990431 0.71694501</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="at">dig =</span> <span class="dv">2</span>, <span class="fl">3.14159</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.list</span>(l1a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 3.14</code></pre>
+<pre><code>[1] TRUE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="at">d =</span> <span class="dv">2</span>, <span class="fl">3.14159</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.data.frame</span>(l1a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 3.14</code></pre>
+<pre><code>[1] FALSE</code></pre>
 </div>
 </div>
-<p>Ordinary data frames use the system to match column names. So, to match the column <code>foo</code> in <code>d1</code>, we only need to specify one letter.</p>
+<p>Likewise, we can use the <code>as.data.frame()</code> to convert a list to a data frame. Below, we invert the conversion from above.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>d1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">foo =</span> <span class="fu">rnorm</span>(<span class="dv">10</span>),</span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">bar =</span> <span class="fu">runif</span>(<span class="dv">10</span>),</span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">baz =</span> <span class="fu">rbinom</span>(<span class="dv">10</span>, <span class="dv">1</span>, <span class="fl">0.5</span>)</span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>d1<span class="sc">$</span>f</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>(d1a <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(l1a))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] -2.91269047 -0.35023392  1.46933902 -0.10735175 -0.73755665  0.07268597
- [7]  1.63779227 -1.40898459  0.29416838 -1.91531183</code></pre>
+<pre><code>       a   b          c
+1  FALSE foo 0.52258161
+2   TRUE foo 0.04646178
+3  FALSE bar 0.07967718
+4  FALSE bar 0.97695559
+5  FALSE bar 0.12152675
+6   TRUE bar 0.24255450
+7  FALSE bar 0.17593701
+8   TRUE bar 0.39135367
+9   TRUE bar 0.47990431
+10  TRUE bar 0.71694501</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.data.frame</span>(d1a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
 </div>
 </div>
-<p>To match the <code>bar</code> or <code>baz</code> columns, however, we need to give the full column name, since these two names only differ in their final letter.</p>
+<p>In most situations, these type conversions do not destroy an information in the underlying data. Below, we see that the converted-and-back-converted version of the data frame, <code>d1a</code>, is identical to the original data frame, <code>d1</code>.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>d1<span class="sc">$</span>ba</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">identical</span>(d1, d1a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>NULL</code></pre>
-</div>
-</div>
-<p>Usually, this shortcut doesn’t cause problems, but it creates unnecessary ambiguity, and permits easily avoided bugs. Consider the following hypothetical data frame.</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>myData <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">female =</span> <span class="fu">sample</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">1</span>, <span class="dv">20</span>, <span class="cn">TRUE</span>),</span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">malevolent =</span> <span class="fu">sample</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">1</span>, <span class="dv">20</span>, <span class="cn">TRUE</span>),</span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">score =</span> <span class="fu">rnorm</span>(<span class="dv">20</span>)</span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>myData</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   female malevolent       score
-1       0          0  2.01780483
-2       0          1  0.13044992
-3       1          1  0.95910682
-4       1          1 -1.24720193
-5       0          0  0.60815797
-6       0          0 -0.55418384
-7       0          0  1.27076851
-8       0          1 -0.68464337
-9       0          1  1.28958818
-10      1          1 -0.21351288
-11      1          0 -0.38963644
-12      0          1 -0.15096276
-13      1          1  0.93903174
-14      1          1 -1.47592823
-15      0          0  0.54352379
-16      1          1 -0.21193548
-17      1          1  0.08940495
-18      0          1  1.06639282
-19      1          0  0.84100205
-20      1          1  2.02010721</code></pre>
-</div>
-</div>
-<p>Suppose the <code>female</code> column contains a dummy code representing biological sex. Further suppose that I want to select the <code>female</code> column, but I misremember its name as <code>male</code>, so I run the following command.</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>myData<span class="sc">$</span>male</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1] 0 1 1 1 0 0 0 1 1 1 0 1 1 1 0 1 1 1 0 1</code></pre>
-</div>
-</div>
-<p>Oops…hope I’m paying extra close attention. Otherwise, as I continue with my analysis, the cases that I think are biological males are actually the cases that have been flagged as “malevolent” by the dummy code that I accidentally selected via silent partial matching.</p>
-<p>Tibbles don’t allow partial matching for columns names, so this type of mistake cannot happen when working with a tibble.</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>myData2 <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(myData)</span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>myData2<span class="sc">$</span>male</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Unknown or uninitialised column: `male`.</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>NULL</code></pre>
+<pre><code>[1] TRUE</code></pre>
 </div>
 </div>
 </section>
-<section id="tibbles-dramatically-restrict-recycling" class="level3">
-<h3 class="anchored" data-anchor-id="tibbles-dramatically-restrict-recycling">Tibbles Dramatically Restrict Recycling</h3>
-<p>Tibbles do away with essentially all of the convoluted recycling rules we’ve discussed for other type of R objects. Basically, we’re only allowed to recycle length-one vectors. So, the following commands are all accepted.</p>
+</section>
+<section id="data-frames-are-not-matrices" class="level2">
+<h2 class="anchored" data-anchor-id="data-frames-are-not-matrices">Data Frames Are Not Matrices</h2>
+<p>As you have probably surmised, data frames are not matrices. Although data frames and matrices share many superficial similarities, they’re almost entirely unrelated types of objects.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>myData2<span class="sc">$</span>female <span class="ot">&lt;-</span> <span class="dv">42</span></span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>myData2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.matrix</span>(d1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 20 × 3
-   female malevolent   score
-    &lt;dbl&gt;      &lt;int&gt;   &lt;dbl&gt;
- 1     42          0  2.02  
- 2     42          1  0.130 
- 3     42          1  0.959 
- 4     42          1 -1.25  
- 5     42          0  0.608 
- 6     42          0 -0.554 
- 7     42          0  1.27  
- 8     42          1 -0.685 
- 9     42          1  1.29  
-10     42          1 -0.214 
-11     42          0 -0.390 
-12     42          1 -0.151 
-13     42          1  0.939 
-14     42          1 -1.48  
-15     42          0  0.544 
-16     42          1 -0.212 
-17     42          1  0.0894
-18     42          1  1.07  
-19     42          0  0.841 
-20     42          1  2.02  </code></pre>
+<pre><code>[1] FALSE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>myData2[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="st">"score"</span>] <span class="ot">&lt;-</span> pi</span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>myData2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.matrix</span>(d2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 20 × 3
-   female malevolent   score
-    &lt;dbl&gt;      &lt;int&gt;   &lt;dbl&gt;
- 1     42          0  3.14  
- 2     42          1  3.14  
- 3     42          1  3.14  
- 4     42          1  3.14  
- 5     42          0  3.14  
- 6     42          0  3.14  
- 7     42          0  1.27  
- 8     42          1 -0.685 
- 9     42          1  1.29  
-10     42          1 -0.214 
-11     42          0 -0.390 
-12     42          1 -0.151 
-13     42          1  0.939 
-14     42          1 -1.48  
-15     42          0  0.544 
-16     42          1 -0.212 
-17     42          1  0.0894
-18     42          1  1.07  
-19     42          0  0.841 
-20     42          1  2.02  </code></pre>
+<pre><code>[1] FALSE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>myData2[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">"foo"</span>, <span class="cn">FALSE</span>)</span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>myData2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.matrix</span>(d3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 20 × 3
-   female malevolent   score
-   &lt;chr&gt;  &lt;lgl&gt;        &lt;dbl&gt;
- 1 foo    FALSE       3.14  
- 2 foo    FALSE       3.14  
- 3 foo    FALSE       3.14  
- 4 foo    FALSE       3.14  
- 5 foo    FALSE       3.14  
- 6 foo    FALSE       3.14  
- 7 foo    FALSE       1.27  
- 8 foo    FALSE      -0.685 
- 9 foo    FALSE       1.29  
-10 foo    FALSE      -0.214 
-11 foo    FALSE      -0.390 
-12 foo    FALSE      -0.151 
-13 foo    FALSE       0.939 
-14 foo    FALSE      -1.48  
-15 foo    FALSE       0.544 
-16 foo    FALSE      -0.212 
-17 foo    FALSE       0.0894
-18 foo    FALSE       1.07  
-19 foo    FALSE       0.841 
-20 foo    FALSE       2.02  </code></pre>
+<pre><code>[1] FALSE</code></pre>
 </div>
 </div>
-<p>These commands, on the other hand, will all fail because we’re trying to recycle vectors with more than one element.</p>
+<p>Consequently, you cannot apply matrix operations (such as matrix multiplication) to a data frame.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>myData2<span class="sc">$</span>female <span class="ot">&lt;-</span> <span class="dv">40</span><span class="sc">:</span><span class="dv">42</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>d2 <span class="sc">%*%</span> <span class="fu">t</span>(d3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
-<pre><code>Error in `$&lt;-`:
-! Assigned data `40:42` must be compatible with existing data.
-✖ Existing data has 20 rows.
-✖ Assigned data has 3 rows.
-ℹ Only vectors of size 1 are recycled.
-Caused by error in `vectbl_recycle_rhs_rows()` at tibble/R/subassign-backend.R:51:5:
-! Can't recycle input of size 3 to size 20.</code></pre>
+<pre><code>Error in `d2 %*% t(d3)`:
+! requires numeric/complex matrix/vector arguments</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>myData2[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="st">"score"</span>] <span class="ot">&lt;-</span> <span class="fu">c</span>(pi, <span class="cn">NA</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error in `[&lt;-`:
-! Assigned data `c(pi, NA)` must be compatible with row subscript `1:6`.
-✖ 6 rows must be assigned.
-✖ Assigned data has 2 rows.
-ℹ Only vectors of size 1 are recycled.
-Caused by error in `vectbl_recycle_rhs_rows()` at tibble/R/subassign-backend.R:206:7:
-! Can't recycle input of size 2 to size 6.</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>myData2[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">"foo"</span>, <span class="fu">c</span>(<span class="cn">FALSE</span>, <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error in `[&lt;-`:
-! Assigned data `list("foo", c(FALSE, TRUE))` must be compatible with
-  existing data.
-✖ Existing data has 20 rows.
-✖ Element 2 of assigned data has 2 rows.
-ℹ Only vectors of size 1 are recycled.
-Caused by error in `vectbl_recycle_rhs_rows()` at tibble/R/subassign-backend.R:51:5:
-! Can't recycle input of size 2 to size 20.</code></pre>
+<p>If you wanted to analyze a data frame like a matrix, you could <em>type cast</em> the data frame into a matrix using the <code>as.matrix()</code> function.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.matrix</span>(d2) <span class="sc">%*%</span> <span class="fu">t</span>(<span class="fu">as.matrix</span>(d3))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       [,1]       [,2]       [,3]       [,4]       [,5]      [,6]       [,7]
+ [1,]  -5.9 -13.894444  -3.888889 -11.883333 -1.8777778 -9.872222  0.1333333
+ [2,]  -8.8   2.211111  -4.777778   6.233333 -0.7555556 10.255556  3.2666667
+ [3,] -15.7 -21.683333  -9.666667 -15.650000 -3.6333333 -9.616667  2.4000000
+ [4,] -18.6  -5.577778 -10.555556   2.466667 -2.5111111 10.511111  5.5333333
+ [5,] -25.5 -29.472222 -15.444444 -19.416667 -5.3888889 -9.361111  4.6666667
+ [6,] -28.4 -13.366667 -16.333333  -1.300000 -4.2666667 10.766667  7.8000000
+ [7,] -35.3 -37.261111 -21.222222 -23.183333 -7.1444444 -9.105556  6.9333333
+ [8,] -38.2 -21.155556 -22.111111  -5.066667 -6.0222222 11.022222 10.0666667
+ [9,] -45.1 -45.050000 -27.000000 -26.950000 -8.9000000 -8.850000  9.2000000
+[10,] -48.0 -28.944444 -27.888889  -8.833333 -7.7777778 11.277778 12.3333333
+            [,8]      [,9] [,10]
+ [1,] -7.8611111  2.144444 -5.85
+ [2,] 14.2777778  7.288889 18.30
+ [3,] -3.5833333  8.433333  2.45
+ [4,] 18.5555556 13.577778 26.60
+ [5,]  0.6944444 14.722222 10.75
+ [6,] 22.8333333 19.866667 34.90
+ [7,]  4.9722222 21.011111 19.05
+ [8,] 27.1111111 26.155556 43.20
+ [9,]  9.2500000 27.300000 27.35
+[10,] 31.3888889 32.444444 51.50</code></pre>
+</div>
+</div>
+<p>You should be carefully about any type conversions, though. If your data frame contains mixed column types, R will coerce every column into some compatible type by applying the same coercion rule you learned about in the <a href="https://openstatprog.com/vectors-matrices/"><strong>Vectors &amp; Matrices</strong></a> module.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>(m1 <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(d1))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      a       b     c           
+ [1,] "FALSE" "foo" "0.52258161"
+ [2,] "TRUE"  "foo" "0.04646178"
+ [3,] "FALSE" "bar" "0.07967718"
+ [4,] "FALSE" "bar" "0.97695559"
+ [5,] "FALSE" "bar" "0.12152675"
+ [6,] "TRUE"  "bar" "0.24255450"
+ [7,] "FALSE" "bar" "0.17593701"
+ [8,] "TRUE"  "bar" "0.39135367"
+ [9,] "TRUE"  "bar" "0.47990431"
+[10,] "TRUE"  "bar" "0.71694501"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(m1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "character"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>(d4 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>), <span class="dv">3</span>), <span class="at">y =</span> <span class="fu">runif</span>(<span class="dv">6</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      x          y
+1  TRUE 0.64512222
+2 FALSE 0.60173157
+3  TRUE 0.36017208
+4 FALSE 0.42502086
+5  TRUE 0.09055093
+6 FALSE 0.86147714</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>(m4 <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(d4))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     x          y
+[1,] 1 0.64512222
+[2,] 0 0.60173157
+[3,] 1 0.36017208
+[4,] 0 0.42502086
+[5,] 1 0.09055093
+[6,] 0 0.86147714</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(m4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "double"</code></pre>
 </div>
 </div>
 <div class="callout callout-style-default callout-knowledge-check callout-titled">
@@ -796,15 +714,14 @@ Knowledge Check
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>How are tibbles and data frames related?</li>
-<li>What’s the purpose of tibbles, when we already have perfectly serviceable data frames?</li>
-<li>Name one specific behavior where tibbles differ from ordinary data frames, and explain the pros and cons of that difference.</li>
+<li>In one sentence, explain how a data frame is related to a list.</li>
+<li>if <code>a</code> and <code>b</code> are both data frames, why will <code>a %*% t(b)</code> produce an error?</li>
+<li>If a data frame has one text column and one numeric column, what happens if you convert it to a matrix with <code>as.matrix()</code>? Why?</li>
 </ul>
 </div>
 </div>
 
 
-</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
@@ -1237,13 +1154,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../tutorials/data_frames/manipulating.html" class="pagination-link" aria-label="Manipulating Data Frames">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Manipulating Data Frames</span>
+      <a href="../../tutorials/data_frames/creating.html" class="pagination-link" aria-label="Creating Data Frames">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Creating Data Frames</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../quizzes/data_frames/index.html" class="pagination-link" aria-label="Knowledge Quiz">
-        <span class="nav-page-text">Knowledge Quiz</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../tutorials/data_frames/manipulating.html" class="pagination-link" aria-label="Manipulating Data Frames">
+        <span class="nav-page-text">Manipulating Data Frames</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

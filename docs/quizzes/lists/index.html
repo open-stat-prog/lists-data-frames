@@ -71,6 +71,19 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
+div.callout-completion-time.callout {
+  border-left-color: gray;
+}
+div.callout-completion-time.callout-style-default > .callout-header {
+  background-color: rgb(from gray r g b / 13%);
+}
+div.callout-completion-time .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-completion-time.callout-style-default .callout-icon::before, div.callout-completion-time.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f2f2' !important;
+  background-image: none;
+}
 div.callout-resource.callout {
   border-left-color: orange;
 }
@@ -82,6 +95,71 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f0c1' !important;
+  background-image: none;
+}
+div.callout-common-mistakes.callout {
+  border-left-color: #B01919;
+}
+div.callout-common-mistakes.callout-style-default > .callout-header {
+  background-color: rgba(176, 25, 25, 0.13);
+}
+div.callout-common-mistakes .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-common-mistakes.callout-style-default .callout-icon::before, div.callout-common-mistakes.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f188' !important;
+  background-image: none;
+}
+div.callout-practice.callout {
+  border-left-color: green;
+}
+div.callout-practice.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
+}
+div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f085' !important;
+  background-image: none;
+}
+div.callout-explanation.callout {
+  border-left-color: violet;
+}
+div.callout-explanation.callout-style-default > .callout-header {
+  background-color: rgb(from violet r g b / 13%);
+}
+div.callout-explanation .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-explanation.callout-style-default .callout-icon::before, div.callout-explanation.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f075' !important;
+  background-image: none;
+}
+div.callout-going-further.callout {
+  border-left-color: #B58900;
+}
+div.callout-going-further.callout-style-default > .callout-header {
+  background-color: rgba(181, 137, 0, 0.13);
+}
+div.callout-going-further .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-going-further.callout-style-default .callout-icon::before, div.callout-going-further.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f4d7' !important;
+  background-image: none;
+}
+div.callout-reading.callout {
+  border-left-color: violet;
+}
+div.callout-reading.callout-style-default > .callout-header {
+  background-color: rgb(from violet r g b / 13%);
+}
+div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
   background-image: none;
 }
 div.callout-reading-advanced.callout {
@@ -108,84 +186,6 @@ div.callout-knowledge-check.callout-style-default .callout-icon::before, div.cal
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f044' !important;
-  background-image: none;
-}
-div.callout-reading.callout {
-  border-left-color: violet;
-}
-div.callout-reading.callout-style-default > .callout-header {
-  background-color: rgb(from violet r g b / 13%);
-}
-div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
-  background-image: none;
-}
-div.callout-going-further.callout {
-  border-left-color: #B58900;
-}
-div.callout-going-further.callout-style-default > .callout-header {
-  background-color: rgba(181, 137, 0, 0.13);
-}
-div.callout-going-further .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-going-further.callout-style-default .callout-icon::before, div.callout-going-further.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f4d7' !important;
-  background-image: none;
-}
-div.callout-practice.callout {
-  border-left-color: green;
-}
-div.callout-practice.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
-}
-div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f085' !important;
-  background-image: none;
-}
-div.callout-common-mistakes.callout {
-  border-left-color: #B01919;
-}
-div.callout-common-mistakes.callout-style-default > .callout-header {
-  background-color: rgba(176, 25, 25, 0.13);
-}
-div.callout-common-mistakes .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-common-mistakes.callout-style-default .callout-icon::before, div.callout-common-mistakes.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f188' !important;
-  background-image: none;
-}
-div.callout-explanation.callout {
-  border-left-color: violet;
-}
-div.callout-explanation.callout-style-default > .callout-header {
-  background-color: rgb(from violet r g b / 13%);
-}
-div.callout-explanation .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-explanation.callout-style-default .callout-icon::before, div.callout-explanation.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f075' !important;
-  background-image: none;
-}
-div.callout-completion-time.callout {
-  border-left-color: gray;
-}
-div.callout-completion-time.callout-style-default > .callout-header {
-  background-color: rgb(from gray r g b / 13%);
-}
-div.callout-completion-time .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-completion-time.callout-style-default .callout-icon::before, div.callout-completion-time.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f2f2' !important;
   background-image: none;
 }
 </style>
@@ -358,6 +358,90 @@ div.callout-completion-time.callout-style-default .callout-icon::before, div.cal
 </header>
 
 
+<div class="cell" data-layout-align="center">
+<div class="webex-question">
+<div class="webex-check webex-box">
+<p>Consider the following list, <code>l1</code>.</p>
+<div class="cell" data-layout-align="center">
+<p><code>{. .cell-code} l1</code></p>
+<div class="cell-output cell-output-stdout">
+<pre><code>$name
+[1] "bob"
+
+$age
+[1] 25
+
+$height
+[1] 180
+
+$eyes
+[1] "blue"</code></pre>
+</div>
+</div>
+<p>Which of the following expressions will change the value of the <code>eyes</code> slot in <code>l1</code> from “blue” to “green”?</p>
+<div id="webex-f553b2e036c71371838b9b5fad2c0e63" class="webex-checkboxgroup" data-answer="PQQZA04CSQAfBz4=">
+<label><input type="checkbox" autocomplete="off" name="f553b2e036c71371838b9b5fad2c0e63"><span><code>l1[[4]] &lt;- "green"</code></span></label><label><input type="checkbox" autocomplete="off" name="f553b2e036c71371838b9b5fad2c0e63"><span><code>names(l1)[4] &lt;- "green"</code></span></label><label><input type="checkbox" autocomplete="off" name="f553b2e036c71371838b9b5fad2c0e63"><span><code>l1$4 &lt;- "green"</code></span></label><label><input type="checkbox" autocomplete="off" name="f553b2e036c71371838b9b5fad2c0e63"><span><code>l1$eyes &lt;- "blue"</code></span></label><label><input type="checkbox" autocomplete="off" name="f553b2e036c71371838b9b5fad2c0e63"><span><code>l1[4] &lt;- "green"</code></span></label>
+</div>
+</div>
+<div class="webex-solution">
+<ul>
+<li>Correct</li>
+<li>Wrong: This command will change the name of the fourth slot, not the contents of that slot.</li>
+<li>Wrong: There is no slot named “4” in l1.</li>
+<li>Wrong: This command doesn’t actually change anything.</li>
+<li>Correct</li>
+</ul>
+</div>
+</div>
+<div class="webex-question">
+<div class="webex-check webex-box">
+<p>There is a problem with the list <code>l</code>: the information for eye color is wrongly saved in a slot called <code>hair</code>. Which of the following options will change the name of the <code>hair</code> slot to something more appropriate?</p>
+<div class="cell" data-layout-align="center">
+<p><code>{. .cell-code} l</code></p>
+<div class="cell-output cell-output-stdout">
+<pre><code>$name
+[1] "bob"
+
+$age
+[1] 25
+
+$height
+[1] 180
+
+$hair
+[1] "blue"</code></pre>
+</div>
+</div>
+<div id="webex-566d2924777731372dce2dabcf68b323" class="webex-radiogroup" data-answer="bgYaVB4JHgQbBmo=">
+<label><input type="radio" autocomplete="off" name="566d2924777731372dce2dabcf68b323"><span><code>names(l)$hair &lt;- "eyes"</code></span></label><label><input type="radio" autocomplete="off" name="566d2924777731372dce2dabcf68b323"><span><code>l[4] &lt;- "eyes"</code></span></label><label><input type="radio" autocomplete="off" name="566d2924777731372dce2dabcf68b323"><span><code>l[[4]] &lt;- "eyes"</code></span></label><label><input type="radio" autocomplete="off" name="566d2924777731372dce2dabcf68b323"><span><code>l$hair &lt;- names("eyes")</code></span></label><label><input type="radio" autocomplete="off" name="566d2924777731372dce2dabcf68b323"><span><code>names(l)[4] &lt;- "eyes"</code></span></label>
+</div>
+</div>
+<div class="webex-solution">
+<p>The correct way to change the name of the value is <code>names(l)[4] &lt;- "eyes"</code></p>
+<ul>
+<li>Wrong: This command will return an error since the <code>names()</code> element is a vector and not a list</li>
+<li>Wrong: This command will change the value itself and not the name</li>
+<li>Wrong: This command will change the value itself and not the name</li>
+<li>Wrong: <code>names("eyes")</code> is <code>NULL</code> since a character string doesn’t have a name, so this command will just erase the list element</li>
+<li>Correct</li>
+</ul>
+</div>
+</div>
+<div class="webex-question">
+<div class="webex-check webex-box">
+<p>Given the list <code>l &lt;- list(a = 1, b = 2, c = 3)</code>, which statement correctly describes the difference between <code>l["a"]</code> and <code>l[["a"]]</code>?</p>
+<div id="webex-aad60058a151f00dde3bf76ecd8fa61a" class="webex-radiogroup" data-answer="OlFIBhwAGQlNAWg=">
+<label><input type="radio" autocomplete="off" name="aad60058a151f00dde3bf76ecd8fa61a"><span><code>l["a"]</code> and <code>l[["a"]]</code> always return exactly the same thing.</span></label><label><input type="radio" autocomplete="off" name="aad60058a151f00dde3bf76ecd8fa61a"><span><code>l["a"]</code> returns the numeric vector <code>1</code>; <code>l[["a"]]</code> returns a one-element list.</span></label><label><input type="radio" autocomplete="off" name="aad60058a151f00dde3bf76ecd8fa61a"><span><code>l[["a"]]</code> can select multiple named slots at once, while <code>l["a"]</code> cannot.</span></label><label><input type="radio" autocomplete="off" name="aad60058a151f00dde3bf76ecd8fa61a"><span><code>l["a"]</code> returns a one-element list; <code>l[["a"]]</code> returns the numeric vector <code>1</code>.</span></label><label><input type="radio" autocomplete="off" name="aad60058a151f00dde3bf76ecd8fa61a"><span><code>l["a"]</code> causes an error, since single brackets can’t be used with names.</span></label>
+</div>
+</div>
+<div class="webex-solution">
+<p>Single brackets (<code>[]</code>) always preserve the list “wrapper” around the result, even when selecting just one slot. So <code>l["a"]</code> returns a one-element <em>list</em>. Double brackets (<code>[[]]</code>) reach inside and return the actual <em>contents</em> of a single slot. So <code>l[["a"]]</code> returns the numeric vector <code>1</code>.</p>
+</div>
+</div>
+</div>
+
+
+
 
 <div class="no-row-height column-margin column-container"><div class="">
 <div class="callout callout-style-default callout-note callout-titled">
@@ -376,89 +460,7 @@ Note
 </ul>
 </div>
 </div>
-</div></div><div class="cell" data-layout-align="center">
-<div class="webex-question">
-<div class="webex-check webex-box">
-<p>Consider the following list, <code>l1</code>.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output cell-output-stdout">
-<pre><code>$name
-[1] "bob"
-
-$age
-[1] 25
-
-$height
-[1] 180
-
-$eyes
-[1] "blue"</code></pre>
-</div>
-</div>
-<p>Which of the following expressions will change the value of the <code>eyes</code> slot in <code>l1</code> from “blue” to “green”?</p>
-<div id="webex-bb829bd0d908a99a08d0b6a21a7aeb65" class="webex-checkboxgroup" data-answer="OVMUAhVSSABICG0=">
-<label><input type="checkbox" autocomplete="off" name="bb829bd0d908a99a08d0b6a21a7aeb65"><span><code>l1$eyes &lt;- "green"</code></span></label><label><input type="checkbox" autocomplete="off" name="bb829bd0d908a99a08d0b6a21a7aeb65"><span><code>l1$eyes &lt;- green</code></span></label><label><input type="checkbox" autocomplete="off" name="bb829bd0d908a99a08d0b6a21a7aeb65"><span><code>l1[4, ] &lt;- "green"</code></span></label><label><input type="checkbox" autocomplete="off" name="bb829bd0d908a99a08d0b6a21a7aeb65"><span><code>l1$4 &lt;- "green"</code></span></label><label><input type="checkbox" autocomplete="off" name="bb829bd0d908a99a08d0b6a21a7aeb65"><span><code>l1[[4]] &lt;- "green"</code></span></label>
-</div>
-</div>
-<div class="webex-solution">
-<ul>
-<li>Correct</li>
-<li>Wrong: We’re replacing the value of <code>l4$eyes</code> with the contents of the object <code>green</code>, not the character vector <code>"green"</code>.</li>
-<li>Wrong: l1 is a list, so we should not use matrix-style selection.</li>
-<li>Wrong: There is no slot named “4” in l1.</li>
-<li>Correct</li>
-</ul>
-</div>
-</div>
-<div class="webex-question">
-<div class="webex-check webex-box">
-<p>In the list <code>l</code> below there is an error, the information for the eyes color is wrongly saved as <code>hair</code>, which of this options will change the name of the element?</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output cell-output-stdout">
-<pre><code>$name
-[1] "bob"
-
-$age
-[1] 25
-
-$height
-[1] 180
-
-$hair
-[1] "blue"</code></pre>
-</div>
-</div>
-<div id="webex-ab88c0d25e99de02e6cb9e5a16fd3217" class="webex-radiogroup" data-answer="OlIUCE8ASAIZVGQ=">
-<label><input type="radio" autocomplete="off" name="ab88c0d25e99de02e6cb9e5a16fd3217"><span><code>l[4] &lt;- "eyes"</code></span></label><label><input type="radio" autocomplete="off" name="ab88c0d25e99de02e6cb9e5a16fd3217"><span><code>l[[4]] &lt;- "eyes"</code></span></label><label><input type="radio" autocomplete="off" name="ab88c0d25e99de02e6cb9e5a16fd3217"><span><code>names(l)$hair &lt;- "eyes"</code></span></label><label><input type="radio" autocomplete="off" name="ab88c0d25e99de02e6cb9e5a16fd3217"><span><code>l$hair &lt;- names("eyes")</code></span></label><label><input type="radio" autocomplete="off" name="ab88c0d25e99de02e6cb9e5a16fd3217"><span><code>names(l)[4] &lt;- "eyes"</code></span></label>
-</div>
-</div>
-<div class="webex-solution">
-<p>The correct way to change the name of the value is <code>names(l)[4] &lt;- "eyes"</code></p>
-<ul>
-<li>Wrong: This will change the value itself and not the name</li>
-<li>Wrong: This will change the value itself and not the name</li>
-<li>Wrong: This will return an error since the <code>names()</code> element is a vector and not a list</li>
-<li>Wrong: <code>names("eyes")</code> is <code>NULL</code> since a character string doesn’t have a name, so it will just erase the list element</li>
-<li>Correct</li>
-</ul>
-</div>
-</div>
-<div class="webex-question">
-<div class="webex-check webex-box">
-<p>Given the list <code>l &lt;- list(a = 1, b = 2, c = 3)</code>, which statement correctly describes the difference between <code>l["a"]</code> and <code>l[["a"]]</code>?</p>
-<div id="webex-05ba6171f035f6161e9d627bf170e821" class="webex-radiogroup" data-answer="awVOURoBGwFKAW4=">
-<label><input type="radio" autocomplete="off" name="05ba6171f035f6161e9d627bf170e821"><span><code>l[["a"]]</code> can select multiple named slots at once, while <code>l["a"]</code> cannot.</span></label><label><input type="radio" autocomplete="off" name="05ba6171f035f6161e9d627bf170e821"><span><code>l["a"]</code> causes an error, since single brackets can’t be used with names.</span></label><label><input type="radio" autocomplete="off" name="05ba6171f035f6161e9d627bf170e821"><span><code>l["a"]</code> returns the number <code>1</code>; <code>l[["a"]]</code> returns a one-element list.</span></label><label><input type="radio" autocomplete="off" name="05ba6171f035f6161e9d627bf170e821"><span><code>l["a"]</code> and <code>l[["a"]]</code> always return exactly the same thing.</span></label><label><input type="radio" autocomplete="off" name="05ba6171f035f6161e9d627bf170e821"><span><code>l["a"]</code> returns a one-element list; <code>l[["a"]]</code> returns just the number <code>1</code>.</span></label>
-</div>
-</div>
-<div class="webex-solution">
-<p>Single brackets (<code>[]</code>) always preserve the list “wrapper” around the result, even when selecting just one slot. So <code>l["a"]</code> returns a one-element <em>list</em>. Double brackets (<code>[[]]</code>) reach inside and return the actual <em>contents</em> of a single slot. So <code>l[["a"]]</code> returns the plain number <code>1</code>. This distinction matters constantly in real R code: if a function unexpectedly receives a list instead of the value you meant to pass it, mixing up <code>[]</code> and <code>[[]]</code> is a very common cause.</p>
-</div>
-</div>
-</div>
-
-
-
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+</div></div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
