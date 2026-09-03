@@ -64,7 +64,7 @@ This bespoke print method is one difference between tibbles and traditional data
 ## How Tibbles Differ from Data Frames
 
 In many ways, tibbles *don't* differ from data frames. For the most part, tibbles are meant to be a drop-in replacement
-for traditional data frames, so they don't change much about the code data frame features (after all, data frames are
+for traditional data frames, so they don't change much about the core data frame features (after all, data frames are
 already very useful). As far as R is concerned, tibbles are still data frames underneath.
 
 ```{r}
@@ -111,8 +111,8 @@ round(dig = 2, 3.14159)
 round(d = 2, 3.14159)
 ```
 
-Ordinary data frames use the system to match column names. So, to match the column `foo` in `d1`, we only need to
-specify one letter.
+Ordinary data frames use the system to match column names. So, to match the column `foo` in the following data frame, we
+only need to specify one letter.
 
 ```{r}
 d1 <- data.frame(
@@ -133,8 +133,8 @@ their final letter.
 d1$ba
 ```
 
-Usually, this shortcut doesn't cause problems, but it creates unnecessary ambiguity, and permits easily avoided bugs.
-Consider the following hypothetical data frame.
+Usually, this behavior doesn't cause problems, but it creates unnecessary ambiguity, and increases the opportunities for
+bugs. Consider the following hypothetical data frame.
 
 ```{r}
 myData <- data.frame(
@@ -199,5 +199,21 @@ myData2[1:2] <- list("foo", c(FALSE, TRUE))
 - What's the purpose of tibbles, when we already have perfectly serviceable data frames?
 - Name one specific behavior where tibbles differ from ordinary data frames, and explain the pros and cons of that
 difference.
+
+:::
+
+::: {.callout-tip}
+
+## Ready to Continue?
+
+You're ready to progress if you can:
+
+- Create a data frame with columns of different types.
+- Explain how a data frames are related to lists and matrices.
+- Use `$`, `[]`, `[[]]`, and matrix-style subsetting to access and modify data frame contents.
+- Explain the differences between the four subsetting operators.
+- Explain how recycling applies when modifying data frame columns.
+
+Take the [Knowledge Quiz](/quizzes/data_frames/index.qmd) to evaluate your learning.
 
 :::

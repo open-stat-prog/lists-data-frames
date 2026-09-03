@@ -105,30 +105,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 <style>
-div.callout-common-mistakes.callout {
-  border-left-color: #B01919;
+div.callout-explanation.callout {
+  border-left-color: violet;
 }
-div.callout-common-mistakes.callout-style-default > .callout-header {
-  background-color: rgba(176, 25, 25, 0.13);
+div.callout-explanation.callout-style-default > .callout-header {
+  background-color: rgb(from violet r g b / 13%);
 }
-div.callout-common-mistakes .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-common-mistakes.callout-style-default .callout-icon::before, div.callout-common-mistakes.callout-titled .callout-icon::before {
+div.callout-explanation .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-explanation.callout-style-default .callout-icon::before, div.callout-explanation.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f188' !important;
-  background-image: none;
-}
-div.callout-knowledge-check.callout {
-  border-left-color: #368FFF;
-}
-div.callout-knowledge-check.callout-style-default > .callout-header {
-  background-color: rgba(54, 143, 255, 0.13);
-}
-div.callout-knowledge-check .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-knowledge-check.callout-style-default .callout-icon::before, div.callout-knowledge-check.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f044' !important;
+  content: '\f075' !important;
   background-image: none;
 }
 div.callout-completion-time.callout {
@@ -144,17 +131,17 @@ div.callout-completion-time.callout-style-default .callout-icon::before, div.cal
   content: '\f2f2' !important;
   background-image: none;
 }
-div.callout-resource.callout {
-  border-left-color: orange;
+div.callout-going-further.callout {
+  border-left-color: #B58900;
 }
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgb(from orange r g b / 13%);
+div.callout-going-further.callout-style-default > .callout-header {
+  background-color: rgba(181, 137, 0, 0.13);
 }
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+div.callout-going-further .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-going-further.callout-style-default .callout-icon::before, div.callout-going-further.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f0c1' !important;
+  content: '\f4d7' !important;
   background-image: none;
 }
 div.callout-practice.callout {
@@ -168,19 +155,6 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f085' !important;
-  background-image: none;
-}
-div.callout-explanation.callout {
-  border-left-color: violet;
-}
-div.callout-explanation.callout-style-default > .callout-header {
-  background-color: rgb(from violet r g b / 13%);
-}
-div.callout-explanation .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-explanation.callout-style-default .callout-icon::before, div.callout-explanation.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f075' !important;
   background-image: none;
 }
 div.callout-reading.callout {
@@ -209,17 +183,43 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
   content: '\f518' !important;
   background-image: none;
 }
-div.callout-going-further.callout {
-  border-left-color: #B58900;
+div.callout-resource.callout {
+  border-left-color: orange;
 }
-div.callout-going-further.callout-style-default > .callout-header {
-  background-color: rgba(181, 137, 0, 0.13);
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
 }
-div.callout-going-further .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-going-further.callout-style-default .callout-icon::before, div.callout-going-further.callout-titled .callout-icon::before {
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f4d7' !important;
+  content: '\f0c1' !important;
+  background-image: none;
+}
+div.callout-common-mistakes.callout {
+  border-left-color: #B01919;
+}
+div.callout-common-mistakes.callout-style-default > .callout-header {
+  background-color: rgba(176, 25, 25, 0.13);
+}
+div.callout-common-mistakes .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-common-mistakes.callout-style-default .callout-icon::before, div.callout-common-mistakes.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f188' !important;
+  background-image: none;
+}
+div.callout-knowledge-check.callout {
+  border-left-color: #368FFF;
+}
+div.callout-knowledge-check.callout-style-default > .callout-header {
+  background-color: rgba(54, 143, 255, 0.13);
+}
+div.callout-knowledge-check .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-knowledge-check.callout-style-default .callout-icon::before, div.callout-knowledge-check.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f044' !important;
   background-image: none;
 }
 </style>
@@ -444,16 +444,16 @@ Optional Content
 <pre><code># A tibble: 10 × 3
          x y           z
      &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt;
- 1  0.985  foo   0.970  
- 2 -0.665  bar   0.443  
- 3 -0.287  baz   0.0823 
- 4  0.0855 foo   0.00731
- 5 -0.254  baz   0.0647 
- 6  0.582  bar   0.339  
- 7 -0.181  baz   0.0327 
- 8  0.748  bar   0.559  
- 9  1.73   bar   2.99   
-10 -1.01   foo   1.02   </code></pre>
+ 1 -0.762  bar   0.581  
+ 2  0.243  foo   0.0589 
+ 3  0.364  baz   0.132  
+ 4  0.398  bar   0.158  
+ 5 -0.966  bar   0.933  
+ 6 -0.0858 baz   0.00736
+ 7 -0.725  baz   0.525  
+ 8  0.676  foo   0.457  
+ 9  0.435  baz   0.189  
+10 -1.53   baz   2.34   </code></pre>
 </div>
 </div>
 <p>Notice how the printed output looks a little different from an ordinary data frame. Tibbles print the number of rows and columns and show each column’s type under the column name. When printing large tibbles, the rows and/or columns will be truncated into a sensibly sized summary.</p>
@@ -467,18 +467,18 @@ Optional Content
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 200 × 50
-         x1      x2     x3     x4     x5     x6      x7      x8      x9    x10
-      &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;
- 1  0.842   -0.713   1.34  -1.14  -0.765 -0.126 -0.282   0.230  -1.44    1.61 
- 2 -0.471    0.728   1.12   0.571  0.931  1.07  -0.357  -1.44   -0.354   0.590
- 3  0.252    0.307   1.22   0.192 -0.914  1.39   0.198  -0.337   0.163  -1.30 
- 4 -1.39     1.30   -1.25  -0.743  0.387  0.535 -0.994  -0.176   0.0657 -0.497
- 5 -0.681   -0.241  -0.462  1.83   0.652  0.546 -0.916  -0.613  -0.690  -0.718
- 6 -0.898   -0.669  -0.893  0.377  1.29   1.55  -0.545  -0.289   0.0411  0.470
- 7 -1.37    -0.625   0.829  1.68   0.153 -1.23  -0.349   1.17    0.401   0.278
- 8 -2.24     0.0632 -0.305  0.178  0.579 -0.380  0.197   0.0359 -1.42   -1.13 
- 9 -0.0193   0.129  -1.21   0.609 -1.36  -1.55  -0.799  -0.800   0.170   0.231
-10 -0.00661  0.419  -0.961 -1.02   1.55  -1.64  -0.0711 -1.48    1.02   -1.29 
+       x1      x2     x3     x4      x5      x6     x7       x8       x9    x10
+    &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;
+ 1 -0.186  0.791  -0.797  0.450  0.537  -0.129   1.44  -0.666   -0.834    0.603
+ 2 -0.594  1.20    0.807 -1.81   0.715  -1.12   -0.214 -0.767    2.28     0.132
+ 3  1.05  -0.0889 -0.411  1.42  -0.0947 -0.233  -0.265  0.892   -1.35     1.51 
+ 4 -0.436 -1.97    0.471 -0.566  0.497   0.174  -1.25  -1.05    -0.0398   1.56 
+ 5  0.917 -0.0285 -0.881 -0.881 -1.29   -0.0773  0.869  0.230    0.651   -0.674
+ 6 -0.289  2.56   -1.74  -1.71  -0.768  -0.480   1.02   0.967    0.809    0.696
+ 7 -0.243  0.818  -0.798  0.692  1.57    1.09   -0.848 -0.00499 -1.82     0.339
+ 8  1.33   1.57    0.470 -0.169  1.03    0.189   0.937  0.140   -0.00866 -1.83 
+ 9 -0.553 -0.316  -0.466 -1.63  -0.161   1.78   -1.16  -0.971   -1.11     1.12 
+10  1.89   1.21    2.62  -0.893  1.31    1.10    0.575 -0.757   -0.599    0.438
 # ℹ 190 more rows
 # ℹ 40 more variables: x11 &lt;dbl&gt;, x12 &lt;dbl&gt;, x13 &lt;dbl&gt;, x14 &lt;dbl&gt;, x15 &lt;dbl&gt;,
 #   x16 &lt;dbl&gt;, x17 &lt;dbl&gt;, x18 &lt;dbl&gt;, x19 &lt;dbl&gt;, x20 &lt;dbl&gt;, x21 &lt;dbl&gt;,
@@ -492,7 +492,7 @@ Optional Content
 </section>
 <section id="how-tibbles-differ-from-data-frames" class="level2">
 <h2 class="anchored" data-anchor-id="how-tibbles-differ-from-data-frames">How Tibbles Differ from Data Frames</h2>
-<p>In many ways, tibbles <em>don’t</em> differ from data frames. For the most part, tibbles are meant to be a drop-in replacement for traditional data frames, so they don’t change much about the code data frame features (after all, data frames are already very useful). As far as R is concerned, tibbles are still data frames underneath.</p>
+<p>In many ways, tibbles <em>don’t</em> differ from data frames. For the most part, tibbles are meant to be a drop-in replacement for traditional data frames, so they don’t change much about the core data frame features (after all, data frames are already very useful). As far as R is concerned, tibbles are still data frames underneath.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.data.frame</span>(t1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -505,16 +505,16 @@ Optional Content
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>(d1 <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(t1))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>             x   y           z
-1   0.98505309 foo 0.970329600
-2  -0.66525993 bar 0.442570780
-3  -0.28684676 baz 0.082281066
-4   0.08551236 foo 0.007312364
-5  -0.25426976 baz 0.064653109
-6   0.58192201 bar 0.338633224
-7  -0.18070373 baz 0.032653838
-8   0.74797450 bar 0.559465859
-9   1.72784009 bar 2.985431366
-10 -1.00780209 foo 1.015665052</code></pre>
+1  -0.76229317 bar 0.581090875
+2   0.24265368 foo 0.058880807
+3   0.36365013 baz 0.132241415
+4   0.39760654 bar 0.158090965
+5  -0.96581685 bar 0.932802184
+6  -0.08579004 baz 0.007359931
+7  -0.72475045 baz 0.525263208
+8   0.67622734 foo 0.457283416
+9   0.43528651 baz 0.189474349
+10 -1.53130589 baz 2.344897743</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert a data frame to a tibble</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">as_tibble</span>(d1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -522,16 +522,16 @@ Optional Content
 <pre><code># A tibble: 10 × 3
          x y           z
      &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt;
- 1  0.985  foo   0.970  
- 2 -0.665  bar   0.443  
- 3 -0.287  baz   0.0823 
- 4  0.0855 foo   0.00731
- 5 -0.254  baz   0.0647 
- 6  0.582  bar   0.339  
- 7 -0.181  baz   0.0327 
- 8  0.748  bar   0.559  
- 9  1.73   bar   2.99   
-10 -1.01   foo   1.02   </code></pre>
+ 1 -0.762  bar   0.581  
+ 2  0.243  foo   0.0589 
+ 3  0.364  baz   0.132  
+ 4  0.398  bar   0.158  
+ 5 -0.966  bar   0.933  
+ 6 -0.0858 baz   0.00736
+ 7 -0.725  baz   0.525  
+ 8  0.676  foo   0.457  
+ 9  0.435  baz   0.189  
+10 -1.53   baz   2.34   </code></pre>
 </div>
 </div>
 <p>The goal of tibbles is to smooth over some of the confusing, frustrating, or surprising behavior of traditional data frames. Below, we highlight a few of the most useful differences.</p>
@@ -545,31 +545,31 @@ Optional Content
 <pre><code># A tibble: 2 × 2
        x y    
    &lt;dbl&gt; &lt;chr&gt;
-1  0.985 foo  
-2 -0.665 bar  </code></pre>
+1 -0.762 bar  
+2  0.243 foo  </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>t1[, <span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 1
          x
      &lt;dbl&gt;
- 1  0.985 
- 2 -0.665 
- 3 -0.287 
- 4  0.0855
- 5 -0.254 
- 6  0.582 
- 7 -0.181 
- 8  0.748 
- 9  1.73  
-10 -1.01  </code></pre>
+ 1 -0.762 
+ 2  0.243 
+ 3  0.364 
+ 4  0.398 
+ 5 -0.966 
+ 6 -0.0858
+ 7 -0.725 
+ 8  0.676 
+ 9  0.435 
+10 -1.53  </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>t1[<span class="dv">1</span>, ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 3
-      x y         z
-  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;
-1 0.985 foo   0.970</code></pre>
+       x y         z
+   &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;
+1 -0.762 bar   0.581</code></pre>
 </div>
 </div>
 </section>
@@ -590,7 +590,7 @@ Optional Content
 <pre><code>[1] 3.14</code></pre>
 </div>
 </div>
-<p>Ordinary data frames use the system to match column names. So, to match the column <code>foo</code> in <code>d1</code>, we only need to specify one letter.</p>
+<p>Ordinary data frames use the system to match column names. So, to match the column <code>foo</code> in the following data frame, we only need to specify one letter.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>d1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">foo =</span> <span class="fu">rnorm</span>(<span class="dv">10</span>),</span>
@@ -600,8 +600,8 @@ Optional Content
 <span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>d1<span class="sc">$</span>f</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]  2.0248078 -0.2728108  1.6377724 -0.4767482  1.7270890 -0.6886427
- [7]  0.1301697  0.8283639  1.7264109  1.6263348</code></pre>
+<pre><code> [1]  1.83739803 -1.23610049  1.05058743 -0.23322273 -0.33858215 -0.07594070
+ [7] -1.59757910 -1.90550864 -1.06889178 -0.07472366</code></pre>
 </div>
 </div>
 <p>To match the <code>bar</code> or <code>baz</code> columns, however, we need to give the full column name, since these two names only differ in their final letter.</p>
@@ -611,7 +611,7 @@ Optional Content
 <pre><code>NULL</code></pre>
 </div>
 </div>
-<p>Usually, this shortcut doesn’t cause problems, but it creates unnecessary ambiguity, and permits easily avoided bugs. Consider the following hypothetical data frame.</p>
+<p>Usually, this behavior doesn’t cause problems, but it creates unnecessary ambiguity, and increases the opportunities for bugs. Consider the following hypothetical data frame.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>myData <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">female =</span> <span class="fu">sample</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">1</span>, <span class="dv">20</span>, <span class="cn">TRUE</span>),</span>
@@ -622,33 +622,33 @@ Optional Content
 <span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>myData</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   female malevolent      score
-1       1          1 -0.2880828
-2       0          1 -0.6472124
-3       1          1  0.2946522
-4       1          1  2.3442097
-5       0          0 -0.4181166
-6       1          1 -1.1677979
-7       0          1 -1.1999956
-8       1          1  0.5874299
-9       0          0 -1.3932702
-10      0          0 -0.4727028
-11      1          1  1.3754372
-12      1          1  1.7228451
-13      0          0 -0.7658464
-14      0          0 -1.1684010
-15      0          0  0.4099815
-16      1          1 -1.2431065
-17      1          1  0.3393213
-18      1          1  1.3190337
-19      0          0 -2.3739355
-20      1          1  0.5625820</code></pre>
+1       1          1  0.4898893
+2       1          1  1.3149508
+3       0          1 -0.7239994
+4       0          0 -0.2123139
+5       0          1  0.1404637
+6       1          0  0.8564879
+7       0          1 -0.7082696
+8       1          1 -0.7540027
+9       1          0  0.8148100
+10      0          1  0.3548326
+11      1          1 -1.2906852
+12      1          0 -1.4778001
+13      1          1 -0.7545866
+14      1          0  0.5335948
+15      0          0 -1.5430491
+16      0          0  2.0755362
+17      0          0 -2.1070245
+18      1          0 -1.3316309
+19      0          0  0.1616109
+20      0          1 -2.1162149</code></pre>
 </div>
 </div>
 <p>Suppose the <code>female</code> column contains a dummy code representing biological sex. Further suppose that I want to select the <code>female</code> column, but I misremember its name as <code>male</code>, so I run the following command.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>myData<span class="sc">$</span>male</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 1 1 1 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1 0 1</code></pre>
+<pre><code> [1] 1 1 1 0 1 0 1 1 0 1 1 0 1 0 0 0 0 0 0 1</code></pre>
 </div>
 </div>
 <p>Oops…hope I’m paying extra close attention. Otherwise, as I continue with my analysis, the cases that I think are biological males are actually the cases that have been flagged as “malevolent” by the dummy code that I accidentally selected via silent partial matching.</p>
@@ -675,26 +675,26 @@ Optional Content
 <pre><code># A tibble: 20 × 3
    female malevolent  score
     &lt;dbl&gt;      &lt;int&gt;  &lt;dbl&gt;
- 1     42          1 -0.288
- 2     42          1 -0.647
- 3     42          1  0.295
- 4     42          1  2.34 
- 5     42          0 -0.418
- 6     42          1 -1.17 
- 7     42          1 -1.20 
- 8     42          1  0.587
- 9     42          0 -1.39 
-10     42          0 -0.473
-11     42          1  1.38 
-12     42          1  1.72 
-13     42          0 -0.766
-14     42          0 -1.17 
-15     42          0  0.410
-16     42          1 -1.24 
-17     42          1  0.339
-18     42          1  1.32 
-19     42          0 -2.37 
-20     42          1  0.563</code></pre>
+ 1     42          1  0.490
+ 2     42          1  1.31 
+ 3     42          1 -0.724
+ 4     42          0 -0.212
+ 5     42          1  0.140
+ 6     42          0  0.856
+ 7     42          1 -0.708
+ 8     42          1 -0.754
+ 9     42          0  0.815
+10     42          1  0.355
+11     42          1 -1.29 
+12     42          0 -1.48 
+13     42          1 -0.755
+14     42          0  0.534
+15     42          0 -1.54 
+16     42          0  2.08 
+17     42          0 -2.11 
+18     42          0 -1.33 
+19     42          0  0.162
+20     42          1 -2.12 </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>myData2[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="st">"score"</span>] <span class="ot">&lt;-</span> pi</span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>myData2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -705,23 +705,23 @@ Optional Content
  1     42          1  3.14 
  2     42          1  3.14 
  3     42          1  3.14 
- 4     42          1  3.14 
- 5     42          0  3.14 
- 6     42          1  3.14 
- 7     42          1 -1.20 
- 8     42          1  0.587
- 9     42          0 -1.39 
-10     42          0 -0.473
-11     42          1  1.38 
-12     42          1  1.72 
-13     42          0 -0.766
-14     42          0 -1.17 
-15     42          0  0.410
-16     42          1 -1.24 
-17     42          1  0.339
-18     42          1  1.32 
-19     42          0 -2.37 
-20     42          1  0.563</code></pre>
+ 4     42          0  3.14 
+ 5     42          1  3.14 
+ 6     42          0  3.14 
+ 7     42          1 -0.708
+ 8     42          1 -0.754
+ 9     42          0  0.815
+10     42          1  0.355
+11     42          1 -1.29 
+12     42          0 -1.48 
+13     42          1 -0.755
+14     42          0  0.534
+15     42          0 -1.54 
+16     42          0  2.08 
+17     42          0 -2.11 
+18     42          0 -1.33 
+19     42          0  0.162
+20     42          1 -2.12 </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>myData2[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">"foo"</span>, <span class="cn">FALSE</span>)</span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>myData2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -735,20 +735,20 @@ Optional Content
  4 foo    FALSE       3.14 
  5 foo    FALSE       3.14 
  6 foo    FALSE       3.14 
- 7 foo    FALSE      -1.20 
- 8 foo    FALSE       0.587
- 9 foo    FALSE      -1.39 
-10 foo    FALSE      -0.473
-11 foo    FALSE       1.38 
-12 foo    FALSE       1.72 
-13 foo    FALSE      -0.766
-14 foo    FALSE      -1.17 
-15 foo    FALSE       0.410
-16 foo    FALSE      -1.24 
-17 foo    FALSE       0.339
-18 foo    FALSE       1.32 
-19 foo    FALSE      -2.37 
-20 foo    FALSE       0.563</code></pre>
+ 7 foo    FALSE      -0.708
+ 8 foo    FALSE      -0.754
+ 9 foo    FALSE       0.815
+10 foo    FALSE       0.355
+11 foo    FALSE      -1.29 
+12 foo    FALSE      -1.48 
+13 foo    FALSE      -0.755
+14 foo    FALSE       0.534
+15 foo    FALSE      -1.54 
+16 foo    FALSE       2.08 
+17 foo    FALSE      -2.11 
+18 foo    FALSE      -1.33 
+19 foo    FALSE       0.162
+20 foo    FALSE      -2.12 </code></pre>
 </div>
 </div>
 <p>These commands, on the other hand, will all fail because we’re trying to recycle vectors with more than one element.</p>
@@ -800,6 +800,27 @@ Knowledge Check
 <li>What’s the purpose of tibbles, when we already have perfectly serviceable data frames?</li>
 <li>Name one specific behavior where tibbles differ from ordinary data frames, and explain the pros and cons of that difference.</li>
 </ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Ready to Continue?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You’re ready to progress if you can:</p>
+<ul>
+<li>Create a data frame with columns of different types.</li>
+<li>Explain how a data frames are related to lists and matrices.</li>
+<li>Use <code>$</code>, <code>[]</code>, <code>[[]]</code>, and matrix-style subsetting to access and modify data frame contents.</li>
+<li>Explain the differences between the four subsetting operators.</li>
+<li>Explain how recycling applies when modifying data frame columns.</li>
+</ul>
+<p>Take the <a href="../../quizzes/data_frames/index.html">Knowledge Quiz</a> to evaluate your learning.</p>
 </div>
 </div>
 

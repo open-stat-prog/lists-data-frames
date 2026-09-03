@@ -71,17 +71,17 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-div.callout-common-mistakes.callout {
-  border-left-color: #B01919;
+div.callout-completion-time.callout {
+  border-left-color: gray;
 }
-div.callout-common-mistakes.callout-style-default > .callout-header {
-  background-color: rgba(176, 25, 25, 0.13);
+div.callout-completion-time.callout-style-default > .callout-header {
+  background-color: rgb(from gray r g b / 13%);
 }
-div.callout-common-mistakes .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-common-mistakes.callout-style-default .callout-icon::before, div.callout-common-mistakes.callout-titled .callout-icon::before {
+div.callout-completion-time .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-completion-time.callout-style-default .callout-icon::before, div.callout-completion-time.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f188' !important;
+  content: '\f2f2' !important;
   background-image: none;
 }
 div.callout-practice.callout {
@@ -97,17 +97,17 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   content: '\f085' !important;
   background-image: none;
 }
-div.callout-going-further.callout {
-  border-left-color: #B58900;
+div.callout-explanation.callout {
+  border-left-color: violet;
 }
-div.callout-going-further.callout-style-default > .callout-header {
-  background-color: rgba(181, 137, 0, 0.13);
+div.callout-explanation.callout-style-default > .callout-header {
+  background-color: rgb(from violet r g b / 13%);
 }
-div.callout-going-further .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-going-further.callout-style-default .callout-icon::before, div.callout-going-further.callout-titled .callout-icon::before {
+div.callout-explanation .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-explanation.callout-style-default .callout-icon::before, div.callout-explanation.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f4d7' !important;
+  content: '\f075' !important;
   background-image: none;
 }
 div.callout-reading-advanced.callout {
@@ -123,19 +123,6 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
   content: '\f518' !important;
   background-image: none;
 }
-div.callout-completion-time.callout {
-  border-left-color: gray;
-}
-div.callout-completion-time.callout-style-default > .callout-header {
-  background-color: rgb(from gray r g b / 13%);
-}
-div.callout-completion-time .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-completion-time.callout-style-default .callout-icon::before, div.callout-completion-time.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f2f2' !important;
-  background-image: none;
-}
 div.callout-resource.callout {
   border-left-color: orange;
 }
@@ -149,30 +136,17 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   content: '\f0c1' !important;
   background-image: none;
 }
-div.callout-explanation.callout {
-  border-left-color: violet;
+div.callout-common-mistakes.callout {
+  border-left-color: #B01919;
 }
-div.callout-explanation.callout-style-default > .callout-header {
-  background-color: rgb(from violet r g b / 13%);
+div.callout-common-mistakes.callout-style-default > .callout-header {
+  background-color: rgba(176, 25, 25, 0.13);
 }
-div.callout-explanation .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-explanation.callout-style-default .callout-icon::before, div.callout-explanation.callout-titled .callout-icon::before {
+div.callout-common-mistakes .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-common-mistakes.callout-style-default .callout-icon::before, div.callout-common-mistakes.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f075' !important;
-  background-image: none;
-}
-div.callout-knowledge-check.callout {
-  border-left-color: #368FFF;
-}
-div.callout-knowledge-check.callout-style-default > .callout-header {
-  background-color: rgba(54, 143, 255, 0.13);
-}
-div.callout-knowledge-check .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-knowledge-check.callout-style-default .callout-icon::before, div.callout-knowledge-check.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f044' !important;
+  content: '\f188' !important;
   background-image: none;
 }
 div.callout-reading.callout {
@@ -186,6 +160,32 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f518' !important;
+  background-image: none;
+}
+div.callout-going-further.callout {
+  border-left-color: #B58900;
+}
+div.callout-going-further.callout-style-default > .callout-header {
+  background-color: rgba(181, 137, 0, 0.13);
+}
+div.callout-going-further .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-going-further.callout-style-default .callout-icon::before, div.callout-going-further.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f4d7' !important;
+  background-image: none;
+}
+div.callout-knowledge-check.callout {
+  border-left-color: #368FFF;
+}
+div.callout-knowledge-check.callout-style-default > .callout-header {
+  background-color: rgba(54, 143, 255, 0.13);
+}
+div.callout-knowledge-check .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-knowledge-check.callout-style-default .callout-icon::before, div.callout-knowledge-check.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f044' !important;
   background-image: none;
 }
 </style>
@@ -407,17 +407,17 @@ window.Quarto = {
 </div>
 </div>
 <p>How can we extract the <code>name</code> column and return the selection as a <em>character vector</em>?</p>
-<div id="webex-e2bccf2bba13e14225eac23e930b0fc1" class="webex-checkboxgroup" data-answer="PgJOU09WHlJOUGw=">
-<label><input type="checkbox" autocomplete="off" name="e2bccf2bba13e14225eac23e930b0fc1"><span><code>df[1]</code></span></label><label><input type="checkbox" autocomplete="off" name="e2bccf2bba13e14225eac23e930b0fc1"><span><code>df[1:2]</code></span></label><label><input type="checkbox" autocomplete="off" name="e2bccf2bba13e14225eac23e930b0fc1"><span><code>df[1, ]</code></span></label><label><input type="checkbox" autocomplete="off" name="e2bccf2bba13e14225eac23e930b0fc1"><span><code>df[[2]]</code></span></label><label><input type="checkbox" autocomplete="off" name="e2bccf2bba13e14225eac23e930b0fc1"><span><code>df[ , 1]</code></span></label>
+<div id="webex-c17d3e02a7bbd96cd3a425fffd45eda3" class="webex-checkboxgroup" data-answer="OAEbVR9UHANNBz8=">
+<label><input type="checkbox" autocomplete="off" name="c17d3e02a7bbd96cd3a425fffd45eda3"><span><code>df[1]</code></span></label><label><input type="checkbox" autocomplete="off" name="c17d3e02a7bbd96cd3a425fffd45eda3"><span><code>df$name</code></span></label><label><input type="checkbox" autocomplete="off" name="c17d3e02a7bbd96cd3a425fffd45eda3"><span><code>df[[1]]</code></span></label><label><input type="checkbox" autocomplete="off" name="c17d3e02a7bbd96cd3a425fffd45eda3"><span><code>df[["name"]]</code></span></label><label><input type="checkbox" autocomplete="off" name="c17d3e02a7bbd96cd3a425fffd45eda3"><span><code>df[1:2]</code></span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
 <li>Wrong: This command will return the <code>name</code> column as a one-column data frame.</li>
-<li>Wrong: This command will return the <code>name</code> and <code>age</code> columns as a <span class="math inline">\(4 \times 2\)</span> data frame.</li>
-<li>Wrong: This command will return the first row of <code>df</code> as a <span class="math inline">\(1 \times 4\)</span> data frame.</li>
-<li>Wrong: This command will return the <code>age</code> column as a numeric vector.</li>
 <li>Correct</li>
+<li>Correct</li>
+<li>Correct</li>
+<li>Wrong: This command will return the <code>name</code> and <code>age</code> columns as a <span class="math inline">\(4 \times 2\)</span> data frame.</li>
 </ul>
 </div>
 </div>
@@ -434,25 +434,25 @@ window.Quarto = {
 </div>
 </div>
 <p>How can we extract the <code>height</code> column and return the selection as a <em>data frame</em>?</p>
-<div id="webex-3b009a85cc93c55b63ede95544303531" class="webex-checkboxgroup" data-answer="aFIcABVQFAVPU2Q=">
-<label><input type="checkbox" autocomplete="off" name="3b009a85cc93c55b63ede95544303531"><span><code>df["height", ]</code></span></label><label><input type="checkbox" autocomplete="off" name="3b009a85cc93c55b63ede95544303531"><span><code>df[ , "height"]</code></span></label><label><input type="checkbox" autocomplete="off" name="3b009a85cc93c55b63ede95544303531"><span><code>df[3]</code></span></label><label><input type="checkbox" autocomplete="off" name="3b009a85cc93c55b63ede95544303531"><span><code>df[["height"]]</code></span></label><label><input type="checkbox" autocomplete="off" name="3b009a85cc93c55b63ede95544303531"><span><code>df$height</code></span></label>
+<div id="webex-91f5afc26c4a563cc592aa691a95bb20" class="webex-checkboxgroup" data-answer="YgFKBU1WTwMaU2k=">
+<label><input type="checkbox" autocomplete="off" name="91f5afc26c4a563cc592aa691a95bb20"><span><code>df$height</code></span></label><label><input type="checkbox" autocomplete="off" name="91f5afc26c4a563cc592aa691a95bb20"><span><code>df[ , "height"]</code></span></label><label><input type="checkbox" autocomplete="off" name="91f5afc26c4a563cc592aa691a95bb20"><span><code>df[2:3]</code></span></label><label><input type="checkbox" autocomplete="off" name="91f5afc26c4a563cc592aa691a95bb20"><span><code>df["height"]</code></span></label><label><input type="checkbox" autocomplete="off" name="91f5afc26c4a563cc592aa691a95bb20"><span><code>df["height", ]</code></span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
-<li>Wrong: This command will try to return a row called “height” and fail because there is no such row in <code>df</code>.</li>
 <li>Wrong: This command will return the <code>height</code> column as a numeric vector.</li>
+<li>Wrong: This command will return the <code>height</code> column as a numeric vector.</li>
+<li>Wrong: This command will return the <code>age</code> and <code>height</code> columns as a <span class="math inline">\(4 \times 2\)</span> data frame.</li>
 <li>Correct</li>
-<li>Wrong: This command will return the <code>height</code> column as a numeric vector.</li>
-<li>Wrong: This command will return the <code>height</code> column as a numeric vector.</li>
+<li>Wrong: This command will try to return a row called “height” and fail because there is no such row in <code>df</code>.</li>
 </ul>
 </div>
 </div>
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Which of the following statements about data frames is correct?</p>
-<div id="webex-d085fa5b0ae90773c34426cf633f4995" class="webex-radiogroup" data-answer="PwAUBUpRGVIcUDg=">
-<label><input type="radio" autocomplete="off" name="d085fa5b0ae90773c34426cf633f4995"><span>A data frame has nothing in common with either lists or matrices. It’s a completely separate object type.</span></label><label><input type="radio" autocomplete="off" name="d085fa5b0ae90773c34426cf633f4995"><span>A data frame is a special kind of list, where each slot must hold a length-one vector.</span></label><label><input type="radio" autocomplete="off" name="d085fa5b0ae90773c34426cf633f4995"><span>A data frame is a special kind of matrix that allows the data types to differ between columns.</span></label><label><input type="radio" autocomplete="off" name="d085fa5b0ae90773c34426cf633f4995"><span>A data frame is a special kind of vector, where each element holds and equal-length character vector.</span></label><label><input type="radio" autocomplete="off" name="d085fa5b0ae90773c34426cf633f4995"><span>A data frame is a special kind of list, where each slot holds an equal-length vector.</span></label>
+<div id="webex-d3e94ac879d407609d3bfd6611854f31" class="webex-radiogroup" data-answer="PwJJCRhRTwgbCTk=">
+<label><input type="radio" autocomplete="off" name="d3e94ac879d407609d3bfd6611854f31"><span>A data frame is a special kind of list, where each slot holds an equal-length vector.</span></label><label><input type="radio" autocomplete="off" name="d3e94ac879d407609d3bfd6611854f31"><span>A data frame is a special kind of vector, where each element holds and equal-length character vector.</span></label><label><input type="radio" autocomplete="off" name="d3e94ac879d407609d3bfd6611854f31"><span>A data frame and a matrix are the same underlying object type, just printed differently.</span></label><label><input type="radio" autocomplete="off" name="d3e94ac879d407609d3bfd6611854f31"><span>A data frame is a special kind of list, where each slot must hold a length-one vector.</span></label><label><input type="radio" autocomplete="off" name="d3e94ac879d407609d3bfd6611854f31"><span>A data frame has nothing in common with either lists or matrices. It’s a completely separate object type.</span></label>
 </div>
 </div>
 <div class="webex-solution">
@@ -462,8 +462,8 @@ window.Quarto = {
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>You have a data frame, <code>d</code>, with 10 rows. You run <code>d[1:2] &lt;- 1:3</code> (attempting to replace the first two columns using a length-3 replacement vector), and R raises an error. Why?</p>
-<div id="webex-eb0ef31f871cefd595759ac073617630" class="webex-radiogroup" data-answer="PlMcVUoDHVYUB2w=">
-<label><input type="radio" autocomplete="off" name="eb0ef31f871cefd595759ac073617630"><span>Because you’re trying to replace 20 values, and 3 does not evenly divide 20.</span></label><label><input type="radio" autocomplete="off" name="eb0ef31f871cefd595759ac073617630"><span>Because you can never use a numeric vector to replace data frame columns.</span></label><label><input type="radio" autocomplete="off" name="eb0ef31f871cefd595759ac073617630"><span>Because the replacement vector must always be named.</span></label><label><input type="radio" autocomplete="off" name="eb0ef31f871cefd595759ac073617630"><span>Because you’re trying to replace 20 values, and 3 is less than 20.</span></label><label><input type="radio" autocomplete="off" name="eb0ef31f871cefd595759ac073617630"><span>Because 3 is larger than 2 (the number of columns being replaced).</span></label>
+<div id="webex-87ac85096f37afb0af53e1377be6a081" class="webex-radiogroup" data-answer="YwZNUxQFHAkaVm4=">
+<label><input type="radio" autocomplete="off" name="87ac85096f37afb0af53e1377be6a081"><span>Because you’re trying to replace 20 values, and 3 does not evenly divide 20.</span></label><label><input type="radio" autocomplete="off" name="87ac85096f37afb0af53e1377be6a081"><span>Because you’re trying to replace 20 values, and 3 is less than 20.</span></label><label><input type="radio" autocomplete="off" name="87ac85096f37afb0af53e1377be6a081"><span>Because you must always use a list or data frame to replace data frame columns.</span></label><label><input type="radio" autocomplete="off" name="87ac85096f37afb0af53e1377be6a081"><span>Because 3 is larger than 2 (the number of columns being replaced).</span></label><label><input type="radio" autocomplete="off" name="87ac85096f37afb0af53e1377be6a081"><span>Because you can never use a numeric vector to replace data frame columns.</span></label>
 </div>
 </div>
 <div class="webex-solution">

@@ -71,18 +71,19 @@ Now that you've completed this module, you should be able to:
 
 ## Additional Reading
 
-For more information on the topics we've covered in this module, the following resources are excellent starting
-points.
+For more information on the topics we've covered in this module, the following chapters from Hadley Wickham's *R for
+Data Science* are excellent resources.
 
-- [Lists](https://r4ds.hadley.nz/vectors.html#lists) and [Data Frames](https://r4ds.hadley.nz/data-structures.html)
-  chapters from Hadley Wickham's *R for Data Science*.
-- [Tibbles](https://r4ds.hadley.nz/data-import.html) for more on the tibble variant briefly previewed in this module.
+- [Field Guide to Base R](https://r4ds.hadley.nz/base-R.html)
+- [Lists](https://r4ds.had.co.nz/vectors.html#lists) (from the first edition)
 
 ### Advanced Reading
 
-For a much more technical deep-dive into the topics we've covered in this module, check out the following chapter
-from Hadley Wickham's [Advanced R](https://adv-r.hadley.nz/index.html).
+For a much more technical deep-dive into the topics we've covered in this module, check out the following
+sections/chapter from Hadley Wickham's [Advanced R](https://adv-r.hadley.nz/index.html).
 
+- [Lists](https://adv-r.hadley.nz/vectors-chap.html#lists)
+- [Data Frames & Tibbles](https://adv-r.hadley.nz/vectors-chap.html#tibble)
 - [Subsetting](https://adv-r.hadley.nz/subsetting.html)
 
 ## Next Steps 

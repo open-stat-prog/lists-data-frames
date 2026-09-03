@@ -71,17 +71,43 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-div.callout-explanation.callout {
-  border-left-color: violet;
+div.callout-reading-advanced.callout {
+  border-left-color: red;
 }
-div.callout-explanation.callout-style-default > .callout-header {
-  background-color: rgb(from violet r g b / 13%);
+div.callout-reading-advanced.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
 }
-div.callout-explanation .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-explanation.callout-style-default .callout-icon::before, div.callout-explanation.callout-titled .callout-icon::before {
+div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f075' !important;
+  content: '\f518' !important;
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: orange;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f0c1' !important;
+  background-image: none;
+}
+div.callout-going-further.callout {
+  border-left-color: #B58900;
+}
+div.callout-going-further.callout-style-default > .callout-header {
+  background-color: rgba(181, 137, 0, 0.13);
+}
+div.callout-going-further .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-going-further.callout-style-default .callout-icon::before, div.callout-going-further.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f4d7' !important;
   background-image: none;
 }
 div.callout-knowledge-check.callout {
@@ -123,19 +149,6 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
   content: '\f518' !important;
   background-image: none;
 }
-div.callout-resource.callout {
-  border-left-color: orange;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgb(from orange r g b / 13%);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f0c1' !important;
-  background-image: none;
-}
 div.callout-completion-time.callout {
   border-left-color: gray;
 }
@@ -149,6 +162,19 @@ div.callout-completion-time.callout-style-default .callout-icon::before, div.cal
   content: '\f2f2' !important;
   background-image: none;
 }
+div.callout-explanation.callout {
+  border-left-color: violet;
+}
+div.callout-explanation.callout-style-default > .callout-header {
+  background-color: rgb(from violet r g b / 13%);
+}
+div.callout-explanation .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-explanation.callout-style-default .callout-icon::before, div.callout-explanation.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f075' !important;
+  background-image: none;
+}
 div.callout-practice.callout {
   border-left-color: green;
 }
@@ -160,32 +186,6 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f085' !important;
-  background-image: none;
-}
-div.callout-reading-advanced.callout {
-  border-left-color: red;
-}
-div.callout-reading-advanced.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
-}
-div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
-  background-image: none;
-}
-div.callout-going-further.callout {
-  border-left-color: #B58900;
-}
-div.callout-going-further.callout-style-default > .callout-header {
-  background-color: rgba(181, 137, 0, 0.13);
-}
-div.callout-going-further .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-going-further.callout-style-default .callout-icon::before, div.callout-going-further.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f4d7' !important;
   background-image: none;
 }
 </style>
@@ -384,16 +384,16 @@ $eyes
 </div>
 </div>
 <p>Which of the following expressions will change the value of the <code>eyes</code> slot in <code>l1</code> from “blue” to “green”?</p>
-<div id="webex-2b663bf4f81722243c5adc0672c08b11" class="webex-checkboxgroup" data-answer="aVMaBh9TSgRKCWw=">
-<label><input type="checkbox" autocomplete="off" name="2b663bf4f81722243c5adc0672c08b11"><span><code>l1[4] &lt;- "green"</code></span></label><label><input type="checkbox" autocomplete="off" name="2b663bf4f81722243c5adc0672c08b11"><span><code>names(l1)[4] &lt;- "green"</code></span></label><label><input type="checkbox" autocomplete="off" name="2b663bf4f81722243c5adc0672c08b11"><span><code>l1[[4]] &lt;- "green"</code></span></label><label><input type="checkbox" autocomplete="off" name="2b663bf4f81722243c5adc0672c08b11"><span><code>l1$4 &lt;- "green"</code></span></label><label><input type="checkbox" autocomplete="off" name="2b663bf4f81722243c5adc0672c08b11"><span><code>l1$eyes &lt;- "green"</code></span></label>
+<div id="webex-f0fd9011aed086a7a73e8361981c317b" class="webex-checkboxgroup" data-answer="PQBKVRUAHQFNVDk=">
+<label><input type="checkbox" autocomplete="off" name="f0fd9011aed086a7a73e8361981c317b"><span><code>l1$eyes &lt;- "blue"</code></span></label><label><input type="checkbox" autocomplete="off" name="f0fd9011aed086a7a73e8361981c317b"><span><code>l1[[4]] &lt;- "green"</code></span></label><label><input type="checkbox" autocomplete="off" name="f0fd9011aed086a7a73e8361981c317b"><span><code>l1$4 &lt;- "green"</code></span></label><label><input type="checkbox" autocomplete="off" name="f0fd9011aed086a7a73e8361981c317b"><span><code>l1$eyes &lt;- green</code></span></label><label><input type="checkbox" autocomplete="off" name="f0fd9011aed086a7a73e8361981c317b"><span><code>l1$eyes &lt;- "green"</code></span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
-<li>Correct</li>
-<li>Wrong: This command will change the name of the fourth slot, not the contents of that slot.</li>
+<li>Wrong: This command doesn’t actually change anything.</li>
 <li>Correct</li>
 <li>Wrong: There is no slot named “4” in l1.</li>
+<li>Wrong: This command tries to replace the value of <code>l4$eyes</code> with the contents of the object <code>green</code>, not the character vector <code>"green"</code>.</li>
 <li>Correct</li>
 </ul>
 </div>
@@ -416,17 +416,17 @@ $hair
 [1] "blue"</code></pre>
 </div>
 </div>
-<div id="webex-9576e3dbec119017a8260ba1cabb8136" class="webex-radiogroup" data-answer="YgQbBkkDSFJJU2w=">
-<label><input type="radio" autocomplete="off" name="9576e3dbec119017a8260ba1cabb8136"><span><code>names(l)[4] &lt;- "eyes"</code></span></label><label><input type="radio" autocomplete="off" name="9576e3dbec119017a8260ba1cabb8136"><span><code>l$hair &lt;- names("eyes")</code></span></label><label><input type="radio" autocomplete="off" name="9576e3dbec119017a8260ba1cabb8136"><span><code>l[[4]] &lt;- "eyes"</code></span></label><label><input type="radio" autocomplete="off" name="9576e3dbec119017a8260ba1cabb8136"><span><code>names(l)$hair &lt;- "eyes"</code></span></label><label><input type="radio" autocomplete="off" name="9576e3dbec119017a8260ba1cabb8136"><span><code>l[4] &lt;- "eyes"</code></span></label>
+<div id="webex-6ca86f40479567d61591ad3a514b2148" class="webex-radiogroup" data-answer="bVNNCBpXGAAYB2Q=">
+<label><input type="radio" autocomplete="off" name="6ca86f40479567d61591ad3a514b2148"><span><code>l$hair &lt;- names("eyes")</code></span></label><label><input type="radio" autocomplete="off" name="6ca86f40479567d61591ad3a514b2148"><span><code>names(l)$hair &lt;- "eyes"</code></span></label><label><input type="radio" autocomplete="off" name="6ca86f40479567d61591ad3a514b2148"><span><code>names(l)[4] &lt;- "eyes"</code></span></label><label><input type="radio" autocomplete="off" name="6ca86f40479567d61591ad3a514b2148"><span><code>l[[4]] &lt;- "eyes"</code></span></label><label><input type="radio" autocomplete="off" name="6ca86f40479567d61591ad3a514b2148"><span><code>l[4] &lt;- "eyes"</code></span></label>
 </div>
 </div>
 <div class="webex-solution">
 <p>The correct way to change the name of the value is <code>names(l)[4] &lt;- "eyes"</code></p>
 <ul>
-<li>Correct</li>
 <li>Wrong: <code>names("eyes")</code> is <code>NULL</code> since a character string doesn’t have a name, so this command will just erase the list element</li>
-<li>Wrong: This command will change the value itself and not the name</li>
 <li>Wrong: This command will return an error since the <code>names()</code> element is a vector and not a list</li>
+<li>Correct</li>
+<li>Wrong: This command will change the value itself and not the name</li>
 <li>Wrong: This command will change the value itself and not the name</li>
 </ul>
 </div>
@@ -434,8 +434,8 @@ $hair
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Given the list <code>l &lt;- list(a = 1, b = 2, c = 3)</code>, which statement correctly describes the difference between <code>l["a"]</code> and <code>l[["a"]]</code>?</p>
-<div id="webex-1bf78380e8c6bb93f15cfbc3ecd53a3b" class="webex-radiogroup" data-answer="alJKBxQDFABJCT4=">
-<label><input type="radio" autocomplete="off" name="1bf78380e8c6bb93f15cfbc3ecd53a3b"><span><code>l["a"]</code> returns the numeric vector <code>1</code>; <code>l[["a"]]</code> returns a one-element list.</span></label><label><input type="radio" autocomplete="off" name="1bf78380e8c6bb93f15cfbc3ecd53a3b"><span><code>l["a"]</code> causes an error, since single brackets can’t be used with names.</span></label><label><input type="radio" autocomplete="off" name="1bf78380e8c6bb93f15cfbc3ecd53a3b"><span><code>l["a"]</code> and <code>l[["a"]]</code> always return exactly the same thing.</span></label><label><input type="radio" autocomplete="off" name="1bf78380e8c6bb93f15cfbc3ecd53a3b"><span><code>l[["a"]]</code> can select multiple named slots at once, while <code>l["a"]</code> cannot.</span></label><label><input type="radio" autocomplete="off" name="1bf78380e8c6bb93f15cfbc3ecd53a3b"><span><code>l["a"]</code> returns a one-element list; <code>l[["a"]]</code> returns the numeric vector <code>1</code>.</span></label>
+<div id="webex-0a1a4e757b668fb204b64ca8ded41aa2" class="webex-radiogroup" data-answer="a1EdURhVGwUbU2s=">
+<label><input type="radio" autocomplete="off" name="0a1a4e757b668fb204b64ca8ded41aa2"><span><code>l["a"]</code> and <code>l[["a"]]</code> always return exactly the same thing.</span></label><label><input type="radio" autocomplete="off" name="0a1a4e757b668fb204b64ca8ded41aa2"><span><code>l[["a"]]</code> can select multiple named slots at once, while <code>l["a"]</code> cannot.</span></label><label><input type="radio" autocomplete="off" name="0a1a4e757b668fb204b64ca8ded41aa2"><span><code>l["a"]</code> returns the numeric vector <code>1</code>; <code>l[["a"]]</code> returns a one-element list.</span></label><label><input type="radio" autocomplete="off" name="0a1a4e757b668fb204b64ca8ded41aa2"><span><code>l["a"]</code> causes an error, since single brackets can’t be used with names.</span></label><label><input type="radio" autocomplete="off" name="0a1a4e757b668fb204b64ca8ded41aa2"><span><code>l["a"]</code> returns a one-element list; <code>l[["a"]]</code> returns the numeric vector <code>1</code>.</span></label>
 </div>
 </div>
 <div class="webex-solution">

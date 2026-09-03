@@ -422,24 +422,7 @@ df
 - If `d1` is a data frame, why does `d1[2]` return a one-column data frame, while `d1[[2]]` returns a vector?
 - Suppose you try to replace two columns in a data frame with the contents of a three-slot list.
   - Which list slots (if any) does R use to fill the columns?
-	- Will R raise an error?
-	- Will R show a warning?
+  - Will R raise an error?
+  - Will R show a warning?
 
 :::
-
-::: {.callout-tip}
-
-## Ready to Continue?
-
-You're ready to progress if you can:
-
-- Create a data frame with columns of different types.
-- Explain how a data frames are related to lists and matrices.
-- Use `$`, `[]`, `[[]]`, and matrix-style subsetting to access and modify data frame contents.
-- Explain the differences between the four subsetting operators.
-- Explain how recycling applies when modifying data frame columns.
-
-Take the [Knowledge Quiz](/quizzes/data_frames/index.qmd) to evaluate your learning.
-
-:::
-
