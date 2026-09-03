@@ -404,7 +404,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"options":{"editor-font-scale":"1","output":"true","classes":"","autorun":"false","warning":"true","fig-height":5,"editor-word-wrap":"true","editor-max-height":"","out-height":"","fig-cap":"","comment":"","editor-quick-suggestions":"false","read-only":"false","fig-width":7,"out-width":"700px","dpi":72,"message":"true","label":"unnamed-chunk-1","results":"markup","context":"interactive"},"code":"someList <- list(\n  a = 1:10,\n  b = tail(LETTERS, 5),\n  c = list(\n    x = \"the quick brown\",\n    y = \"fox\",\n    z = \"jumped over\"\n  )\n)\n\nsomeList$c","id":1},{"options":{"editor-font-scale":"1","output":"true","classes":"","autorun":"false","warning":"true","fig-height":5,"editor-word-wrap":"true","editor-max-height":"","out-height":"","fig-cap":"","comment":"","editor-quick-suggestions":"false","read-only":"false","fig-width":7,"out-width":"700px","dpi":72,"message":"true","label":"unnamed-chunk-2","results":"markup","context":"interactive"},"code":"","id":2}];
+globalThis.qwebrCellDetails = [{"code":"someList <- list(\n  a = 1:10,\n  b = tail(LETTERS, 5),\n  c = list(\n    x = \"the quick brown\",\n    y = \"fox\",\n    z = \"jumped over\"\n  )\n)\n\nsomeList$c","id":1,"options":{"results":"markup","classes":"","warning":"true","label":"unnamed-chunk-1","out-height":"","editor-max-height":"","editor-word-wrap":"true","context":"interactive","editor-quick-suggestions":"false","editor-font-scale":"1","fig-height":5,"dpi":72,"comment":"","out-width":"700px","autorun":"false","message":"true","read-only":"false","output":"true","fig-width":7,"fig-cap":""}},{"code":"","id":2,"options":{"results":"markup","classes":"","warning":"true","label":"unnamed-chunk-2","out-height":"","editor-max-height":"","editor-word-wrap":"true","context":"interactive","editor-quick-suggestions":"false","editor-font-scale":"1","fig-height":5,"dpi":72,"comment":"","out-width":"700px","autorun":"false","message":"true","read-only":"false","output":"true","fig-width":7,"fig-cap":""}},{"code":"","id":3,"options":{"results":"markup","classes":"","warning":"true","label":"unnamed-chunk-3","out-height":"","editor-max-height":"","editor-word-wrap":"true","context":"interactive","editor-quick-suggestions":"false","editor-font-scale":"1","fig-height":5,"dpi":72,"comment":"","out-width":"700px","autorun":"false","message":"true","read-only":"false","output":"true","fig-width":7,"fig-cap":""}}];
 
 </script>
 <script type="module">
@@ -1658,30 +1658,17 @@ globalThis.qwebrExecuteCode = async function (
 
 </script>
 <style>
-div.callout-practice.callout {
-  border-left-color: green;
+div.callout-completion-time.callout {
+  border-left-color: gray;
 }
-div.callout-practice.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
+div.callout-completion-time.callout-style-default > .callout-header {
+  background-color: rgb(from gray r g b / 13%);
 }
-div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
+div.callout-completion-time .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-completion-time.callout-style-default .callout-icon::before, div.callout-completion-time.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f085' !important;
-  background-image: none;
-}
-div.callout-going-further.callout {
-  border-left-color: #B58900;
-}
-div.callout-going-further.callout-style-default > .callout-header {
-  background-color: rgba(181, 137, 0, 0.13);
-}
-div.callout-going-further .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-going-further.callout-style-default .callout-icon::before, div.callout-going-further.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f4d7' !important;
+  content: '\f2f2' !important;
   background-image: none;
 }
 div.callout-common-mistakes.callout {
@@ -1710,17 +1697,17 @@ div.callout-knowledge-check.callout-style-default .callout-icon::before, div.cal
   content: '\f044' !important;
   background-image: none;
 }
-div.callout-explanation.callout {
-  border-left-color: violet;
+div.callout-practice.callout {
+  border-left-color: green;
 }
-div.callout-explanation.callout-style-default > .callout-header {
-  background-color: rgb(from violet r g b / 13%);
+div.callout-practice.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
 }
-div.callout-explanation .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-explanation.callout-style-default .callout-icon::before, div.callout-explanation.callout-titled .callout-icon::before {
+div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f075' !important;
+  content: '\f085' !important;
   background-image: none;
 }
 div.callout-reading-advanced.callout {
@@ -1736,30 +1723,17 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
   content: '\f518' !important;
   background-image: none;
 }
-div.callout-reading.callout {
+div.callout-explanation.callout {
   border-left-color: violet;
 }
-div.callout-reading.callout-style-default > .callout-header {
+div.callout-explanation.callout-style-default > .callout-header {
   background-color: rgb(from violet r g b / 13%);
 }
-div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+div.callout-explanation .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-explanation.callout-style-default .callout-icon::before, div.callout-explanation.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f518' !important;
-  background-image: none;
-}
-div.callout-completion-time.callout {
-  border-left-color: gray;
-}
-div.callout-completion-time.callout-style-default > .callout-header {
-  background-color: rgb(from gray r g b / 13%);
-}
-div.callout-completion-time .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-completion-time.callout-style-default .callout-icon::before, div.callout-completion-time.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f2f2' !important;
+  content: '\f075' !important;
   background-image: none;
 }
 div.callout-resource.callout {
@@ -1773,6 +1747,32 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f0c1' !important;
+  background-image: none;
+}
+div.callout-reading.callout {
+  border-left-color: violet;
+}
+div.callout-reading.callout-style-default > .callout-header {
+  background-color: rgb(from violet r g b / 13%);
+}
+div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
+  background-image: none;
+}
+div.callout-going-further.callout {
+  border-left-color: #B58900;
+}
+div.callout-going-further.callout-style-default > .callout-header {
+  background-color: rgba(181, 137, 0, 0.13);
+}
+div.callout-going-further .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-going-further.callout-style-default .callout-icon::before, div.callout-going-further.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f4d7' !important;
   background-image: none;
 }
 </style>
@@ -1891,6 +1891,12 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../tutorials/data_frames/relation_to_lists.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Relation to Lists</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../tutorials/data_frames/manipulating.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Manipulating Data Frames</span></a>
   </div>
@@ -1898,7 +1904,7 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/data_frames/tibbles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tibbles: A Modern Data Frame</span></a>
+ <span class="menu-text">Tibbles</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -2339,28 +2345,19 @@ $alive
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-A Mental Model for <code>$</code>, <code>[[]]</code>, and <code>[]</code>
+Moving Day: A Mental Model for <code>$</code>, <code>[[]]</code>, and <code>[]</code>
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>To gain some intuition for the different flavors of list subsetting, you can think of a list as a stack of moving boxes. Let’s consider a three-slot list as our example. We conceptualize this list as a stack of three boxes. Let’s say the first box contains clothes, the second box contains books, and the third box contains four smaller boxes that hold various types of office supplies.</p>
+<p>To gain some intuition for the different flavors of list subsetting, you can think of a list as a stack of moving boxes.</p>
+<p>Let’s consider a three-slot list as our example. We’ll conceptualize this list as a stack of three boxes (box = list slot). Let’s say the first box contains clothes (pile of clothes = some kind of vector), the second box contains books (stack of books = different kind of vector), and the third box contains four smaller boxes (set of smaller boxes = nested list) that hold various types of kitchen supplies.</p>
 <ul>
-<li>The <code>$</code> and <code>[[]]</code> operators work like reaching <em>inside</em> a single box and retrieving its <em>contents</em>.
-<ul>
-<li>In our analogy, these two operators unpack a single box.
-<ul>
-<li>We remove the clothes from our first box and do something with those clothes.</li>
-</ul></li>
-</ul></li>
-<li>The <code>[]</code> operator works like choosing one or more boxes from our stack and doing something with those unopened boxes.
-<ul>
-<li>In our analogy, this operator picks up some boxes but doesn’t open them.
-<ul>
-<li>We pick up the first box and move it to our bedroom.</li>
-</ul></li>
-</ul></li>
+<li><p>The <code>$</code> and <code>[[]]</code> operators work like reaching <em>inside</em> a single box and retrieving its <em>contents</em>.</p>
+<p>In our analogy, these two operators unpack a single box. For example, we might remove the books from the second box and place them on a bookshelf. We’re not interested in the box; we’re directly interacting with the books.</p></li>
+<li><p>The <code>[]</code> operator works like choosing one or more <em>unopened</em> boxes from our stack and doing something with those boxes.</p>
+<p>In our analogy, this operator picks up some boxes but doesn’t open them. For example, we might pick up the first two boxes and move them to our bedroom. This time, we’re only interacting with the boxes; we’re not concerned with anything inside the boxes.</p></li>
 </ul>
-<p>If you ever find yourself surprised that a selection “is still a list” when you expected the raw value from the list slot, check whether you used <code>[]</code> (which always keeps the list wrapper) instead of <code>$</code> or <code>[[]]</code> (which unwrap it).</p>
+<p>If you’re ever surprised that a selection “is still a list” when you expected the raw value from the list slot, check whether you used <code>[]</code> (which always keeps the list wrapper) instead of <code>$</code> or <code>[[]]</code> (which unwrap the selected value).</p>
 </div>
 </div>
 <p><strong>Predict:</strong> What type of object will the following code print?</p>
@@ -2384,8 +2381,8 @@ Explanation
 <pre><code>[1] "list"</code></pre>
 </div>
 </div>
-<p>The command <code>someList$c</code> returns a list because the <code>c</code> slot in <code>someList</code> holds an entire list. Using the single element extraction procedure returns the contents of the <code>c</code> slot, which is another list, in this case.</p>
-<p>So, don’t fall into the trap of thinking that <code>$</code> and <code>[[]]</code> <em>never</em> return a list. Both the <code>$</code> and <code>[[]]</code> operators will return a list, when the selected slot holds a list.</p>
+<p>The command <code>someList$c</code> returns a list because the <code>c</code> slot in <code>someList</code> holds another list. Nothing special happens here: using the single element extraction procedure returns the contents of the <code>c</code> slot, as it always does. In this case, those contents just happen to be another list. In terms of our “Moving Day” analogy, running <code>someList$c</code> is like unpacking the third box. After unpacking, we’re left with more boxes, since the third box only contained a set of smaller boxes.</p>
+<p>This example is meant as a warning against overgeneralizing simple rules. Don’t fall into the trap of thinking that <code>$</code> and <code>[[]]</code> <em>never</em> return a list. Both of these operators will return a list, when the selected slot holds a list.</p>
 </div>
 </div>
 </div>
@@ -2455,39 +2452,107 @@ $logical
 [1] 1 2 3 4</code></pre>
 </div>
 </div>
+<div class="callout callout-style-default callout-practice callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Practice
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Use the list that you created in the last practice problem for this exercise.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true"><i class="fa-solid fa-circle-question" aria-label="circle-question"></i> Question</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><i class="fa-solid fa-code" aria-label="code"></i> Interactive Editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Replace the character vector that you assigned to the <code>hair</code> slot with a two-slot list comprising two length-one character vectors.</p>
+<ul>
+<li>Use the first vector to describe your hair color.
+<ul>
+<li>This vector should be the same as the one previously stored in the <code>hair</code> slot.</li>
+</ul></li>
+<li>Use the second vector to describe your hair type (e.g., wavy, straight, curly).</li>
+</ul>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div id="qwebr-insertion-location-2"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p>Recall my solution for the last practice problem.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>myInfo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$name
+[1] "bob"
+
+$eyes
+[1] "blue"
+
+$hair
+[1] "black"
+
+$color
+[1] "green"</code></pre>
+</div>
+</div>
+<p>I would modify my list as follows.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>myInfo<span class="sc">$</span>hair <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">color =</span> <span class="st">"black"</span>,</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"wavy"</span></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>myInfo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$name
+[1] "bob"
+
+$eyes
+[1] "blue"
+
+$hair
+$hair$color
+[1] "black"
+
+$hair$type
+[1] "wavy"
+
+
+$color
+[1] "green"</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="using-list-elements" class="level2">
 <h2 class="anchored" data-anchor-id="using-list-elements">Using List Elements</h2>
 <p>Importantly, the types of the objects you store in a list are maintained.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>(x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1 2 3 4 5</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>(y <span class="ot">&lt;-</span> <span class="fu">list</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>list()</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>(z <span class="ot">&lt;-</span> letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1] "a" "b" "c" "d" "e" "f" "g" "h" "i" "j"</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>(l3 <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">a =</span> x, <span class="at">b =</span> y, <span class="at">c =</span> z))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>$a
-[1] 1 2 3 4 5
-
-$b
-list()
-
-$c
- [1] "a" "b" "c" "d" "e" "f" "g" "h" "i" "j"</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]</span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>l3 <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">a =</span> x, <span class="at">b =</span> y, <span class="at">c =</span> z)</span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "integer"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(l3<span class="sc">$</span>a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "integer"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "list"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(l3<span class="sc">$</span>b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "list"</code></pre>
 </div>
@@ -2495,30 +2560,23 @@ $c
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "character"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(l3<span class="sc">$</span>a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "integer"</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(l3<span class="sc">$</span>b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "list"</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(l3<span class="sc">$</span>c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(l3<span class="sc">$</span>c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "character"</code></pre>
 </div>
 </div>
-<p>Consequently, objects stored in a list behave just as they would outside of the list. For example, if a function is stored as an element of a list, we can call it directly:</p>
+<p>Consequently, objects stored in a list behave just as they would outside of the list. For example, if we store a function as an element of a list, we can call that function directly from within the list.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Store the Base R 'mean' function in the 'l3' list</span></span>
-<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>l3<span class="sc">$</span>myMean <span class="ot">&lt;-</span> mean</span>
-<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Call both versions of our function</span></span>
-<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Store the Base R 'mean' function in the 'l3' list</span></span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>l3<span class="sc">$</span>myMean <span class="ot">&lt;-</span> mean</span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Call the normal 'mean' function</span></span>
+<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>l3<span class="sc">$</span><span class="fu">myMean</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Call the function from our list</span></span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>l3<span class="sc">$</span><span class="fu">myMean</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3</code></pre>
 </div>
@@ -2535,16 +2593,16 @@ Practice
 <div class="callout-body-container callout-body">
 <p>Use the list that you created in the last practice problem for this exercise.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true"><i class="fa-solid fa-circle-question" aria-label="circle-question"></i> Question</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><i class="fa-solid fa-code" aria-label="code"></i> Interactive Editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false"><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Hint</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true"><i class="fa-solid fa-circle-question" aria-label="circle-question"></i> Question</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false"><i class="fa-solid fa-code" aria-label="code"></i> Interactive Editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false"><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Hint</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
 <div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
 <p>Using a single command, test if your eye color OR your hair color is also your favorite color.</p>
 </div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<div id="qwebr-insertion-location-2"></div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div id="qwebr-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </div>
-<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
 <p>Recall the basic logical operators:</p>
 <ul>
 <li><code>==</code>, <code>!=</code>: Equal, Not Equal</li>
@@ -2552,10 +2610,10 @@ Practice
 <li><code>&amp;</code>, <code>|</code>: Logical AND, Logical OR (not exclusive)</li>
 </ul>
 </div>
-<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
 <p>Recall my solution for the last practice problem.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>myInfo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>myInfo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$name
 [1] "bob"
@@ -2564,7 +2622,12 @@ $eyes
 [1] "blue"
 
 $hair
+$hair$color
 [1] "black"
+
+$hair$type
+[1] "wavy"
+
 
 $color
 [1] "green"</code></pre>
@@ -2572,7 +2635,7 @@ $color
 </div>
 <p>So, I would set up the necessary logical test as follows.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>myInfo<span class="sc">$</span>eyes <span class="sc">==</span> myInfo<span class="sc">$</span>color <span class="sc">|</span> myInfo<span class="sc">$</span>hair <span class="sc">==</span> myInfo<span class="sc">$</span>color</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>myInfo<span class="sc">$</span>eyes <span class="sc">==</span> myInfo<span class="sc">$</span>color <span class="sc">|</span> myInfo<span class="sc">$</span>hair<span class="sc">$</span>color <span class="sc">==</span> myInfo<span class="sc">$</span>color</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE</code></pre>
 </div>

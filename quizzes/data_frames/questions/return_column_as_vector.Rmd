@@ -1,16 +1,14 @@
-```{r, echo = FALSE, include = FALSE}
+Question
+========
 
+```{r, echo = FALSE, include = FALSE}
 df <- data.frame(
   name = c("bob", "mike", "mark", "steve"),
   age = c(25, 23, 24, 26),
   height = c(180, 178, 169, 183),
   eyes = c("green", "green", "blue", "brown")
 )
-
 ```
-
-Question
-========
 
 Consider the following data frame, `df`.
 
@@ -22,6 +20,7 @@ How can we extract the `name` column and return the selection as a *character ve
 
 Answerlist
 -----------
+
 * `df$name`
 * `df[["name"]]`
 * `df[[1]]`
@@ -39,6 +38,7 @@ Solution
 
 Answerlist
 -----------
+
 * Correct
 * Correct
 * Correct
@@ -53,6 +53,7 @@ Answerlist
 
 Meta-information
 ================
+
 exname: return_df_column_as_vector
 extype: mchoice
 exsolution: 11111000000

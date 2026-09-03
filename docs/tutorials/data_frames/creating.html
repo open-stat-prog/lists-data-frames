@@ -404,7 +404,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"options":{"warning":"true","read-only":"false","results":"markup","editor-word-wrap":"true","dpi":72,"comment":"","out-width":"700px","out-height":"","autorun":"false","editor-font-scale":"1","fig-width":7,"fig-cap":"","editor-quick-suggestions":"false","output":"true","fig-height":5,"label":"unnamed-chunk-1","message":"true","classes":"","editor-max-height":"","context":"interactive"},"id":1,"code":""},{"options":{"warning":"true","read-only":"false","results":"markup","editor-word-wrap":"true","dpi":72,"comment":"","out-width":"700px","out-height":"","autorun":"false","editor-font-scale":"1","fig-width":7,"fig-cap":"","editor-quick-suggestions":"false","output":"true","fig-height":5,"label":"unnamed-chunk-2","message":"true","classes":"","editor-max-height":"","context":"interactive"},"id":2,"code":""}];
+globalThis.qwebrCellDetails = [{"code":"data.frame(\n  foo = head(1:100, 6),\n  bar = seq(0, 1, 0.2),\n  baz = rep(c(\"alice\", \"bob\"), each = 3)\n)","id":1,"options":{"context":"interactive","output":"true","out-height":"","fig-width":7,"out-width":"700px","message":"true","comment":"","results":"markup","read-only":"false","classes":"","editor-quick-suggestions":"false","dpi":72,"warning":"true","fig-height":5,"editor-font-scale":"1","autorun":"false","editor-max-height":"","fig-cap":"","label":"unnamed-chunk-1","editor-word-wrap":"true"}},{"code":"","id":2,"options":{"context":"interactive","output":"true","out-height":"","fig-width":7,"out-width":"700px","message":"true","comment":"","results":"markup","read-only":"false","classes":"","editor-quick-suggestions":"false","dpi":72,"warning":"true","fig-height":5,"editor-font-scale":"1","autorun":"false","editor-max-height":"","fig-cap":"","label":"unnamed-chunk-2","editor-word-wrap":"true"}}];
 
 </script>
 <script type="module">
@@ -1658,30 +1658,17 @@ globalThis.qwebrExecuteCode = async function (
 
 </script>
 <style>
-div.callout-reading.callout {
+div.callout-explanation.callout {
   border-left-color: violet;
 }
-div.callout-reading.callout-style-default > .callout-header {
+div.callout-explanation.callout-style-default > .callout-header {
   background-color: rgb(from violet r g b / 13%);
 }
-div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+div.callout-explanation .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-explanation.callout-style-default .callout-icon::before, div.callout-explanation.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f518' !important;
-  background-image: none;
-}
-div.callout-reading-advanced.callout {
-  border-left-color: red;
-}
-div.callout-reading-advanced.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
-}
-div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
+  content: '\f075' !important;
   background-image: none;
 }
 div.callout-common-mistakes.callout {
@@ -1697,19 +1684,6 @@ div.callout-common-mistakes.callout-style-default .callout-icon::before, div.cal
   content: '\f188' !important;
   background-image: none;
 }
-div.callout-knowledge-check.callout {
-  border-left-color: #368FFF;
-}
-div.callout-knowledge-check.callout-style-default > .callout-header {
-  background-color: rgba(54, 143, 255, 0.13);
-}
-div.callout-knowledge-check .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-knowledge-check.callout-style-default .callout-icon::before, div.callout-knowledge-check.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f044' !important;
-  background-image: none;
-}
 div.callout-completion-time.callout {
   border-left-color: gray;
 }
@@ -1723,17 +1697,56 @@ div.callout-completion-time.callout-style-default .callout-icon::before, div.cal
   content: '\f2f2' !important;
   background-image: none;
 }
-div.callout-practice.callout {
-  border-left-color: green;
+div.callout-going-further.callout {
+  border-left-color: #B58900;
 }
-div.callout-practice.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
+div.callout-going-further.callout-style-default > .callout-header {
+  background-color: rgba(181, 137, 0, 0.13);
 }
-div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
+div.callout-going-further .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-going-further.callout-style-default .callout-icon::before, div.callout-going-further.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f085' !important;
+  content: '\f4d7' !important;
+  background-image: none;
+}
+div.callout-knowledge-check.callout {
+  border-left-color: #368FFF;
+}
+div.callout-knowledge-check.callout-style-default > .callout-header {
+  background-color: rgba(54, 143, 255, 0.13);
+}
+div.callout-knowledge-check .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-knowledge-check.callout-style-default .callout-icon::before, div.callout-knowledge-check.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f044' !important;
+  background-image: none;
+}
+div.callout-reading-advanced.callout {
+  border-left-color: red;
+}
+div.callout-reading-advanced.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
+}
+div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
+  background-image: none;
+}
+div.callout-reading.callout {
+  border-left-color: violet;
+}
+div.callout-reading.callout-style-default > .callout-header {
+  background-color: rgb(from violet r g b / 13%);
+}
+div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
   background-image: none;
 }
 div.callout-resource.callout {
@@ -1749,30 +1762,17 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   content: '\f0c1' !important;
   background-image: none;
 }
-div.callout-explanation.callout {
-  border-left-color: violet;
+div.callout-practice.callout {
+  border-left-color: green;
 }
-div.callout-explanation.callout-style-default > .callout-header {
-  background-color: rgb(from violet r g b / 13%);
+div.callout-practice.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
 }
-div.callout-explanation .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-explanation.callout-style-default .callout-icon::before, div.callout-explanation.callout-titled .callout-icon::before {
+div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f075' !important;
-  background-image: none;
-}
-div.callout-going-further.callout {
-  border-left-color: #B58900;
-}
-div.callout-going-further.callout-style-default > .callout-header {
-  background-color: rgba(181, 137, 0, 0.13);
-}
-div.callout-going-further .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-going-further.callout-style-default .callout-icon::before, div.callout-going-further.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f4d7' !important;
+  content: '\f085' !important;
   background-image: none;
 }
 </style>
@@ -1933,7 +1933,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/data_frames/tibbles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tibbles: A Modern Data Frame</span></a>
+ <span class="menu-text">Tibbles</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1955,14 +1955,8 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#quick-check" id="toc-quick-check" class="nav-link active" data-scroll-target="#quick-check">Quick Check</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -2270,19 +2264,6 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </header>
 
 
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This page is hands-on: constructing data frames with columns of different types.</p>
-</div>
-</div>
 <p>We create data frames using the <code>data.frame()</code> function. This function takes vectors as arguments, and each vector becomes a column in the resulting data frame.</p>
 <p>In the following code, we create a data frame called <code>d1</code> that contains 10 rows and 3 columns.</p>
 <ol type="1">
@@ -2375,19 +2356,22 @@ Note
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>                  <span class="at">b =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"foo"</span>, <span class="st">"bar"</span>), <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>                  <span class="at">c =</span> <span class="fu">runif</span>(<span class="dv">10</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>       a   b          c
-1   TRUE bar 0.19858868
-2  FALSE bar 0.38426508
-3   TRUE foo 0.35993882
-4   TRUE foo 0.39544801
-5  FALSE foo 0.81648970
-6  FALSE bar 0.30765156
-7  FALSE foo 0.29124515
-8  FALSE foo 0.01769363
-9  FALSE bar 0.87380215
-10  TRUE bar 0.11872620</code></pre>
+<pre><code>       a   b         c
+1  FALSE bar 0.9479847
+2   TRUE foo 0.4246288
+3  FALSE bar 0.2282483
+4  FALSE bar 0.8640942
+5   TRUE bar 0.3101797
+6   TRUE bar 0.8192379
+7   TRUE foo 0.5127799
+8   TRUE bar 0.1956576
+9  FALSE bar 0.1129330
+10  TRUE foo 0.1074128</code></pre>
 </div>
 </div>
+<p><strong>Predict</strong> what the following code will print.</p>
+<div id="qwebr-insertion-location-1"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>If we want to quickly generate an empty data frame, we can supply a matrix as the sole argument to <code>data.frame()</code>.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>(d4 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">matrix</span>(<span class="cn">NA</span>, <span class="dv">10</span>, <span class="dv">3</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2423,26 +2407,28 @@ Practice
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true"><i class="fa-solid fa-code" aria-label="code"></i> Interactive Editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<div id="qwebr-insertion-location-1"></div>
+<div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <p>There are an infinite number of correct solutions to this problem (literally). The following is one possibility.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">text =</span> <span class="fu">rep</span>(<span class="st">"text"</span>, <span class="dv">7</span>),</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>                 <span class="at">integer =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="dv">7</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">complex =</span> <span class="fu">complex</span>(<span class="dv">7</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>                 )</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">text =</span> <span class="fu">rep</span>(<span class="st">"text"</span>, <span class="dv">7</span>),</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">integer =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="dv">7</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">complex =</span> <span class="fu">complex</span>(<span class="dv">7</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  text integer complex
-1 text       9    1+1i
-2 text       8    2+2i
-3 text       6    3+3i
-4 text      10    4+1i
-5 text       9    5+2i
-6 text       7    1+3i
-7 text       5    2+1i</code></pre>
+1 text       8    1+1i
+2 text       5    2+2i
+3 text       8    3+3i
+4 text       7    4+1i
+5 text      10    5+2i
+6 text       2    1+3i
+7 text       9    2+1i</code></pre>
 </div>
 </div>
 </div>
@@ -2450,17 +2436,24 @@ Practice
 </div>
 </div>
 </div>
-<section id="quick-check" class="level2">
-<h2 class="anchored" data-anchor-id="quick-check">Quick Check</h2>
+<div class="callout callout-style-default callout-knowledge-check callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Knowledge Check
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ul>
-<li>What determines the column names when you don’t explicitly name the arguments to <code>data.frame()</code>?</li>
-<li>Can two columns in the same data frame have different types? Can they have different lengths? Why or why not?</li>
+<li>Can two columns in the same data frame have different types? Why or why not?</li>
+<li>Can two columns in the same data frame have different lengths? Why or why not?</li>
 </ul>
-<div id="qwebr-insertion-location-2"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+</div>
 
 
-</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

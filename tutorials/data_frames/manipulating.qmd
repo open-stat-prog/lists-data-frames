@@ -90,6 +90,88 @@ however, so it's worth understanding what's happening.
 
 :::
 
+### Convenience Functions
+
+Calling the `head()` function on a data frame returns the first `n` rows of the data frame.
+
+```{r}
+head(d1, 3)
+```
+
+Likewise, the `tail()` function returns the final `n` rows of the data frame.
+
+```{r}
+tail(d1, 3)
+```
+
+As with vectors, providing a negative value for the `n` argument returns the complementary number of rows from either
+the top or bottom of the data frame.
+
+```{r}
+head(d1, -3)
+tail(d1, -3)
+```
+
+::: practice
+
+The `iris` dataset is provided by Base R and available in any R session.
+
+```{r}
+head(iris, 10)
+```
+
+Use the `iris` dataset to complete the following tasks.
+
+:::: {.panel-tabset}
+
+## {{< var tab_title.question >}}
+
+1. Use three different methods to extract the `Petal.Length` column.
+   - Return the results as vectors.
+1. Extract the `Petal.Width` column.
+   - Return the result as a one-column data frame.
+1. Extract the first 20 rows of the `Sepal.Length` and `Sepal.Width` columns.
+   - Return the result as a $20 \times 2$ data frame.
+1. Extract the final 10 rows of the data frame.
+   - Return the result as a $10 \times 5$ data frame.
+
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+```
+
+## {{< var tab_title.solution >}}
+
+**Q1**
+
+```{r}
+iris$Petal.Length
+iris[["Petal.Length"]]
+iris[, "Petal.Length"]
+```
+
+**Q2**
+
+```{r}
+iris["Petal.Width"]
+```
+
+**Q3**
+
+```{r}
+iris[1:20, c("Sepal.Length", "Sepal.Width")]
+```
+
+**Q4**
+
+```{r}
+tail(iris, 10)
+```
+
+::::
+
+:::
+
 ## Modifying Data Frame Elements
 
 At this point, I hope it comes as no surprise to hear that we can overwrite the columns of a data frame using the same
@@ -296,8 +378,6 @@ d2
 ```
 
 ::: practice
-
-## Practice
 
 Run the following code to create an empty data frame containing 10 observations of the 3 variables: `a`,`b`, `c`. Then
 populate the data frame as described below.

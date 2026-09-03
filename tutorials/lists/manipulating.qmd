@@ -62,22 +62,28 @@ l1$c("name", "alive")
 
 ::: {.callout-tip}
 
-## A Mental Model for `$`, `[[]]`, and `[]`
+## Moving Day: A Mental Model for `$`, `[[]]`, and `[]`
 
 To gain some intuition for the different flavors of list subsetting, you can think of a list as a stack of moving boxes.
-Let's consider a three-slot list as our example. We conceptualize this list as a stack of three boxes. Let's say the
-first box contains clothes, the second box contains books, and the third box contains four smaller boxes that hold
-various types of office supplies.
+
+Let's consider a three-slot list as our example. We'll conceptualize this list as a stack of three boxes (box = list
+slot). Let's say the first box contains clothes (pile of clothes = some kind of vector), the second box contains books
+(stack of books = different kind of vector), and the third box contains four smaller boxes (set of smaller boxes =
+nested list) that hold various types of kitchen supplies.
 
 - The `$` and `[[]]` operators work like reaching *inside* a single box and retrieving its *contents*.
-  - In our analogy, these two operators unpack a single box.
-	- We remove the clothes from our first box and do something with those clothes.
-- The `[]` operator works like choosing one or more boxes from our stack and doing something with those unopened boxes.
-  - In our analogy, this operator picks up some boxes but doesn't open them.
-	- We pick up the first box and move it to our bedroom.
 
-If you ever find yourself surprised that a selection "is still a list" when you expected the raw value from the list
-slot, check whether you used `[]` (which always keeps the list wrapper) instead of `$` or `[[]]` (which unwrap it).
+	In our analogy, these two operators unpack a single box. For example, we might remove the books from the second box
+	and place them on a bookshelf. We're not interested in the box; we're directly interacting with the books.
+
+- The `[]` operator works like choosing one or more *unopened* boxes from our stack and doing something with those boxes.
+
+	In our analogy, this operator picks up some boxes but doesn't open them. For example, we might pick up the first two
+	boxes and move them to our bedroom. This time, we're only interacting with the boxes; we're not concerned with
+	anything inside the boxes.
+
+If you're ever surprised that a selection "is still a list" when you expected the raw value from the list slot, check
+whether you used `[]` (which always keeps the list wrapper) instead of `$` or `[[]]` (which unwrap the selected value).
 
 :::
 
@@ -117,11 +123,14 @@ someList <- list(
 class(someList$c)
 ```
 
-The command `someList$c` returns a list because the `c` slot in `someList` holds an entire list. Using the single
-element extraction procedure returns the contents of the `c` slot, which is another list, in this case.
+The command `someList$c` returns a list because the `c` slot in `someList` holds another list. Nothing special happens
+here: using the single element extraction procedure returns the contents of the `c` slot, as it always does. In this
+case, those contents just happen to be another list. In terms of our "Moving Day" analogy, running `someList$c` is like
+unpacking the third box. After unpacking, we're left with more boxes, since the third box only contained a set of
+smaller boxes.
 
-So, don't fall into the trap of thinking that `$` and `[[]]` *never* return a list. Both the `$` and `[[]]` operators
-will return a list, when the selected slot holds a list.
+This example is meant as a warning against overgeneralizing simple rules. Don't fall into the trap of thinking that `$`
+and `[[]]` *never* return a list. Both of these operators will return a list, when the selected slot holds a list.
 
 :::
 
@@ -160,35 +169,91 @@ l2[[3]] <- 1:4
 l2
 ```
 
+::: practice
+
+Use the list that you created in the last practice problem for this exercise.
+
+:::: {.panel-tabset}
+
+## {{< var tab_title.question >}}
+
+Replace the character vector that you assigned to the `hair` slot with a two-slot list comprising two length-one
+character vectors.
+
+- Use the first vector to describe your hair color.
+  - This vector should be the same as the one previously stored in the `hair` slot.
+- Use the second vector to describe your hair type (e.g., wavy, straight, curly).
+
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+```
+
+## {{< var tab_title.solution >}}
+
+Recall my solution for the last practice problem.
+
+```{r}
+#| include: false
+
+myInfo <- list(
+  name = "bob",
+  eyes = "blue",
+  hair = "black",
+  color = "green"
+)
+```
+
+```{r}
+myInfo
+```
+
+I would modify my list as follows.
+
+```{r}
+myInfo$hair <- list(
+  color = "black",
+  type = "wavy"
+)
+
+myInfo
+```
+
+::::
+
+:::
+
 ## Using List Elements
 
 Importantly, the types of the objects you store in a list are maintained.
 
 ```{r}
-(x <- 1:5)
-(y <- list())
-(z <- letters[1:10])
-
-(l3 <- list(a = x, b = y, c = z))
+x <- 1:5
+y <- list()
+z <- letters[1:10]
+l3 <- list(a = x, b = y, c = z)
 
 class(x)
-class(y)
-class(z)
-
 class(l3$a)
+
+class(y)
 class(l3$b)
+
+class(z)
 class(l3$c)
 ```
 
-Consequently, objects stored in a list behave just as they would outside of the list. For example, if a function is
-stored as an element of a list, we can call it directly:
+Consequently, objects stored in a list behave just as they would outside of the list. For example, if we store a
+function as an element of a list, we can call that function directly from within the list.
 
 ```{r}
 # Store the Base R 'mean' function in the 'l3' list
 l3$myMean <- mean
 
-# Call both versions of our function
+# Call the normal 'mean' function
 mean(1:5)
+
+# Call the function from our list
 l3$myMean(1:5)
 ```
 
@@ -220,24 +285,13 @@ Recall the basic logical operators:
 Recall my solution for the last practice problem.
 
 ```{r}
-#| include: false
-
-myInfo <- list(
-  name = "bob",
-  eyes = "blue",
-  hair = "black",
-  color = "green"
-)
-```
-
-```{r}
 myInfo
 ```
 
 So, I would set up the necessary logical test as follows.
 
 ```{r}
-myInfo$eyes == myInfo$color | myInfo$hair == myInfo$color
+myInfo$eyes == myInfo$color | myInfo$hair$color == myInfo$color
 ```
 
 ::::

@@ -1,16 +1,14 @@
-```{r, echo = FALSE, include = FALSE}
+Question
+========
 
+```{r, echo = FALSE, include = FALSE}
 df <- data.frame(
   name = c("bob", "mike", "mark", "steve"),
   age = c(25, 23, 24, 26),
   height = c(180, 178, 169, 183),
   eyes = c("green", "green", "blue", "brown")
 )
-
 ```
-
-Question
-========
 
 Consider the following data frame, `df`.
 
@@ -22,6 +20,7 @@ How can we extract the `height` column and return the selection as a *data frame
 
 Answerlist
 -----------
+
 * `df[3]`
 * `df["height"]`
 * `df$height`
@@ -39,6 +38,7 @@ Solution
 
 Answerlist
 -----------
+
 * Correct
 * Correct
 * Wrong: This command will return the `height` column as a numeric vector.
@@ -53,6 +53,7 @@ Answerlist
 
 Meta-information
 ================
+
 exname: return_df_column_as_df
 extype: mchoice
 exsolution: 11000000000

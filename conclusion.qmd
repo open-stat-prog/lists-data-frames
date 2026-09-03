@@ -12,12 +12,7 @@ format:
 source(here::here("R", "buttons.R"))
 ```
 
-By completing this module, you've built a solid foundation in understanding two more of R's essential data
-structures:
-
-- Lists
-- Data Frames
-
+<!--
 ## Hand-In Assignment
 
 ::: practice
@@ -47,6 +42,9 @@ Save all of your commands, in the order you ran them, in a single plain-text or 
 A teacher reviewing your submission should be able to see: a correctly constructed list, two working (and correctly explained) list-access methods, a correctly constructed data frame, correct conditional selection/modification, and a clear explanation of the list–data-frame relationship in your own words.
 
 :::
+-->
+
+Congratulations! You've completed the *Lists & Data Frames* module.
 
 ## Learning Goals
 
@@ -57,16 +55,16 @@ Now that you've completed this module, you should be able to:
 1. Describe the characteristics of an R list.
 1. Describe important use-cases for lists, and explain why lists are the best choice in these situations.
 1. Create new lists in R.
-1. Access and modify list elements using different methods and explain the difference between the available
+1. Access and modify list elements using different methods, and explain the difference between the available
    selection operators.
 
 ### Data Frames
 
-1. Describe the characteristics of data frames.
+1. Describe the characteristics of data frames. 
 1. Explain important use-cases for data frames, and explain why data frames are the best choice in these situations.
-1. Explain how data frames and lists are related.
-1. Explain the differences between data frames and matrices.
 1. Create new data frames in R.
+1. Explain how data frames and lists are related. 
+1. Explain the differences between data frames and matrices. 
 1. Use list-style and matrix-style indexing to access and modify the elements of a data frame.
 1. Explain the different effects of the available selection operators.
 1. Explain how recycling works with data frames.
@@ -91,6 +89,8 @@ from Hadley Wickham's [Advanced R](https://adv-r.hadley.nz/index.html).
 
 Now that you're comfortable with lists and data frames, you're ready to move on to the last data structure in this
 series: factors, which R uses to represent categorical data.
+
+Click the button below to get started!
 
 ```{r}
 #| echo: false

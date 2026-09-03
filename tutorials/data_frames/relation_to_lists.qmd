@@ -117,6 +117,45 @@ converted-and-back-converted version of the data frame, `d1a`, is identical to t
 identical(d1, d1a)
 ```
 
+::: practice
+
+Use a single function to convert the data frame you created in the last practice problem to a list.
+
+:::: {.panel-tabset}
+
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+```
+
+## {{< var tab_title.solution >}}
+
+Recall my solution to the last problem.
+
+```{r}
+#| echo: false
+
+df <- data.frame(
+	text = rep("text", 7),
+	integer = sample(1:10, 7, replace = TRUE),
+	complex = complex(7, 1:5, 1:3)
+)
+```
+
+```{r}
+df
+```
+
+To convert this data frame to a list, I simply apply the `as.list()` function.
+
+```{r}
+as.list(df)
+```
+
+::::
+
+:::
+
 ## Data Frames Are Not Matrices
 
 As you have probably surmised, data frames are not matrices. Although data frames and matrices share many superficial
@@ -153,6 +192,79 @@ typeof(m1)
 (m4 <- as.matrix(d4))
 typeof(m4)
 ```
+
+::: practice
+
+Consider the following data frame when answering this question.
+
+```{r}
+df <- data.frame(
+	x1 = rep(c(TRUE, FALSE), 3),
+	x2 = seq(2, 12, 2)
+)
+
+df
+```
+
+:::: {.panel-tabset}
+
+## {{< var tab_title.question >}}
+
+**Predict** what the following code will print.
+
+```{r}
+#| eval: false
+
+t(df)
+```
+
+Check your prediction using the interactive editor, and explain why this code prints the observed result.
+
+## {{< var tab_title.hint >}}
+
+Recall that the `t()` function *transposes* the matrix provided as its argument.
+
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+#| context: setup
+
+df <- data.frame(
+	x1 = rep(c(TRUE, FALSE), 3),
+	x2 = seq(2, 12, 2)
+)
+```
+
+```{webr-r}
+```
+
+## {{< var tab_title.solution >}}
+
+Even though we can't do matrix operations on data frames, the code doesn't error. Our original data frame hasn't
+made it through the operation intact, though.
+
+```{r}
+t(df)
+```
+
+In fact, we truly *cannot* do matrix operations on data frames, and the apparent success of this command isn't a
+counterexample. Before running `t()`, R is type casting `df` into a matrix and then transposing that matrix. So, the
+above is equivalent to the following.
+
+```{r}
+t(as.matrix(df))
+```
+
+The type casting explains why the logical values in the `x1` column appear as numeric values in the corresponding
+transposed row. The least destructive type conversion required casting `df` as a numeric matrix.
+
+```{r}
+as.matrix(df)
+```
+
+::::
+
+:::
 
 :::knowledge-check
 

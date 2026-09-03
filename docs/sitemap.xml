@@ -2,75 +2,79 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.openstatprog.com/lists-data-frames/tutorials/lists/manipulating.html</loc>
-    <lastmod>2026-09-02T16:10:39.216Z</lastmod>
+    <lastmod>2026-09-03T19:17:17.574Z</lastmod>
   </url>
   <url>
     <loc>https://www.openstatprog.com/lists-data-frames/tutorials/lists/creating.html</loc>
     <lastmod>2026-09-02T16:15:59.056Z</lastmod>
   </url>
   <url>
-    <loc>https://www.openstatprog.com/lists-data-frames/tutorials/data_frames/manipulating.html</loc>
-    <lastmod>2026-09-03T14:48:42.897Z</lastmod>
+    <loc>https://www.openstatprog.com/lists-data-frames/tutorials/data_frames/relation_to_lists.html</loc>
+    <lastmod>2026-09-03T19:52:57.555Z</lastmod>
   </url>
   <url>
-    <loc>https://www.openstatprog.com/lists-data-frames/tutorials/data_frames/creating.html</loc>
-    <lastmod>2026-08-28T11:47:46.702Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/lists-data-frames/quizzes/lists/questions/list_name.html</loc>
-    <lastmod>2026-09-03T11:46:40.466Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/lists-data-frames/quizzes/lists/index.html</loc>
-    <lastmod>2026-09-03T10:10:06.165Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/lists-data-frames/quizzes/data_frames/questions/return_column_as_vector.html</loc>
-    <lastmod>2026-08-28T11:47:46.693Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/lists-data-frames/quizzes/data_frames/questions/relationships.html</loc>
-    <lastmod>2026-08-28T11:47:46.691Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/lists-data-frames/quizzes/data_frames/index.html</loc>
-    <lastmod>2026-09-03T17:19:07.147Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/lists-data-frames/index.html</loc>
-    <lastmod>2026-09-02T10:31:01.132Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/lists-data-frames/conclusion.html</loc>
-    <lastmod>2026-08-28T11:47:46.477Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/lists-data-frames/in_progress.html</loc>
-    <lastmod>2026-08-28T11:47:46.684Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/lists-data-frames/quizzes/data_frames/questions/recycling_concept.html</loc>
-    <lastmod>2026-08-28T11:47:46.690Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/lists-data-frames/quizzes/data_frames/questions/return_column_as_df.html</loc>
-    <lastmod>2026-08-28T11:47:46.692Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/lists-data-frames/quizzes/data_frames/questions/select_row.html</loc>
-    <lastmod>2026-08-28T11:47:46.693Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/lists-data-frames/quizzes/lists/questions/list_change.html</loc>
-    <lastmod>2026-09-03T11:46:50.791Z</lastmod>
+    <loc>https://www.openstatprog.com/lists-data-frames/tutorials/data_frames/index.html</loc>
+    <lastmod>2026-09-03T12:07:30.968Z</lastmod>
   </url>
   <url>
     <loc>https://www.openstatprog.com/lists-data-frames/quizzes/lists/questions/selection_operators.html</loc>
     <lastmod>2026-09-03T10:18:43.257Z</lastmod>
   </url>
   <url>
-    <loc>https://www.openstatprog.com/lists-data-frames/tutorials/data_frames/index.html</loc>
-    <lastmod>2026-09-03T12:07:30.968Z</lastmod>
+    <loc>https://www.openstatprog.com/lists-data-frames/quizzes/lists/questions/list_change.html</loc>
+    <lastmod>2026-09-03T11:46:50.791Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/lists-data-frames/quizzes/data_frames/questions/select_row.html</loc>
+    <lastmod>2026-09-03T18:08:43.515Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/lists-data-frames/quizzes/data_frames/questions/return_column_as_df.html</loc>
+    <lastmod>2026-09-03T18:09:12.547Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/lists-data-frames/quizzes/data_frames/questions/recycling_concept.html</loc>
+    <lastmod>2026-09-03T17:58:24.881Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/lists-data-frames/in_progress.html</loc>
+    <lastmod>2026-08-28T11:47:46.684Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/lists-data-frames/conclusion.html</loc>
+    <lastmod>2026-09-03T18:14:21.928Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/lists-data-frames/index.html</loc>
+    <lastmod>2026-09-03T18:15:18.487Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/lists-data-frames/quizzes/data_frames/index.html</loc>
+    <lastmod>2026-09-03T17:19:07.147Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/lists-data-frames/quizzes/data_frames/questions/relationships.html</loc>
+    <lastmod>2026-09-03T18:06:15.011Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/lists-data-frames/quizzes/data_frames/questions/return_column_as_vector.html</loc>
+    <lastmod>2026-09-03T18:08:59.584Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/lists-data-frames/quizzes/lists/index.html</loc>
+    <lastmod>2026-09-03T10:10:06.165Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/lists-data-frames/quizzes/lists/questions/list_name.html</loc>
+    <lastmod>2026-09-03T11:46:40.466Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/lists-data-frames/tutorials/data_frames/creating.html</loc>
+    <lastmod>2026-09-03T19:29:46.505Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/lists-data-frames/tutorials/data_frames/manipulating.html</loc>
+    <lastmod>2026-09-03T20:20:57.816Z</lastmod>
   </url>
   <url>
     <loc>https://www.openstatprog.com/lists-data-frames/tutorials/data_frames/tibbles.html</loc>
@@ -79,9 +83,5 @@
   <url>
     <loc>https://www.openstatprog.com/lists-data-frames/tutorials/lists/index.html</loc>
     <lastmod>2026-09-02T11:24:02.733Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/lists-data-frames/tutorials/data_frames/relation_to_lists.html</loc>
-    <lastmod>2026-09-03T17:13:12.421Z</lastmod>
   </url>
 </urlset>
