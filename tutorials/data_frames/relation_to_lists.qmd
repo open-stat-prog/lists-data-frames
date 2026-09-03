@@ -1,0 +1,276 @@
+---
+title: "Relation to Lists"
+---
+
+::: {.callout-important}
+
+Data frames are somewhat strange objects that can cause a lot of confusion. To new users, data frames usually feel more
+similar to matrices than lists, but the opposite is actually true. The underlying implementation of data frames
+doesn't match their apparent tabular structure. This page compares data frames to lists and matrices. Understanding
+these similarities and differences will help you use data frames more effectively and avoid many common mistakes.
+
+:::
+
+Did you notice the similarity between the code that we used to create data frames on the last page and the code that we
+used to create lists in the last tutorial?
+
+```{r}
+# Create a data frame
+someDataFrame <- data.frame(
+  a = rnorm(10),
+  b = 1:10,
+  c = letters[1:10]
+)
+
+# Create a list
+someDataFrame <- list(
+  a = rnorm(10),
+  b = 1:10,
+  c = letters[1:10]
+)
+```
+
+If so, you were right to see some parallels: lists and data frames are actually the same thing!
+
+## Data Frames Are Actually Lists
+
+Data frames are actually implemented as a special kind of list. Each column in a data frame is an element of a list, but
+all of these list elements must be vector-like objects (not necessarily atomic vectors, though) with equal length. In
+other words, a data frame is just a list where each slot contains a vector representing one column in the data frame,
+but with additional constraints and attributes that allow the data frame to behave like a 2 dimensional table.
+
+```{r}
+d1 <- data.frame(
+  a = sample(c(TRUE, FALSE), 10, replace = TRUE),
+  b = sample(c("foo", "bar"), 10, replace = TRUE),
+  c = runif(10)
+)
+d2 <- data.frame(a = 1:10, b = c(-1, 1), c = seq(0.1, 1, 0.1))
+d3 <- data.frame(x = -5:4, y = c(1, 10), z = seq(1, 1.5, length.out = 10))
+```
+
+For example, `d1`, `d2`, and `d3` are all data frames.
+
+```{r}
+is.data.frame(d1)
+is.data.frame(d2)
+is.data.frame(d3)
+```
+
+But all three are also lists.
+
+```{r}
+is.list(d1)
+is.list(d2)
+is.list(d3)
+```
+
+### Not all Lists are Data Frames
+
+All data frames are lists, but the inverse is not always true. Some lists are not data frames.
+
+```{r}
+l1 <- list()
+l2 <- list(
+  a = sample(c(TRUE, FALSE), 10, replace = TRUE),
+  b = sample(c("foo", "bar"), 10, replace = TRUE),
+  c = runif(10)
+)
+l3 <- list(d2, d3)
+```
+
+As you can see below, `l1`, `l2`, and `l3` are all lists, but they're not data frames.
+
+```{r}
+is.list(l1)
+is.list(l2)
+is.list(l3)
+
+is.data.frame(l1)
+is.data.frame(l2)
+is.data.frame(l3)
+```
+
+### List $\leftrightarrow$ Data Frame Conversion
+
+We can use the `as.list()` type conversion function to convert a data frame to a list. For example, in the following
+code, we convert `d1` into a list, `l1a`.
+
+```{r}
+(l1a <- as.list(d1))
+is.list(l1a)
+is.data.frame(l1a)
+```
+
+Likewise, we can use the `as.data.frame()` to convert a list to a data frame. Below, we invert the conversion from
+above.
+
+```{r}
+(d1a <- as.data.frame(l1a))
+is.data.frame(d1a)
+```
+
+In most situations, these type conversions do not destroy an information in the underlying data. Below, we see that the
+converted-and-back-converted version of the data frame, `d1a`, is identical to the original data frame, `d1`.
+
+```{r}
+identical(d1, d1a)
+```
+
+::: practice
+
+Use a single function to convert the data frame you created in the last practice problem to a list.
+
+:::: {.panel-tabset}
+
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+```
+
+## {{< var tab_title.solution >}}
+
+Recall my solution to the last problem.
+
+```{r}
+#| echo: false
+
+df <- data.frame(
+	text = rep("text", 7),
+	integer = sample(1:10, 7, replace = TRUE),
+	complex = complex(7, 1:5, 1:3)
+)
+```
+
+```{r}
+df
+```
+
+To convert this data frame to a list, I simply apply the `as.list()` function.
+
+```{r}
+as.list(df)
+```
+
+::::
+
+:::
+
+## Data Frames Are Not Matrices
+
+As you have probably surmised, data frames are not matrices. Although data frames and matrices share many superficial
+similarities, they're almost entirely unrelated types of objects.
+
+```{r}
+is.matrix(d1)
+is.matrix(d2)
+is.matrix(d3)
+```
+
+Consequently, you cannot apply matrix operations (such as matrix multiplication) to a data frame.
+
+```{r error = TRUE}
+d2 %*% t(d3)
+```
+
+If you wanted to analyze a data frame like a matrix, you could *type cast* the data frame into a matrix using the
+`as.matrix()` function.
+
+```{r}
+as.matrix(d2) %*% t(as.matrix(d3))
+```
+
+You should be carefully about any type conversions, though. If your data frame contains mixed column types, R will
+coerce every column into some compatible type by applying the same coercion rule you learned about in the [**Vectors &
+Matrices**](https://openstatprog.com/vectors-matrices/) module.
+
+```{r}
+(m1 <- as.matrix(d1))
+typeof(m1)
+
+(d4 <- data.frame(x = rep(c(TRUE, FALSE), 3), y = runif(6)))
+(m4 <- as.matrix(d4))
+typeof(m4)
+```
+
+::: practice
+
+Consider the following data frame when answering this question.
+
+```{r}
+df <- data.frame(
+	x1 = rep(c(TRUE, FALSE), 3),
+	x2 = seq(2, 12, 2)
+)
+
+df
+```
+
+:::: {.panel-tabset}
+
+## {{< var tab_title.question >}}
+
+**Predict** what the following code will print.
+
+```{r}
+#| eval: false
+
+t(df)
+```
+
+Check your prediction using the interactive editor, and explain why this code prints the observed result.
+
+## {{< var tab_title.hint >}}
+
+Recall that the `t()` function *transposes* the matrix provided as its argument.
+
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+#| context: setup
+
+df <- data.frame(
+	x1 = rep(c(TRUE, FALSE), 3),
+	x2 = seq(2, 12, 2)
+)
+```
+
+```{webr-r}
+```
+
+## {{< var tab_title.solution >}}
+
+Even though we can't do matrix operations on data frames, the code doesn't error. Our original data frame hasn't
+made it through the operation intact, though.
+
+```{r}
+t(df)
+```
+
+In fact, we truly *cannot* do matrix operations on data frames, and the apparent success of this command isn't a
+counterexample. Before running `t()`, R is type casting `df` into a matrix and then transposing that matrix. So, the
+above is equivalent to the following.
+
+```{r}
+t(as.matrix(df))
+```
+
+The type casting explains why the logical values in the `x1` column appear as numeric values in the corresponding
+transposed row. The least destructive type conversion required casting `df` as a numeric matrix.
+
+```{r}
+as.matrix(df)
+```
+
+::::
+
+:::
+
+:::knowledge-check
+
+- In one sentence, explain how a data frame is related to a list.
+- if `a` and `b` are both data frames, why will `a %*% t(b)` produce an error?
+- If a data frame has one text column and one numeric column, what happens if you convert it to a matrix with
+  `as.matrix()`? Why?
+
+:::

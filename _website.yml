@@ -41,8 +41,10 @@ website:
         text: "Data Frames"
         contents:
           - href: tutorials/data_frames/creating.qmd
+          - href: tutorials/data_frames/relation_to_lists.qmd
           - href: tutorials/data_frames/manipulating.qmd
           - href: tutorials/data_frames/tibbles.qmd
+            text: "Tibbles"
           - href: quizzes/data_frames/index.qmd
             text: "Knowledge Quiz"
       - href: conclusion.qmd

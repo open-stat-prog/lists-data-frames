@@ -2,48 +2,184 @@
 title: "Creating Lists"
 ---
 
-::: {.callout-note}
-This page is hands-on: constructing and naming lists.
-:::
-
-## Generating Lists
-
-We construct lists using the `list()` function. Lists place essentially no restrictions on the nature of their contents:
+Lists place essentially no restrictions on the nature of their contents:
 
 - A list slot can hold any valid R object (including other lists).
 - The contents of different list slots do not need to have the same type (nor do they need to be different types).
 - The contents of different list slots do not need to have the same---or otherwise conformable---sizes.
 
+So, lists are a great way to store substantively related, but heterogeneously sized/typed, pieces of data in one object.
+
+## Generating Lists
+
+We construct lists using the `list()` function.
+
 ```{r}
 (l1 <- list(1, 2, 3))
-(l2 <- list("bob", TRUE, 33, 42+3i))
+(l2 <- list("bob", TRUE, 33, 42 + 3i))
 (l3 <- list(c(1, 2), c(3, 4)))
 ```
 
+::: practice
+
+Create a list called `myList` that comprises the following three elements.
+
+1. A length-three numeric vector
+1. A length-one character vector
+1. A length-two logical vector
+
+:::: {.panel-tabset}
+
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+```
+
+## {{< var tab_title.solution >}}
+
+Here's one possible solution.
+
+```{r}
+myList <- list(
+  1:3,
+  "alice is not bob",
+  rep(TRUE, 2)
+)
+
+myList
+```
+
+::::
+
+:::
 
 ## Naming List Elements
 
 We can name the elements of a list by defining the list slots via key-value pairs.
 
 ```{r}
-l4 <- list(name = "bob",
-           alive = TRUE,
-           age = 33,
-           relationshipStatus = 42+3i)
+l4 <- list(
+  name = "bob",
+  alive = TRUE,
+  age = 33,
+  relationshipStatus = 42 + 3i
+)
+
 l4
 ```
 
 We can use the `names()` function to access and modify the names of a list's slots.
 
 ```{r}
-names(l4)
+# The slots in l1 don't yet have names
+names(l1)
+l1
+
+# Add names to the l1 slots
 names(l1) <- c("first", "second", "third")
 l1
 ```
 
+The `names()` function returns a character vector. So, we can assign/overwrite a subset of the names using ordinary
+vector subsetting syntax.
+
+```{r}
+# Change the name for the second slot in l4
+names(l4)[2] <- "not dead"
+names(l4)
+l4
+```
+
 ::: practice
 
-## Practice
+Consider the following list (`aList`) when answering this question.
+
+```{r}
+#| echo: false
+
+aList <- list(
+	hello = "world",
+	day = "monday",
+	name = "jude",
+	false = TRUE
+)
+```
+
+```{r}
+aList
+```
+
+:::: {.panel-tabset}
+
+## {{< var tab_title.question >}}
+
+**Predict** what the following code will print.
+
+```{r}
+#| eval: false
+
+names(aList)[2:3] <- c("blue", "hey")
+aList
+```
+
+Use the interactive editor to check your predictions.
+
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+#| context: setup
+
+aList <- list(
+	hello = "world",
+	day = "monday",
+	name = "jude",
+	false = TRUE
+)
+```
+
+```{webr-r}
+```
+
+## {{< var tab_title.solution >}}
+
+We've overwritten the names of the second and third list slots with the new values `blue` and `hey`, respectively. So,
+we see an updated version of `aList` that contains the same data but has two new names.
+
+```{r}
+#| echo: false
+
+names(aList)[2:3] <- c("blue", "hey")
+aList
+```
+
+::::
+
+:::
+
+## Nested Lists
+
+It's difficult to overstate the versatility of lists as general-purpose containers for R objects. It's no exaggeration
+to say that a list can store any type of R object. Notably, lists are perfectly happy to store other lists. So the
+following abomination is a completely valid list.
+
+```{r}
+level0 <- list(
+	level1 = list(
+		level2a = list(
+			level3a = list("How much wood"),
+			level3b = list("would a woodchuck chuck"),
+			level3c = list("if")
+		),
+		level2b = list(
+			level3a = list("a"),
+			level3b = list("woodchuck could"),
+			level3c = list("chuck wood?")
+		)
+	)
+)
+```
+
+::: practice
 
 Create a list to describe yourself. Include the following named elements in your list:
 
@@ -54,19 +190,21 @@ Create a list to describe yourself. Include the following named elements in your
 
 :::: {.panel-tabset}
 
-## {{< var tab_title.question >}}
+## {{< var tab_title.editor >}}
 
 ```{webr-r}
-
 ```
 
 ## {{< var tab_title.solution >}}
 
 ```{r}
-myInfo <- list(name = "bob",
-               eyes = "blue",
-               hair = "black",
-               color = "green")
+myInfo <- list(
+  name = "bob",
+  eyes = "blue",
+  hair = "black",
+  color = "green"
+)
+
 myInfo
 ```
 
@@ -74,10 +212,9 @@ myInfo
 
 :::
 
-## Quick Check
+::: knowledge-check
 
 - What's the key difference between a list slot and a vector element, in terms of what kind of data each can hold?
-- If you don't name a list's slots, can you still tell R which slot to modify later? How?
+- If you don't name a list's slots when you generate the list, can you still add names later later? How?
 
-```{webr-r}
-```
+:::

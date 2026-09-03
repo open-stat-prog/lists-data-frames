@@ -2,10 +2,6 @@
 title: "Creating Data Frames"
 ---
 
-::: {.callout-note}
-This page is hands-on: constructing data frames with columns of different types.
-:::
-
 We create data frames using the `data.frame()` function. This function takes vectors as arguments, and each vector
 becomes a column in the resulting data frame. 
 
@@ -56,6 +52,16 @@ a. A numeric vector containing 10 values randomly sampled from the interval [0, 
                   c = runif(10)))
 ```
 
+**Predict** what the following code will print.
+
+```{webr-r}
+data.frame(
+  foo = head(1:100, 6),
+  bar = seq(0, 1, 0.2),
+  baz = rep(c("alice", "bob"), each = 3)
+)
+```
+
 If we want to quickly generate an empty data frame, we can supply a matrix as the sole argument to `data.frame()`.
 
 ```{r}
@@ -63,8 +69,6 @@ If we want to quickly generate an empty data frame, we can supply a matrix as th
 ```
 
 ::: practice
-
-## Practice
 
 Create a data frame containing 7 observations of 3 variables.
 
@@ -83,10 +87,12 @@ Create a data frame containing 7 observations of 3 variables.
 There are an infinite number of correct solutions to this problem (literally). The following is one possibility.
 
 ```{r}
-df <- data.frame(text = rep("text", 7),
-                 integer = sample(1:10, 7, replace = TRUE),
-                 complex = complex(7, 1:5, 1:3)
-                 )
+df <- data.frame(
+	text = rep("text", 7),
+	integer = sample(1:10, 7, replace = TRUE),
+	complex = complex(7, 1:5, 1:3)
+)
+
 df
 ```
 
@@ -94,10 +100,9 @@ df
 
 :::
 
-## Quick Check
+::: knowledge-check
 
-- What determines the column names when you don't explicitly name the arguments to `data.frame()`?
-- Can two columns in the same data frame have different types? Can they have different lengths? Why or why not?
+- Can two columns in the same data frame have different types? Why or why not?
+- Can two columns in the same data frame have different lengths? Why or why not?
 
-```{webr-r}
-```
+:::

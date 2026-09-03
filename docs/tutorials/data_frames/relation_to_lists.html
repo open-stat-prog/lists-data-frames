@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Manipulating Data Frames – OSP Lists &amp; Data Frames</title>
+<title>Relation to Lists – OSP Lists &amp; Data Frames</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,8 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../tutorials/data_frames/tibbles.html" rel="next">
-<link href="../../tutorials/data_frames/relation_to_lists.html" rel="prev">
+<link href="../../tutorials/data_frames/manipulating.html" rel="next">
+<link href="../../tutorials/data_frames/creating.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -404,7 +404,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"","options":{"editor-max-height":"","read-only":"false","comment":"","autorun":"false","label":"unnamed-chunk-1","warning":"true","editor-font-scale":"1","classes":"","output":"true","editor-word-wrap":"true","message":"true","dpi":72,"fig-width":7,"results":"markup","editor-quick-suggestions":"false","context":"interactive","fig-cap":"","out-width":"700px","out-height":"","fig-height":5},"id":1},{"code":"df <- data.frame(\n  a = rep(NA, 10),\n  b = rep(NA, 10),\n  c = rep(NA, 10)\n)","options":{"editor-max-height":"","read-only":"false","comment":"","autorun":"false","label":"unnamed-chunk-2","warning":"true","editor-font-scale":"1","classes":"","output":"true","editor-word-wrap":"true","message":"true","dpi":72,"fig-width":7,"results":"markup","editor-quick-suggestions":"false","context":"interactive","fig-cap":"","out-width":"700px","out-height":"","fig-height":5},"id":2}];
+globalThis.qwebrCellDetails = [{"code":"","options":{"editor-max-height":"","comment":"","fig-width":7,"dpi":72,"fig-cap":"","classes":"","fig-height":5,"results":"markup","label":"unnamed-chunk-1","editor-word-wrap":"true","read-only":"false","out-width":"700px","warning":"true","editor-quick-suggestions":"false","out-height":"","output":"true","autorun":"false","message":"true","context":"interactive","editor-font-scale":"1"},"id":1},{"code":"df <- data.frame(\n    x1 = rep(c(TRUE, FALSE), 3),\n    x2 = seq(2, 12, 2)\n)","options":{"editor-max-height":"","comment":"","fig-width":7,"dpi":72,"fig-cap":"","classes":"","fig-height":5,"results":"markup","label":"unnamed-chunk-2","editor-word-wrap":"true","read-only":"false","out-width":"700px","warning":"true","editor-quick-suggestions":"false","out-height":"","output":"true","autorun":"true","message":"true","context":"setup","editor-font-scale":"1"},"id":2},{"code":"","options":{"editor-max-height":"","comment":"","fig-width":7,"dpi":72,"fig-cap":"","classes":"","fig-height":5,"results":"markup","label":"unnamed-chunk-3","editor-word-wrap":"true","read-only":"false","out-width":"700px","warning":"true","editor-quick-suggestions":"false","out-height":"","output":"true","autorun":"false","message":"true","context":"interactive","editor-font-scale":"1"},"id":3}];
 
 </script>
 <script type="module">
@@ -1658,45 +1658,6 @@ globalThis.qwebrExecuteCode = async function (
 
 </script>
 <style>
-div.callout-knowledge-check.callout {
-  border-left-color: #368FFF;
-}
-div.callout-knowledge-check.callout-style-default > .callout-header {
-  background-color: rgba(54, 143, 255, 0.13);
-}
-div.callout-knowledge-check .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-knowledge-check.callout-style-default .callout-icon::before, div.callout-knowledge-check.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f044' !important;
-  background-image: none;
-}
-div.callout-going-further.callout {
-  border-left-color: #B58900;
-}
-div.callout-going-further.callout-style-default > .callout-header {
-  background-color: rgba(181, 137, 0, 0.13);
-}
-div.callout-going-further .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-going-further.callout-style-default .callout-icon::before, div.callout-going-further.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f4d7' !important;
-  background-image: none;
-}
-div.callout-resource.callout {
-  border-left-color: orange;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgb(from orange r g b / 13%);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f0c1' !important;
-  background-image: none;
-}
 div.callout-common-mistakes.callout {
   border-left-color: #B01919;
 }
@@ -1708,6 +1669,19 @@ div.callout-common-mistakes.callout-style-default .callout-icon::before, div.cal
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f188' !important;
+  background-image: none;
+}
+div.callout-completion-time.callout {
+  border-left-color: gray;
+}
+div.callout-completion-time.callout-style-default > .callout-header {
+  background-color: rgb(from gray r g b / 13%);
+}
+div.callout-completion-time .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-completion-time.callout-style-default .callout-icon::before, div.callout-completion-time.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f2f2' !important;
   background-image: none;
 }
 div.callout-reading.callout {
@@ -1723,17 +1697,17 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
   content: '\f518' !important;
   background-image: none;
 }
-div.callout-reading-advanced.callout {
-  border-left-color: red;
+div.callout-resource.callout {
+  border-left-color: orange;
 }
-div.callout-reading-advanced.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
 }
-div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f518' !important;
+  content: '\f0c1' !important;
   background-image: none;
 }
 div.callout-practice.callout {
@@ -1749,17 +1723,43 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   content: '\f085' !important;
   background-image: none;
 }
-div.callout-completion-time.callout {
-  border-left-color: gray;
+div.callout-going-further.callout {
+  border-left-color: #B58900;
 }
-div.callout-completion-time.callout-style-default > .callout-header {
-  background-color: rgb(from gray r g b / 13%);
+div.callout-going-further.callout-style-default > .callout-header {
+  background-color: rgba(181, 137, 0, 0.13);
 }
-div.callout-completion-time .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-completion-time.callout-style-default .callout-icon::before, div.callout-completion-time.callout-titled .callout-icon::before {
+div.callout-going-further .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-going-further.callout-style-default .callout-icon::before, div.callout-going-further.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f2f2' !important;
+  content: '\f4d7' !important;
+  background-image: none;
+}
+div.callout-knowledge-check.callout {
+  border-left-color: #368FFF;
+}
+div.callout-knowledge-check.callout-style-default > .callout-header {
+  background-color: rgba(54, 143, 255, 0.13);
+}
+div.callout-knowledge-check .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-knowledge-check.callout-style-default .callout-icon::before, div.callout-knowledge-check.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f044' !important;
+  background-image: none;
+}
+div.callout-reading-advanced.callout {
+  border-left-color: red;
+}
+div.callout-reading-advanced.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
+}
+div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
   background-image: none;
 }
 div.callout-explanation.callout {
@@ -1856,7 +1856,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/data_frames/index.html">Data Frames</a></li><li class="breadcrumb-item"><a href="../../tutorials/data_frames/manipulating.html">Manipulating Data Frames</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/data_frames/index.html">Data Frames</a></li><li class="breadcrumb-item"><a href="../../tutorials/data_frames/relation_to_lists.html">Relation to Lists</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -1920,13 +1920,13 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../tutorials/data_frames/relation_to_lists.html" class="sidebar-item-text sidebar-link">
+  <a href="../../tutorials/data_frames/relation_to_lists.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Relation to Lists</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../tutorials/data_frames/manipulating.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../tutorials/data_frames/manipulating.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Manipulating Data Frames</span></a>
   </div>
 </li>
@@ -1960,21 +1960,12 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#accessing-data-frame-elements" id="toc-accessing-data-frame-elements" class="nav-link active" data-scroll-target="#accessing-data-frame-elements">Accessing Data Frame Elements</a>
+  <li><a href="#data-frames-are-actually-lists" id="toc-data-frames-are-actually-lists" class="nav-link active" data-scroll-target="#data-frames-are-actually-lists">Data Frames Are Actually Lists</a>
   <ul class="collapse">
-  <li><a href="#matrix-style-selection" id="toc-matrix-style-selection" class="nav-link" data-scroll-target="#matrix-style-selection">Matrix-Style Selection</a></li>
-  <li><a href="#quirks-of-matrix-style-subsetting" id="toc-quirks-of-matrix-style-subsetting" class="nav-link" data-scroll-target="#quirks-of-matrix-style-subsetting">Quirks of Matrix-Style Subsetting</a></li>
-  <li><a href="#convenience-functions" id="toc-convenience-functions" class="nav-link" data-scroll-target="#convenience-functions">Convenience Functions</a></li>
+  <li><a href="#not-all-lists-are-data-frames" id="toc-not-all-lists-are-data-frames" class="nav-link" data-scroll-target="#not-all-lists-are-data-frames">Not all Lists are Data Frames</a></li>
+  <li><a href="#list-leftrightarrow-data-frame-conversion" id="toc-list-leftrightarrow-data-frame-conversion" class="nav-link" data-scroll-target="#list-leftrightarrow-data-frame-conversion">List <span class="math inline">\(\leftrightarrow\)</span> Data Frame Conversion</a></li>
   </ul></li>
-  <li><a href="#modifying-data-frame-elements" id="toc-modifying-data-frame-elements" class="nav-link" data-scroll-target="#modifying-data-frame-elements">Modifying Data Frame Elements</a>
-  <ul class="collapse">
-  <li><a href="#matrix-style-selection-1" id="toc-matrix-style-selection-1" class="nav-link" data-scroll-target="#matrix-style-selection-1">Matrix-Style Selection</a></li>
-  </ul></li>
-  <li><a href="#recycling" id="toc-recycling" class="nav-link" data-scroll-target="#recycling">Recycling</a>
-  <ul class="collapse">
-  <li><a href="#restrictions" id="toc-restrictions" class="nav-link" data-scroll-target="#restrictions">Restrictions</a></li>
-  </ul></li>
-  <li><a href="#adding-columns" id="toc-adding-columns" class="nav-link" data-scroll-target="#adding-columns">Adding Columns</a></li>
+  <li><a href="#data-frames-are-not-matrices" id="toc-data-frames-are-not-matrices" class="nav-link" data-scroll-target="#data-frames-are-not-matrices">Data Frames Are Not Matrices</a></li>
   </ul>
 </nav>
     </div>
@@ -2265,9 +2256,9 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 }
 </script>
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/data_frames/index.html">Data Frames</a></li><li class="breadcrumb-item"><a href="../../tutorials/data_frames/manipulating.html">Manipulating Data Frames</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/data_frames/index.html">Data Frames</a></li><li class="breadcrumb-item"><a href="../../tutorials/data_frames/relation_to_lists.html">Relation to Lists</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Manipulating Data Frames</h1>
+<h1 class="title">Relation to Lists</h1>
 </div>
 
 
@@ -2284,232 +2275,169 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </header>
 
 
-<section id="accessing-data-frame-elements" class="level2">
-<h2 class="anchored" data-anchor-id="accessing-data-frame-elements">Accessing Data Frame Elements</h2>
-<p>Because data frames are just lists, we can access a data frame’s columns using the same methods we would use for lists. To access a single column by name, the most efficient method is typically the <code>$</code> operator.</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>d1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">a =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>), <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">b =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"foo"</span>, <span class="st">"bar"</span>), <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">c =</span> <span class="fu">runif</span>(<span class="dv">10</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>d1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>       a   b          c
-1  FALSE bar 0.05953239
-2   TRUE bar 0.89668374
-3   TRUE foo 0.19611331
-4  FALSE foo 0.36490166
-5  FALSE foo 0.09832523
-6  FALSE bar 0.90508043
-7  FALSE foo 0.92559116
-8  FALSE foo 0.51965613
-9  FALSE foo 0.98685013
-10  TRUE bar 0.39354245</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>d1<span class="sc">$</span>b</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1] "bar" "bar" "foo" "foo" "foo" "bar" "foo" "foo" "foo" "bar"</code></pre>
-</div>
-</div>
-<p>We can also use the single, <code>[]</code>, or double, <code>[[]]</code>, square bracket operators. As with lists, these operators differ in two respects: how many columns they can select and how they format the resulting selection.</p>
-<ul>
-<li><code>[]</code> Can select multiple columns and always returns a data frame.</li>
-<li><code>[[]]</code> Can select only one column and returns the column contents as a vector (or whatever type of object the column contained).</li>
-</ul>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Return a one-column data frame comprising the 'b' column from d1</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>d1[<span class="st">"b"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     b
-1  bar
-2  bar
-3  foo
-4  foo
-5  foo
-6  bar
-7  foo
-8  foo
-9  foo
-10 bar</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The same as above, but using the column index instead of the column name</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>d1[<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     b
-1  bar
-2  bar
-3  foo
-4  foo
-5  foo
-6  bar
-7  foo
-8  foo
-9  foo
-10 bar</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Return a two-column data frame comprising the 'a' and 'b' columns from d1</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>d1[<span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>       a   b
-1  FALSE bar
-2   TRUE bar
-3   TRUE foo
-4  FALSE foo
-5  FALSE foo
-6  FALSE bar
-7  FALSE foo
-8  FALSE foo
-9  FALSE foo
-10  TRUE bar</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The same as above, but using the column indices instead of the column names</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>d1[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>       a   b
-1  FALSE bar
-2   TRUE bar
-3   TRUE foo
-4  FALSE foo
-5  FALSE foo
-6  FALSE bar
-7  FALSE foo
-8  FALSE foo
-9  FALSE foo
-10  TRUE bar</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Return the 'b' column from d1 as a character vector</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>d1[[<span class="st">"b"</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1] "bar" "bar" "foo" "foo" "foo" "bar" "foo" "foo" "foo" "bar"</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The same as above, but using the column index instead of the column name</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>d1[[<span class="dv">2</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1] "bar" "bar" "foo" "foo" "foo" "bar" "foo" "foo" "foo" "bar"</code></pre>
-</div>
-</div>
-<section id="matrix-style-selection" class="level3">
-<h3 class="anchored" data-anchor-id="matrix-style-selection">Matrix-Style Selection</h3>
-<p>Data frames also support matrix-style subsetting, where we define the selection by specifying both the row and column indices.</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Return the first two rows of columns `b` and `c`</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>d1[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="dv">2</span><span class="sc">:</span><span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>    b          c
-1 bar 0.05953239
-2 bar 0.89668374</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Return all rows from columns `a` and `b`</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>d1[, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>       a   b
-1  FALSE bar
-2   TRUE bar
-3   TRUE foo
-4  FALSE foo
-5  FALSE foo
-6  FALSE bar
-7  FALSE foo
-8  FALSE foo
-9  FALSE foo
-10  TRUE bar</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Return the second and third rows of all columns</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>d1[<span class="dv">2</span><span class="sc">:</span><span class="dv">3</span>, ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     a   b         c
-2 TRUE bar 0.8966837
-3 TRUE foo 0.1961133</code></pre>
-</div>
-</div>
-</section>
-<section id="quirks-of-matrix-style-subsetting" class="level3">
-<h3 class="anchored" data-anchor-id="quirks-of-matrix-style-subsetting">Quirks of Matrix-Style Subsetting</h3>
-<p>In most cases, matrix style subsetting behaves the same was as the <code>[]</code> list-style operator. You can select any number of columns, and the selection is returned as a data frame, but there is one important exception. If you select a single column using matrix-style subsetting, the selection will be converted to a vector.</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>d1[, <span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1] FALSE  TRUE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE  TRUE</code></pre>
-</div>
-</div>
-<div class="callout callout-style-default callout-going-further callout-titled">
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Going Further
+Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If you want to create a one-column data frame by extracting a single column from another data frame, you should probably use the <code>[]</code> list-style subsetting operator. That being said, if you really want to use matrix-style subsetting, you can achieve the desired effect by adding the <code>drop = FALSE</code> argument inside the brackets.</p>
+<p>Data frames are somewhat strange objects that can cause a lot of confusion. To new users, data frames usually feel more similar to matrices than lists, but the opposite is actually true. The underlying implementation of data frames doesn’t match their apparent tabular structure. This page compares data frames to lists and matrices. Understanding these similarities and differences will help you use data frames more effectively and avoid many common mistakes.</p>
+</div>
+</div>
+<p>Did you notice the similarity between the code that we used to create data frames on the last page and the code that we used to create lists in the last tutorial?</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>d1[, <span class="dv">1</span>, drop <span class="ot">=</span> <span class="cn">FALSE</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a data frame</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>someDataFrame <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">a =</span> <span class="fu">rnorm</span>(<span class="dv">10</span>),</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">b =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">c =</span> letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a list</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>someDataFrame <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">a =</span> <span class="fu">rnorm</span>(<span class="dv">10</span>),</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">b =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">c =</span> letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If so, you were right to see some parallels: lists and data frames are actually the same thing!</p>
+<section id="data-frames-are-actually-lists" class="level2">
+<h2 class="anchored" data-anchor-id="data-frames-are-actually-lists">Data Frames Are Actually Lists</h2>
+<p>Data frames are actually implemented as a special kind of list. Each column in a data frame is an element of a list, but all of these list elements must be vector-like objects (not necessarily atomic vectors, though) with equal length. In other words, a data frame is just a list where each slot contains a vector representing one column in the data frame, but with additional constraints and attributes that allow the data frame to behave like a 2 dimensional table.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>d1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">a =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>), <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">b =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"foo"</span>, <span class="st">"bar"</span>), <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">c =</span> <span class="fu">runif</span>(<span class="dv">10</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>d2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">a =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">b =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>), <span class="at">c =</span> <span class="fu">seq</span>(<span class="fl">0.1</span>, <span class="dv">1</span>, <span class="fl">0.1</span>))</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>d3 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="sc">-</span><span class="dv">5</span><span class="sc">:</span><span class="dv">4</span>, <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">10</span>), <span class="at">z =</span> <span class="fu">seq</span>(<span class="dv">1</span>, <span class="fl">1.5</span>, <span class="at">length.out =</span> <span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>For example, <code>d1</code>, <code>d2</code>, and <code>d3</code> are all data frames.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.data.frame</span>(d1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>       a
-1  FALSE
-2   TRUE
-3   TRUE
-4  FALSE
-5  FALSE
-6  FALSE
-7  FALSE
-8  FALSE
-9  FALSE
-10  TRUE</code></pre>
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.data.frame</span>(d2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.data.frame</span>(d3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
 </div>
 </div>
-<p>I wouldn’t recommend using this pattern since it produces non-idiomatic R code (i.e., by convention, we should only specify function arguments inside the parentheses of a function call). You might come across this syntax in the wild, however, so it’s worth understanding what’s happening.</p>
+<p>But all three are also lists.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.list</span>(d1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.list</span>(d2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.list</span>(d3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+<section id="not-all-lists-are-data-frames" class="level3">
+<h3 class="anchored" data-anchor-id="not-all-lists-are-data-frames">Not all Lists are Data Frames</h3>
+<p>All data frames are lists, but the inverse is not always true. Some lists are not data frames.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>l1 <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>l2 <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">a =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>), <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">b =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"foo"</span>, <span class="st">"bar"</span>), <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">c =</span> <span class="fu">runif</span>(<span class="dv">10</span>)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>l3 <span class="ot">&lt;-</span> <span class="fu">list</span>(d2, d3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>As you can see below, <code>l1</code>, <code>l2</code>, and <code>l3</code> are all lists, but they’re not data frames.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.list</span>(l1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.list</span>(l2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.list</span>(l3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.data.frame</span>(l1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.data.frame</span>(l2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.data.frame</span>(l3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
 </div>
 </div>
 </section>
-<section id="convenience-functions" class="level3">
-<h3 class="anchored" data-anchor-id="convenience-functions">Convenience Functions</h3>
-<p>Calling the <code>head()</code> function on a data frame returns the first <code>n</code> rows of the data frame.</p>
+<section id="list-leftrightarrow-data-frame-conversion" class="level3">
+<h3 class="anchored" data-anchor-id="list-leftrightarrow-data-frame-conversion">List <span class="math inline">\(\leftrightarrow\)</span> Data Frame Conversion</h3>
+<p>We can use the <code>as.list()</code> type conversion function to convert a data frame to a list. For example, in the following code, we convert <code>d1</code> into a list, <code>l1a</code>.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(d1, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>(l1a <span class="ot">&lt;-</span> <span class="fu">as.list</span>(d1))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>      a   b          c
-1 FALSE bar 0.05953239
-2  TRUE bar 0.89668374
-3  TRUE foo 0.19611331</code></pre>
+<pre><code>$a
+ [1]  TRUE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE
+
+$b
+ [1] "bar" "foo" "bar" "foo" "bar" "foo" "foo" "bar" "foo" "foo"
+
+$c
+ [1] 0.4395132 0.1226633 0.2210836 0.9823659 0.0998729 0.7353745 0.5083550
+ [8] 0.5169476 0.4064910 0.3931368</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.list</span>(l1a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.data.frame</span>(l1a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
 </div>
 </div>
-<p>Likewise, the <code>tail()</code> function returns the final <code>n</code> rows of the data frame.</p>
+<p>Likewise, we can use the <code>as.data.frame()</code> to convert a list to a data frame. Below, we invert the conversion from above.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(d1, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>(d1a <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(l1a))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>       a   b         c
-8  FALSE foo 0.5196561
-9  FALSE foo 0.9868501
-10  TRUE bar 0.3935425</code></pre>
+1   TRUE bar 0.4395132
+2  FALSE foo 0.1226633
+3   TRUE bar 0.2210836
+4   TRUE foo 0.9823659
+5   TRUE bar 0.0998729
+6   TRUE foo 0.7353745
+7   TRUE foo 0.5083550
+8   TRUE bar 0.5169476
+9   TRUE foo 0.4064910
+10 FALSE foo 0.3931368</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.data.frame</span>(d1a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
 </div>
 </div>
-<p>As with vectors, providing a negative value for the <code>n</code> argument returns the complementary number of rows from either the top or bottom of the data frame.</p>
+<p>In most situations, these type conversions do not destroy an information in the underlying data. Below, we see that the converted-and-back-converted version of the data frame, <code>d1a</code>, is identical to the original data frame, <code>d1</code>.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(d1, <span class="sc">-</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">identical</span>(d1, d1a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>      a   b          c
-1 FALSE bar 0.05953239
-2  TRUE bar 0.89668374
-3  TRUE foo 0.19611331
-4 FALSE foo 0.36490166
-5 FALSE foo 0.09832523
-6 FALSE bar 0.90508043
-7 FALSE foo 0.92559116</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(d1, <span class="sc">-</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>       a   b          c
-4  FALSE foo 0.36490166
-5  FALSE foo 0.09832523
-6  FALSE bar 0.90508043
-7  FALSE foo 0.92559116
-8  FALSE foo 0.51965613
-9  FALSE foo 0.98685013
-10  TRUE bar 0.39354245</code></pre>
+<pre><code>[1] TRUE</code></pre>
 </div>
 </div>
 <div class="callout callout-style-default callout-practice callout-titled">
@@ -2522,290 +2450,41 @@ Practice
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The <code>iris</code> dataset is provided by Base R and available in any R session.</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(iris, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-1           5.1         3.5          1.4         0.2  setosa
-2           4.9         3.0          1.4         0.2  setosa
-3           4.7         3.2          1.3         0.2  setosa
-4           4.6         3.1          1.5         0.2  setosa
-5           5.0         3.6          1.4         0.2  setosa
-6           5.4         3.9          1.7         0.4  setosa
-7           4.6         3.4          1.4         0.3  setosa
-8           5.0         3.4          1.5         0.2  setosa
-9           4.4         2.9          1.4         0.2  setosa
-10          4.9         3.1          1.5         0.1  setosa</code></pre>
-</div>
-</div>
-<p>Use the <code>iris</code> dataset to complete the following tasks.</p>
+<p>Use a single function to convert the data frame you created in the last practice problem to a list.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true"><i class="fa-solid fa-circle-question" aria-label="circle-question"></i> Question</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><i class="fa-solid fa-code" aria-label="code"></i> Interactive Editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true"><i class="fa-solid fa-code" aria-label="code"></i> Interactive Editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<ol type="1">
-<li>Use three different methods to extract the <code>Petal.Length</code> column.
-<ul>
-<li>Return the results as vectors.</li>
-</ul></li>
-<li>Extract the <code>Petal.Width</code> column.
-<ul>
-<li>Return the result as a one-column data frame.</li>
-</ul></li>
-<li>Extract the first 20 rows of the <code>Sepal.Length</code> and <code>Sepal.Width</code> columns.
-<ul>
-<li>Return the result as a <span class="math inline">\(20 \times 2\)</span> data frame.</li>
-</ul></li>
-<li>Extract the final 10 rows of the data frame.
-<ul>
-<li>Return the result as a <span class="math inline">\(10 \times 5\)</span> data frame.</li>
-</ul></li>
-</ol>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </div>
-<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<p><strong>Q1</strong></p>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>Recall my solution to the last problem.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>iris<span class="sc">$</span>Petal.Length</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  [1] 1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 1.5 1.6 1.4 1.1 1.2 1.5 1.3 1.4
- [19] 1.7 1.5 1.7 1.5 1.0 1.7 1.9 1.6 1.6 1.5 1.4 1.6 1.6 1.5 1.5 1.4 1.5 1.2
- [37] 1.3 1.4 1.3 1.5 1.3 1.3 1.3 1.6 1.9 1.4 1.6 1.4 1.5 1.4 4.7 4.5 4.9 4.0
- [55] 4.6 4.5 4.7 3.3 4.6 3.9 3.5 4.2 4.0 4.7 3.6 4.4 4.5 4.1 4.5 3.9 4.8 4.0
- [73] 4.9 4.7 4.3 4.4 4.8 5.0 4.5 3.5 3.8 3.7 3.9 5.1 4.5 4.5 4.7 4.4 4.1 4.0
- [91] 4.4 4.6 4.0 3.3 4.2 4.2 4.2 4.3 3.0 4.1 6.0 5.1 5.9 5.6 5.8 6.6 4.5 6.3
-[109] 5.8 6.1 5.1 5.3 5.5 5.0 5.1 5.3 5.5 6.7 6.9 5.0 5.7 4.9 6.7 4.9 5.7 6.0
-[127] 4.8 4.9 5.6 5.8 6.1 6.4 5.6 5.1 5.6 6.1 5.6 5.5 4.8 5.4 5.6 5.1 5.1 5.9
-[145] 5.7 5.2 5.0 5.2 5.4 5.1</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>iris[[<span class="st">"Petal.Length"</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  [1] 1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 1.5 1.6 1.4 1.1 1.2 1.5 1.3 1.4
- [19] 1.7 1.5 1.7 1.5 1.0 1.7 1.9 1.6 1.6 1.5 1.4 1.6 1.6 1.5 1.5 1.4 1.5 1.2
- [37] 1.3 1.4 1.3 1.5 1.3 1.3 1.3 1.6 1.9 1.4 1.6 1.4 1.5 1.4 4.7 4.5 4.9 4.0
- [55] 4.6 4.5 4.7 3.3 4.6 3.9 3.5 4.2 4.0 4.7 3.6 4.4 4.5 4.1 4.5 3.9 4.8 4.0
- [73] 4.9 4.7 4.3 4.4 4.8 5.0 4.5 3.5 3.8 3.7 3.9 5.1 4.5 4.5 4.7 4.4 4.1 4.0
- [91] 4.4 4.6 4.0 3.3 4.2 4.2 4.2 4.3 3.0 4.1 6.0 5.1 5.9 5.6 5.8 6.6 4.5 6.3
-[109] 5.8 6.1 5.1 5.3 5.5 5.0 5.1 5.3 5.5 6.7 6.9 5.0 5.7 4.9 6.7 4.9 5.7 6.0
-[127] 4.8 4.9 5.6 5.8 6.1 6.4 5.6 5.1 5.6 6.1 5.6 5.5 4.8 5.4 5.6 5.1 5.1 5.9
-[145] 5.7 5.2 5.0 5.2 5.4 5.1</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>iris[, <span class="st">"Petal.Length"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  [1] 1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 1.5 1.6 1.4 1.1 1.2 1.5 1.3 1.4
- [19] 1.7 1.5 1.7 1.5 1.0 1.7 1.9 1.6 1.6 1.5 1.4 1.6 1.6 1.5 1.5 1.4 1.5 1.2
- [37] 1.3 1.4 1.3 1.5 1.3 1.3 1.3 1.6 1.9 1.4 1.6 1.4 1.5 1.4 4.7 4.5 4.9 4.0
- [55] 4.6 4.5 4.7 3.3 4.6 3.9 3.5 4.2 4.0 4.7 3.6 4.4 4.5 4.1 4.5 3.9 4.8 4.0
- [73] 4.9 4.7 4.3 4.4 4.8 5.0 4.5 3.5 3.8 3.7 3.9 5.1 4.5 4.5 4.7 4.4 4.1 4.0
- [91] 4.4 4.6 4.0 3.3 4.2 4.2 4.2 4.3 3.0 4.1 6.0 5.1 5.9 5.6 5.8 6.6 4.5 6.3
-[109] 5.8 6.1 5.1 5.3 5.5 5.0 5.1 5.3 5.5 6.7 6.9 5.0 5.7 4.9 6.7 4.9 5.7 6.0
-[127] 4.8 4.9 5.6 5.8 6.1 6.4 5.6 5.1 5.6 6.1 5.6 5.5 4.8 5.4 5.6 5.1 5.1 5.9
-[145] 5.7 5.2 5.0 5.2 5.4 5.1</code></pre>
+<pre><code>  text integer complex
+1 text      10    1+1i
+2 text       8    2+2i
+3 text       3    3+3i
+4 text       7    4+1i
+5 text       1    5+2i
+6 text       5    1+3i
+7 text       7    2+1i</code></pre>
 </div>
 </div>
-<p><strong>Q2</strong></p>
+<p>To convert this data frame to a list, I simply apply the <code>as.list()</code> function.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>iris[<span class="st">"Petal.Width"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.list</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>    Petal.Width
-1           0.2
-2           0.2
-3           0.2
-4           0.2
-5           0.2
-6           0.4
-7           0.3
-8           0.2
-9           0.2
-10          0.1
-11          0.2
-12          0.2
-13          0.1
-14          0.1
-15          0.2
-16          0.4
-17          0.4
-18          0.3
-19          0.3
-20          0.3
-21          0.2
-22          0.4
-23          0.2
-24          0.5
-25          0.2
-26          0.2
-27          0.4
-28          0.2
-29          0.2
-30          0.2
-31          0.2
-32          0.4
-33          0.1
-34          0.2
-35          0.2
-36          0.2
-37          0.2
-38          0.1
-39          0.2
-40          0.2
-41          0.3
-42          0.3
-43          0.2
-44          0.6
-45          0.4
-46          0.3
-47          0.2
-48          0.2
-49          0.2
-50          0.2
-51          1.4
-52          1.5
-53          1.5
-54          1.3
-55          1.5
-56          1.3
-57          1.6
-58          1.0
-59          1.3
-60          1.4
-61          1.0
-62          1.5
-63          1.0
-64          1.4
-65          1.3
-66          1.4
-67          1.5
-68          1.0
-69          1.5
-70          1.1
-71          1.8
-72          1.3
-73          1.5
-74          1.2
-75          1.3
-76          1.4
-77          1.4
-78          1.7
-79          1.5
-80          1.0
-81          1.1
-82          1.0
-83          1.2
-84          1.6
-85          1.5
-86          1.6
-87          1.5
-88          1.3
-89          1.3
-90          1.3
-91          1.2
-92          1.4
-93          1.2
-94          1.0
-95          1.3
-96          1.2
-97          1.3
-98          1.3
-99          1.1
-100         1.3
-101         2.5
-102         1.9
-103         2.1
-104         1.8
-105         2.2
-106         2.1
-107         1.7
-108         1.8
-109         1.8
-110         2.5
-111         2.0
-112         1.9
-113         2.1
-114         2.0
-115         2.4
-116         2.3
-117         1.8
-118         2.2
-119         2.3
-120         1.5
-121         2.3
-122         2.0
-123         2.0
-124         1.8
-125         2.1
-126         1.8
-127         1.8
-128         1.8
-129         2.1
-130         1.6
-131         1.9
-132         2.0
-133         2.2
-134         1.5
-135         1.4
-136         2.3
-137         2.4
-138         1.8
-139         1.8
-140         2.1
-141         2.4
-142         2.3
-143         1.9
-144         2.3
-145         2.5
-146         2.3
-147         1.9
-148         2.0
-149         2.3
-150         1.8</code></pre>
-</div>
-</div>
-<p><strong>Q3</strong></p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>iris[<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>, <span class="fu">c</span>(<span class="st">"Sepal.Length"</span>, <span class="st">"Sepal.Width"</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   Sepal.Length Sepal.Width
-1           5.1         3.5
-2           4.9         3.0
-3           4.7         3.2
-4           4.6         3.1
-5           5.0         3.6
-6           5.4         3.9
-7           4.6         3.4
-8           5.0         3.4
-9           4.4         2.9
-10          4.9         3.1
-11          5.4         3.7
-12          4.8         3.4
-13          4.8         3.0
-14          4.3         3.0
-15          5.8         4.0
-16          5.7         4.4
-17          5.4         3.9
-18          5.1         3.5
-19          5.7         3.8
-20          5.1         3.8</code></pre>
-</div>
-</div>
-<p><strong>Q4</strong></p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(iris, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>    Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
-141          6.7         3.1          5.6         2.4 virginica
-142          6.9         3.1          5.1         2.3 virginica
-143          5.8         2.7          5.1         1.9 virginica
-144          6.8         3.2          5.9         2.3 virginica
-145          6.7         3.3          5.7         2.5 virginica
-146          6.7         3.0          5.2         2.3 virginica
-147          6.3         2.5          5.0         1.9 virginica
-148          6.5         3.0          5.2         2.0 virginica
-149          6.2         3.4          5.4         2.3 virginica
-150          5.9         3.0          5.1         1.8 virginica</code></pre>
+<pre><code>$text
+[1] "text" "text" "text" "text" "text" "text" "text"
+
+$integer
+[1] 10  8  3  7  1  5  7
+
+$complex
+[1] 1+1i 2+2i 3+3i 4+1i 5+2i 1+3i 2+1i</code></pre>
 </div>
 </div>
 </div>
@@ -2815,381 +2494,102 @@ Practice
 </div>
 </section>
 </section>
-<section id="modifying-data-frame-elements" class="level2">
-<h2 class="anchored" data-anchor-id="modifying-data-frame-elements">Modifying Data Frame Elements</h2>
-<p>At this point, I hope it comes as no surprise to hear that we can overwrite the columns of a data frame using the same procedures that we use to modify list slots. When modifying one column at a time, we directly apply the intuitive operations.</p>
+<section id="data-frames-are-not-matrices" class="level2">
+<h2 class="anchored" data-anchor-id="data-frames-are-not-matrices">Data Frames Are Not Matrices</h2>
+<p>As you have probably surmised, data frames are not matrices. Although data frames and matrices share many superficial similarities, they’re almost entirely unrelated types of objects.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># View the original data frame</span></span>
-<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>d1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.matrix</span>(d1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>       a   b          c
-1  FALSE bar 0.05953239
-2   TRUE bar 0.89668374
-3   TRUE foo 0.19611331
-4  FALSE foo 0.36490166
-5  FALSE foo 0.09832523
-6  FALSE bar 0.90508043
-7  FALSE foo 0.92559116
-8  FALSE foo 0.51965613
-9  FALSE foo 0.98685013
-10  TRUE bar 0.39354245</code></pre>
+<pre><code>[1] FALSE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Modify some columns</span></span>
-<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>d1<span class="sc">$</span>a <span class="ot">&lt;-</span> LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]</span>
-<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>d1[[<span class="dv">2</span>]] <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
-<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>d1[<span class="st">"c"</span>] <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>), <span class="at">each =</span> <span class="dv">5</span>)</span>
-<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a><span class="co"># View the modified data frame</span></span>
-<span id="cb51-7"><a href="#cb51-7" aria-hidden="true" tabindex="-1"></a>d1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.matrix</span>(d2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>   a          b     c
-1  A -0.5726434  TRUE
-2  B  1.0046224  TRUE
-3  C  0.6288373  TRUE
-4  D -1.9856082  TRUE
-5  E  0.5412699  TRUE
-6  F  0.9958062 FALSE
-7  G -0.3716671 FALSE
-8  H -0.1168243 FALSE
-9  I  2.2861396 FALSE
-10 J -0.2126098 FALSE</code></pre>
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.matrix</span>(d3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
 </div>
 </div>
-<p>When modifying multiple columns with the <code>[]</code>, operator, it’s best to supply the replacement values as a data frame or list with the same size as the selected columns. For example, below we replace the first two columns of <code>d1</code> with an equivalently sized data frame.</p>
+<p>Consequently, you cannot apply matrix operations (such as matrix multiplication) to a data frame.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>d1[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)</span>
-<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>d1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>    a b     c
-1   1 1  TRUE
-2   2 2  TRUE
-3   3 1  TRUE
-4   4 2  TRUE
-5   5 1  TRUE
-6   6 2 FALSE
-7   7 1 FALSE
-8   8 2 FALSE
-9   9 1 FALSE
-10 10 2 FALSE</code></pre>
-</div>
-</div>
-<p>Here, we replace the <code>a</code> and <code>c</code> columns in <code>d1</code> with an equivalently sized list.</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>d1[<span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"c"</span>)] <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="fu">rnorm</span>(<span class="dv">10</span>), <span class="fu">runif</span>(<span class="dv">10</span>))</span>
-<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>d1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>            a b         c
-1   0.9187951 1 0.1701443
-2  -0.5724222 2 0.6975865
-3  -0.3107467 1 0.1793382
-4  -1.4230649 2 0.7899628
-5   0.2105296 1 0.2084773
-6   0.3194327 2 0.8416104
-7  -1.2090442 1 0.1326894
-8   1.2461163 2 0.2173493
-9  -1.0636381 1 0.1631748
-10 -1.5323543 2 0.2482311</code></pre>
-</div>
-</div>
-<section id="matrix-style-selection-1" class="level3">
-<h3 class="anchored" data-anchor-id="matrix-style-selection-1">Matrix-Style Selection</h3>
-<p>If we only want to replace part of a column, we can use matrix-style selection to choose the target cells. Below, we first overwrite the first five rows in column <code>b</code>. We then overwrite rows 3 through 6 in columns <code>a</code> and <code>c</code>.</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>d1[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="dv">41</span><span class="sc">:</span><span class="dv">45</span></span>
-<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>d1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>            a  b         c
-1   0.9187951 41 0.1701443
-2  -0.5724222 42 0.6975865
-3  -0.3107467 43 0.1793382
-4  -1.4230649 44 0.7899628
-5   0.2105296 45 0.2084773
-6   0.3194327  2 0.8416104
-7  -1.2090442  1 0.1326894
-8   1.2461163  2 0.2173493
-9  -1.0636381  1 0.1631748
-10 -1.5323543  2 0.2482311</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>d1[<span class="dv">3</span><span class="sc">:</span><span class="dv">6</span>, <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"c"</span>)] <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="sc">-</span><span class="dv">99</span>, <span class="dv">888</span>)</span>
-<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>d1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>             a  b           c
-1    0.9187951 41   0.1701443
-2   -0.5724222 42   0.6975865
-3  -99.0000000 43 888.0000000
-4  -99.0000000 44 888.0000000
-5  -99.0000000 45 888.0000000
-6  -99.0000000  2 888.0000000
-7   -1.2090442  1   0.1326894
-8    1.2461163  2   0.2173493
-9   -1.0636381  1   0.1631748
-10  -1.5323543  2   0.2482311</code></pre>
-</div>
-</div>
-<p>In the second command, notice the pattern in which the contents of the list are recycled to fill the target cells. The recycling rules for data frames can be a little tricky.</p>
-</section>
-</section>
-<section id="recycling" class="level2">
-<h2 class="anchored" data-anchor-id="recycling">Recycling</h2>
-<p>When the replacement size doesn’t match the selection size, R will use recycling to resolve the discrepancy, as with vectors and matrices. However, it’s not always easy to predict how the replacement will behave.</p>
-<p>If we supply a single vector as the replacement data, the recycling operates the same way it does for matrices. For example, in the following code, we replace the first two columns of <code>d1</code> by recycling the vector <code>1:5</code>.</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>d1[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span></span>
-<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>d1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   a b           c
-1  1 1   0.1701443
-2  2 2   0.6975865
-3  3 3 888.0000000
-4  4 4 888.0000000
-5  5 5 888.0000000
-6  1 1 888.0000000
-7  2 2   0.1326894
-8  3 3   0.2173493
-9  4 4   0.1631748
-10 5 5   0.2482311</code></pre>
-</div>
-</div>
-<p>Nothing new here. We simply re-use the elements of the replacement vector, <code>1:5</code>, until each selected cell is overwritten. Things get more complicated with we supply the replacement data as a list or data frame, though. Below, we want to replace the <code>a</code> and <code>c</code> columns in <code>d1</code> with the contents of a list, but the vectors therein aren’t long enough, so they will need to be recycled.</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>d1[<span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"c"</span>)] <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="st">"yes"</span>, <span class="st">"no"</span>), <span class="dv">8</span><span class="sc">:</span><span class="dv">12</span>)</span>
-<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a>d1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     a b  c
-1  yes 1  8
-2   no 2  9
-3  yes 3 10
-4   no 4 11
-5  yes 5 12
-6   no 1  8
-7  yes 2  9
-8   no 3 10
-9  yes 4 11
-10  no 5 12</code></pre>
-</div>
-</div>
-<p>Note that each list slot acts as the replacement for one of the selected columns. So, the recycling happens within columns: the contents of each list slot are recycled independently to resolve the respective size discrepancy. In this case,</p>
-<ul>
-<li>The vector <code>c("yes", "no")</code> is recycled five times to match the length of column <code>a</code>.</li>
-<li>The vector <code>8:12</code> only needs to be recycled twice.</li>
-</ul>
-<section id="restrictions" class="level3">
-<h3 class="anchored" data-anchor-id="restrictions">Restrictions</h3>
-<p>As with matrices, R is oddly specific (in a slightly different way) about the kinds of size discrepancies it will automatically resolved when modifying data frames. When all lengths align cleanly (as in the examples above), R will apply recycling silently (i.e., without any messages or warnings).</p>
-<p><strong>Ideal</strong></p>
-<ul>
-<li>All replacement lengths <span class="math inline">\(\leq\)</span> Respective selection lengths</li>
-<li>All replacement lengths evenly divide their respective selection lengths</li>
-<li>Number of replacement list slots = Number of columns selected</li>
-<li>Number of replacement data frame columns = Number of columns selected</li>
-</ul>
-<p>For several other types of size discrepancy, R will apply recycling with a warning.</p>
-<p><strong>Acceptable</strong></p>
-<ul>
-<li>Replacement length &gt; Selection length</li>
-<li>Replacement length cleanly divides the selection length</li>
-<li>Replacement length exceeds selection length</li>
-<li>Replacement list contains more slots than columns selected</li>
-<li>Replacement data frame contains more slots than columns selected</li>
-</ul>
-<p>In one specific situation, R will throw an error and refuse to implement the replacement.</p>
-<p><strong>Invalid</strong></p>
-<ul>
-<li>Replacement length does not evenly divide the selection length.</li>
-</ul>
-<section id="examples-of-acceptable-replacement" class="level4">
-<h4 class="anchored" data-anchor-id="examples-of-acceptable-replacement">Examples of Acceptable Replacement</h4>
-<p>When working with data frames, R is quite permissive with abuses of recycling. So, all of the following examples represent legal uses of replacement that R will run without errors, but these examples will all trigger warnings.</p>
-<p>Replace the first two columns of <code>d1</code> by using the first 20 elements from the vector <code>100:500</code>.</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>d1[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="dv">100</span><span class="sc">:</span><span class="dv">500</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in matrix(value, n, p): data length [401] is not a sub-multiple or
-multiple of the number of rows [10]</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>d1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     a   b  c
-1  100 110  8
-2  101 111  9
-3  102 112 10
-4  103 113 11
-5  104 114 12
-6  105 115  8
-7  106 116  9
-8  107 117 10
-9  108 118 11
-10 109 119 12</code></pre>
-</div>
-</div>
-<p>Replace the <code>a</code> and <code>c</code> columns in <code>d1</code> with a list containing vectors that are too long.</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>d1[<span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"c"</span>)] <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="fu">rnorm</span>(<span class="dv">100</span>), <span class="fu">runif</span>(<span class="dv">100</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in `[&lt;-.data.frame`(`*tmp*`, c("a", "c"), value =
-list(c(-0.535388500130966, : replacement element 1 has 100 rows to replace 10
-rows</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in `[&lt;-.data.frame`(`*tmp*`, c("a", "c"), value =
-list(c(-0.535388500130966, : replacement element 2 has 100 rows to replace 10
-rows</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>d1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>            a   b          c
-1  -0.5353885 110 0.26374842
-2  -0.9931941 111 0.57205526
-3  -0.6473954 112 0.34406680
-4  -1.0534366 113 0.18382629
-5   1.1547795 114 0.13603892
-6   1.5953771 115 0.95651939
-7  -0.2341340 116 0.39505284
-8   1.3625139 117 0.84646849
-9   0.5434835 118 0.01676838
-10  0.5772128 119 0.21642427</code></pre>
-</div>
-</div>
-<p>Replace the <code>a</code> and <code>c</code> columns in <code>d1</code> with the first two slots in a length-3 list.</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a>d1[<span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"c"</span>)] <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in `[&lt;-.data.frame`(`*tmp*`, c("a", "c"), value = list(1, 2, 3)):
-provided 3 variables to replace 2 variables</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a>d1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   a   b c
-1  1 110 2
-2  1 111 2
-3  1 112 2
-4  1 113 2
-5  1 114 2
-6  1 115 2
-7  1 116 2
-8  1 117 2
-9  1 118 2
-10 1 119 2</code></pre>
-</div>
-</div>
-<p>Replace the <code>a</code> and <code>c</code> columns in <code>d1</code> with the first two columns of a three-column data frame.</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a>d1[<span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"c"</span>)] <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="st">"foo"</span>, <span class="st">"bar"</span>, <span class="st">"baz"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in `[&lt;-.data.frame`(`*tmp*`, c("a", "c"), value = structure(list(:
-provided 3 variables to replace 2 variables</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a>d1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     a   b   c
-1  foo 110 bar
-2  foo 111 bar
-3  foo 112 bar
-4  foo 113 bar
-5  foo 114 bar
-6  foo 115 bar
-7  foo 116 bar
-8  foo 117 bar
-9  foo 118 bar
-10 foo 119 bar</code></pre>
-</div>
-</div>
-</section>
-<section id="examples-of-invalid-replacement" class="level4">
-<h4 class="anchored" data-anchor-id="examples-of-invalid-replacement">Examples of Invalid Replacement</h4>
-<p>For the most part, R will only complain when the replacement length does not cleanly divide selection length. So, the following two examples represent some of the few situations in which R will completely refuse to apply our requested replacement.</p>
-<p>Here, we try to replace the first two columns of <code>d1</code> (i.e., 20 total cells) with the length-three vector <code>1:3</code>.</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a>d1[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>d2 <span class="sc">%*%</span> <span class="fu">t</span>(d3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
-<pre><code>Error in `[&lt;-.data.frame`:
-! replacement has 3 items, need 20</code></pre>
+<pre><code>Error in `d2 %*% t(d3)`:
+! requires numeric/complex matrix/vector arguments</code></pre>
 </div>
 </div>
-<p>This time, we make essentially the same mistake, but now the incompatible vectors live in a list. We’re trying to replace the <code>a</code> and <code>c</code> columns in <code>d1</code> with a list containing a length-four vector and a length-eight vector.</p>
+<p>If you wanted to analyze a data frame like a matrix, you could <em>type cast</em> the data frame into a matrix using the <code>as.matrix()</code> function.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a>d1[<span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"c"</span>)] <span class="ot">&lt;-</span> <span class="fu">list</span>(letters[<span class="dv">4</span>], <span class="dv">1</span><span class="sc">:</span><span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error in `[&lt;-.data.frame`:
-! replacement element 2 has 8 rows, need 10</code></pre>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.matrix</span>(d2) <span class="sc">%*%</span> <span class="fu">t</span>(<span class="fu">as.matrix</span>(d3))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       [,1]       [,2]       [,3]       [,4]       [,5]      [,6]       [,7]
+ [1,]  -5.9 -13.894444  -3.888889 -11.883333 -1.8777778 -9.872222  0.1333333
+ [2,]  -8.8   2.211111  -4.777778   6.233333 -0.7555556 10.255556  3.2666667
+ [3,] -15.7 -21.683333  -9.666667 -15.650000 -3.6333333 -9.616667  2.4000000
+ [4,] -18.6  -5.577778 -10.555556   2.466667 -2.5111111 10.511111  5.5333333
+ [5,] -25.5 -29.472222 -15.444444 -19.416667 -5.3888889 -9.361111  4.6666667
+ [6,] -28.4 -13.366667 -16.333333  -1.300000 -4.2666667 10.766667  7.8000000
+ [7,] -35.3 -37.261111 -21.222222 -23.183333 -7.1444444 -9.105556  6.9333333
+ [8,] -38.2 -21.155556 -22.111111  -5.066667 -6.0222222 11.022222 10.0666667
+ [9,] -45.1 -45.050000 -27.000000 -26.950000 -8.9000000 -8.850000  9.2000000
+[10,] -48.0 -28.944444 -27.888889  -8.833333 -7.7777778 11.277778 12.3333333
+            [,8]      [,9] [,10]
+ [1,] -7.8611111  2.144444 -5.85
+ [2,] 14.2777778  7.288889 18.30
+ [3,] -3.5833333  8.433333  2.45
+ [4,] 18.5555556 13.577778 26.60
+ [5,]  0.6944444 14.722222 10.75
+ [6,] 22.8333333 19.866667 34.90
+ [7,]  4.9722222 21.011111 19.05
+ [8,] 27.1111111 26.155556 43.20
+ [9,]  9.2500000 27.300000 27.35
+[10,] 31.3888889 32.444444 51.50</code></pre>
 </div>
 </div>
-</section>
-</section>
-</section>
-<section id="adding-columns" class="level2">
-<h2 class="anchored" data-anchor-id="adding-columns">Adding Columns</h2>
-<p>As with lists, we can add new columns to an existing data frame using the <code>$</code> or <code>[[]]</code> operators.</p>
+<p>You should be carefully about any type conversions, though. If your data frame contains mixed column types, R will coerce every column into some compatible type by applying the same coercion rule you learned about in the <a href="https://openstatprog.com/vectors-matrices/"><strong>Vectors &amp; Matrices</strong></a> module.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a baseline data frame</span></span>
-<span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a>(d2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">a =</span> <span class="fu">rep</span>(<span class="dv">0</span>, <span class="dv">10</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>(m1 <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(d1))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>   a
-1  0
-2  0
-3  0
-4  0
-5  0
-6  0
-7  0
-8  0
-9  0
-10 0</code></pre>
+<pre><code>      a       b     c          
+ [1,] "TRUE"  "bar" "0.4395132"
+ [2,] "FALSE" "foo" "0.1226633"
+ [3,] "TRUE"  "bar" "0.2210836"
+ [4,] "TRUE"  "foo" "0.9823659"
+ [5,] "TRUE"  "bar" "0.0998729"
+ [6,] "TRUE"  "foo" "0.7353745"
+ [7,] "TRUE"  "foo" "0.5083550"
+ [8,] "TRUE"  "bar" "0.5169476"
+ [9,] "TRUE"  "foo" "0.4064910"
+[10,] "FALSE" "foo" "0.3931368"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Various ways of adding new single columns</span></span>
-<span id="cb88-2"><a href="#cb88-2" aria-hidden="true" tabindex="-1"></a>d2<span class="sc">$</span>b <span class="ot">&lt;-</span> letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]</span>
-<span id="cb88-3"><a href="#cb88-3" aria-hidden="true" tabindex="-1"></a>d2[[<span class="st">"c"</span>]] <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">10</span>)</span>
-<span id="cb88-4"><a href="#cb88-4" aria-hidden="true" tabindex="-1"></a>d2[[<span class="dv">4</span>]] <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
-<span id="cb88-5"><a href="#cb88-5" aria-hidden="true" tabindex="-1"></a>d2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(m1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>   a b          c          V4
-1  0 a 0.16675152  0.62950639
-2  0 b 0.66826056 -0.84161264
-3  0 c 0.06672647  0.61689049
-4  0 d 0.06259623  1.89699518
-5  0 e 0.19566288 -1.55533153
-6  0 f 0.37155647  1.03521774
-7  0 g 0.52814765 -0.02203947
-8  0 h 0.71506695 -0.04771449
-9  0 i 0.16562455 -1.61827805
-10 0 j 0.87183256 -0.63305394</code></pre>
+<pre><code>[1] "character"</code></pre>
 </div>
-</div>
-<p>As you may expect, R will use recycling when we specify too few elements for the new column.</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a>d2[<span class="st">"alice"</span>] <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>)</span>
-<span id="cb90-2"><a href="#cb90-2" aria-hidden="true" tabindex="-1"></a>d2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>(d4 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>), <span class="dv">3</span>), <span class="at">y =</span> <span class="fu">runif</span>(<span class="dv">6</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>   a b          c          V4 alice
-1  0 a 0.16675152  0.62950639  TRUE
-2  0 b 0.66826056 -0.84161264 FALSE
-3  0 c 0.06672647  0.61689049  TRUE
-4  0 d 0.06259623  1.89699518 FALSE
-5  0 e 0.19566288 -1.55533153  TRUE
-6  0 f 0.37155647  1.03521774 FALSE
-7  0 g 0.52814765 -0.02203947  TRUE
-8  0 h 0.71506695 -0.04771449 FALSE
-9  0 i 0.16562455 -1.61827805  TRUE
-10 0 j 0.87183256 -0.63305394 FALSE</code></pre>
+<pre><code>      x          y
+1  TRUE 0.82279816
+2 FALSE 0.64067816
+3  TRUE 0.65752167
+4 FALSE 0.44481012
+5  TRUE 0.86688303
+6 FALSE 0.06812604</code></pre>
 </div>
-</div>
-<p>We can add multiple columns using the <code>[]</code> operator.</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a>d2[<span class="dv">6</span><span class="sc">:</span><span class="dv">7</span>] <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">20</span>)</span>
-<span id="cb92-2"><a href="#cb92-2" aria-hidden="true" tabindex="-1"></a>d2[<span class="fu">c</span>(<span class="st">"foo"</span>, <span class="st">"bar"</span>)] <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>)</span>
-<span id="cb92-3"><a href="#cb92-3" aria-hidden="true" tabindex="-1"></a>d2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>(m4 <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(d4))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>   a b          c          V4 alice         V6         V7  foo   bar
-1  0 a 0.16675152  0.62950639  TRUE -1.1262705  0.9714567 TRUE FALSE
-2  0 b 0.66826056 -0.84161264 FALSE  0.4890620  0.1815502 TRUE FALSE
-3  0 c 0.06672647  0.61689049  TRUE -0.9121183 -1.4094829 TRUE FALSE
-4  0 d 0.06259623  1.89699518 FALSE -0.3190297 -0.5837219 TRUE FALSE
-5  0 e 0.19566288 -1.55533153  TRUE -1.4516665  0.7839286 TRUE FALSE
-6  0 f 0.37155647  1.03521774 FALSE -1.5835851 -0.6618996 TRUE FALSE
-7  0 g 0.52814765 -0.02203947  TRUE -1.6295050 -0.7508775 TRUE FALSE
-8  0 h 0.71506695 -0.04771449 FALSE -0.5745959 -0.1194467 TRUE FALSE
-9  0 i 0.16562455 -1.61827805  TRUE  0.5779600  0.7589953 TRUE FALSE
-10 0 j 0.87183256 -0.63305394 FALSE -0.7166323 -0.5986976 TRUE FALSE</code></pre>
+<pre><code>     x          y
+[1,] 1 0.82279816
+[2,] 0 0.64067816
+[3,] 1 0.65752167
+[4,] 0 0.44481012
+[5,] 1 0.86688303
+[6,] 0 0.06812604</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(m4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "double"</code></pre>
 </div>
 </div>
 <div class="callout callout-style-default callout-practice callout-titled">
@@ -3202,61 +2602,73 @@ Practice
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Run the following code to create an empty data frame containing 10 observations of the 3 variables: <code>a</code>,<code>b</code>, <code>c</code>. Then populate the data frame as described below.</p>
-<ol type="1">
-<li>Fill column <code>a</code> with the integer sequence from -9 to 0.
-<ul>
-<li>Use the column name to assign the new values.</li>
-</ul></li>
-<li>Fill column <code>b</code> with the even integers between 1 and 20 (inclusive).
-<ul>
-<li>Use the numeric column index to assign the new values.</li>
-</ul></li>
-<li>Replace the odd rows in column <code>c</code> with the odd integers between 11 and 20 (inclusive).
-<ul>
-<li>Do not overwrite the missing values in the even rows.</li>
-</ul></li>
-</ol>
+<p>Consider the following data frame when answering this question.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">x1 =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>), <span class="dv">3</span>),</span>
+<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">x2 =</span> <span class="fu">seq</span>(<span class="dv">2</span>, <span class="dv">12</span>, <span class="dv">2</span>)</span>
+<span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb64-5"><a href="#cb64-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-6"><a href="#cb64-6" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     x1 x2
+1  TRUE  2
+2 FALSE  4
+3  TRUE  6
+4 FALSE  8
+5  TRUE 10
+6 FALSE 12</code></pre>
+</div>
+</div>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true"><i class="fa-solid fa-code" aria-label="code"></i> Interactive Editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true"><i class="fa-solid fa-circle-question" aria-label="circle-question"></i> Question</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false"><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Hint</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false"><i class="fa-solid fa-code" aria-label="code"></i> Interactive Editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<div id="qwebr-insertion-location-2"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p><strong>Predict</strong> what the following code will print.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Check your prediction using the interactive editor, and explain why this code prints the observed result.</p>
 </div>
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb94"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">a =</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="dv">10</span>), <span class="at">b =</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="dv">10</span>), <span class="at">c =</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="dv">10</span>))</span>
-<span id="cb94-2"><a href="#cb94-2" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>    a  b  c
-1  NA NA NA
-2  NA NA NA
-3  NA NA NA
-4  NA NA NA
-5  NA NA NA
-6  NA NA NA
-7  NA NA NA
-8  NA NA NA
-9  NA NA NA
-10 NA NA NA</code></pre>
+<p>Recall that the <code>t()</code> function <em>transposes</em> the matrix provided as its argument.</p>
 </div>
-<div class="sourceCode cell-code" id="cb96"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>a <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">9</span><span class="sc">:</span><span class="dv">0</span></span>
-<span id="cb96-2"><a href="#cb96-2" aria-hidden="true" tabindex="-1"></a>df[<span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">2</span>, <span class="dv">20</span>, <span class="dv">2</span>)</span>
-<span id="cb96-3"><a href="#cb96-3" aria-hidden="true" tabindex="-1"></a>df[<span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">9</span>, <span class="dv">2</span>), <span class="st">"c"</span>] <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">11</span>, <span class="dv">19</span>, <span class="dv">2</span>)</span>
-<span id="cb96-4"><a href="#cb96-4" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<div id="qwebr-insertion-location-2"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div id="qwebr-insertion-location-3"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
+<p>Even though we can’t do matrix operations on data frames, the code doesn’t error. Our original data frame hasn’t made it through the operation intact, though.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>    a  b  c
-1  -9  2 11
-2  -8  4 NA
-3  -7  6 13
-4  -6  8 NA
-5  -5 10 15
-6  -4 12 NA
-7  -3 14 17
-8  -2 16 NA
-9  -1 18 19
-10  0 20 NA</code></pre>
+<pre><code>   [,1] [,2] [,3] [,4] [,5] [,6]
+x1    1    0    1    0    1    0
+x2    2    4    6    8   10   12</code></pre>
+</div>
+</div>
+<p>In fact, we truly <em>cannot</em> do matrix operations on data frames, and the apparent success of this command isn’t a counterexample. Before running <code>t()</code>, R is type casting <code>df</code> into a matrix and then transposing that matrix. So, the above is equivalent to the following.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t</span>(<span class="fu">as.matrix</span>(df))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   [,1] [,2] [,3] [,4] [,5] [,6]
+x1    1    0    1    0    1    0
+x2    2    4    6    8   10   12</code></pre>
+</div>
+</div>
+<p>The type casting explains why the logical values in the <code>x1</code> column appear as numeric values in the corresponding transposed row. The least destructive type conversion required casting <code>df</code> as a numeric matrix.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.matrix</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     x1 x2
+[1,]  1  2
+[2,]  0  4
+[3,]  1  6
+[4,]  0  8
+[5,]  1 10
+[6,]  0 12</code></pre>
 </div>
 </div>
 </div>
@@ -3275,13 +2687,9 @@ Knowledge Check
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>If <code>d1</code> is a data frame, why does <code>d1[2]</code> return a one-column data frame, while <code>d1[[2]]</code> returns a vector?</li>
-<li>Suppose you try to replace two columns in a data frame with the contents of a three-slot list.
-<ul>
-<li>Which list slots (if any) does R use to fill the columns?</li>
-<li>Will R raise an error?</li>
-<li>Will R show a warning?</li>
-</ul></li>
+<li>In one sentence, explain how a data frame is related to a list.</li>
+<li>if <code>a</code> and <code>b</code> are both data frames, why will <code>a %*% t(b)</code> produce an error?</li>
+<li>If a data frame has one text column and one numeric column, what happens if you convert it to a matrix with <code>as.matrix()</code>? Why?</li>
 </ul>
 </div>
 </div>
@@ -3719,13 +3127,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../tutorials/data_frames/relation_to_lists.html" class="pagination-link" aria-label="Relation to Lists">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Relation to Lists</span>
+      <a href="../../tutorials/data_frames/creating.html" class="pagination-link" aria-label="Creating Data Frames">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Creating Data Frames</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../tutorials/data_frames/tibbles.html" class="pagination-link" aria-label="Tibbles">
-        <span class="nav-page-text">Tibbles</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../tutorials/data_frames/manipulating.html" class="pagination-link" aria-label="Manipulating Data Frames">
+        <span class="nav-page-text">Manipulating Data Frames</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
